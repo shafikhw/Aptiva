@@ -1,0 +1,782 @@
+{
+  "pricingAndFloorPlans": [
+    {
+      "model_name": "S1",
+      "rent_label": "$749",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "410 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A2",
+      "rent_label": "$799",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "668 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A1",
+      "rent_label": "$849",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "570 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "$875",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "680 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$975",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "808 Sq Ft"
+      ],
+      "availability": "8 Available units",
+      "units": [
+        {
+          "unit": "016",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#ct22rke-2-unit"
+        },
+        {
+          "unit": "019",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#n8hgrbp-2-unit"
+        },
+        {
+          "unit": "034",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h187f22-2-unit"
+        },
+        {
+          "unit": "017",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#cntrzxd-2-unit"
+        },
+        {
+          "unit": "020",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6dwgp6t-2-unit"
+        },
+        {
+          "unit": "033",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#t7xf94c-2-unit"
+        },
+        {
+          "unit": "032",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#17xgj95-2-unit"
+        },
+        {
+          "unit": "003",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#1n07m85-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B2",
+      "rent_label": "$975",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "818 Sq Ft"
+      ],
+      "availability": "10 Available units",
+      "units": [
+        {
+          "unit": "215",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6zjc8dv-2-unit"
+        },
+        {
+          "unit": "230",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h5d0fy3-2-unit"
+        },
+        {
+          "unit": "243",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#v3t5mvd-2-unit"
+        },
+        {
+          "unit": "245",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#zky1n0w-2-unit"
+        },
+        {
+          "unit": "202",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#0hdkt53-2-unit"
+        },
+        {
+          "unit": "239",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yd8mlfs-2-unit"
+        },
+        {
+          "unit": "216",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#flk8bjs-2-unit"
+        },
+        {
+          "unit": "115",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yj5bgqs-2-unit"
+        },
+        {
+          "unit": "139",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#082my71-2-unit"
+        },
+        {
+          "unit": "214",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#gwh125w-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,049",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "956 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "133",
+          "price": "$1,049",
+          "square_feet": "956",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#mentjwj-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B5",
+      "rent_label": "$1,099",
+      "details": [
+        "2 Beds",
+        "2.5 Baths",
+        "1,002 Sq Ft"
+      ],
+      "availability": "4 Available units",
+      "units": [
+        {
+          "unit": "142",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#c2rq17f-2-unit"
+        },
+        {
+          "unit": "118",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#fqf5mbr-2-unit"
+        },
+        {
+          "unit": "150",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#p7wkb6t-2-unit"
+        },
+        {
+          "unit": "117",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#msrzvmh-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B4",
+      "rent_label": "$1,099 - $1,149",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,002 Sq Ft"
+      ],
+      "availability": "6 Available units",
+      "units": [
+        {
+          "unit": "211",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#5tlp91n-2-unit"
+        },
+        {
+          "unit": "209",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#npnlxvq-2-unit"
+        },
+        {
+          "unit": "232",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#rv7c113-2-unit"
+        },
+        {
+          "unit": "233",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#w8cg2bk-2-unit"
+        },
+        {
+          "unit": "219",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#pkxlj2r-2-unit"
+        },
+        {
+          "unit": "222",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#4cqjz3j-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "S1",
+      "rent_label": "$749",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "410 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A2",
+      "rent_label": "$799",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "668 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A1",
+      "rent_label": "$849",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "570 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "$875",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "680 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$975",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "808 Sq Ft"
+      ],
+      "availability": "8 Available units",
+      "units": [
+        {
+          "unit": "016",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#ct22rke-2-unit"
+        },
+        {
+          "unit": "019",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#n8hgrbp-2-unit"
+        },
+        {
+          "unit": "034",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h187f22-2-unit"
+        },
+        {
+          "unit": "017",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#cntrzxd-2-unit"
+        },
+        {
+          "unit": "020",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6dwgp6t-2-unit"
+        },
+        {
+          "unit": "033",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#t7xf94c-2-unit"
+        },
+        {
+          "unit": "032",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#17xgj95-2-unit"
+        },
+        {
+          "unit": "003",
+          "price": "$975",
+          "square_feet": "808",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#1n07m85-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B2",
+      "rent_label": "$975",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "818 Sq Ft"
+      ],
+      "availability": "10 Available units",
+      "units": [
+        {
+          "unit": "215",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6zjc8dv-2-unit"
+        },
+        {
+          "unit": "230",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h5d0fy3-2-unit"
+        },
+        {
+          "unit": "243",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#v3t5mvd-2-unit"
+        },
+        {
+          "unit": "245",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#zky1n0w-2-unit"
+        },
+        {
+          "unit": "202",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#0hdkt53-2-unit"
+        },
+        {
+          "unit": "239",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yd8mlfs-2-unit"
+        },
+        {
+          "unit": "216",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#flk8bjs-2-unit"
+        },
+        {
+          "unit": "115",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yj5bgqs-2-unit"
+        },
+        {
+          "unit": "139",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#082my71-2-unit"
+        },
+        {
+          "unit": "214",
+          "price": "$975",
+          "square_feet": "818",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#gwh125w-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,049",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "956 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "133",
+          "price": "$1,049",
+          "square_feet": "956",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#mentjwj-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B5",
+      "rent_label": "$1,099",
+      "details": [
+        "2 Beds",
+        "2.5 Baths",
+        "1,002 Sq Ft"
+      ],
+      "availability": "4 Available units",
+      "units": [
+        {
+          "unit": "142",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#c2rq17f-2-unit"
+        },
+        {
+          "unit": "118",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#fqf5mbr-2-unit"
+        },
+        {
+          "unit": "150",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#p7wkb6t-2-unit"
+        },
+        {
+          "unit": "117",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#msrzvmh-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B4",
+      "rent_label": "$1,099 - $1,149",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,002 Sq Ft"
+      ],
+      "availability": "6 Available units",
+      "units": [
+        {
+          "unit": "211",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#5tlp91n-2-unit"
+        },
+        {
+          "unit": "209",
+          "price": "$1,099",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#npnlxvq-2-unit"
+        },
+        {
+          "unit": "232",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#rv7c113-2-unit"
+        },
+        {
+          "unit": "233",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#w8cg2bk-2-unit"
+        },
+        {
+          "unit": "219",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#pkxlj2r-2-unit"
+        },
+        {
+          "unit": "222",
+          "price": "$1,149",
+          "square_feet": "1,002",
+          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#4cqjz3j-2-unit"
+        }
+      ]
+    }
+  ],
+  "url": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/",
+  "feesAndPolicies": {},
+  "about": {
+    "description": "Experience the best of urban living at City View at Mueller, situated at 1106 Reinli St, Austin, TX 78723. Our recently upgraded one and two bedroom apartments offer a modern and comfortable living space in the heart of vibrant Austin, TX. Located in the Mueller neighborhood, City View is just minutes away from downtown Austin, 1 mile from ACC Highland Campus, and near major freeways I35, 290 & 183 for easy access to work or school. Entertainment is endless with the growing Mueller Development, Windsor Park, and The Domain only a few minutes away. At City View, we offer top-notch amenities that are designed to enhance your living experience. Relax by our sparkling pool, enjoy a workout in our state-of-the-art fitness center, or simply unwind in our lush green spaces. Don't miss out on the chance to live in one of Austin's most sought-after communities. Schedule a tour of City View at Mueller today! City View at Mueller is an apartment community located in Travis County and the 78723 ZIP Code. This area is served by the Austin Independent attendance zone. Unique Features",
+    "breadcrumbs": [
+      "Texas",
+      "Travis County",
+      "Austin",
+      "Windsor Park",
+      "City View at Mueller"
+    ],
+    "title": "City View at Mueller",
+    "location": "",
+    "rating": "3.0",
+    "reviews": "2",
+    "images": [],
+    "image": "https://images1.apartments.com/i2/cWNCPHwV1sKVJ7DjkkbfLnx1z9MPPZZ5g7O9l1sSV3g/111/city-view-at-mueller-austin-tx-primary-photo.png",
+    "Features": [
+      "Backyards*",
+      "Special Price",
+      "Deposit alternatives available through Obligo",
+      "Minutes Away From Downtown Austin",
+      "Outdoor Grilling Area with Gas Grills",
+      "Two On-Site Laundry Facilities",
+      "Spacious Studio, One- & Two-Bedroom Apartment Home",
+      "WiFi Available",
+      "*In Select Apartment Homes",
+      "Just a Few Minutes From Mueller Development, Winds",
+      "On-Site Management & 24-Hour Maintenance Team",
+      "Package Lockers",
+      "Pet Friendly Community with Dog Park",
+      "Quartz & Granite Countertops*",
+      "Two Sparkling Swimming Pools",
+      "Private Patio or Balcony",
+      "A/C & Heating",
+      "One Mile From ACC Highland Campus",
+      "Pool & Courtyard Views Available",
+      "Resident Portal with Online Rent Payment & Service",
+      "Community Wide WiFi",
+      "Natural Gas Range & Oven",
+      "Spacious Walk-In Closets",
+      "Wood Style Plank Flooring Throughout*",
+      "Black Cabinet Hardware & Accents*",
+      "Modern Kitchen with Stainless Steel Appliances"
+    ]
+  },
+  "contact": {
+    "property_management_logo": "https://images1.apartments.com/i2/KA5xTKs9L3bHJtxUjXjOVOFMxbPbVhOiHrU9fJZ-aR0/115/harbor-group-management-logo.jpg",
+    "phone_number": "(737) 204-8545",
+    "property_website": "https://www.harborgroupmanagement.com/apartments/tx/austin/city-view-at-mueller?utm_knock=a",
+    "language": "Language: English",
+    "office_hours": {
+      "days": "Monday - Friday,",
+      "hours": "9am - 6pm"
+    }
+  },
+  "amenities": [
+    {
+      "title": "Other Amenities",
+      "amenities": [
+        "Community-Wide WiFi",
+        "Laundry Facilities",
+        "Maintenance on site",
+        "Property Manager on Site",
+        "24 Hour Access",
+        "Trash Pickup - Door to Door",
+        "Recycling",
+        "Online Services",
+        "Pet Play Area",
+        "Fitness Center",
+        "Pool",
+        "Playground",
+        "Courtyard",
+        "Grill",
+        "Dog Park"
+      ]
+    },
+    {
+      "title": "Indoor Features",
+      "amenities": [
+        "High Speed Internet Access",
+        "Wi-Fi",
+        "Washer/Dryer Hookup",
+        "Air Conditioning",
+        "Heating",
+        "Ceiling Fans",
+        "Smoke Free",
+        "Sprinkler System"
+      ]
+    },
+    {
+      "title": "Kitchen Features & Appliances",
+      "amenities": [
+        "Dishwasher",
+        "Granite Countertops",
+        "Stainless Steel Appliances",
+        "Kitchen",
+        "Oven",
+        "Range",
+        "Refrigerator",
+        "Freezer",
+        "Gas Range"
+      ]
+    },
+    {
+      "title": "Model Details",
+      "amenities": [
+        "Vinyl Flooring",
+        "Walk-In Closets",
+        "Balcony",
+        "Patio",
+        "Porch",
+        "Lawn"
+      ]
+    }
+  ],
+  "education": {
+    "colleges_universities": [
+      "University of Texas at Austin : Drive: 7 min / 3.3 mi",
+      "Austin C.C., Rio Grande Campus : Drive: 9 min / 4.8 mi",
+      "Austin C.C., Eastview Campus : Drive: 10 min / 4.8 mi",
+      "Austin C.C., Riverside Campus : Drive: 14 min / 7.4 mi"
+    ],
+    "description": "City View at Mueller is within 7 minutes or 3.3 miles from University of Texas at Austin. It is also near Austin C.C., Eastview Campus and Austin C.C., Rio Grande Campus."
+  },
+  "schools": {
+    "public": [
+      {
+        "name": "Harris Elementary School",
+        "subtitle": "Public Elementary School"
+      },
+      {
+        "name": "Dell Children's Medical Center",
+        "subtitle": "Public Elementary, Middle & High School"
+      },
+      {
+        "name": "Webb Middle School",
+        "subtitle": "Public Middle School"
+      },
+      {
+        "name": "Northeast Early College High School",
+        "subtitle": "Public High School"
+      }
+    ],
+    "private": [
+      {
+        "name": "St Francis School",
+        "subtitle": "Private Elementary & Middle School"
+      },
+      {
+        "name": "Greater Calvary Academy",
+        "subtitle": "Private Elementary School"
+      },
+      {
+        "name": "Griffin School",
+        "subtitle": "Private High School"
+      }
+    ]
+  },
+  "transportation": {
+    "description": "Transportation options available in Austin include Highland Station, located 1.6 miles from City View at Mueller. City View at Mueller is near Austin-Bergstrom International, located 13.6 miles or 26 minutes away.",
+    "groups": [
+      {
+        "subtitle": "Transit / Subway",
+        "stations": [
+          "Highland Station : Drive: 3 min / 1.6 mi",
+          "Crestview Station : Drive: 6 min / 2.4 mi",
+          "M L King Jr Station : Drive: 8 min / 3.8 mi",
+          "Downtown Station : Drive: 8 min / 4.7 mi",
+          "Plaza Saltillo Station : Drive: 9 min / 5.0 mi"
+        ]
+      },
+      {
+        "subtitle": "Commuter Rail",
+        "stations": [
+          "Austin : Drive: 12 min / 6.0 mi",
+          "Taylor Amtrak : Drive: 39 min / 31.5 mi",
+          "San Marcos Amtrak : Drive: 43 min / 35.2 mi"
+        ]
+      },
+      {
+        "subtitle": "Airports",
+        "stations": [
+          "Austin-Bergstrom International : Drive: 26 min / 13.6 mi"
+        ]
+      }
+    ]
+  },
+  "pointOfInterest": {
+    "description": "Time and distance from City View at Mueller.",
+    "groups": [
+      {
+        "subtitle": "Shopping Centers",
+        "description": "City View at Mueller has 3 shopping centers within 0.6 mile, which is about a 10-minute walk. The miles and minutes will be for the farthest away property.",
+        "places": [
+          "Cameron Station : Walk: 8 min / 0.5 mi",
+          "5339 IH-35 : Walk: 10 min / 0.5 mi",
+          "Cameron Village : Walk: 10 min / 0.6 mi"
+        ]
+      },
+      {
+        "subtitle": "Parks and Recreation",
+        "description": "City View at Mueller has 5 parks within 4.7 miles, including Thinkery, Elisabet Ney Museum, and Texas Memorial Museum.",
+        "places": [
+          "Thinkery : Drive: 5 min / 2.1 mi",
+          "Elisabet Ney Museum : Drive: 6 min / 2.5 mi",
+          "Texas Memorial Museum : Drive: 7 min / 3.3 mi",
+          "Beverly S. Sheffield Northwest District Park : Drive: 11 min / 4.4 mi",
+          "Shoal Creek Greenbelt Park : Drive: 10 min / 4.7 mi"
+        ]
+      },
+      {
+        "subtitle": "Hospitals",
+        "description": "City View at Mueller has 3 hospitals within 2.8 miles, the nearest is Dell Children's Medical Center of Central Texas which is 1.6 miles away and a 4 minute drive.",
+        "places": [
+          "Dell Children's Medical Center of Central Texas : Drive: 4 min / 1.6 mi",
+          "Austin Lakes Hospital : Drive: 5 min / 2.6 mi",
+          "St. David's Medical Center : Drive: 5 min / 2.8 mi"
+        ]
+      },
+      {
+        "subtitle": "Military Bases",
+        "description": "City View at Mueller is 70.0 miles from Fort Hood, and is convenient to other military bases, including Randolph Air Force Base.",
+        "places": [
+          "Fort Hood : Drive: 86 min / 70.0 mi",
+          "Randolph Air Force Base : Drive: 85 min / 70.1 mi"
+        ]
+      }
+    ]
+  }
+}

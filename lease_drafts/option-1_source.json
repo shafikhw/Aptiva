@@ -1,0 +1,316 @@
+{
+  "pricingAndFloorPlans": [
+    {
+      "model_name": "One Bedroom-1",
+      "rent_label": "$1,827",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-5",
+      "rent_label": "$1,854",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-7",
+      "rent_label": "$1,881",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "779 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-9",
+      "rent_label": "$1,908",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "802 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-11",
+      "rent_label": "$2,016",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "875 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-1",
+      "rent_label": "$2,169",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,032 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-5",
+      "rent_label": "$2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,104 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-8",
+      "rent_label": "$2,430",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,241 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-1",
+      "rent_label": "$1,827",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-5",
+      "rent_label": "$1,854",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-7",
+      "rent_label": "$1,881",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "779 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-9",
+      "rent_label": "$1,908",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "802 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "One Bedroom-11",
+      "rent_label": "$2,016",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "875 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-1",
+      "rent_label": "$2,169",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,032 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-5",
+      "rent_label": "$2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,104 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "Two Bedroom-8",
+      "rent_label": "$2,430",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,241 Sq Ft"
+      ],
+      "units": []
+    }
+  ],
+  "url": "https://www.apartments.com/gurnee-glen-apartments-gurnee-il/q9s1zby/",
+  "feesAndPolicies": {},
+  "about": {
+    "description": "Experience luxury apartment living at Gurnee Glen Apartments in the heart of Village of Gurnee right next to Six Flags Great America. This community is located near many great shopping sites and restaurants, boasts elevators in every building, Oasis area with pool, controlled access, Amazon Package HUB, an amazing clubhouse, common area lounges, fitness room and balconies. In each unit, you will find top of the line finishes such as stainless steel appliances, vinyl plank flooring, quartz counter tops and premium carpet. Contact us today to visit Gurnee Glen Apartments! Gurnee Glen Apartments is an apartment community located in Lake County and the 60031 ZIP Code. This area is served by the Gurnee School District 56 attendance zone.",
+    "breadcrumbs": [
+      "Illinois",
+      "Lake County",
+      "Gurnee",
+      "Gurnee Glen Apartments"
+    ],
+    "title": "Gurnee Glen Apartments",
+    "location": "",
+    "rating": "",
+    "reviews": "0",
+    "images": [],
+    "image": "https://images1.apartments.com/i2/hOq5NZYv0Shu2raKIwpEIOpAtEtMM6wfkmS6XI2wLoI/111/gurnee-glen-apartments-gurnee-il-primary-photo.jpg"
+  },
+  "contact": {
+    "property_management_logo": "https://images1.apartments.com/i2/Tu044L5pdRtwDI-07OTD-sSnLgMFIZ-oZzDmPlREFTA/115/ar-building-company-logo.jpg",
+    "phone_number": "(224) 333-1871",
+    "property_website": "https://www.gurneeglen-apts.com/?utm_source=gbp&utm_medium=organic&utm_knock=g&cpm=gbp",
+    "language": "Language: English",
+    "office_hours": {
+      "days": "Monday - Thursday,",
+      "hours": "9am - 5pm"
+    }
+  },
+  "amenities": [
+    {
+      "title": "Other Amenities",
+      "amenities": [
+        "Package Service",
+        "Controlled Access",
+        "Property Manager on Site",
+        "24 Hour Access",
+        "Trash Pickup - Door to Door",
+        "EV Charging",
+        "Public Transportation",
+        "Elevator",
+        "Clubhouse",
+        "Lounge",
+        "Fitness Center",
+        "Pool"
+      ]
+    }
+  ],
+  "education": {
+    "colleges_universities": [
+      "Coll. of Lake Co., Grayslake : Drive: 10 min / 5.2 mi",
+      "Coll. of Lake Co., Lakeshore : Drive: 12 min / 6.8 mi",
+      "Coll. of Lake Co., Southlake : Drive: 19 min / 11.5 mi",
+      "Lake Forest College : Drive: 19 min / 12.6 mi"
+    ],
+    "description": "Gurnee Glen Apartments is within 10 minutes or 5.2 miles from Coll. of Lake Co., Grayslake. It is also near Coll. of Lake Co., Lakeshore and Coll. of Lake Co., Southlake."
+  },
+  "schools": {
+    "public": [
+      {
+        "name": "River Trail School",
+        "subtitle": "Public Elementary & Middle School"
+      },
+      {
+        "name": "Spaulding Elementary School",
+        "subtitle": "Public Elementary School"
+      },
+      {
+        "name": "Viking School",
+        "subtitle": "Public Middle School"
+      },
+      {
+        "name": "Warren Township High School",
+        "subtitle": "Public High School"
+      }
+    ],
+    "private": [
+      {
+        "name": "Country Meadows Montessori School",
+        "subtitle": "Private Elementary & Middle School"
+      },
+      {
+        "name": "Ombudsman Programs",
+        "subtitle": "Private High School"
+      },
+      {
+        "name": "Cristo Rey St. Martin College Prep",
+        "subtitle": "Private High School"
+      }
+    ]
+  },
+  "transportation": {
+    "description": "Gurnee Glen Apartments is near Chicago O'Hare International, located 31.6 miles or 41 minutes away.",
+    "groups": [
+      {
+        "subtitle": "Commuter Rail",
+        "stations": [
+          "Libertyville Station : Drive: 9 min / 5.5 mi",
+          "Prairie Crossing Station (Md-North) : Drive: 10 min / 5.9 mi",
+          "Prairie Crossing Station (Ncs) : Drive: 11 min / 6.1 mi",
+          "Waukegan Station : Drive: 12 min / 6.9 mi",
+          "North Chicago Station : Drive: 13 min / 9.3 mi"
+        ]
+      },
+      {
+        "subtitle": "Airports",
+        "stations": [
+          "Chicago O'Hare International : Drive: 41 min / 31.6 mi"
+        ]
+      }
+    ]
+  },
+  "pointOfInterest": {
+    "description": "Time and distance from Gurnee Glen Apartments.",
+    "groups": [
+      {
+        "subtitle": "Shopping Centers",
+        "description": "Gurnee Glen Apartments has 3 shopping centers within 1.8 miles, which is about a 3-minute walk. The miles and minutes will be for the farthest away property.",
+        "places": [
+          "Saratoga Square : Walk: 9 min / 0.5 mi",
+          "Gurnee Shopping Center : Walk: 16 min / 0.8 mi",
+          "Pembrook Corners : Drive: 3 min / 1.8 mi"
+        ]
+      },
+      {
+        "subtitle": "Parks and Recreation",
+        "description": "Gurnee Glen Apartments has 5 parks within 5.7 miles, including Lake Carina Forest Preserve, Almond Marsh, and Independence Grove.",
+        "places": [
+          "Lake Carina Forest Preserve : Walk: 6 min / 0.3 mi",
+          "Almond Marsh : Drive: 5 min / 3.5 mi",
+          "Independence Grove : Drive: 8 min / 4.6 mi",
+          "Greenbelt Cultural Center : Drive: 9 min / 5.0 mi",
+          "Prairie Crossing Learning Farm : Drive: 10 min / 5.7 mi"
+        ]
+      },
+      {
+        "subtitle": "Hospitals",
+        "description": "Gurnee Glen Apartments has 3 hospitals within 6.6 miles, the nearest is Lake Behavioral Hospital which is 3.7 miles away and a 7 minute drive.",
+        "places": [
+          "Lake Behavioral Hospital : Drive: 7 min / 3.7 mi",
+          "Advocate Condell Medical Center : Drive: 10 min / 6.4 mi",
+          "Vista Medical Center East : Drive: 12 min / 6.6 mi"
+        ]
+      },
+      {
+        "subtitle": "Military Bases",
+        "description": "Gurnee Glen Apartments is 7.6 miles from Great Lakes Naval Training Center, and is convenient to other military bases, including US Military Reservation Elk Grove.",
+        "places": [
+          "Great Lakes Naval Training Center : Drive: 11 min / 7.6 mi",
+          "US Military Reservation Elk Grove : Drive: 43 min / 25.3 mi"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1217 @@
+{
+  "pricingAndFloorPlans": [
+    {
+      "model_name": "E1",
+      "rent_label": "$1,095 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "517 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1229",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#5w34cwq-2-unit"
+        },
+        {
+          "unit": "2127",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#xsmwffm-2-unit"
+        },
+        {
+          "unit": "2219",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#ftsnnev-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E2",
+      "rent_label": "$1,195 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "509 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1445",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v2rtx4e-2-unit"
+        },
+        {
+          "unit": "2315",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#4p8z1bh-2-unit"
+        },
+        {
+          "unit": "2415",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v0htzmd-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E3",
+      "rent_label": "$1,295 - $1,445",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "584 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1242",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#mhe644j-2-unit"
+        },
+        {
+          "unit": "1342",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#zhgqw5z-2-unit"
+        },
+        {
+          "unit": "1442",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#6t7mpsr-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E5",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "651 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1439",
+          "price": "$1,395",
+          "square_feet": "651",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#c7fbrhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E4",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "606 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2132",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#330cz4f-2-unit"
+        },
+        {
+          "unit": "2332",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#sb7jfq6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A1",
+      "rent_label": "$1,295 - $1,595",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "742 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1117",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#gqffrly-2-unit"
+        },
+        {
+          "unit": "1211",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#28hsqrb-2-unit"
+        },
+        {
+          "unit": "2110",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#1638kz6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A2",
+      "rent_label": "$1,345 - $1,395",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "756 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1447",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#7zdk9zz-2-unit"
+        },
+        {
+          "unit": "2217",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#sgdr8x6-2-unit"
+        },
+        {
+          "unit": "2417",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#ex6db2q-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "$1,395 - $1,495",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A5",
+      "rent_label": "$1,495 - $1,645",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "957 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2231",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#l7kvv8e-2-unit"
+        },
+        {
+          "unit": "2331",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v7llvfe-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$1,695 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,074 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2201",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#t9q1pbb-2-unit"
+        },
+        {
+          "unit": "2237",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#bgejhp8-2-unit"
+        },
+        {
+          "unit": "1126",
+          "price": "$1,795",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#dhjq7wk-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1343",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#73q6z1z-2-unit"
+        },
+        {
+          "unit": "1443",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#2y0skwb-2-unit"
+        },
+        {
+          "unit": "2226",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#nwyx82m-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B2",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,140 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1106",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#040v3s1-2-unit"
+        },
+        {
+          "unit": "1206",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#c42bvrg-2-unit"
+        },
+        {
+          "unit": "1306",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#wlz74rl-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B4",
+      "rent_label": "$1,845 - $2,045",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2234",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#te71kb9-2-unit"
+        },
+        {
+          "unit": "2434",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#k9p9pdb-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B5",
+      "rent_label": "$1,995 - $2,195",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,081 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2214",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#yzhdlcv-2-unit"
+        },
+        {
+          "unit": "2314",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#2dzhhbb-2-unit"
+        },
+        {
+          "unit": "2414",
+          "price": "$2,095",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#l26vyhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B10",
+      "rent_label": "$1,995 - $2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,383 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "2416",
+          "price": "$1,995",
+          "square_feet": "1,383",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#tfm8khc-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B11",
+      "rent_label": "$2,095 - $2,395",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,429 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1349",
+          "price": "$2,095",
+          "square_feet": "1,429",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#1fc09g6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,057 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,230 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A4",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "939 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,211 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,192 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,303 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B9",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "E1",
+      "rent_label": "$1,095 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "517 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1229",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#5w34cwq-2-unit"
+        },
+        {
+          "unit": "2127",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#xsmwffm-2-unit"
+        },
+        {
+          "unit": "2219",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#ftsnnev-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E2",
+      "rent_label": "$1,195 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "509 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1445",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v2rtx4e-2-unit"
+        },
+        {
+          "unit": "2315",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#4p8z1bh-2-unit"
+        },
+        {
+          "unit": "2415",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v0htzmd-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E3",
+      "rent_label": "$1,295 - $1,445",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "584 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1242",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#mhe644j-2-unit"
+        },
+        {
+          "unit": "1342",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#zhgqw5z-2-unit"
+        },
+        {
+          "unit": "1442",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#6t7mpsr-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E5",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "651 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1439",
+          "price": "$1,395",
+          "square_feet": "651",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#c7fbrhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E4",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "606 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2132",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#330cz4f-2-unit"
+        },
+        {
+          "unit": "2332",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#sb7jfq6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A1",
+      "rent_label": "$1,295 - $1,595",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "742 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1117",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#gqffrly-2-unit"
+        },
+        {
+          "unit": "1211",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#28hsqrb-2-unit"
+        },
+        {
+          "unit": "2110",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#1638kz6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A2",
+      "rent_label": "$1,345 - $1,395",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "756 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1447",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#7zdk9zz-2-unit"
+        },
+        {
+          "unit": "2217",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#sgdr8x6-2-unit"
+        },
+        {
+          "unit": "2417",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#ex6db2q-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "$1,395 - $1,495",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A5",
+      "rent_label": "$1,495 - $1,645",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "957 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2231",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#l7kvv8e-2-unit"
+        },
+        {
+          "unit": "2331",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#v7llvfe-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,057 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,230 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A4",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "939 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$1,695 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,074 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2201",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#t9q1pbb-2-unit"
+        },
+        {
+          "unit": "2237",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#bgejhp8-2-unit"
+        },
+        {
+          "unit": "1126",
+          "price": "$1,795",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#dhjq7wk-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1343",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#73q6z1z-2-unit"
+        },
+        {
+          "unit": "1443",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#2y0skwb-2-unit"
+        },
+        {
+          "unit": "2226",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#nwyx82m-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B2",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,140 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1106",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#040v3s1-2-unit"
+        },
+        {
+          "unit": "1206",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#c42bvrg-2-unit"
+        },
+        {
+          "unit": "1306",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#wlz74rl-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B4",
+      "rent_label": "$1,845 - $2,045",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2234",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#te71kb9-2-unit"
+        },
+        {
+          "unit": "2434",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#k9p9pdb-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B5",
+      "rent_label": "$1,995 - $2,195",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,081 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2214",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#yzhdlcv-2-unit"
+        },
+        {
+          "unit": "2314",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#2dzhhbb-2-unit"
+        },
+        {
+          "unit": "2414",
+          "price": "$2,095",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#l26vyhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B10",
+      "rent_label": "$1,995 - $2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,383 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "2416",
+          "price": "$1,995",
+          "square_feet": "1,383",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#tfm8khc-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B11",
+      "rent_label": "$2,095 - $2,395",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,429 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1349",
+          "price": "$2,095",
+          "square_feet": "1,429",
+          "view_more_html": "https://www.apartments.com/edison-austin-tx/40n18nj/#1fc09g6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,211 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,192 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,303 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B9",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    }
+  ],
+  "url": "https://www.apartments.com/edison-austin-tx/40n18nj/",
+  "feesAndPolicies": {},
+  "about": {
+    "description": "Edison Austin Apartments offers upscale living with modern studio, one-, and two-bedroom floor plans featuring wood-style plank flooring, sleek kitchens, and floor-to-ceiling windows. These thoughtfully designed spaces create a luxurious atmosphere youll love coming home to every day.\n\nEnjoy resort-style amenities, including a sparkling pool, rooftop lounge, and state-of-the-art fitness center, all crafted to elevate your lifestyle. Conveniently located near top employers, shopping, parks, and entertainment, Edison Austin provides the perfect balance of luxury and convenience. Discover the exceptional living experience waiting for you at Edison Austin Apartments. Edison is an apartment community located in Travis County and the 78741 ZIP Code. This area is served by the Del Valle Independent attendance zone. Unique Features",
+    "breadcrumbs": [
+      "Texas",
+      "Travis County",
+      "Austin",
+      "East Riverside-Oltorf",
+      "Edison"
+    ],
+    "title": "Edison",
+    "location": "",
+    "rating": "3.6",
+    "reviews": "9",
+    "images": [],
+    "image": "https://images1.apartments.com/i2/z5H0yQFpjlAgKT3GJVDk1HmGsaf-mFVw0KNZfqRx8AU/111/edison-austin-tx-primary-photo.jpg",
+    "Features": [
+      "Fenced-in Yard Available",
+      "30-day Money Back Guarantee",
+      "Modern Kitchens with Stainless Steel appliances",
+      "Spin/Yoga Studio",
+      "Faux Wood Plank Flooring throughout",
+      "Spacious Dog Park",
+      "9' Ceilings",
+      "Ambient Smart Home Technology",
+      "Dog Spa",
+      "Granite Countertops with Undermount Kitchen Sink",
+      "Custom Shelving in Select Units",
+      "In-unit Washer/Dryer",
+      "Rooftop Terrace with Downtown Views",
+      "Slate Grey or Blue Subway Tile Backsplash"
+    ]
+  },
+  "contact": {
+    "property_management_logo": "https://images1.apartments.com/i2/2KYeNtYOrDikake9VBDRkslEVEBBU18-Vrt6RMeLNtI/115/the-connor-group-logo.png",
+    "phone_number": "(737) 377-3852",
+    "property_website": "https://edisonaustin.com/?utm_source=apartments",
+    "language": "Language: English",
+    "office_hours": {
+      "days": "Monday - Friday,",
+      "hours": "11am - 6pm"
+    }
+  },
+  "amenities": [
+    {
+      "title": "Other Amenities",
+      "amenities": [
+        "Package Service",
+        "Pet Play Area",
+        "Pet Washing Station",
+        "EV Charging",
+        "Business Center",
+        "Clubhouse",
+        "Lounge",
+        "Storage Space",
+        "Conference Rooms",
+        "Fitness Center",
+        "Spa",
+        "Pool",
+        "Bicycle Storage",
+        "Gated",
+        "Roof Terrace",
+        "Sundeck",
+        "Cabana",
+        "Courtyard",
+        "Dog Park"
+      ]
+    },
+    {
+      "title": "Indoor Features",
+      "amenities": [
+        "High Speed Internet Access",
+        "Washer/Dryer",
+        "Air Conditioning",
+        "Heating",
+        "Smoke Free",
+        "Storage Space",
+        "Wheelchair Accessible (Rooms)"
+      ]
+    },
+    {
+      "title": "Kitchen Features & Appliances",
+      "amenities": [
+        "Dishwasher",
+        "Disposal",
+        "Ice Maker",
+        "Granite Countertops",
+        "Stainless Steel Appliances",
+        "Island Kitchen",
+        "Kitchen",
+        "Oven",
+        "Range",
+        "Refrigerator"
+      ]
+    },
+    {
+      "title": "Model Details",
+      "amenities": [
+        "Hardwood Floors",
+        "Vinyl Flooring",
+        "Walk-In Closets",
+        "Floor to Ceiling Windows",
+        "Yard"
+      ]
+    }
+  ],
+  "education": {
+    "colleges_universities": [
+      "Austin C.C., Riverside Campus : Drive: 5 min / 1.9 mi",
+      "St. Edward's University : Drive: 7 min / 3.0 mi",
+      "Austin C.C., Eastview Campus : Drive: 7 min / 3.2 mi",
+      "Austin C.C., Rio Grande Campus : Drive: 10 min / 4.8 mi"
+    ],
+    "description": "Edison is within 5 minutes or 1.9 miles from Austin C.C., Riverside Campus. It is also near St. Edward's University and Austin C.C., Eastview Campus."
+  },
+  "schools": {
+    "public": [
+      {
+        "name": "Baty Elementary School",
+        "subtitle": "Public Elementary School"
+      },
+      {
+        "name": "IDEA Montopolis College Preparatory",
+        "subtitle": "Charter Middle & High School"
+      },
+      {
+        "name": "John P Ojeda J High School",
+        "subtitle": "Public Middle School"
+      },
+      {
+        "name": "Del Valle High School",
+        "subtitle": "Public Middle & High School"
+      },
+      {
+        "name": "Travis High School",
+        "subtitle": "Public High School"
+      }
+    ],
+    "private": [
+      {
+        "name": "St Ignatius Martyr School",
+        "subtitle": "Private Elementary & Middle School"
+      },
+      {
+        "name": "San Juan Diego Catholic High School",
+        "subtitle": "Private High School"
+      }
+    ]
+  },
+  "transportation": {
+    "description": "Transportation options available in Austin include Downtown Station, located 3.1 miles from Edison. Edison is near Austin-Bergstrom International, located 8.1 miles or 19 minutes away.",
+    "groups": [
+      {
+        "subtitle": "Transit / Subway",
+        "stations": [
+          "Downtown Station : Drive: 7 min / 3.1 mi",
+          "Plaza Saltillo Station : Drive: 8 min / 3.7 mi",
+          "M L King Jr Station : Drive: 10 min / 4.4 mi",
+          "Highland Station : Drive: 13 min / 7.8 mi",
+          "Crestview Station : Drive: 16 min / 8.7 mi"
+        ]
+      },
+      {
+        "subtitle": "Commuter Rail",
+        "stations": [
+          "Austin : Drive: 11 min / 4.2 mi",
+          "San Marcos Amtrak : Drive: 38 min / 30.3 mi",
+          "Taylor Amtrak : Drive: 50 min / 38.8 mi"
+        ]
+      },
+      {
+        "subtitle": "Airports",
+        "stations": [
+          "Austin-Bergstrom International : Drive: 19 min / 8.1 mi"
+        ]
+      }
+    ]
+  },
+  "pointOfInterest": {
+    "description": "Time and distance from Edison.",
+    "groups": [
+      {
+        "subtitle": "Shopping Centers",
+        "description": "Edison has 3 shopping centers within 1.1 miles, which is about a 20-minute walk. The miles and minutes will be for the farthest away property.",
+        "places": [
+          "Parke Green : Walk: 7 min / 0.4 mi",
+          "Riverside Place Shopping Center : Walk: 12 min / 0.6 mi",
+          "Willow Creek Center : Walk: 20 min / 1.1 mi"
+        ]
+      },
+      {
+        "subtitle": "Parks and Recreation",
+        "description": "Edison has 5 parks within 6.4 miles, including Lady Bird Lake, Blunn Creek Nature Preserve, and Boggy Creek Greenbelt.",
+        "places": [
+          "Lady Bird Lake : Drive: 4 min / 1.5 mi",
+          "Blunn Creek Nature Preserve : Drive: 6 min / 2.5 mi",
+          "Boggy Creek Greenbelt : Drive: 7 min / 3.3 mi",
+          "Umlauf Sculpture Garden and Museum : Drive: 10 min / 4.2 mi",
+          "McKinney Falls State Park : Drive: 16 min / 6.4 mi"
+        ]
+      },
+      {
+        "subtitle": "Hospitals",
+        "description": "Edison has 3 hospitals within 5.2 miles, the nearest is Dell Seton Medical Center at The University of Texas which is 3.8 miles away and a 8 minute drive.",
+        "places": [
+          "Dell Seton Medical Center at The University of Texas : Drive: 8 min / 3.8 mi",
+          "Austin Lakes Hospital : Drive: 9 min / 4.8 mi",
+          "St. David's South Austin Medical Center : Drive: 10 min / 5.2 mi"
+        ]
+      },
+      {
+        "subtitle": "Military Bases",
+        "description": "Edison is 65.2 miles from Randolph Air Force Base, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
+        "places": [
+          "Randolph Air Force Base : Drive: 80 min / 65.2 mi",
+          "Camp Bullis Military Training Reservation : Drive: 109 min / 92.7 mi"
+        ]
+      }
+    ]
+  }
+}
