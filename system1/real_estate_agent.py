@@ -23,11 +23,14 @@ import sys
 from dataclasses import asdict
 from dotenv import load_dotenv
 from typing import Any, Dict, List, Optional, Tuple, TypedDict
+from pathlib import Path
 
 from langgraph.graph import END, StateGraph
 from openai import OpenAI
 
-import scraper
+# from .url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
+
+from scraper import run_actor_and_save_outputs
 from url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
 
 # Defaults can be overridden via env vars
@@ -35,6 +38,8 @@ load_dotenv()
 DEFAULT_OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 DEFAULT_MAX_PAGES = 1
 DEFAULT_FILTER_OPTION = "all"
+VALID_FILTER_OPTIONS = {"all", "bed0", "bed1", "bed2", "bed3", "bed4", "bed5"}
+SCRAPER_OUTPUT_PATH = "actor_output.json"
 
 STATE_ABBREVIATIONS = {
     "alabama": "AL",
@@ -135,9 +140,12 @@ class AgentState(TypedDict, total=False):
     need_more_info: bool
     search_query: Optional[Dict[str, Any]]
     search_url: Optional[str]
+    scraped_listings: List[Dict[str, Any]]
     listings: List[Dict[str, Any]]
     enriched_listings: List[Dict[str, Any]]
     ranked_listings: List[Dict[str, Any]]
+    listing_lookup: Dict[str, Dict[str, Optional[str]]]
+    focused_listing: Dict[str, Any]
     reply: str
 
 
@@ -317,6 +325,7 @@ def generate_persona_reply(
     intent: str,
     listing_summaries: Optional[List[Dict[str, Any]]] = None,
     notes: Optional[str] = None,
+    focused_listing: Optional[Dict[str, Any]] = None,
 ) -> Tuple[str, str]:
     """
     Create a persona-aware reply using the latest user message and optional listing context.
@@ -344,6 +353,7 @@ def generate_persona_reply(
         "preferences": prefs,
         "clarifying_questions": state.get("clarifying_questions", []),
         "listings": listing_summaries,
+        "focused_listing": focused_listing,
         "recent_messages": messages[-6:],
         "latest_user_message": latest_user_message,
         "notes": notes,
@@ -402,6 +412,141 @@ def _safe_float(value: Any, default: Optional[float] = None) -> Optional[float]:
         return float(value) if value is not None else default
     except Exception:
         return default
+
+
+def _load_scraped_output(state: AgentState, force_reload: bool = False) -> List[Dict[str, Any]]:
+    """
+    Load the latest scraper output from disk into state['scraped_listings'].
+    force_reload ensures we re-read the file even if data already exists in memory.
+    """
+    if state.get("scraped_listings") and not force_reload:
+        return state["scraped_listings"]
+    path = Path(SCRAPER_OUTPUT_PATH)
+    if not path.exists():
+        return state.get("scraped_listings") or []
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            state["scraped_listings"] = data
+            return data
+    except Exception:
+        pass
+    return state.get("scraped_listings") or []
+
+
+def _listing_identity(listing: Dict[str, Any]) -> Dict[str, Optional[str]]:
+    """Extract stable identity fields for a listing."""
+    about = listing.get("about") or {}
+    return {
+        "url": listing.get("url"),
+        "title": about.get("title"),
+        "location": about.get("location"),
+    }
+
+
+def _build_listing_lookup(listings: List[Dict[str, Any]]) -> Dict[str, Dict[str, Optional[str]]]:
+    """
+    Build a mapping from user-facing identifiers (index, title, location, URL) to listing identities.
+    Keys are normalized to lowercase for matching.
+    """
+    lookup: Dict[str, Dict[str, Optional[str]]] = {}
+
+    def _register_keys(keys: List[str], identity: Dict[str, Optional[str]]) -> None:
+        for key in keys:
+            cleaned = key.strip().lower()
+            if cleaned:
+                lookup[cleaned] = identity
+
+    for idx, listing in enumerate(listings, start=1):
+        identity = _listing_identity(listing)
+        url = (identity.get("url") or "").rstrip("/")
+        title = identity.get("title") or ""
+        location = identity.get("location") or ""
+        base_keys = [
+            str(idx),
+            f"listing {idx}",
+            f"option {idx}",
+            f"choice {idx}",
+            f"#{idx}",
+        ]
+        if title:
+            base_keys.append(title)
+        if location:
+            base_keys.append(location)
+        if url:
+            base_keys.extend([url, url.lower()])
+        _register_keys(base_keys, identity)
+    return lookup
+
+
+def _find_listing_in_data(
+    scraped_data: List[Dict[str, Any]], identity: Dict[str, Optional[str]]
+) -> Optional[Dict[str, Any]]:
+    """Locate a listing in the scraped data using stable fields, preferring URL matches."""
+    url = (identity.get("url") or "").rstrip("/")
+    title = (identity.get("title") or "").strip().lower()
+    location = (identity.get("location") or "").strip().lower()
+
+    if url:
+        for listing in scraped_data:
+            cand_url = (listing.get("url") or "").rstrip("/")
+            if cand_url and cand_url == url:
+                return listing
+    for listing in scraped_data:
+        about = listing.get("about") or {}
+        cand_title = (about.get("title") or "").strip().lower()
+        cand_loc = (about.get("location") or "").strip().lower()
+        if title and cand_title == title:
+            return listing
+        if location and cand_loc == location:
+            return listing
+    return None
+
+
+def _identify_listing_from_message(
+    user_text: str,
+    lookup: Dict[str, Dict[str, Optional[str]]],
+    scraped_data: List[Dict[str, Any]],
+) -> Optional[Dict[str, Optional[str]]]:
+    """Infer which listing the user is referencing from their message."""
+    text = user_text.lower()
+
+    # Numeric references such as "listing 2" or "#3"
+    num_match = re.search(r"(?:listing|option|choice|#)\s*(\d+)", text)
+    if not num_match:
+        num_match = re.fullmatch(r"\s*(\d+)\s*", user_text.strip())
+    if num_match:
+        num_key = num_match.group(1)
+        for key in (num_key, f"listing {num_key}", f"option {num_key}", f"choice {num_key}", f"#{num_key}"):
+            ident = lookup.get(key.strip().lower())
+            if ident:
+                return ident
+
+    # URL references
+    urls = re.findall(r"https?://\S+", user_text)
+    for raw_url in urls:
+        cleaned = raw_url.rstrip(").,;")
+        ident = lookup.get(cleaned.strip().lower()) or lookup.get(cleaned.rstrip("/").lower())
+        if ident:
+            return ident
+        for listing in scraped_data:
+            cand_url = (listing.get("url") or "").rstrip("/")
+            if cand_url and cand_url == cleaned.rstrip("/"):
+                return _listing_identity(listing)
+
+    # Title/location substring references
+    for key, ident in lookup.items():
+        if key and not key.isdigit() and key in text:
+            return ident
+
+    # Fallback: scan scraped data titles for a match in the message
+    for listing in scraped_data:
+        about = listing.get("about") or {}
+        title = (about.get("title") or "").strip().lower()
+        if title and title in text:
+            return _listing_identity(listing)
+    return None
 
 
 def analyze_preferences(state: AgentState) -> AgentState:
@@ -503,7 +648,7 @@ def build_query_node(state: AgentState) -> AgentState:
 def scrape_listings(state: AgentState) -> AgentState:
     """Call the scraper actor to fetch listings from Apartments.com."""
     search_url = state.get("search_url")
-    if state.get("listings") and not state.get("preferences_updated"):
+    if state.get("scraped_listings") and not state.get("preferences_updated"):
         return state
     prefs = state.get("preferences", {})
     if not search_url:
@@ -516,35 +661,62 @@ def scrape_listings(state: AgentState) -> AgentState:
 
     run_input = {
         "search_url": search_url,
-        "max_pages": _safe_int(prefs.get("max_pages"), DEFAULT_MAX_PAGES) or DEFAULT_MAX_PAGES,
-        "filter_option": prefs.get("filter_option") or DEFAULT_FILTER_OPTION,
+        "max_pages": min(
+            max(_safe_int(prefs.get("max_pages"), DEFAULT_MAX_PAGES) or DEFAULT_MAX_PAGES, 1), 5
+        ),
+        "filter_option": (
+            prefs.get("filter_option") if prefs.get("filter_option") in VALID_FILTER_OPTIONS else DEFAULT_FILTER_OPTION
+        ),
     }
 
     try:
-        items = scraper.fetch_listings_from_actor(run_input)
+        json_path = SCRAPER_OUTPUT_PATH
+        run_actor_and_save_outputs(run_input, json_path=json_path)
+        with open(json_path, "r", encoding="utf-8") as f:
+            scraped_data = json.load(f)
     except Exception as exc:
         reply, persona_key = generate_persona_reply(
             state,
             intent="error",
             notes=f"Scraper failed: {exc}. Apologize briefly and ask to confirm preferences or try again.",
         )
-        return {**state, "reply": reply, "listings": [], "active_persona": persona_key}
+        return {
+            **state,
+            "reply": reply,
+            "scraped_listings": [],
+            "listings": [],
+            "active_persona": persona_key,
+        }
 
-    if not items:
+    if not scraped_data:
         reply, persona_key = generate_persona_reply(
             state,
             intent="no_results",
             notes="No listings were found; ask to adjust location or price range.",
         )
-        return {**state, "reply": reply, "listings": [], "active_persona": persona_key}
+        return {
+            **state,
+            "reply": reply,
+            "scraped_listings": [],
+            "listings": [],
+            "active_persona": persona_key,
+        }
 
-    return {**state, "listings": items}
+    return {
+        **state,
+        "scraped_listings": scraped_data,
+        "listings": scraped_data,
+        "enriched_listings": [],
+        "ranked_listings": [],
+        "listing_lookup": _build_listing_lookup(scraped_data),
+        "focused_listing": {},
+    }
 
 
 def enrich_with_maps(state: AgentState) -> AgentState:
     """Augment listings with nearby points of interest via Google Maps."""
     gmaps_client = get_gmaps_client()
-    listings = state.get("listings", []) or []
+    listings = state.get("scraped_listings") or state.get("listings") or []
     if not gmaps_client:
         return {**state, "enriched_listings": listings}
 
@@ -604,7 +776,7 @@ def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]]) -> List[str
 def rank_and_format(state: AgentState) -> AgentState:
     """Score listings, select the top 3, and craft the user-facing reply."""
     prefs = state.get("preferences", {})
-    listings = state.get("enriched_listings") or state.get("listings") or []
+    listings = state.get("enriched_listings") or state.get("scraped_listings") or state.get("listings") or []
     ranked = sorted(listings, key=lambda item: _score_listing(item, prefs), reverse=True)[:5]
     if not ranked:
         reply, persona_key = generate_persona_reply(
@@ -633,6 +805,7 @@ def rank_and_format(state: AgentState) -> AgentState:
         "ranked_listings": ranked,
         "active_persona": persona_key,
         "preferences_updated": False,
+        "listing_lookup": _build_listing_lookup(ranked),
     }
 
 
@@ -814,7 +987,37 @@ def handle_persona_command(state: AgentState, user_input: str) -> Optional[str]:
 
 def answer_with_existing(state: AgentState) -> AgentState:
     """Use existing listings and history to answer follow-ups without re-scraping."""
-    listings = state.get("enriched_listings") or state.get("listings") or []
+    messages = state.get("messages") or []
+    latest_user_message = messages[-1]["content"] if messages else ""
+
+    scraped_data = _load_scraped_output(state, force_reload=False)
+    lookup = state.get("listing_lookup") or _build_listing_lookup(scraped_data)
+    state["listing_lookup"] = lookup
+
+    # Check if the user is asking about a specific listing and reload disk data for freshness.
+    identity = _identify_listing_from_message(latest_user_message, lookup, scraped_data)
+    if identity:
+        refreshed_data = _load_scraped_output(state, force_reload=True)
+        focus_listing = _find_listing_in_data(refreshed_data, identity)
+        if focus_listing:
+            state["scraped_listings"] = refreshed_data
+            state["listing_lookup"] = _build_listing_lookup(refreshed_data)
+            reply, persona_key = generate_persona_reply(
+                state,
+                intent="listing_follow_up",
+                listing_summaries=[],
+                notes="Use only the focused listing data loaded from actor_output.json; be concise and avoid inventing missing details.",
+                focused_listing=focus_listing,
+            )
+            return {
+                **state,
+                "reply": reply,
+                "active_persona": persona_key,
+                "focused_listing": focus_listing,
+                "listing_lookup": state.get("listing_lookup", {}),
+            }
+
+    listings = state.get("enriched_listings") or state.get("scraped_listings") or state.get("listings") or []
     if not listings:
         reply, persona_key = generate_persona_reply(
             state,
@@ -851,7 +1054,7 @@ def build_graph() -> StateGraph:
         lambda s: "clarify"
         if s.get("need_more_info")
         else "answer_existing"
-        if s.get("listings") and not s.get("preferences_updated")
+        if s.get("scraped_listings") and not s.get("preferences_updated")
         else "build_query",
         {"clarify": "clarify", "build_query": "build_query", "answer_existing": "answer_existing"},
     )
@@ -864,7 +1067,7 @@ def build_graph() -> StateGraph:
 
     graph.add_conditional_edges(
         "scrape",
-        lambda s: "enrich" if s.get("listings") else "end",
+        lambda s: "enrich" if s.get("scraped_listings") else "end",
         {"enrich": "enrich", "end": END},
     )
 
