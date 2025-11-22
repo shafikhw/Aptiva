@@ -17,6 +17,7 @@ Environment variables:
 
 from __future__ import annotations
 
+import copy
 import json
 import os
 import re
@@ -150,6 +151,12 @@ class AgentState(TypedDict, total=False):
     pending_lease_waiting_plan: bool
     pending_lease_plan_options: List[Dict[str, Any]]
     pending_lease_selected_plan: Dict[str, Any]
+    pending_lease_waiting_unit: bool
+    pending_lease_unit_options: List[Dict[str, Any]]
+    pending_lease_selected_unit: Dict[str, Any]
+    pending_lease_waiting_unit: bool
+    pending_lease_unit_options: List[Dict[str, Any]]
+    pending_lease_selected_unit: Dict[str, Any]
     pending_lease_waiting_start: bool
     pending_lease_waiting_duration: bool
     pending_lease_duration_bounds: Tuple[Optional[int], Optional[int]]
@@ -751,6 +758,16 @@ def _reason_tags(listing: Dict[str, Any], prefs: Dict[str, Any], amenity_titles:
     return reasons
 
 
+def _parse_price_value(value: Optional[str]) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        cleaned = re.sub(r"[^\d]", "", str(value))
+        return int(cleaned) if cleaned else None
+    except Exception:
+        return None
+
+
 def _parse_rent_label(label: Optional[str]) -> Tuple[Optional[int], Optional[int]]:
     if not label:
         return None, None
@@ -765,6 +782,12 @@ def _parse_rent_label(label: Optional[str]) -> Tuple[Optional[int], Optional[int
     return min(values), max(values)
 
 
+def _clean_model_name(name: Optional[str]) -> Optional[str]:
+    if not name:
+        return None
+    return re.sub(r"\s+", " ", name).strip()
+
+
 def _extract_plan_options(listing: Dict[str, Any]) -> List[Dict[str, Any]]:
     options: List[Dict[str, Any]] = []
     plans = listing.get("pricingAndFloorPlans") or []
@@ -772,15 +795,20 @@ def _extract_plan_options(listing: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not isinstance(plan, dict):
             continue
         rent_min, rent_max = _parse_rent_label(plan.get("rent_label"))
+        text_blob = " ".join(plan.get("details") or [])
+        rent_text = " ".join([plan.get("rent_label") or "", text_blob]).lower()
+        per_person = "per person" in rent_text
         option = {
             "index": idx,
-            "model_name": plan.get("model_name"),
+            "model_name": _clean_model_name(plan.get("model_name")) or plan.get("model_name"),
             "details": plan.get("details") or [],
             "rent_label": plan.get("rent_label"),
             "rent_min": rent_min,
             "rent_max": rent_max,
             "availability": plan.get("availability"),
             "deposit": plan.get("deposit") or plan.get("deposit_label"),
+            "units": plan.get("units") or [],
+            "per_person": per_person,
         }
         options.append(option)
     return options
@@ -816,12 +844,55 @@ def _format_plan_prompt(plan_options: List[Dict[str, Any]], option_number: int) 
         rent = option.get("rent_label") or "rent TBD"
         availability = option.get("availability") or "availability not listed"
         deposit = option.get("deposit")
-        line = f"{option['index']}. {label} | {rent} | {availability}"
+        pieces = [f"{option['index']}. {label}", rent, availability]
         if deposit:
-            line += f" | Deposit: {deposit}"
-        lines.append(line)
+            pieces.append(f"Deposit: {deposit}")
+        if option.get("per_person"):
+            pieces.append("price per person")
+        lines.append(" | ".join(pieces))
     lines.append("Reply with the plan number or name (e.g., 'plan 2' or 'B06').")
     return "\n".join(lines)
+
+
+def _format_unit_prompt(unit_options: List[Dict[str, Any]], option_number: int, plan_name: Optional[str]) -> str:
+    header = f"Option {option_number}"
+    if plan_name:
+        header += f" ({plan_name})"
+    header += " has multiple units. Which one should I use for the lease?"
+    lines = [header]
+    for option in unit_options[:10]:
+        idx = option.get("index")
+        label = option.get("unit") or "Unit"
+        price = option.get("price")
+        sqft = option.get("square_feet")
+        availability = option.get("availability")
+        details = option.get("details")
+        parts = [f"{idx}. {label}"]
+        if price:
+            parts.append(f"Base Price: ${price:,}")
+        if sqft:
+            parts.append(f"Sq Ft: {sqft}")
+        if availability:
+            parts.append(f"Availability: {availability}")
+        if details:
+            parts.append(f"Details: {details}")
+        lines.append(" | ".join(parts))
+    lines.append("Reply with the unit number (e.g., '1' or '2').")
+    return "\n".join(lines)
+
+
+def _match_unit_selection(user_text: str, unit_options: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    lowered = user_text.lower().strip()
+    numbers = re.findall(r"\d+", lowered)
+    if numbers:
+        try:
+            idx = int(numbers[-1])
+            for option in unit_options:
+                if option.get("index") == idx:
+                    return option
+        except ValueError:
+            pass
+    return None
 
 
 def _derive_listing_location(listing: Dict[str, Any], prefs: Dict[str, Any]) -> str:
@@ -1089,6 +1160,24 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
         normalized = f"option {pending_choice + 1} lease draft"
         user_input = normalized
 
+    waiting_for_unit = bool(state.get("pending_lease_waiting_unit"))
+    if waiting_for_unit and pending_choice is not None:
+        unit_options = state.get("pending_lease_unit_options") or []
+        selection = _match_unit_selection(user_input, unit_options)
+        if not selection:
+            plan_name = state.get("pending_lease_selected_plan", {}).get("model_name")
+            prompt = _format_unit_prompt(unit_options, pending_choice + 1, plan_name)
+            history = state.get("messages") or []
+            history.append({"role": "user", "content": user_input})
+            history.append({"role": "assistant", "content": prompt})
+            state["messages"] = history
+            return prompt
+        state["pending_lease_selected_unit"] = selection
+        state["pending_lease_waiting_unit"] = False
+        state["pending_lease_unit_options"] = []
+        normalized = f"option {pending_choice + 1} lease draft"
+        user_input = normalized
+
     waiting_for_start = bool(state.get("pending_lease_waiting_start"))
     if waiting_for_start and pending_choice is not None:
         move_date = _parse_move_in_date(user_input)
@@ -1216,13 +1305,60 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
             history.append({"role": "assistant", "content": prompt})
             state["messages"] = history
             return prompt
+        else:
+            state["pending_lease_plan_options"] = []
+            state["pending_lease_waiting_plan"] = False
     state["pending_lease_selected_plan"] = selected_plan
     state["pending_lease_plan_options"] = []
     state["pending_lease_choice"] = choice_index
 
+    # Prompt for unit immediately after plan selection
+    plan_units_source = selected_plan or {}
+    selected_unit = state.get("pending_lease_selected_unit")
+    plan_units = plan_units_source.get("units") or []
+    if not selected_unit and plan_units:
+        unit_options = []
+        for idx, unit in enumerate(plan_units, start=1):
+            if not isinstance(unit, dict):
+                continue
+            price = _parse_price_value(unit.get("price"))
+            details = unit.get("details")
+            if isinstance(details, list):
+                details = ", ".join(details)
+            unit_options.append(
+                {
+                    "index": idx,
+                    "unit": unit.get("unit") or unit.get("label") or "",
+                    "price": price,
+                    "square_feet": unit.get("square_feet"),
+                    "availability": unit.get("availability") or unit.get("available") or unit.get("availabilityStatus"),
+                    "details": details,
+                }
+            )
+        priced_options = [u for u in unit_options if u.get("price")]
+        target_options = priced_options or unit_options
+        if target_options:
+            prompt = _format_unit_prompt(
+                target_options,
+                choice_index + 1,
+                selected_plan.get("model_name") if selected_plan else None,
+            )
+            state["pending_lease_waiting_unit"] = True
+            state["pending_lease_unit_options"] = target_options
+            state["pending_lease_choice"] = choice_index
+            history = state.get("messages") or []
+            history.append({"role": "user", "content": user_input})
+            history.append({"role": "assistant", "content": prompt})
+            state["messages"] = history
+            return prompt
+    state["pending_lease_selected_unit"] = selected_unit
+
     duration_bounds = _extract_lease_duration_bounds(listing)
+    if duration_bounds == (None, None):
+        duration_bounds = (12, 12)
     state["pending_lease_duration_bounds"] = duration_bounds
 
+    preferences = state.get("preferences") or {}
     preferences = state.get("preferences") or {}
     if not preferences.get("lease_start_date"):
         prompt = "When should the lease start? Please reply with a move-in date (YYYY-MM-DD)."
@@ -1267,12 +1403,21 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
         overrides["selected_plan_availability"] = selected_plan.get("availability")
         overrides["selected_plan_rent_label"] = selected_plan.get("rent_label")
         overrides["selected_plan_deposit"] = selected_plan.get("deposit")
-        state["pending_lease_selected_plan"] = None
+        overrides["selected_plan_price_per_person"] = selected_plan.get("per_person", False)
+    selected_unit = state.get("pending_lease_selected_unit")
+    if selected_unit:
+        if selected_unit.get("price"):
+            overrides["monthly_rent"] = selected_unit["price"]
+        overrides["selected_unit_label"] = selected_unit.get("unit")
+        overrides["selected_unit_sqft"] = selected_unit.get("square_feet")
+        overrides["selected_unit_price"] = selected_unit.get("price")
+        overrides["selected_unit_availability"] = selected_unit.get("availability")
+        overrides["selected_unit_details"] = selected_unit.get("details")
     if listing_summary:
         rent_choice = listing_summary.get("price_min")
         if rent_choice is None:
             rent_choice = listing_summary.get("price_max")
-        if rent_choice is not None:
+        if rent_choice is not None and "monthly_rent" not in overrides:
             overrides["monthly_rent"] = rent_choice
         location_choice = listing_summary.get("location")
         if location_choice:
@@ -1296,6 +1441,10 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     )
     package = lease_drafter.build_lease_package(lease_inputs)
     compliance = package["compliance"]
+
+    state["last_listing"] = listing
+    state["last_overrides"] = copy.deepcopy(overrides)
+    state["last_duration_bounds"] = state.get("pending_lease_duration_bounds")
 
     source_path = None
     if listing:
@@ -1347,15 +1496,108 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     drafts = state.get("lease_drafts") or []
     drafts.append(package)
     state["lease_drafts"] = drafts
+    state["pending_lease_waiting_name"] = False
+    state["pending_lease_waiting_plan"] = False
+    state["pending_lease_plan_options"] = []
+    state["pending_lease_selected_plan"] = None
+    state["pending_lease_waiting_unit"] = False
+    state["pending_lease_unit_options"] = []
+    state["pending_lease_selected_unit"] = None
+    state["pending_lease_waiting_start"] = False
+    state["pending_lease_waiting_duration"] = False
     state["pending_lease_choice"] = None
     state["pending_lease_waiting_name"] = False
     state["pending_lease_waiting_plan"] = False
+    state["pending_lease_waiting_unit"] = False
+    state["pending_lease_unit_options"] = []
+    state["pending_lease_selected_unit"] = None
     state["pending_lease_plan_options"] = []
     state["pending_lease_selected_plan"] = None
     state["pending_lease_waiting_start"] = False
     state["pending_lease_waiting_duration"] = False
     state["pending_lease_duration_bounds"] = (None, None)
     return reply
+
+
+def handle_lease_update_request(state: AgentState, user_input: str) -> Optional[str]:
+    lowered = user_input.lower().strip()
+    if not lowered:
+        return None
+    keywords = ["update lease", "change lease", "edit lease", "modify lease", "lease update"]
+    if not any(keyword in lowered for keyword in keywords):
+        return None
+
+    last_listing = state.get("last_listing")
+    last_overrides = state.get("last_overrides")
+    if not last_listing or not last_overrides:
+        return "I don't have a recent lease draft to update yet. Please generate one first."
+
+    overrides = copy.deepcopy(last_overrides)
+    preferences = state.get("preferences") or {}
+    updates_applied: List[str] = []
+
+    move_date = _parse_move_in_date(user_input)
+    if move_date:
+        overrides["lease_start_date"] = move_date
+        preferences["lease_start_date"] = move_date
+        updates_applied.append(f"Move-in date set to {move_date}.")
+
+    duration_bounds = state.get("last_duration_bounds") or (None, None)
+    if "month" in lowered or "term" in lowered or "duration" in lowered:
+        months = _parse_duration_months(user_input)
+        if months:
+            lower_bound, upper_bound = duration_bounds
+            if upper_bound and months > upper_bound:
+                return f"The community allows terms up to {upper_bound} months. Please choose a duration within that range."
+            if lower_bound and months < lower_bound:
+                return f"The community requires at least {lower_bound} months. Please choose a duration within that range."
+            overrides["lease_term_months"] = months
+            preferences["lease_duration_months"] = months
+            updates_applied.append(f"Lease term set to {months} months.")
+
+    if "rent" in lowered or "$" in user_input:
+        rent_value = _parse_price_value(user_input)
+        if rent_value:
+            overrides["monthly_rent"] = rent_value
+            updates_applied.append(f"Monthly rent updated to ${rent_value:,}.")
+
+    if "name" in lowered:
+        name = _extract_name_from_message(user_input)
+        if name:
+            overrides["tenant_name"] = name
+            preferences["tenant_name"] = name
+            updates_applied.append(f"Tenant name updated to {name}.")
+
+    if not updates_applied:
+        return "Let me know what you'd like to change (e.g., move-in date, lease term, or rent)."
+
+    state["preferences"] = preferences
+    lease_inputs = lease_drafter.infer_inputs(
+        preferences=preferences,
+        listing=last_listing,
+        overrides=overrides,
+    )
+    package = lease_drafter.build_lease_package(lease_inputs)
+    state["last_overrides"] = copy.deepcopy(overrides)
+    state["last_listing"] = last_listing
+    state["last_duration_bounds"] = duration_bounds
+    source_path = None
+    base_path = Path(package["file_path"])
+    source_path = base_path.parent / "option_source.json"
+    source_path.write_text(json.dumps(last_listing, indent=2, ensure_ascii=True), encoding="ascii", errors="ignore")
+    package["listing_source"] = str(source_path)
+
+    drafts = state.get("lease_drafts") or []
+    drafts.append(package)
+    state["lease_drafts"] = drafts
+
+    summary = [
+        "Updated the existing lease draft:",
+        *updates_applied,
+        f"New text: {package['file_path']}",
+        f"New PDF: {package.get('pdf_path', 'n/a')}",
+    ]
+    return "\n".join(summary)
 
 
 def answer_with_existing(state: AgentState) -> AgentState:
@@ -1449,6 +1691,10 @@ def main() -> None:
         command_reply = handle_persona_command(state, user_input)
         if command_reply:
             print(f"Agent: {command_reply}\n")
+            continue
+        update_reply = handle_lease_update_request(state, user_input)
+        if update_reply:
+            print(f"Agent: {update_reply}\n")
             continue
         lease_reply = handle_lease_command(state, user_input)
         if lease_reply:

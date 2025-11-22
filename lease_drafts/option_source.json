@@ -1,628 +1,647 @@
 {
   "pricingAndFloorPlans": [
     {
-      "model_name": "S1",
-      "rent_label": "$749",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "410 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A2",
-      "rent_label": "$799",
+      "model_name": "11B",
+      "rent_label": "$918 - $1,838",
       "details": [
         "1 Bed",
         "1 Bath",
-        "668 Sq Ft"
+        "732 Sq Ft"
       ],
-      "units": []
-    },
-    {
-      "model_name": "A1",
-      "rent_label": "$849",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "570 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A3",
-      "rent_label": "$875",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "680 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "B1",
-      "rent_label": "$975",
-      "details": [
-        "2 Beds",
-        "1 Bath",
-        "808 Sq Ft"
-      ],
-      "availability": "8 Available units",
+      "availability": "5 Available units",
       "units": [
         {
-          "unit": "016",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#ct22rke-2-unit"
+          "unit": "03209",
+          "price": "$918",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#9vg7ql4-2-unit"
         },
         {
-          "unit": "019",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#n8hgrbp-2-unit"
+          "unit": "07302",
+          "price": "$948",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#c8y5tlf-2-unit"
         },
         {
-          "unit": "034",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h187f22-2-unit"
+          "unit": "04209",
+          "price": "$1,033",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#typq3h9-2-unit"
         },
         {
-          "unit": "017",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#cntrzxd-2-unit"
+          "unit": "10202",
+          "price": "$973",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3l720jf-2-unit"
         },
         {
-          "unit": "020",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6dwgp6t-2-unit"
-        },
-        {
-          "unit": "033",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#t7xf94c-2-unit"
-        },
-        {
-          "unit": "032",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#17xgj95-2-unit"
-        },
-        {
-          "unit": "003",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#1n07m85-2-unit"
+          "unit": "08302",
+          "price": "$973",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#0pmgj70-2-unit"
         }
       ]
     },
     {
-      "model_name": "B2",
-      "rent_label": "$975",
+      "model_name": "11C",
+      "rent_label": "$933 - $1,683",
       "details": [
-        "2 Beds",
+        "1 Bed",
         "1 Bath",
-        "818 Sq Ft"
+        "745 Sq Ft"
       ],
-      "availability": "10 Available units",
+      "availability": "3 Available units",
       "units": [
         {
-          "unit": "215",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6zjc8dv-2-unit"
+          "unit": "06308",
+          "price": "$933",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#mgb6wpj-2-unit"
         },
         {
-          "unit": "230",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h5d0fy3-2-unit"
+          "unit": "06101",
+          "price": "$1,093",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#p7vwmgt-2-unit"
         },
         {
-          "unit": "243",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#v3t5mvd-2-unit"
-        },
-        {
-          "unit": "245",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#zky1n0w-2-unit"
-        },
-        {
-          "unit": "202",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#0hdkt53-2-unit"
-        },
-        {
-          "unit": "239",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yd8mlfs-2-unit"
-        },
-        {
-          "unit": "216",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#flk8bjs-2-unit"
-        },
-        {
-          "unit": "115",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yj5bgqs-2-unit"
-        },
-        {
-          "unit": "139",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#082my71-2-unit"
-        },
-        {
-          "unit": "214",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#gwh125w-2-unit"
+          "unit": "12207",
+          "price": "$993",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#phxshpr-2-unit"
         }
       ]
     },
     {
-      "model_name": "B3",
-      "rent_label": "$1,049",
+      "model_name": "11D",
+      "rent_label": "$943 - $1,908",
       "details": [
-        "2 Beds",
-        "2 Baths",
-        "956 Sq Ft"
+        "1 Bed",
+        "1 Bath",
+        "791 Sq Ft"
       ],
-      "availability": "1 Available unit",
+      "availability": "7 Available units",
       "units": [
         {
-          "unit": "133",
-          "price": "$1,049",
-          "square_feet": "956",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#mentjwj-2-unit"
+          "unit": "05303",
+          "price": "$943",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#fk6y03v-2-unit"
+        },
+        {
+          "unit": "10207",
+          "price": "$978",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#xzpvcmn-2-unit"
+        },
+        {
+          "unit": "02107",
+          "price": "$1,038",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#hr7t350-2-unit"
+        },
+        {
+          "unit": "08104",
+          "price": "$983",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#vs7b8jd-2-unit"
+        },
+        {
+          "unit": "02305",
+          "price": "$948",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#5dnhbtp-2-unit"
+        },
+        {
+          "unit": "10305",
+          "price": "$963",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#ykd1fwv-2-unit"
+        },
+        {
+          "unit": "02306",
+          "price": "$968",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#154x487-2-unit"
         }
       ]
     },
     {
-      "model_name": "B5",
-      "rent_label": "$1,099",
+      "model_name": "11A",
+      "rent_label": "$1,003 - $1,793",
       "details": [
-        "2 Beds",
-        "2.5 Baths",
-        "1,002 Sq Ft"
+        "1 Bed",
+        "1 Bath",
+        "726 Sq Ft"
       ],
       "availability": "4 Available units",
       "units": [
         {
-          "unit": "142",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#c2rq17f-2-unit"
+          "unit": "01203",
+          "price": "$1,008",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3tpj0fd-2-unit"
         },
         {
-          "unit": "118",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#fqf5mbr-2-unit"
+          "unit": "01101",
+          "price": "$1,043",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#k6kppr8-2-unit"
         },
         {
-          "unit": "150",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#p7wkb6t-2-unit"
+          "unit": "01202",
+          "price": "$1,003",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#8hgbg80-2-unit"
         },
         {
-          "unit": "117",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#msrzvmh-2-unit"
+          "unit": "01204",
+          "price": "$1,003",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#tqmzzkb-2-unit"
         }
       ]
     },
     {
-      "model_name": "B4",
-      "rent_label": "$1,099 - $1,149",
+      "model_name": "22A",
+      "rent_label": "$1,073 - $2,003",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,002 Sq Ft"
-      ],
-      "availability": "6 Available units",
-      "units": [
-        {
-          "unit": "211",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#5tlp91n-2-unit"
-        },
-        {
-          "unit": "209",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#npnlxvq-2-unit"
-        },
-        {
-          "unit": "232",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#rv7c113-2-unit"
-        },
-        {
-          "unit": "233",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#w8cg2bk-2-unit"
-        },
-        {
-          "unit": "219",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#pkxlj2r-2-unit"
-        },
-        {
-          "unit": "222",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#4cqjz3j-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "S1",
-      "rent_label": "$749",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "410 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A2",
-      "rent_label": "$799",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "668 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A1",
-      "rent_label": "$849",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "570 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A3",
-      "rent_label": "$875",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "680 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "B1",
-      "rent_label": "$975",
-      "details": [
-        "2 Beds",
-        "1 Bath",
-        "808 Sq Ft"
-      ],
-      "availability": "8 Available units",
-      "units": [
-        {
-          "unit": "016",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#ct22rke-2-unit"
-        },
-        {
-          "unit": "019",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#n8hgrbp-2-unit"
-        },
-        {
-          "unit": "034",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h187f22-2-unit"
-        },
-        {
-          "unit": "017",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#cntrzxd-2-unit"
-        },
-        {
-          "unit": "020",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6dwgp6t-2-unit"
-        },
-        {
-          "unit": "033",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#t7xf94c-2-unit"
-        },
-        {
-          "unit": "032",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#17xgj95-2-unit"
-        },
-        {
-          "unit": "003",
-          "price": "$975",
-          "square_feet": "808",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#1n07m85-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B2",
-      "rent_label": "$975",
-      "details": [
-        "2 Beds",
-        "1 Bath",
-        "818 Sq Ft"
-      ],
-      "availability": "10 Available units",
-      "units": [
-        {
-          "unit": "215",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#6zjc8dv-2-unit"
-        },
-        {
-          "unit": "230",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#h5d0fy3-2-unit"
-        },
-        {
-          "unit": "243",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#v3t5mvd-2-unit"
-        },
-        {
-          "unit": "245",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#zky1n0w-2-unit"
-        },
-        {
-          "unit": "202",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#0hdkt53-2-unit"
-        },
-        {
-          "unit": "239",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yd8mlfs-2-unit"
-        },
-        {
-          "unit": "216",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#flk8bjs-2-unit"
-        },
-        {
-          "unit": "115",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#yj5bgqs-2-unit"
-        },
-        {
-          "unit": "139",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#082my71-2-unit"
-        },
-        {
-          "unit": "214",
-          "price": "$975",
-          "square_feet": "818",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#gwh125w-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B3",
-      "rent_label": "$1,049",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "956 Sq Ft"
-      ],
-      "availability": "1 Available unit",
-      "units": [
-        {
-          "unit": "133",
-          "price": "$1,049",
-          "square_feet": "956",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#mentjwj-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B5",
-      "rent_label": "$1,099",
-      "details": [
-        "2 Beds",
-        "2.5 Baths",
-        "1,002 Sq Ft"
+        "1,124 Sq Ft"
       ],
       "availability": "4 Available units",
       "units": [
         {
-          "unit": "142",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#c2rq17f-2-unit"
+          "unit": "12303",
+          "price": "$1,073",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3qj9vne-2-unit"
         },
         {
-          "unit": "118",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#fqf5mbr-2-unit"
+          "unit": "12206",
+          "price": "$1,093",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#gvr5l5x-2-unit"
         },
         {
-          "unit": "150",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#p7wkb6t-2-unit"
+          "unit": "03306",
+          "price": "$1,153",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#yj0j5ks-2-unit"
         },
         {
-          "unit": "117",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#msrzvmh-2-unit"
+          "unit": "07305",
+          "price": "$1,168",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#mqqrpxl-2-unit"
         }
       ]
     },
     {
-      "model_name": "B4",
-      "rent_label": "$1,099 - $1,149",
+      "model_name": "22B",
+      "rent_label": "$1,123 - $1,853",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,002 Sq Ft"
+        "1,137 Sq Ft"
       ],
-      "availability": "6 Available units",
+      "availability": "4 Available units",
       "units": [
         {
-          "unit": "211",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#5tlp91n-2-unit"
+          "unit": "04101",
+          "price": "$1,133",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#4znsv3h-2-unit"
         },
         {
-          "unit": "209",
-          "price": "$1,099",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#npnlxvq-2-unit"
+          "unit": "07110",
+          "price": "$1,183",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#c3qj26f-2-unit"
         },
         {
-          "unit": "232",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#rv7c113-2-unit"
+          "unit": "09201",
+          "price": "$1,123",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#ly7g31g-2-unit"
         },
         {
-          "unit": "233",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#w8cg2bk-2-unit"
+          "unit": "05108",
+          "price": "$1,168",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#wcznk7l-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "21A",
+      "rent_label": "$1,178 - $2,173",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "970 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "11206",
+          "price": "$1,178",
+          "square_feet": "970",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#vrztc3e-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "32A",
+      "rent_label": "$1,448 - $2,703",
+      "details": [
+        "3 Beds",
+        "2 Baths",
+        "1,273 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "08203",
+          "price": "$1,448",
+          "square_feet": "1,273",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#7pgj9ry-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "11B",
+      "rent_label": "$918 - $1,838",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "732 Sq Ft"
+      ],
+      "availability": "5 Available units",
+      "units": [
+        {
+          "unit": "03209",
+          "price": "$918",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#9vg7ql4-2-unit"
         },
         {
-          "unit": "219",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#pkxlj2r-2-unit"
+          "unit": "07302",
+          "price": "$948",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#c8y5tlf-2-unit"
         },
         {
-          "unit": "222",
-          "price": "$1,149",
-          "square_feet": "1,002",
-          "view_more_html": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/#4cqjz3j-2-unit"
+          "unit": "04209",
+          "price": "$1,033",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#typq3h9-2-unit"
+        },
+        {
+          "unit": "10202",
+          "price": "$973",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3l720jf-2-unit"
+        },
+        {
+          "unit": "08302",
+          "price": "$973",
+          "square_feet": "732",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#0pmgj70-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "11C",
+      "rent_label": "$933 - $1,683",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "745 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "06308",
+          "price": "$933",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#mgb6wpj-2-unit"
+        },
+        {
+          "unit": "06101",
+          "price": "$1,093",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#p7vwmgt-2-unit"
+        },
+        {
+          "unit": "12207",
+          "price": "$993",
+          "square_feet": "745",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#phxshpr-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "11D",
+      "rent_label": "$943 - $1,908",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "791 Sq Ft"
+      ],
+      "availability": "7 Available units",
+      "units": [
+        {
+          "unit": "05303",
+          "price": "$943",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#fk6y03v-2-unit"
+        },
+        {
+          "unit": "10207",
+          "price": "$978",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#xzpvcmn-2-unit"
+        },
+        {
+          "unit": "02107",
+          "price": "$1,038",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#hr7t350-2-unit"
+        },
+        {
+          "unit": "08104",
+          "price": "$983",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#vs7b8jd-2-unit"
+        },
+        {
+          "unit": "02305",
+          "price": "$948",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#5dnhbtp-2-unit"
+        },
+        {
+          "unit": "10305",
+          "price": "$963",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#ykd1fwv-2-unit"
+        },
+        {
+          "unit": "02306",
+          "price": "$968",
+          "square_feet": "791",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#154x487-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "11A",
+      "rent_label": "$1,003 - $1,793",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "726 Sq Ft"
+      ],
+      "availability": "4 Available units",
+      "units": [
+        {
+          "unit": "01203",
+          "price": "$1,008",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3tpj0fd-2-unit"
+        },
+        {
+          "unit": "01101",
+          "price": "$1,043",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#k6kppr8-2-unit"
+        },
+        {
+          "unit": "01202",
+          "price": "$1,003",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#8hgbg80-2-unit"
+        },
+        {
+          "unit": "01204",
+          "price": "$1,003",
+          "square_feet": "726",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#tqmzzkb-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "22A",
+      "rent_label": "$1,073 - $2,003",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,124 Sq Ft"
+      ],
+      "availability": "4 Available units",
+      "units": [
+        {
+          "unit": "12303",
+          "price": "$1,073",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#3qj9vne-2-unit"
+        },
+        {
+          "unit": "12206",
+          "price": "$1,093",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#gvr5l5x-2-unit"
+        },
+        {
+          "unit": "03306",
+          "price": "$1,153",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#yj0j5ks-2-unit"
+        },
+        {
+          "unit": "07305",
+          "price": "$1,168",
+          "square_feet": "1,124",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#mqqrpxl-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "22B",
+      "rent_label": "$1,123 - $1,853",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,137 Sq Ft"
+      ],
+      "availability": "4 Available units",
+      "units": [
+        {
+          "unit": "04101",
+          "price": "$1,133",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#4znsv3h-2-unit"
+        },
+        {
+          "unit": "07110",
+          "price": "$1,183",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#c3qj26f-2-unit"
+        },
+        {
+          "unit": "09201",
+          "price": "$1,123",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#ly7g31g-2-unit"
+        },
+        {
+          "unit": "05108",
+          "price": "$1,168",
+          "square_feet": "1,137",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#wcznk7l-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "21A",
+      "rent_label": "$1,178 - $2,173",
+      "details": [
+        "2 Beds",
+        "1 Bath",
+        "970 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "11206",
+          "price": "$1,178",
+          "square_feet": "970",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#vrztc3e-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "32A",
+      "rent_label": "$1,448 - $2,703",
+      "details": [
+        "3 Beds",
+        "2 Baths",
+        "1,273 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "08203",
+          "price": "$1,448",
+          "square_feet": "1,273",
+          "view_more_html": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/#7pgj9ry-2-unit"
         }
       ]
     }
   ],
-  "url": "https://www.apartments.com/city-view-at-mueller-austin-tx/5ctk3rp/",
+  "url": "https://www.apartments.com/maa-canyon-pointe-austin-tx/5l8f95n/",
   "feesAndPolicies": {},
   "about": {
-    "description": "Experience the best of urban living at City View at Mueller, situated at 1106 Reinli St, Austin, TX 78723. Our recently upgraded one and two bedroom apartments offer a modern and comfortable living space in the heart of vibrant Austin, TX. Located in the Mueller neighborhood, City View is just minutes away from downtown Austin, 1 mile from ACC Highland Campus, and near major freeways I35, 290 & 183 for easy access to work or school. Entertainment is endless with the growing Mueller Development, Windsor Park, and The Domain only a few minutes away. At City View, we offer top-notch amenities that are designed to enhance your living experience. Relax by our sparkling pool, enjoy a workout in our state-of-the-art fitness center, or simply unwind in our lush green spaces. Don't miss out on the chance to live in one of Austin's most sought-after communities. Schedule a tour of City View at Mueller today! City View at Mueller is an apartment community located in Travis County and the 78723 ZIP Code. This area is served by the Austin Independent attendance zone. Unique Features",
+    "description": "TOUR YOUR WAY! We have a tour to fit your needs- virtual, self-guided, or agent-guided. Enjoy modern amenities in a lovely setting at MAA Canyon Pointe in Austin, TX. The spacious one-, two-, and three-bedroom apartments include washer/dryer, built-in entertainment centers, and high ceilings. Select units also feature fireplaces and French doors. Residents enjoy incredible amenities, including the lagoon-style swimming pool, grill and picnic area, 24-hour fitness center, and open-air dog park where all breeds are welcome. Come live at MAA Canyon Pointe in Northwest Austin, and be just minutes from Hwy. 183, Lakeline Mall in Anderson Mill, and outdoor fun at Lake Travis. MAA Canyon Pointe is an apartment community located in Travis County and the 78726 ZIP Code. This area is served by the Leander Independent attendance zone. Unique Features",
     "breadcrumbs": [
       "Texas",
       "Travis County",
       "Austin",
-      "Windsor Park",
-      "City View at Mueller"
+      "Canyon Creek",
+      "MAA Canyon Pointe"
     ],
-    "title": "City View at Mueller",
+    "title": "MAA Canyon Pointe",
     "location": "",
-    "rating": "3.0",
-    "reviews": "2",
+    "rating": "3.8",
+    "reviews": "9",
     "images": [],
-    "image": "https://images1.apartments.com/i2/cWNCPHwV1sKVJ7DjkkbfLnx1z9MPPZZ5g7O9l1sSV3g/111/city-view-at-mueller-austin-tx-primary-photo.png",
+    "image": "https://images1.apartments.com/i2/KV9OZdZpQRXEOk90nPnETMwKDhYUgOBbz6LjSxbQagA/111/maa-canyon-pointe-austin-tx-primary-photo.jpg",
     "Features": [
-      "Backyards*",
-      "Special Price",
-      "Deposit alternatives available through Obligo",
-      "Minutes Away From Downtown Austin",
-      "Outdoor Grilling Area with Gas Grills",
-      "Two On-Site Laundry Facilities",
-      "Spacious Studio, One- & Two-Bedroom Apartment Home",
-      "WiFi Available",
-      "*In Select Apartment Homes",
-      "Just a Few Minutes From Mueller Development, Winds",
-      "On-Site Management & 24-Hour Maintenance Team",
-      "Package Lockers",
-      "Pet Friendly Community with Dog Park",
-      "Quartz & Granite Countertops*",
-      "Two Sparkling Swimming Pools",
-      "Private Patio or Balcony",
-      "A/C & Heating",
-      "One Mile From ACC Highland Campus",
-      "Pool & Courtyard Views Available",
-      "Resident Portal with Online Rent Payment & Service",
-      "Community Wide WiFi",
-      "Natural Gas Range & Oven",
-      "Spacious Walk-In Closets",
-      "Wood Style Plank Flooring Throughout*",
-      "Black Cabinet Hardware & Accents*",
-      "Modern Kitchen with Stainless Steel Appliances"
+      "Emergency Maintenance",
+      "Outdoor Firepit",
+      "Additional Storage",
+      "At&t Fiber",
+      "Business Center With Wifi",
+      "Controlled Access Gate",
+      "Dog Run",
+      "Gated Community",
+      "Outdoor Grill Area",
+      "Planned Social Events",
+      "Courtesy Officer",
+      "No Breed Restrictions",
+      "Storage Units",
+      "Sun Deck",
+      "Pest Control Service",
+      "Pet Friendly",
+      "Picnic/bbq Area",
+      "Washer And Dryer",
+      "Wifi",
+      "Coffee Bar",
+      "Gazebo",
+      "Grilling Area",
+      "Onsite Storage Units",
+      "Wifi Access",
+      "Wifi Hotspot",
+      "Car Care Center",
+      "Carports",
+      "Preferred Employer Discount",
+      "Bike And Walking Trail",
+      "Close To Shopping"
     ]
   },
   "contact": {
-    "property_management_logo": "https://images1.apartments.com/i2/KA5xTKs9L3bHJtxUjXjOVOFMxbPbVhOiHrU9fJZ-aR0/115/harbor-group-management-logo.jpg",
-    "phone_number": "(737) 204-8545",
-    "property_website": "https://www.harborgroupmanagement.com/apartments/tx/austin/city-view-at-mueller?utm_knock=a",
+    "property_management_logo": "https://images1.apartments.com/i2/w_D97828IilOwxnA8eRjntFbkK6qiYLhhVK2n_AFfJM/115/maa-logo.jpg",
+    "phone_number": "(737) 777-8462",
+    "property_website": "https://www.maac.com/texas/austin/maa-canyon-pointe/?utm_medium=ils&utm_source=costar&utm_campaign=listing",
     "language": "Language: English",
     "office_hours": {
       "days": "Monday - Friday,",
-      "hours": "9am - 6pm"
+      "hours": "10am - 6pm"
     }
   },
   "amenities": [
     {
-      "title": "Other Amenities",
+      "title": "Property Services",
       "amenities": [
+        "Package Service",
         "Community-Wide WiFi",
-        "Laundry Facilities",
+        "Wi-Fi",
+        "Controlled Access",
         "Maintenance on site",
         "Property Manager on Site",
-        "24 Hour Access",
-        "Trash Pickup - Door to Door",
+        "Concierge",
         "Recycling",
-        "Online Services",
+        "Planned Social Activities",
         "Pet Play Area",
+        "Car Wash Area"
+      ]
+    },
+    {
+      "title": "Shared Community",
+      "amenities": [
+        "Business Center",
+        "Storage Space",
+        "Walk-Up"
+      ]
+    },
+    {
+      "title": "Fitness & Recreation",
+      "amenities": [
         "Fitness Center",
         "Pool",
-        "Playground",
+        "Walking/Biking Trails"
+      ]
+    },
+    {
+      "title": "Outdoor Features",
+      "amenities": [
+        "Gated",
+        "Sundeck",
         "Courtyard",
         "Grill",
+        "Picnic Area",
         "Dog Park"
       ]
     },
@@ -631,150 +650,149 @@
       "amenities": [
         "High Speed Internet Access",
         "Wi-Fi",
-        "Washer/Dryer Hookup",
+        "Washer/Dryer",
         "Air Conditioning",
         "Heating",
-        "Ceiling Fans",
-        "Smoke Free",
-        "Sprinkler System"
+        "Cable Ready",
+        "Security System",
+        "Storage Space",
+        "Tub/Shower"
       ]
     },
     {
       "title": "Kitchen Features & Appliances",
       "amenities": [
         "Dishwasher",
-        "Granite Countertops",
-        "Stainless Steel Appliances",
+        "Disposal",
+        "Ice Maker",
         "Kitchen",
+        "Microwave",
         "Oven",
         "Range",
         "Refrigerator",
-        "Freezer",
-        "Gas Range"
+        "Freezer"
       ]
     },
     {
       "title": "Model Details",
       "amenities": [
+        "Tile Floors",
         "Vinyl Flooring",
-        "Walk-In Closets",
         "Balcony",
         "Patio",
-        "Porch",
-        "Lawn"
+        "Deck"
       ]
     }
   ],
   "education": {
     "colleges_universities": [
-      "University of Texas at Austin : Drive: 7 min / 3.3 mi",
-      "Austin C.C., Rio Grande Campus : Drive: 9 min / 4.8 mi",
-      "Austin C.C., Eastview Campus : Drive: 10 min / 4.8 mi",
-      "Austin C.C., Riverside Campus : Drive: 14 min / 7.4 mi"
+      "Concordia University Texas : Drive: 4 min / 1.8 mi",
+      "Austin C.C., Cypress Creek : Drive: 8 min / 4.6 mi",
+      "The Art Institute of Austin : Drive: 15 min / 11.2 mi",
+      "Austin C.C., Northridge Campus : Drive: 21 min / 12.1 mi"
     ],
-    "description": "City View at Mueller is within 7 minutes or 3.3 miles from University of Texas at Austin. It is also near Austin C.C., Eastview Campus and Austin C.C., Rio Grande Campus."
+    "description": "MAA Canyon Pointe is within 4 minutes or 1.8 miles from Concordia University Texas. It is also near Austin C.C., Cypress Creek and Austin C.C., Northridge Campus."
   },
   "schools": {
     "public": [
       {
-        "name": "Harris Elementary School",
+        "name": "Grandview Hills Elementary School",
         "subtitle": "Public Elementary School"
       },
       {
-        "name": "Dell Children's Medical Center",
-        "subtitle": "Public Elementary, Middle & High School"
-      },
-      {
-        "name": "Webb Middle School",
+        "name": "Noel Grisham Middle",
         "subtitle": "Public Middle School"
       },
       {
-        "name": "Northeast Early College High School",
+        "name": "Four Points Middle",
+        "subtitle": "Public Middle School"
+      },
+      {
+        "name": "Cedar Park High School",
+        "subtitle": "Public High School"
+      },
+      {
+        "name": "Vandegrift High School",
         "subtitle": "Public High School"
       }
     ],
     "private": [
       {
-        "name": "St Francis School",
-        "subtitle": "Private Elementary & Middle School"
-      },
-      {
-        "name": "Greater Calvary Academy",
+        "name": "Cedar Park Jewish Day School",
         "subtitle": "Private Elementary School"
       },
       {
-        "name": "Griffin School",
-        "subtitle": "Private High School"
+        "name": "Hill Country Christian School",
+        "subtitle": "Private Elementary, Middle & High School"
       }
     ]
   },
   "transportation": {
-    "description": "Transportation options available in Austin include Highland Station, located 1.6 miles from City View at Mueller. City View at Mueller is near Austin-Bergstrom International, located 13.6 miles or 26 minutes away.",
+    "description": "Transportation options available in Austin include Lakeline Station, located 5.3 miles from MAA Canyon Pointe. MAA Canyon Pointe is near Austin-Bergstrom International, located 30.0 miles or 44 minutes away.",
     "groups": [
       {
         "subtitle": "Transit / Subway",
         "stations": [
-          "Highland Station : Drive: 3 min / 1.6 mi",
-          "Crestview Station : Drive: 6 min / 2.4 mi",
-          "M L King Jr Station : Drive: 8 min / 3.8 mi",
-          "Downtown Station : Drive: 8 min / 4.7 mi",
-          "Plaza Saltillo Station : Drive: 9 min / 5.0 mi"
+          "Lakeline Station : Drive: 11 min / 5.3 mi",
+          "Kramer Station : Drive: 18 min / 10.9 mi",
+          "Mckalla Station : Drive: 20 min / 11.3 mi",
+          "Howard Station : Drive: 17 min / 12.2 mi",
+          "Crestview Station : Drive: 21 min / 13.9 mi"
         ]
       },
       {
         "subtitle": "Commuter Rail",
         "stations": [
-          "Austin : Drive: 12 min / 6.0 mi",
-          "Taylor Amtrak : Drive: 39 min / 31.5 mi",
-          "San Marcos Amtrak : Drive: 43 min / 35.2 mi"
+          "Austin : Drive: 28 min / 16.9 mi",
+          "Taylor Amtrak : Drive: 39 min / 31.4 mi"
         ]
       },
       {
         "subtitle": "Airports",
         "stations": [
-          "Austin-Bergstrom International : Drive: 26 min / 13.6 mi"
+          "Austin-Bergstrom International : Drive: 44 min / 30.0 mi"
         ]
       }
     ]
   },
   "pointOfInterest": {
-    "description": "Time and distance from City View at Mueller.",
+    "description": "Time and distance from MAA Canyon Pointe.",
     "groups": [
       {
         "subtitle": "Shopping Centers",
-        "description": "City View at Mueller has 3 shopping centers within 0.6 mile, which is about a 10-minute walk. The miles and minutes will be for the farthest away property.",
+        "description": "MAA Canyon Pointe has 3 shopping centers within 1.6 miles, which is about a 3-minute walk. The miles and minutes will be for the farthest away property.",
         "places": [
-          "Cameron Station : Walk: 8 min / 0.5 mi",
-          "5339 IH-35 : Walk: 10 min / 0.5 mi",
-          "Cameron Village : Walk: 10 min / 0.6 mi"
+          "The Shops at Boulder Lane : Walk: 16 min / 0.8 mi",
+          "Volente Village : Drive: 3 min / 1.6 mi",
+          "Trails at 620 : Drive: 3 min / 1.6 mi"
         ]
       },
       {
         "subtitle": "Parks and Recreation",
-        "description": "City View at Mueller has 5 parks within 4.7 miles, including Thinkery, Elisabet Ney Museum, and Texas Memorial Museum.",
+        "description": "MAA Canyon Pointe has 5 parks within 10.2 miles, including Great Hills Park, Austin Steam Train, and Balcones District Park.",
         "places": [
-          "Thinkery : Drive: 5 min / 2.1 mi",
-          "Elisabet Ney Museum : Drive: 6 min / 2.5 mi",
-          "Texas Memorial Museum : Drive: 7 min / 3.3 mi",
-          "Beverly S. Sheffield Northwest District Park : Drive: 11 min / 4.4 mi",
-          "Shoal Creek Greenbelt Park : Drive: 10 min / 4.7 mi"
+          "Great Hills Park : Drive: 15 min / 7.6 mi",
+          "Austin Steam Train : Drive: 13 min / 8.5 mi",
+          "Balcones District Park : Drive: 17 min / 9.2 mi",
+          "The Stephen F. Austin Planetarium : Drive: 16 min / 9.8 mi",
+          "Bull Creek Greenbelt : Drive: 16 min / 10.2 mi"
         ]
       },
       {
         "subtitle": "Hospitals",
-        "description": "City View at Mueller has 3 hospitals within 2.8 miles, the nearest is Dell Children's Medical Center of Central Texas which is 1.6 miles away and a 4 minute drive.",
+        "description": "MAA Canyon Pointe has 3 hospitals within 9.8 miles, the nearest is Cedar Park Regional Medical Center which is 8.6 miles away and a 13 minute drive.",
         "places": [
-          "Dell Children's Medical Center of Central Texas : Drive: 4 min / 1.6 mi",
-          "Austin Lakes Hospital : Drive: 5 min / 2.6 mi",
-          "St. David's Medical Center : Drive: 5 min / 2.8 mi"
+          "Cedar Park Regional Medical Center : Drive: 13 min / 8.6 mi",
+          "Seton Northwest Hospital : Drive: 14 min / 9.0 mi",
+          "Round Rock Medical Center : Drive: 14 min / 9.8 mi"
         ]
       },
       {
         "subtitle": "Military Bases",
-        "description": "City View at Mueller is 70.0 miles from Fort Hood, and is convenient to other military bases, including Randolph Air Force Base.",
+        "description": "MAA Canyon Pointe is 63.4 miles from Fort Hood, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
         "places": [
-          "Fort Hood : Drive: 86 min / 70.0 mi",
-          "Randolph Air Force Base : Drive: 85 min / 70.1 mi"
+          "Fort Hood : Drive: 82 min / 63.4 mi",
+          "Camp Bullis Military Training Reservation : Drive: 125 min / 95.9 mi"
         ]
       }
     ]

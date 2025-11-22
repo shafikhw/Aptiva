@@ -9,11 +9,12 @@ obvious compliance issues (rent caps, deposit limits, missing clauses).
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
+from uuid import uuid4
 from xml.sax.saxutils import escape
 
 MANDATORY_SECTIONS = [
@@ -218,6 +219,7 @@ def _extract_landlord_name(listing: Dict[str, object], prefs: Dict[str, object])
 def _render_pdf(draft_text: str, pdf_path: Path) -> str:
     """Render draft text into a PDF using ReportLab."""
     try:
+        from reportlab.lib.enums import TA_JUSTIFY
         from reportlab.lib.pagesizes import LETTER
         from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
         from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
@@ -228,31 +230,37 @@ def _render_pdf(draft_text: str, pdf_path: Path) -> str:
     title_style = ParagraphStyle(
         "LeaseTitle",
         parent=styles["Title"],
+        fontName="Helvetica-Bold",
         fontSize=18,
         leading=24,
         spaceAfter=12,
+        alignment=1,
     )
     meta_style = ParagraphStyle(
         "LeaseMeta",
         parent=styles["Normal"],
+        fontName="Helvetica",
         fontSize=11,
-        leading=14,
+        leading=15,
         spaceAfter=8,
     )
     section_style = ParagraphStyle(
         "LeaseSection",
         parent=styles["Heading4"],
+        fontName="Helvetica-Bold",
         fontSize=12,
-        leading=16,
-        spaceBefore=10,
-        spaceAfter=4,
+        leading=18,
+        spaceBefore=12,
+        spaceAfter=6,
     )
     body_style = ParagraphStyle(
         "LeaseBody",
         parent=styles["Normal"],
+        fontName="Helvetica",
         fontSize=11,
-        leading=15,
-        spaceAfter=6,
+        leading=16,
+        spaceAfter=8,
+        alignment=TA_JUSTIFY,
     )
 
     story = []
@@ -333,6 +341,12 @@ class LeaseDraftInputs:
     selected_plan_availability: Optional[str] = None
     selected_plan_rent_label: Optional[str] = None
     selected_plan_deposit: Optional[str] = None
+    selected_plan_price_per_person: bool = False
+    selected_unit_label: Optional[str] = None
+    selected_unit_sqft: Optional[str] = None
+    selected_unit_price: Optional[int] = None
+    selected_unit_availability: Optional[str] = None
+    selected_unit_details: Optional[str] = None
 
     def __post_init__(self) -> None:
         for attr in (
@@ -355,6 +369,10 @@ class LeaseDraftInputs:
             "selected_plan_availability",
             "selected_plan_rent_label",
             "selected_plan_deposit",
+            "selected_unit_label",
+            "selected_unit_sqft",
+            "selected_unit_availability",
+            "selected_unit_details",
         ):
             val = getattr(self, attr)
             if isinstance(val, str):
@@ -413,6 +431,17 @@ def generate_lease_text(inputs: LeaseDraftInputs) -> str:
         plan_lines.append(f"   Availability reported by community: {inputs.selected_plan_availability}.")
     if inputs.selected_plan_deposit:
         plan_lines.append(f"   Plan-specific deposit: {inputs.selected_plan_deposit}.")
+    if inputs.selected_unit_label:
+        unit_line = f"   Selected unit: {inputs.selected_unit_label}"
+        if inputs.selected_unit_sqft:
+            unit_line += f" ({inputs.selected_unit_sqft} sq ft)"
+        if inputs.selected_unit_price:
+            unit_line += f" at ${inputs.selected_unit_price:,}/month"
+        plan_lines.append(unit_line + ".")
+        if inputs.selected_unit_availability:
+            plan_lines.append(f"   Unit availability: {inputs.selected_unit_availability}.")
+        if inputs.selected_unit_details:
+            plan_lines.append(f"   Unit details: {inputs.selected_unit_details}.")
 
     lines = [
         "RESIDENTIAL LEASE AGREEMENT",
@@ -447,6 +476,8 @@ def generate_lease_text(inputs: LeaseDraftInputs) -> str:
 
     if plan_lines:
         lines.extend(["", "   Floor plan selection:"] + plan_lines)
+    if inputs.selected_plan_price_per_person:
+        lines.append("   Note: Community pricing for this plan is listed per person.")
 
     lines.append("   Utilities & Essentials: Additional fees (utilities packages, parking, pet fees, etc.) may apply per community policies.")
 
@@ -600,8 +631,11 @@ def build_lease_package(inputs: LeaseDraftInputs, output_dir: str = "lease_draft
     path = Path(output_dir)
     path.mkdir(parents=True, exist_ok=True)
     city_slug = inputs.city.lower().replace(" ", "_") if inputs.city else "lease"
-    timestamp = date.today().strftime("%Y%m%d")
-    file_path = path / f"{city_slug}_lease_draft_{timestamp}.txt"
+    username = inputs.tenant_name or "user"
+    username_slug = re.sub(r"[^a-zA-Z0-9]+", "_", username.strip()).strip("_") or "user"
+    unique_id = uuid4().hex[:8]
+    filename_base = f"{username_slug}_{unique_id}_lease_draft"
+    file_path = path / f"{filename_base}.txt"
     file_path.write_text(draft_text, encoding="ascii", errors="strict")
     pdf_path = file_path.with_suffix(".pdf")
     render_pdf_from_text(draft_text, str(pdf_path))
