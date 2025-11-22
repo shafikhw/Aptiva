@@ -623,7 +623,7 @@ def compliance_report(inputs: LeaseDraftInputs, draft_text: str) -> Dict[str, Li
     return {"issues": issues, "warnings": warnings, "rules_checked": rules_checked}
 
 
-def build_lease_package(inputs: LeaseDraftInputs, output_dir: str = "lease_drafts") -> Dict[str, object]:
+def build_lease_package(inputs: LeaseDraftInputs, output_dir: str = "system1/lease_drafts") -> Dict[str, object]:
     """Generate the lease draft, run compliance checks, and persist the file."""
     draft_text = generate_lease_text(inputs)
     report = compliance_report(inputs, draft_text)
