@@ -10,6 +10,9 @@ load_dotenv()
 DEFAULT_ACTOR_ID = "BvepfniODI2AixuNN"
 
 
+
+APIFY_API_TOKEN= os.getenv("APIFY_API_TOKEN")
+ACTOR_ID = "BvepfniODI2AixuNN" 
 def _get_client() -> ApifyClient:
     token = os.getenv("APIFY_API_TOKEN") or os.getenv("APIFY_TOKEN")
     if not token:
