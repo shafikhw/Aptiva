@@ -4,17 +4,19 @@ import json
 import asyncio
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional, Tuple
-
 from openai import OpenAI
 from fastmcp import Client as McpClient
 from fastmcp.client.transports import StreamableHttpTransport
+import dotenv
+
+dotenv.load_dotenv()
 
 # =========================
 # CONFIG
 # =========================
 
 # NEVER hard-code your API key in the file.
-OPENAI_API_KEY = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise RuntimeError("Set OPENAI_API_KEY in your environment.")
 OPENAI_MODEL = "gpt-4o"
@@ -26,6 +28,8 @@ ZAPIER_MCP_URL = os.getenv(
 )
 ZAPIER_MCP_TOKEN = ""
 
+
+## change code here
 USER_CALENDAR_ID = os.getenv("USER_CAL_ID", "lamamawlawi9@gmail.com")
 LANDLORD_CALENDAR_ID = os.getenv("LANDLORD_CAL_ID", "mawlama152003@gmail.com")
 USER_EMAIL = USER_CALENDAR_ID
@@ -38,7 +42,8 @@ DEFAULT_SLOT_MINUTES = 30
 # Local timezone offset from UTC, in hours (e.g. 2 for UTC+2, -5 for UTC-5)
 LOCAL_TZ_OFFSET_HOURS = 2
 LOCAL_TZ = timezone(timedelta(hours=LOCAL_TZ_OFFSET_HOURS))
-
+# end of change
+## ======================================================================
 
 # =========================
 # Utility helpers

@@ -1,0 +1,89 @@
+{
+    "pricingAndFloorPlans": [
+        {
+            "model_name": "",
+            "rent_label": "",
+            "details": [],
+            "units": [
+                {
+                    "unit": "",
+                    "price": "",
+                    "square_feet": "",
+                    "view_more_html": ""
+                }
+            ],
+            "availability": ""
+        }
+    ],
+    "url": "",
+    "feesAndPolicies": {
+        "details": {
+            "Property Information": []
+        }
+    },
+    "about": {
+        "description": "",
+        "breadcrumbs": [],
+        "title": "",
+        "location": "",
+        "rating": "",
+        "reviews": "",
+        "images": [],
+        "image": "",
+        "Unique Features": [],
+        "Features": []
+    },
+    "contact": {
+        "property_management_logo": "",
+        "phone_number": "",
+        "property_website": "",
+        "language": "",
+        "office_hours": {
+            "days": "Monday - Friday",
+            "hours": "9am - 5pm"
+        }
+    },
+    "amenities": [
+        {
+            "title": "",
+            "amenities": []
+        }
+    ],
+    "education": {
+        "colleges_universities": [],
+        "description": ""
+    },
+    "schools": {
+        "public": [
+            {
+                "name": "",
+                "subtitle": ""
+            }
+        ],
+        "private": [
+            {
+                "name": "",
+                "subtitle": ""
+            }
+        ]
+    },
+    "transportation": {
+        "description": "",
+        "groups": [
+            {
+                "subtitle": "",
+                "stations": []
+            }
+        ]
+    },
+    "pointOfInterest": {
+        "description": "",
+        "groups": [
+            {
+                "subtitle": "",
+                "description": "",
+                "places": []
+            }
+        ]
+    }
+}
