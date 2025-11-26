@@ -20,19 +20,21 @@ import json
 import os
 import re
 import sys
+from contextvars import ContextVar
 from dataclasses import asdict
+from datetime import datetime
 from dotenv import load_dotenv
-from typing import Any, Dict, List, Optional, Tuple, TypedDict
+from typing import Any, Callable, Dict, List, Optional, Tuple, TypedDict
 from pathlib import Path
 
 from langgraph.graph import END, StateGraph
 from openai import OpenAI
+import requests
 
-# from .scraper import run_actor_and_save_outputs
-# from .url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
+from .scraper import run_actor_and_save_outputs
+from .url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
 
-from scraper import run_actor_and_save_outputs
-from url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
+STREAM_CALLBACK: ContextVar[Optional[Callable[[str], None]]] = ContextVar("STREAM_CALLBACK", default=None)
 
 # Defaults can be overridden via env vars
 load_dotenv()
@@ -207,6 +209,26 @@ REAL_ESTATE_KEYWORDS = [
     "moving to", "housing options"
 ]
 
+LEASE_REQUEST_PHRASES = [
+    "lease draft",
+    "draft lease",
+    "lease agreement",
+    "lease document",
+    "lease contract",
+    "generate lease",
+    "create lease",
+    "write lease",
+    "lease paperwork",
+]
+
+LEASE_COLLECTION_FIELDS = [
+    {"key": "tenant_name", "prompt": "What full legal name should appear for the tenant on the lease?"},
+    {"key": "floor_plan", "type": "floor_plan"},
+    {"key": "unit", "type": "unit"},
+    {"key": "lease_start_date", "prompt": "When should the lease start? (YYYY-MM-DD)"},
+    {"key": "lease_term_months", "prompt": "What lease term do you want (in months)?"},
+]
+
 
 STATE_ABBREVIATIONS = {
     "alabama": "AL",
@@ -271,7 +293,7 @@ PERSONAS = {
         "system": (
             "You are The Neighborhood Naturalist, a friendly local who knows every tree, coffee shop, and dog park in town. "
             "Blend sensory detail with honest market realities. Highlight vibe, walkability, green spaces, and everyday life details. "
-            "Be warm, pragmatic, supportive, and realistic—never salesy."
+            "Be warm, pragmatic, supportive, and realisticâ€”never salesy."
         ),
     },
     "data": {
@@ -730,6 +752,8 @@ def stream_chat_completion(
     emitted_to_stdout = False
     label_printed = False
 
+    callback = STREAM_CALLBACK.get()
+
     try:
         response = client.chat.completions.create(**kwargs)
         for chunk in response:
@@ -737,6 +761,11 @@ def stream_chat_completion(
             if not text:
                 continue
             content_parts.append(text)
+            if callback:
+                try:
+                    callback(text)
+                except Exception:
+                    pass
             if stream_to_stdout:
                 if stream_label is not None and not label_printed:
                     print(stream_label, end="", flush=True)
@@ -751,7 +780,7 @@ def stream_chat_completion(
             if stream_label is not None and not label_printed:
                 print(stream_label, end="", flush=True)
                 label_printed = True
-            notice = "\n[stream interrupted—partial reply above; you can ask me to continue]"
+            notice = "\n[stream interruptedâ€”partial reply above; you can ask me to continue]"
             print(notice, flush=True)
         fallback = "".join(content_parts)
         if not fallback:
@@ -1622,6 +1651,322 @@ def handle_persona_command(state: AgentState, user_input: str) -> Optional[str]:
     return ack
 
 
+def _looks_like_lease_request(text: str) -> bool:
+    lower = (text or "").lower()
+    if "lease" not in lower:
+        return False
+    for phrase in LEASE_REQUEST_PHRASES:
+        if phrase in lower:
+            return True
+    triggers = ("draft", "generate", "create", "write", "document", "contract")
+    return any(trigger in lower for trigger in triggers)
+
+
+def _missing_lease_inputs(prefs: Dict[str, Any]) -> List[str]:
+    missing: List[str] = []
+    if not prefs.get("city"):
+        missing.append("city")
+    if not prefs.get("state"):
+        missing.append("state")
+    if not (prefs.get("max_rent") or prefs.get("min_rent")):
+        missing.append("budget")
+    return missing
+
+
+def _derive_listing_address(listing: Optional[Dict[str, Any]]) -> Optional[str]:
+    if not listing:
+        return None
+    about = listing.get("about") if isinstance(listing, dict) else None
+    if isinstance(about, dict):
+        location = about.get("location")
+        if location:
+            return location
+        breadcrumbs = about.get("breadcrumbs")
+        if isinstance(breadcrumbs, list) and breadcrumbs:
+            return ", ".join(str(part) for part in breadcrumbs if part)
+    contact = listing.get("contact") if isinstance(listing, dict) else None
+    if isinstance(contact, dict):
+        address = contact.get("address")
+        if address:
+            return address
+    return None
+
+
+def _parse_price_value(value: Any) -> Optional[int]:
+    if value is None:
+        return None
+    matches = re.findall(r"\d[\d,]*", str(value))
+    if not matches:
+        return None
+    try:
+        return int(matches[0].replace(",", ""))
+    except ValueError:
+        return None
+
+
+def _build_floor_plan_options(listing: Optional[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    if not isinstance(listing, dict):
+        return []
+    plans = listing.get("pricingAndFloorPlans") or []
+    options: List[Dict[str, Any]] = []
+    for plan in plans:
+        if not isinstance(plan, dict):
+            continue
+        option = {
+            "name": plan.get("name") or plan.get("beds_baths") or plan.get("floor_plan") or "Floor plan",
+            "details": plan.get("beds_baths") or plan.get("description"),
+            "availability": plan.get("available") or plan.get("availability"),
+            "rent_label": plan.get("rent_label") or plan.get("rentLabel"),
+            "deposit": plan.get("deposit"),
+            "price_per_person": bool(plan.get("price_per_person") or plan.get("is_price_per_bed")),
+            "units": [],
+        }
+        units = []
+        for unit in plan.get("units") or []:
+            if not isinstance(unit, dict):
+                continue
+            units.append(
+                {
+                    "label": unit.get("name") or unit.get("unit") or unit.get("label") or "Unit",
+                    "sqft": unit.get("sqft") or unit.get("square_feet"),
+                    "price": _parse_price_value(unit.get("price") or unit.get("rent")),
+                    "availability": unit.get("availability"),
+                    "details": unit.get("description"),
+                }
+            )
+        option["units"] = units
+        options.append(option)
+    return options
+
+
+def _format_floor_plan_prompt(options: List[Dict[str, Any]]) -> str:
+    if not options:
+        return "Which floor plan would you like?"
+    lines = ["Here are the available floor plans:"]
+    for idx, opt in enumerate(options, start=1):
+        desc_parts = [
+            opt.get("details"),
+            opt.get("rent_label"),
+            opt.get("availability"),
+        ]
+        desc = " | ".join(part for part in desc_parts if part)
+        lines.append(f"{idx}) {opt.get('name', 'Floor plan')} " + (f"– {desc}" if desc else ""))
+    lines.append("Which option number suits you best?")
+    return "\n".join(lines)
+
+
+def _format_unit_prompt(options: List[Dict[str, Any]]) -> str:
+    if not options:
+        return "Which unit would you like?"
+    lines = ["Units available for that floor plan:"]
+    for idx, unit in enumerate(options, start=1):
+        desc_parts = [
+            unit.get("sqft") and f"{unit.get('sqft')} sq ft",
+            unit.get("price") and f"${unit.get('price'):,}/month",
+            unit.get("availability"),
+        ]
+        desc = " | ".join(part for part in desc_parts if part)
+        lines.append(f"{idx}) {unit.get('label', 'Unit')} " + (f"– {desc}" if desc else ""))
+    lines.append("Which unit number would you like?")
+    return "\n".join(lines)
+
+
+def _parse_option_choice(user_input: str, options: List[Dict[str, Any]]) -> Optional[int]:
+    text = (user_input or "").strip()
+    if not text:
+        return None
+    try:
+        idx = int(text) - 1
+        if 0 <= idx < len(options):
+            return idx
+    except ValueError:
+        pass
+    lower = text.lower()
+    for idx, option in enumerate(options):
+        label = option.get("name") or option.get("label")
+        if label and lower in label.lower():
+            return idx
+    return None
+
+
+def _extract_listing_from_state(state: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    if not isinstance(state, dict):
+        return None
+    for key in ("focused_listing", "selected_listing", "active_listing", "current_listing"):
+        listing = state.get(key)
+        if listing:
+            return listing
+    for key in ("ranked_listings", "enriched_listings", "scraped_listings", "listings"):
+        items = state.get(key)
+        if isinstance(items, list) and items:
+            return items[0]
+    return None
+
+
+def _next_lease_prompt(collector: Dict[str, Any]) -> Optional[str]:
+    fields: List[Dict[str, Any]] = collector.get("fields", [])
+    index = collector.get("index", 0)
+    while index < len(fields):
+        field = fields[index]
+        field_type = field.get("type")
+        if field_type == "floor_plan":
+            options = collector.get("plan_options") or []
+            if not options:
+                index += 1
+                collector["index"] = index
+                continue
+            return _format_floor_plan_prompt(options)
+        if field_type == "unit":
+            options = collector.get("unit_options") or []
+            if not options:
+                index += 1
+                collector["index"] = index
+                continue
+            return _format_unit_prompt(options)
+        prompt = field.get("prompt") or "Can you confirm that detail?"
+        if field_type == "property":
+            default_address = collector.get("default_address")
+            if default_address:
+                prompt += f" (press Enter to use {default_address})"
+        return prompt
+    return None
+
+
+def maybe_schedule_lease_generation(state: AgentState, user_input: str) -> Tuple[Optional[str], bool]:
+    if not _looks_like_lease_request(user_input):
+        return None, False
+    prefs = state.get("preferences") or {}
+    missing_fields = _missing_lease_inputs(prefs)
+    if missing_fields:
+        message = (
+            "I can definitely draft a lease once we finalize your "
+            f"{', '.join(missing_fields)}. Share those details and I'll take it from there."
+        )
+        return message, False
+    city = prefs.get("city")
+    state_label = prefs.get("state")
+    location = ", ".join(part for part in [city, state_label] if part)
+    ack = (
+        "I'll prepare a lease draft"
+        + (f" for {location}" if location else "")
+        + " that reflects the preferences we've captured."
+    )
+    listing = _extract_listing_from_state(state)
+    plan_options = _build_floor_plan_options(listing)
+    fields = list(LEASE_COLLECTION_FIELDS)
+    if not plan_options:
+        fields = [field for field in fields if field["key"] not in {"floor_plan", "unit"}]
+    plan = {
+        "status": "collecting",
+        "ack": ack,
+        "requested_at": datetime.utcnow().isoformat(),
+        "overrides": {},
+    }
+    collector = {
+        "plan": plan,
+        "fields": fields,
+        "index": 0,
+        "responses": {},
+        "listing": listing,
+        "plan_options": plan_options,
+        "unit_options": [],
+        "default_address": _derive_listing_address(listing),
+    }
+    state["lease_collection"] = collector
+    prompt = _next_lease_prompt(collector)
+    if not prompt:
+        plan["status"] = "requested"
+        state["lease_generation_plan"] = plan
+        state.pop("lease_collection", None)
+        return ack, True
+    return f"{ack}\n\n{prompt}", True
+
+
+def continue_lease_collection(state: AgentState, user_input: str) -> Optional[str]:
+    collector = state.get("lease_collection")
+    if not collector:
+        return None
+    fields: List[Dict[str, Any]] = collector.get("fields") or []
+    index = collector.get("index", 0)
+    responses = collector.get("responses") or {}
+    cleaned = user_input.strip()
+
+    while index < len(fields):
+        field = fields[index]
+        field_type = field.get("type")
+        if field_type == "floor_plan":
+            options = collector.get("plan_options") or []
+            if not options:
+                index += 1
+                collector["index"] = index
+                continue
+            choice = _parse_option_choice(cleaned, options)
+            if choice is None:
+                return "Please pick a floor plan by number:\n" + _format_floor_plan_prompt(options)
+            selected = options[choice]
+            responses["selected_plan_name"] = selected.get("name")
+            responses["selected_plan_details"] = selected.get("details")
+            responses["selected_plan_availability"] = selected.get("availability")
+            responses["selected_plan_rent_label"] = selected.get("rent_label")
+            responses["selected_plan_deposit"] = selected.get("deposit")
+            responses["selected_plan_price_per_person"] = bool(selected.get("price_per_person"))
+            collector["unit_options"] = selected.get("units") or []
+            collector["responses"] = responses
+            index += 1
+            collector["index"] = index
+            state["lease_collection"] = collector
+            next_prompt = _next_lease_prompt(collector)
+            if next_prompt:
+                return next_prompt
+            break
+        elif field_type == "unit":
+            options = collector.get("unit_options") or []
+            if not options:
+                index += 1
+                collector["index"] = index
+                continue
+            choice = _parse_option_choice(cleaned, options)
+            if choice is None:
+                return "Please pick a unit by number:\n" + _format_unit_prompt(options)
+            selected = options[choice]
+            responses["selected_unit_label"] = selected.get("label")
+            responses["selected_unit_sqft"] = selected.get("sqft")
+            responses["selected_unit_price"] = selected.get("price")
+            responses["selected_unit_availability"] = selected.get("availability")
+            responses["selected_unit_details"] = selected.get("details")
+            collector["responses"] = responses
+            index += 1
+            collector["index"] = index
+            state["lease_collection"] = collector
+            next_prompt = _next_lease_prompt(collector)
+            if next_prompt:
+                return next_prompt
+            break
+        else:
+            if field_type == "property":
+                default_address = collector.get("default_address")
+                if not cleaned and default_address:
+                    cleaned = default_address
+            responses[field["key"]] = cleaned
+            collector["responses"] = responses
+            index += 1
+            collector["index"] = index
+            state["lease_collection"] = collector
+            next_prompt = _next_lease_prompt(collector)
+            if next_prompt:
+                return next_prompt
+            break
+
+    if index >= len(fields):
+        plan = collector.get("plan") or {}
+        plan["status"] = "requested"
+        plan["overrides"] = responses
+        state["lease_generation_plan"] = plan
+        state.pop("lease_collection", None)
+        return "Thanks! I have all the details I need. I'll assemble the lease now and let you know when it's ready."
+    return None
+
+
 def answer_with_existing(state: AgentState) -> AgentState:
     """Use existing listings and history to answer follow-ups without re-scraping."""
     messages = state.get("messages") or []
@@ -1775,7 +2120,7 @@ def main() -> None:
         state["off_topic"] = False
 
         state = app.invoke(state)
-        reply = state.get("reply") or "I didn't catch that—could you rephrase?"
+        reply = state.get("reply") or "I didn't catch thatâ€”could you rephrase?"
         streamed = state.get("reply_streamed", False)
         if not streamed:
             print(f"Agent: {reply}")

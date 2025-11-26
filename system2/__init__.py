@@ -6,6 +6,7 @@ System 1 while we build Lebanon-specific logic.
 """
 
 from . import real_estate_agent
+from .session import System2AgentSession
 
 
 def run() -> None:
@@ -13,4 +14,4 @@ def run() -> None:
     real_estate_agent.main()
 
 
-__all__ = ["run", "real_estate_agent"]
+__all__ = ["run", "real_estate_agent", "System2AgentSession"]
