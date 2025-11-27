@@ -1,0 +1,2352 @@
+[
+  {
+    "id": "200sqm apartment in dam w farez\u0627\u0644\u0636\u0645 \u0648\u0627\u0644\u0641\u0631\u0632",
+    "data": {
+      "id": "200sqm apartment in dam w farez\u0627\u0644\u0636\u0645 \u0648\u0627\u0644\u0641\u0631\u0632",
+      "source": {
+        "url": "https://mearealestate.com/property/9299",
+        "scraped_at": "019ac508-582a-7519-b1c1-99d491b2452c"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$750",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "200",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "4",
+      "baths": "3",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$750",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$750",
+              "square_feet": "200",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://mearealestate.com/property/9299",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 4",
+            "Bathrooms: 3",
+            "Area: 200 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638558558957200622.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638558558962854292.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638558558964557525.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638558558966289620.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638558558968004802.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638558558969697671.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/9299",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638558558957200622.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638558558962854292.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638558558964557525.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638558558966289620.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638558558968004802.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638558558969697671.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Apartment 220m for rent in Dam Wel Farez",
+    "data": {
+      "id": "Apartment 220m for rent in Dam Wel Farez",
+      "source": {
+        "url": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+        "scraped_at": "019ac574-766f-7618-9f98-c4c4041b7f18"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$900",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "220",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "3",
+      "baths": "3",
+      "parking_spaces": "",
+      "floor": "3",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$900",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$900",
+              "square_feet": "220",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 3",
+            "Bathrooms: 3",
+            "Area: 220 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "Explore this apartment 220m for rent in Dam Wel Farez - Tripoli, featuring 3 bedrooms, maid room, and multiple balconies. Perfect for renting properties in Tripoli, Lebanon.",
+        "breadcrumbs": [],
+        "title": "Apartment 220m for rent in Dam Wel Farez - Tripoli, near Hoz Mall",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/01/97be811a1ae0650dfb425a451436e0421-1024x1024.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1.jpg"
+        ],
+        "image": "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+9616440723",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+        "language": "en-US",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "s.RE/MAX is the global leading real estate agency in the world. Operated offices with over 100,000 agents in 100 countries worldwide.",
+        "city": "s.RE/MAX is the global leading real estate agency in the world. Operated offices with over 100,000 agents in 100 countries worldwide.",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/01/97be811a1ae0650dfb425a451436e0421-1024x1024.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1.jpg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Apartment For Rent in Dam Wel Farez Tripoli",
+    "data": {
+      "id": "Apartment For Rent in Dam Wel Farez Tripoli",
+      "source": {
+        "url": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+        "scraped_at": "019ac52e-7e13-7396-a88e-73cf304b3cdd"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$550",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "200",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "3",
+      "baths": "2",
+      "parking_spaces": "1",
+      "floor": "10",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$550",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$550",
+              "square_feet": "200",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 3",
+            "Bathrooms: 2",
+            "Area: 200 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "Spacious 200m apartment for rent in Dam W Farez Tripoli. Located on the 10th floor with panoramic views, 3 bedrooms, 3 bathrooms, salon, dining, living room, kitchen, 2 balconies, elevator, and private parking. Ideal for families and professionals.",
+        "breadcrumbs": [],
+        "title": "Spacious Apartment For Rent in Dam Wel Farez Tripoli",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10.jpg"
+        ],
+        "image": "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+9616440723",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+        "language": "en-US",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Dam W Farez Tripoli, North Lebanon",
+        "city": "Dam W Farez Tripoli, North Lebanon",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10.jpg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "Immediate",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "calm neighborhood tripoli Abu samra",
+    "data": {
+      "id": "calm neighborhood tripoli Abu samra",
+      "source": {
+        "url": "https://mearealestate.com/property/35207",
+        "scraped_at": "019ac510-cd8a-708f-832c-f344c2040ff6"
+      },
+      "listing_type": "",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$450",
+        "currency": "USD",
+        "frequency": "",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "110",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "1",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "Fully furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "",
+          "rent_label": "$450",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$450",
+              "square_feet": "110",
+              "view_more_html": ""
+            }
+          ],
+          "availability": ""
+        }
+      ],
+      "url": "https://mearealestate.com/property/35207",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bathrooms: 1",
+            "Area: 110 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Abu samra Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638997527714970546.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638997527717445002.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638997527719674634.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638997527721922951.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638997527724174820.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/7_638997527726529080.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638989891355344781.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/35207",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638997527714970546.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638997527717445002.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638997527719674634.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638997527721922951.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638997527724174820.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/7_638997527726529080.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638989891355344781.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Fully Furnished in Maarad",
+    "data": {
+      "id": "Fully Furnished in Maarad",
+      "source": {
+        "url": "https://mearealestate.com/property/25111",
+        "scraped_at": "019ac50d-f535-764c-98af-8d6b4a9da186"
+      },
+      "listing_type": "",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$800",
+        "currency": "USD",
+        "frequency": "",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "200",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "Fully furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "",
+          "rent_label": "$800",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$800",
+              "square_feet": "200",
+              "view_more_html": ""
+            }
+          ],
+          "availability": ""
+        }
+      ],
+      "url": "https://mearealestate.com/property/25111",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Area: 200 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Maarad Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638809143754628045.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638809143881565351.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638809143884200515.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638809143886682220.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638809143888609512.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638809143890617606.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638809143893403989.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638809144844046983.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638809144850896772.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638809144853754837.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638809144855671649.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638809144857607652.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638809144859945608.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/25111",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638809143754628045.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638809143881565351.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638809143884200515.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638809143886682220.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638809143888609512.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638809143890617606.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638809143893403989.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638809144844046983.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638809144850896772.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638809144853754837.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638809144855671649.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638809144857607652.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638809144859945608.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "Immediate",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Furnished Apartment for Rent in Bishmezzine",
+    "data": {
+      "id": "Furnished Apartment for Rent in Bishmezzine",
+      "source": {
+        "url": "https://www.olx.com.lb/ad/fully-furnished-apartment-for-rent-in-bishmezzine-ID116388196.html",
+        "scraped_at": "019ac57a-8052-77e8-a7a6-a7c38911d9e7"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$850",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "130",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "3",
+      "parking_spaces": "",
+      "floor": "1",
+      "year_built": "",
+      "furnishing": "Fully furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$850",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$850",
+              "square_feet": "130",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.olx.com.lb/ad/fully-furnished-apartment-for-rent-in-bishmezzine-ID116388196.html",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bathrooms: 3",
+            "Area: 130 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "Fully Furnished Apartment for Rent in Bishmezzine Discover peaceful living in this charming 130 SQM apartment located in the heart of Beshmezzine. Perfect for families or couples seeking comfort and privacy. 3 Spa - Apartments & Villas For Rent",
+        "breadcrumbs": [],
+        "title": "Fully Furnished Apartment for Rent in Bishmezzine - Apartments & Villas For Rent - 116388196",
+        "location": "Bishmezzine koura, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://images.olx.com.lb/thumbnails/14138554-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138591-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362289-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13374090-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11790411-400x300.jpeg"
+        ],
+        "image": "https://images.olx.com.lb/thumbnails/14138554-800x600.jpeg",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "14138554",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.olx.com.lb/ad/fully-furnished-apartment-for-rent-in-bishmezzine-ID116388196.html",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "city": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://images.olx.com.lb/thumbnails/14138554-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138591-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362289-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13374090-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11790411-400x300.jpeg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "Immediate",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Furnished, Tripoli, Dam w farez",
+    "data": {
+      "id": "Furnished, Tripoli, Dam w farez",
+      "source": {
+        "url": "https://mearealestate.com/property/22372",
+        "scraped_at": "019ac50b-88ed-7729-8519-706efd8f451a"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$800",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "220",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "Furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$800",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$800",
+              "square_feet": "220",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://mearealestate.com/property/22372",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Area: 220 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638757489527933179.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638757489534517007.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638757489536491763.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638757489538471176.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638757489540398230.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638757489542421115.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638757489544458756.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/7_638757489546500518.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/8_638757489548421878.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/9_638757489551068549.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/22372",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638757489527933179.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638757489534517007.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638757489536491763.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638757489538471176.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638757489540398230.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638757489542421115.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638757489544458756.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/7_638757489546500518.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/8_638757489548421878.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/9_638757489551068549.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Prime areaMaarad, Tripoli\u0627\u0644\u0645\u0639\u0631\u0636",
+    "data": {
+      "id": "Prime areaMaarad, Tripoli\u0627\u0644\u0645\u0639\u0631\u0636",
+      "source": {
+        "url": "https://mearealestate.com/property/33889",
+        "scraped_at": "019ac50e-fe00-7421-a3ce-89033a04c902"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$650",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "210",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "3",
+      "baths": "3",
+      "parking_spaces": "",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$650",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$650",
+              "square_feet": "210",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://mearealestate.com/property/33889",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 3",
+            "Bathrooms: 3",
+            "Area: 210 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Maarad Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638975136522397864.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638975136661265298.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638975136663753253.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638975136666240760.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638975136668747399.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638975136671178096.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638975136673512345.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/33889",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638975136522397864.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638975136661265298.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638975136663753253.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638975136666240760.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638975136668747399.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638975136671178096.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638975136673512345.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Sea Apartment For Rent in Ras Maska, Al-Koura",
+    "data": {
+      "id": "Sea Apartment For Rent in Ras Maska, Al-Koura",
+      "source": {
+        "url": "https://www.olx.com.lb/ad/furnished-sea-view-apartment-for-rent-in-ras-maska-al-koura-ID116241681.html",
+        "scraped_at": "019ac577-2a3c-77b6-a5a0-afb2b94b1371"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$900",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "180",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "3",
+      "parking_spaces": "1",
+      "floor": "3",
+      "year_built": "",
+      "furnishing": "Fully furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$900",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$900",
+              "square_feet": "180",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.olx.com.lb/ad/furnished-sea-view-apartment-for-rent-in-ras-maska-al-koura-ID116241681.html",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bathrooms: 3",
+            "Area: 180 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "180 sqm Apartment with Stunning Sea View 3 Spacious Bedrooms 2 Modern Bathrooms Breathtaking Views of the Mediterranean Unbeatable value for your perfect home! Located in the heart of Ras Maska, offering comfort, co - Apartments & Villas For Rent",
+        "breadcrumbs": [],
+        "title": "Furnished Sea View Apartment For Rent in Ras Maska, Al-Koura - Apartments & Villas For Rent - 116241681",
+        "location": "Bishmezzine koura, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://images.olx.com.lb/thumbnails/13374090-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14826095-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14826096-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362289-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138554-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13967907-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15429311-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15578103-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13557435-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11790411-400x300.jpeg"
+        ],
+        "image": "https://images.olx.com.lb/thumbnails/13374090-800x600.jpeg",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "13374090",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.olx.com.lb/ad/furnished-sea-view-apartment-for-rent-in-ras-maska-al-koura-ID116241681.html",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "city": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://images.olx.com.lb/thumbnails/13374090-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14826095-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14826096-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362289-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138554-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13967907-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15429311-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15578103-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13557435-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11790411-400x300.jpeg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Traditional House for rent in Bechmezzine Koura",
+    "data": {
+      "id": "Traditional House for rent in Bechmezzine Koura",
+      "source": {
+        "url": "https://www.olx.com.lb/ad/rwb171sn-traditional-house-for-rent-in-bechmezzine-koura-ID116430365.html",
+        "scraped_at": "019ac579-3fa7-777c-a4da-e8ef4dbfcc11"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$700",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "155",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "2",
+      "baths": "2",
+      "parking_spaces": "1",
+      "floor": "1",
+      "year_built": "",
+      "furnishing": "Fully furnished",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$700",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$700",
+              "square_feet": "155",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.olx.com.lb/ad/rwb171sn-traditional-house-for-rent-in-bechmezzine-koura-ID116430365.html",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 2",
+            "Bathrooms: 2",
+            "Area: 155 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "A luxury traditional house for rent in Bishmizzine with open mountains view. Size: 155 sqm 2 Bedrooms 3 Bathrooms Living room and dining room Kitchenette installed Double glaze AC splits provision installed European - Apartments & Villas For Rent",
+        "breadcrumbs": [],
+        "title": "RWB171SN - Traditional House for rent in Bechmezzine Koura - Apartments & Villas For Rent - 116430365",
+        "location": "Bishmezzine koura, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://images.olx.com.lb/thumbnails/14362289-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362290-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362291-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138554-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13374090-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15414617-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11988358-400x300.jpeg"
+        ],
+        "image": "https://images.olx.com.lb/thumbnails/14362289-800x600.jpeg",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "14362289",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.olx.com.lb/ad/rwb171sn-traditional-house-for-rent-in-bechmezzine-koura-ID116430365.html",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "city": "](https://www.olx.com.lb/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg)",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://images.olx.com.lb/thumbnails/14362289-800x600.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362290-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14362291-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/14138554-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/13374090-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/15414617-400x300.jpeg",
+          "https://images.olx.com.lb/thumbnails/11988358-400x300.jpeg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "Amenities",
+          "amenities": [
+            "Private backyard garden, front yard patio"
+          ]
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "well-designed tripoli dam w farez",
+    "data": {
+      "id": "well-designed tripoli dam w farez",
+      "source": {
+        "url": "https://mearealestate.com/property/31504",
+        "scraped_at": "019ac50c-71ce-7188-a9ad-a2a079748927"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$585",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "185",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "",
+      "baths": "",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$585",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$585",
+              "square_feet": "185",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://mearealestate.com/property/31504",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Area: 185 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638931915902981666.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638931915911080797.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638931915913569549.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638931915916500726.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638931915919108065.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638931915921751733.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638931915924517986.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/31504",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638931915902981666.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638931915911080797.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638931915913569549.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638931915916500726.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638931915919108065.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638931915921751733.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638931915924517986.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  }
+]

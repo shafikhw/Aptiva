@@ -1,0 +1,194 @@
+{
+  "id": "well-designed tripoli dam w farez",
+  "source": {
+    "url": "https://mearealestate.com/property/31504",
+    "scraped_at": "019ac50c-71ce-7188-a9ad-a2a079748927"
+  },
+  "listing_type": "rent",
+  "property_type": "Apartment",
+  "price": {
+    "amount": "$585",
+    "currency": "USD",
+    "frequency": "monthly",
+    "commission": "",
+    "deposit": ""
+  },
+  "size": {
+    "value": "185",
+    "units": "sqm",
+    "land_size": ""
+  },
+  "beds": "",
+  "baths": "",
+  "parking_spaces": "1",
+  "floor": "",
+  "year_built": "",
+  "furnishing": "",
+  "pricingAndFloorPlans": [
+    {
+      "model_name": "For Rent",
+      "rent_label": "$585",
+      "details": [],
+      "units": [
+        {
+          "unit": "",
+          "price": "$585",
+          "square_feet": "185",
+          "view_more_html": ""
+        }
+      ],
+      "availability": "For Rent"
+    }
+  ],
+  "url": "https://mearealestate.com/property/31504",
+  "feesAndPolicies": {
+    "details": {
+      "Property Information": [
+        "Area: 185 sqm"
+      ]
+    }
+  },
+  "about": {
+    "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+    "breadcrumbs": [],
+    "title": "Property Details | MEA Real Estate",
+    "location": "Type",
+    "rating": "",
+    "reviews": "",
+    "images": [
+      "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638931915902981666.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638931915911080797.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638931915913569549.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638931915916500726.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638931915919108065.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638931915921751733.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638931915924517986.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+      "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+      "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+      "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+    ],
+    "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+    "Unique Features": [],
+    "Features": []
+  },
+  "features": {
+    "general": [],
+    "interior": [],
+    "exterior": [],
+    "appliances": [],
+    "heating_cooling": [],
+    "parking": []
+  },
+  "contact": {
+    "property_management_logo": "",
+    "phone_number": "+96181000760",
+    "whatsapp": "",
+    "email": "",
+    "contact_name": "",
+    "agency": "",
+    "property_website": "https://mearealestate.com/property/31504",
+    "language": "en",
+    "office_hours": {
+      "days": "Monday - Friday",
+      "hours": "9am - 5pm"
+    }
+  },
+  "location": {
+    "address_line": "Type",
+    "city": "Type",
+    "area": "",
+    "neighborhood": "",
+    "street": "",
+    "country": "Lebanon",
+    "coordinates": {
+      "lat": "",
+      "lng": ""
+    }
+  },
+  "media": {
+    "images": [
+      "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638931915902981666.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638931915911080797.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638931915913569549.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638931915916500726.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638931915919108065.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638931915921751733.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/6_638931915924517986.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+      "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+      "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+      "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+      "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+    ],
+    "floorplans": [],
+    "videos": []
+  },
+  "availability": "For Rent",
+  "legal": {
+    "ownership": ""
+  },
+  "similar_listings": [],
+  "amenities": [
+    {
+      "title": "",
+      "amenities": []
+    }
+  ],
+  "education": {
+    "colleges_universities": [],
+    "description": ""
+  },
+  "schools": {
+    "public": [
+      {
+        "name": "",
+        "subtitle": ""
+      }
+    ],
+    "private": [
+      {
+        "name": "",
+        "subtitle": ""
+      }
+    ]
+  },
+  "transportation": {
+    "description": "",
+    "groups": [
+      {
+        "subtitle": "",
+        "stations": []
+      }
+    ]
+  },
+  "pointOfInterest": {
+    "description": "",
+    "groups": [
+      {
+        "subtitle": "",
+        "description": "",
+        "places": []
+      }
+    ]
+  }
+}
