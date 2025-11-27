@@ -12,6 +12,8 @@ from .real_estate_agent import (
     OFF_TOPIC_REFUSAL,
     build_graph,
     handle_persona_command,
+    handle_lease_command,
+    handle_lease_update_request,
     is_real_estate_related,
     _normalize_persona_mode,
     maybe_schedule_lease_generation,
@@ -101,8 +103,31 @@ class System1AgentSession:
                     "reply": follow_up,
                     "state": snapshot,
                     "preferences": snapshot.get("preferences", {}),
-                    "conversation_complete": False,
-                }
+                "conversation_complete": False,
+            }
+
+        update_reply = handle_lease_update_request(self.state, user_input)
+        if update_reply:
+            msgs = self.state.get("messages") or []
+            msgs.append({"role": "assistant", "content": update_reply})
+            self.state["messages"] = msgs
+            snapshot = _snapshot(self.state)
+            return {
+                "reply": update_reply,
+                "state": snapshot,
+                "preferences": snapshot.get("preferences", {}),
+                "conversation_complete": False,
+            }
+
+        lease_cmd_reply = handle_lease_command(self.state, user_input)
+        if lease_cmd_reply:
+            snapshot = _snapshot(self.state)
+            return {
+                "reply": lease_cmd_reply,
+                "state": snapshot,
+                "preferences": snapshot.get("preferences", {}),
+                "conversation_complete": False,
+            }
 
         lease_reply, _ = maybe_schedule_lease_generation(self.state, user_input)
         if lease_reply:

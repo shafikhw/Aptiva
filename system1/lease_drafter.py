@@ -16,6 +16,7 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 from uuid import uuid4
 from xml.sax.saxutils import escape
+import string
 
 MANDATORY_SECTIONS = [
     "1. PARTIES",
@@ -46,6 +47,13 @@ STATE_RULES: Dict[str, Dict[str, float]] = {
 
 def _clean_ascii(value: str) -> str:
     return value.encode("ascii", errors="ignore").decode() if isinstance(value, str) else value
+
+
+def _normalize_resident_name(value: str) -> str:
+    if not value:
+        return ""
+    collapsed = " ".join(value.split())
+    return string.capwords(collapsed)
 
 
 def _parse_int(value: object) -> Optional[int]:
@@ -361,6 +369,8 @@ class LeaseDraftInputs:
             val = getattr(self, attr, "")
             if isinstance(val, str):
                 setattr(self, attr, _clean_ascii(val))
+        if isinstance(self.tenant_name, str):
+            self.tenant_name = _normalize_resident_name(self.tenant_name)
         self.utilities_landlord = [_clean_ascii(item) for item in self.utilities_landlord]
         self.utilities_tenant = [_clean_ascii(item) for item in self.utilities_tenant]
         for attr in (
@@ -668,8 +678,15 @@ def infer_inputs(
     info["rent_cap"] = _parse_int(prefs.get("max_rent"))
     label_parts = [part for part in [info["city"], info["state"], "rent cap"] if part]
     info["local_rent_cap_label"] = " ".join(label_parts) if label_parts else "local rent guidance"
-    if prefs.get("tenant_name"):
-        info["tenant_name"] = _clean_ascii(str(prefs.get("tenant_name")))
+    first_pref = prefs.get("tenant_first_name")
+    last_pref = prefs.get("tenant_last_name")
+    tenant_pref_name = prefs.get("tenant_name")
+    combined_pref = None
+    if first_pref or last_pref:
+        combined_pref = " ".join(part for part in [first_pref, last_pref] if part)
+    name_source = combined_pref or tenant_pref_name
+    if name_source:
+        info["tenant_name"] = _normalize_resident_name(_clean_ascii(str(name_source)))
 
     if listing:
         about = listing.get("about") or {}
@@ -687,6 +704,8 @@ def infer_inputs(
     lease_start_str = None
     lease_term_override = None
     if overrides:
+        if overrides.get("tenant_name"):
+            overrides["tenant_name"] = _normalize_resident_name(_clean_ascii(str(overrides["tenant_name"])))
         lease_start_str = overrides.pop("lease_start_date", None)
         lease_term_override = overrides.pop("lease_term_months", None)
     if not lease_start_str:
