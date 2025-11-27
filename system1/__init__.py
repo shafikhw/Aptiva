@@ -6,6 +6,7 @@ can invoke the existing real estate agent workflow.
 """
 
 from . import real_estate_agent
+from .session import System1AgentSession
 
 
 def run() -> None:
@@ -13,4 +14,4 @@ def run() -> None:
     real_estate_agent.main()
 
 
-__all__ = ["run", "real_estate_agent"]
+__all__ = ["run", "real_estate_agent", "System1AgentSession"]

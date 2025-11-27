@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aptiva Real Estate Assistant</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="logo-pill">
+            <img
+              src="/logo.png"
+              alt="Aptiva logo"
+              class="logo-image"
+              width="48"
+              height="48"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <h1>Aptiva</h1>
+            <p>Dual-market rental intelligence</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="ghost-btn" type="button" aria-pressed="false">
+            Light mode
+          </button>
+          <button id="guestBtn" class="ghost-btn" type="button">New Guest Session</button>
+          <button id="authToggleBtn" class="ghost-btn" type="button">Sign in or create account</button>
+          <button id="logoutBtn" class="ghost-btn danger" type="button">Log out</button>
+        </div>
+      </header>
+
+      <section class="status-bar" id="statusBar" role="status" aria-live="polite"></section>
+
+      <main class="app-body">
+        <aside class="sidebar">
+          <div class="panel">
+            <div class="panel-header">
+              <span>Active profile</span>
+              <strong id="userLabel">Guest</strong>
+            </div>
+            <p class="panel-subtle" id="userMeta">Signed in as guest</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <span>System</span>
+              <select id="systemSelect">
+                <option value="system1">System 1 · U.S.</option>
+                <option value="system2">System 2 · Lebanon</option>
+              </select>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="carryToggle" checked />
+              <span>Link chats with shared preferences</span>
+            </label>
+          </div>
+
+          <div class="panel conversations-panel">
+            <div class="panel-header">
+              <span>Conversations</span>
+              <button id="newChatBtn" class="primary-btn" type="button">New chat</button>
+            </div>
+            <div class="conversation-list" id="conversationList" role="listbox" aria-label="Previous conversations"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <span>Lease drafts</span>
+              <button id="refreshLeasesBtn" class="ghost-btn" type="button">Refresh</button>
+            </div>
+            <div class="lease-list" id="leaseList" aria-live="polite"></div>
+          </div>
+        </aside>
+
+        <section class="chat-panel">
+          <div class="chat-header">
+            <div>
+              <h2 id="chatTitle">Select or start a conversation</h2>
+              <p id="chatSubtitle">Streaming responses match the CLI speed.</p>
+            </div>
+            <div class="pill-group">
+              <label class="persona-picker">
+                <span>Persona</span>
+                <select id="personaSelect" aria-label="Persona mode"></select>
+              </label>
+              <button class="ghost-btn" id="refreshBtn" type="button">Refresh</button>
+            </div>
+          </div>
+          <div class="scrape-notice hidden" id="scrapeNotice" aria-live="polite">
+            <div class="scrape-head">
+              <div class="scrape-dot" aria-hidden="true"></div>
+              <div class="scrape-copy">
+                <strong id="scrapeMessage">Retrieving listings…</strong>
+                <small>We’re fetching fresh apartments; this can take a few seconds.</small>
+              </div>
+            </div>
+            <div class="scrape-actions">
+              <button class="ghost-btn" type="button" id="scrapeToggle">Show details</button>
+              <button class="ghost-btn" type="button" id="scrapeHide">Hide</button>
+            </div>
+            <div class="scrape-details hidden" id="scrapeDetails">
+              <p>
+                The agent is pulling live results from Apartments.com via Apify. Listings will stream in
+                as soon as they’re found. You can keep typing or adjust your filters while this runs.
+              </p>
+            </div>
+          </div>
+          <div class="chat-feed" id="chatFeed" aria-live="off"></div>
+          <form id="messageForm" class="chat-composer">
+            <textarea id="messageInput" rows="3" placeholder="Describe your ideal rental..." autocomplete="off"></textarea>
+            <div class="composer-footer">
+              <label class="toggle pill-toggle">
+                <input type="checkbox" id="sharePrefToggle" checked />
+                <span>Share memory across chats</span>
+              </label>
+              <div class="composer-actions">
+                <button id="stopStreamBtn" class="ghost-btn danger" type="button" disabled>Stop</button>
+                <button id="sendBtn" class="primary-btn" type="submit">Send</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <section class="modal hidden" id="authModal" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="authModalTitle">Account</h3>
+          <button id="closeAuthModal" class="ghost-btn" type="button">×</button>
+        </div>
+        <div class="auth-tabs">
+          <button type="button" data-mode="login" class="auth-tab active">Sign in</button>
+          <button type="button" data-mode="signup" class="auth-tab">Create account</button>
+        </div>
+        <form id="loginForm" class="auth-form" data-mode="login">
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Password<input type="password" name="password" required /></label>
+          <button class="primary-btn" type="submit">Sign in</button>
+          <button type="button" id="forgotPasswordLink" class="link-btn">Forgot password?</button>
+        </form>
+        <form id="signupForm" class="auth-form hidden" data-mode="signup">
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Username<input type="text" name="username" required /></label>
+          <label>First name<input type="text" name="first_name" required /></label>
+          <label>Last name<input type="text" name="last_name" required /></label>
+          <label>Password<input type="password" name="password" required minlength="6" /></label>
+          <button class="primary-btn" type="submit">Create account</button>
+        </form>
+        <form id="forgotForm" class="auth-form hidden">
+          <p>Enter your email and a new password. We'll update it immediately.</p>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>New password<input type="password" name="password" required minlength="6" /></label>
+          <div class="form-actions">
+            <button type="button" id="backToLoginBtn" class="ghost-btn">Back</button>
+            <button class="primary-btn" type="submit">Update password</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script type="module" src="/assets/app.js?v=2"></script>
+  </body>
+</html>
