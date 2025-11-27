@@ -1,377 +1,1028 @@
 {
   "pricingAndFloorPlans": [
     {
-      "model_name": "A3",
-      "rent_label": "$1,090 - $1,940",
+      "model_name": "E1",
+      "rent_label": "$1,095 - $1,295",
       "details": [
-        "1 Bed",
+        "Studio",
         "1 Bath",
-        "950 Sq Ft"
+        "517 Sq Ft"
       ],
       "availability": "3 Available units",
       "units": [
         {
-          "unit": "0233",
-          "price": "$1,090",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#1wh01y7-2-unit"
+          "unit": "1229",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#5w34cwq-2-unit"
         },
         {
-          "unit": "1021",
-          "price": "$1,185",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#j8663h7-2-unit"
+          "unit": "2127",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#xsmwffm-2-unit"
         },
         {
-          "unit": "0826",
-          "price": "$1,185",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#37vm6yd-2-unit"
+          "unit": "2219",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#ftsnnev-2-unit"
         }
       ]
     },
     {
-      "model_name": "A4D",
-      "rent_label": "$1,260 - $2,075",
+      "model_name": "E2",
+      "rent_label": "$1,195 - $1,295",
       "details": [
-        "1 Bed",
+        "Studio",
         "1 Bath",
-        "983 Sq Ft"
+        "509 Sq Ft"
       ],
       "availability": "3 Available units",
       "units": [
         {
-          "unit": "0138",
-          "price": "$1,315",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#p0lgcdr-2-unit"
+          "unit": "1445",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v2rtx4e-2-unit"
         },
         {
-          "unit": "1226",
-          "price": "$1,260",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#qecxy3y-2-unit"
+          "unit": "2315",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#4p8z1bh-2-unit"
         },
         {
-          "unit": "1234",
-          "price": "$1,300",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9md3gl6-2-unit"
+          "unit": "2415",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v0htzmd-2-unit"
         }
       ]
     },
     {
-      "model_name": "A2",
-      "rent_label": "$1,165 - $1,905",
+      "model_name": "E3",
+      "rent_label": "$1,295 - $1,445",
       "details": [
-        "1 Bed",
+        "Studio",
         "1 Bath",
-        "794 Sq Ft"
+        "584 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1242",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#mhe644j-2-unit"
+        },
+        {
+          "unit": "1342",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#zhgqw5z-2-unit"
+        },
+        {
+          "unit": "1442",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#6t7mpsr-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E5",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "651 Sq Ft"
       ],
       "availability": "1 Available unit",
       "units": [
         {
-          "unit": "1132",
-          "price": "$1,165",
-          "square_feet": "794",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#lg44x2e-2-unit"
+          "unit": "1439",
+          "price": "$1,395",
+          "square_feet": "651",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#c7fbrhf-2-unit"
         }
       ]
     },
     {
-      "model_name": "B1",
-      "rent_label": "$1,390 - $2,125",
+      "model_name": "E4",
+      "rent_label": "$1,395 - $1,455",
       "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,036 Sq Ft"
+        "Studio",
+        "1 Bath",
+        "606 Sq Ft"
       ],
       "availability": "2 Available units",
       "units": [
         {
-          "unit": "0838",
-          "price": "$1,390",
-          "square_feet": "1,036",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#fnp55jt-2-unit"
+          "unit": "2132",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#330cz4f-2-unit"
         },
         {
-          "unit": "0728",
-          "price": "$1,415",
-          "square_feet": "1,036",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#xm9fsvq-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "C1",
-      "rent_label": "$1,560 - $3,005",
-      "details": [
-        "3 Beds",
-        "2 Baths",
-        "1,310 Sq Ft"
-      ],
-      "availability": "3 Available units",
-      "units": [
-        {
-          "unit": "0517",
-          "price": "$1,560",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#tt7g6v9-2-unit"
-        },
-        {
-          "unit": "0921",
-          "price": "$1,675",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#r6znzc2-2-unit"
-        },
-        {
-          "unit": "1211",
-          "price": "$1,855",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9km3934-2-unit"
+          "unit": "2332",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#sb7jfq6-2-unit"
         }
       ]
     },
     {
       "model_name": "A1",
-      "rent_label": "Call for Rent",
+      "rent_label": "$1,295 - $1,595",
       "details": [
         "1 Bed",
         "1 Bath",
-        "686 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "B2",
-      "rent_label": "Call for Rent",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,097 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "B3",
-      "rent_label": "Call for Rent",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,226 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "A3",
-      "rent_label": "$1,090 - $1,940",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "950 Sq Ft"
+        "742 Sq Ft"
       ],
       "availability": "3 Available units",
       "units": [
         {
-          "unit": "0233",
-          "price": "$1,090",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#1wh01y7-2-unit"
+          "unit": "1117",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#gqffrly-2-unit"
         },
         {
-          "unit": "1021",
-          "price": "$1,185",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#j8663h7-2-unit"
+          "unit": "1211",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#28hsqrb-2-unit"
         },
         {
-          "unit": "0826",
-          "price": "$1,185",
-          "square_feet": "950",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#37vm6yd-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A4D",
-      "rent_label": "$1,260 - $2,075",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "983 Sq Ft"
-      ],
-      "availability": "3 Available units",
-      "units": [
-        {
-          "unit": "0138",
-          "price": "$1,315",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#p0lgcdr-2-unit"
-        },
-        {
-          "unit": "1226",
-          "price": "$1,260",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#qecxy3y-2-unit"
-        },
-        {
-          "unit": "1234",
-          "price": "$1,300",
-          "square_feet": "983",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9md3gl6-2-unit"
+          "unit": "2110",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#1638kz6-2-unit"
         }
       ]
     },
     {
       "model_name": "A2",
-      "rent_label": "$1,165 - $1,905",
+      "rent_label": "$1,345 - $1,395",
       "details": [
         "1 Bed",
         "1 Bath",
-        "794 Sq Ft"
+        "756 Sq Ft"
       ],
-      "availability": "1 Available unit",
+      "availability": "3 Available units",
       "units": [
         {
-          "unit": "1132",
-          "price": "$1,165",
-          "square_feet": "794",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#lg44x2e-2-unit"
+          "unit": "1447",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#7zdk9zz-2-unit"
+        },
+        {
+          "unit": "2217",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#sgdr8x6-2-unit"
+        },
+        {
+          "unit": "2417",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#ex6db2q-2-unit"
         }
       ]
     },
     {
-      "model_name": "A1",
-      "rent_label": "Call for Rent",
+      "model_name": "A5",
+      "rent_label": "$1,495 - $1,645",
       "details": [
         "1 Bed",
         "1 Bath",
-        "686 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "B1",
-      "rent_label": "$1,390 - $2,125",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,036 Sq Ft"
+        "957 Sq Ft"
       ],
       "availability": "2 Available units",
       "units": [
         {
-          "unit": "0838",
-          "price": "$1,390",
-          "square_feet": "1,036",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#fnp55jt-2-unit"
+          "unit": "2231",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#l7kvv8e-2-unit"
         },
         {
-          "unit": "0728",
-          "price": "$1,415",
-          "square_feet": "1,036",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#xm9fsvq-2-unit"
+          "unit": "2331",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v7llvfe-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$1,695 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,074 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2201",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#t9q1pbb-2-unit"
+        },
+        {
+          "unit": "2237",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#bgejhp8-2-unit"
+        },
+        {
+          "unit": "1126",
+          "price": "$1,795",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#dhjq7wk-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1343",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#73q6z1z-2-unit"
+        },
+        {
+          "unit": "1443",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#2y0skwb-2-unit"
+        },
+        {
+          "unit": "2226",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#nwyx82m-2-unit"
         }
       ]
     },
     {
       "model_name": "B2",
-      "rent_label": "Call for Rent",
+      "rent_label": "$1,795 - $1,995",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,097 Sq Ft"
+        "1,140 Sq Ft"
       ],
-      "units": []
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "1106",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#040v3s1-2-unit"
+        },
+        {
+          "unit": "1206",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#c42bvrg-2-unit"
+        }
+      ]
     },
     {
-      "model_name": "B3",
-      "rent_label": "Call for Rent",
+      "model_name": "B4",
+      "rent_label": "$1,845 - $2,045",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,226 Sq Ft"
+        "1,073 Sq Ft"
       ],
-      "units": []
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2234",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#te71kb9-2-unit"
+        },
+        {
+          "unit": "2434",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#k9p9pdb-2-unit"
+        }
+      ]
     },
     {
-      "model_name": "C1",
-      "rent_label": "$1,560 - $3,005",
+      "model_name": "B5",
+      "rent_label": "$1,995 - $2,195",
       "details": [
-        "3 Beds",
+        "2 Beds",
         "2 Baths",
-        "1,310 Sq Ft"
+        "1,081 Sq Ft"
       ],
       "availability": "3 Available units",
       "units": [
         {
-          "unit": "0517",
-          "price": "$1,560",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#tt7g6v9-2-unit"
+          "unit": "2214",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#yzhdlcv-2-unit"
         },
         {
-          "unit": "0921",
-          "price": "$1,675",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#r6znzc2-2-unit"
+          "unit": "2314",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#2dzhhbb-2-unit"
+        },
+        {
+          "unit": "2414",
+          "price": "$2,095",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#l26vyhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B10",
+      "rent_label": "$1,995 - $2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,383 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "2416",
+          "price": "$1,995",
+          "square_feet": "1,383",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#tfm8khc-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B11",
+      "rent_label": "$2,095 - $2,395",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,429 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1349",
+          "price": "$2,095",
+          "square_feet": "1,429",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#1fc09g6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,057 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,230 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A4",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "939 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,211 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,192 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,303 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B9",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "E1",
+      "rent_label": "$1,095 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "517 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1229",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#5w34cwq-2-unit"
+        },
+        {
+          "unit": "2127",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#xsmwffm-2-unit"
+        },
+        {
+          "unit": "2219",
+          "price": "$1,095",
+          "square_feet": "517",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#ftsnnev-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E2",
+      "rent_label": "$1,195 - $1,295",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "509 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1445",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v2rtx4e-2-unit"
+        },
+        {
+          "unit": "2315",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#4p8z1bh-2-unit"
+        },
+        {
+          "unit": "2415",
+          "price": "$1,195",
+          "square_feet": "509",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v0htzmd-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E3",
+      "rent_label": "$1,295 - $1,445",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "584 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1242",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#mhe644j-2-unit"
+        },
+        {
+          "unit": "1342",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#zhgqw5z-2-unit"
+        },
+        {
+          "unit": "1442",
+          "price": "$1,295",
+          "square_feet": "584",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#6t7mpsr-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E5",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "651 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1439",
+          "price": "$1,395",
+          "square_feet": "651",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#c7fbrhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E4",
+      "rent_label": "$1,395 - $1,455",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "606 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2132",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#330cz4f-2-unit"
+        },
+        {
+          "unit": "2332",
+          "price": "$1,395",
+          "square_feet": "606",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#sb7jfq6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "E6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "Studio",
+        "1 Bath",
+        "740 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A1",
+      "rent_label": "$1,295 - $1,595",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "742 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1117",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#gqffrly-2-unit"
         },
         {
           "unit": "1211",
-          "price": "$1,855",
-          "square_feet": "1,310",
-          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9km3934-2-unit"
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#28hsqrb-2-unit"
+        },
+        {
+          "unit": "2110",
+          "price": "$1,295",
+          "square_feet": "742",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#1638kz6-2-unit"
         }
       ]
+    },
+    {
+      "model_name": "A2",
+      "rent_label": "$1,345 - $1,395",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "756 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1447",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#7zdk9zz-2-unit"
+        },
+        {
+          "unit": "2217",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#sgdr8x6-2-unit"
+        },
+        {
+          "unit": "2417",
+          "price": "$1,345",
+          "square_feet": "756",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#ex6db2q-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A5",
+      "rent_label": "$1,495 - $1,645",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "957 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2231",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#l7kvv8e-2-unit"
+        },
+        {
+          "unit": "2331",
+          "price": "$1,495",
+          "square_feet": "957",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#v7llvfe-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,057 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,351 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "1,230 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A4",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "939 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "A3",
+      "rent_label": "Call for Rent",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "752 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B1",
+      "rent_label": "$1,695 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,074 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2201",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#t9q1pbb-2-unit"
+        },
+        {
+          "unit": "2237",
+          "price": "$1,695",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#bgejhp8-2-unit"
+        },
+        {
+          "unit": "1126",
+          "price": "$1,795",
+          "square_feet": "1,074",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#dhjq7wk-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "1343",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#73q6z1z-2-unit"
+        },
+        {
+          "unit": "1443",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#2y0skwb-2-unit"
+        },
+        {
+          "unit": "2226",
+          "price": "$1,795",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#nwyx82m-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B2",
+      "rent_label": "$1,795 - $1,995",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,140 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "1106",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#040v3s1-2-unit"
+        },
+        {
+          "unit": "1206",
+          "price": "$1,795",
+          "square_feet": "1,140",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#c42bvrg-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B4",
+      "rent_label": "$1,845 - $2,045",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,073 Sq Ft"
+      ],
+      "availability": "2 Available units",
+      "units": [
+        {
+          "unit": "2234",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#te71kb9-2-unit"
+        },
+        {
+          "unit": "2434",
+          "price": "$1,845",
+          "square_feet": "1,073",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#k9p9pdb-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B5",
+      "rent_label": "$1,995 - $2,195",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,081 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "2214",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#yzhdlcv-2-unit"
+        },
+        {
+          "unit": "2314",
+          "price": "$1,995",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#2dzhhbb-2-unit"
+        },
+        {
+          "unit": "2414",
+          "price": "$2,095",
+          "square_feet": "1,081",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#l26vyhf-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B10",
+      "rent_label": "$1,995 - $2,295",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,383 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "2416",
+          "price": "$1,995",
+          "square_feet": "1,383",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#tfm8khc-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B11",
+      "rent_label": "$2,095 - $2,395",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,429 Sq Ft"
+      ],
+      "availability": "1 Available unit",
+      "units": [
+        {
+          "unit": "1349",
+          "price": "$2,095",
+          "square_feet": "1,429",
+          "view_more_html": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/#1fc09g6-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "B7",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,211 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B6",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,192 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B8",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,303 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B9",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,351 Sq Ft"
+      ],
+      "units": []
     }
   ],
-  "url": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/",
+  "url": "https://www.apartments.com/edison-austin-austin-tx/40n18nj/",
   "feesAndPolicies": {},
   "about": {
-    "description": "Welcome to Callista Hill Country Apartments, a blissful community where we celebrate a healthful balance between relaxation and refinement, responsibility, and indulgence. Stunning hilltop views entice you to enjoy our outdoor amenities while desirable interior features beckon you to the comforts of home. Less than 3 miles away youll find a number of major employers including Yeti Coolers, AMD, and NXP Semiconductors. The nearby Hill Country Galleria and Barton Creek Square give you access to a variety of shopping, dining, and entertainment options. When you want to connect with nature, the Barton Creek Habitat Preserve is less than two miles away. Callista Hill Country Apartments is an apartment community located in Travis County and the 78735 ZIP Code. This area is served by the Austin Independent attendance zone. Unique Features",
+    "description": "Edison Austin Apartments offers upscale living with modern studio, one-, and two-bedroom floor plans featuring wood-style plank flooring, sleek kitchens, and floor-to-ceiling windows. These thoughtfully designed spaces create a luxurious atmosphere youll love coming home to every day.\n\nEnjoy resort-style amenities, including a sparkling pool, rooftop lounge, and state-of-the-art fitness center, all crafted to elevate your lifestyle. Conveniently located near top employers, shopping, parks, and entertainment, Edison Austin provides the perfect balance of luxury and convenience. Discover the exceptional living experience waiting for you at Edison Austin Apartments. Edison Austin is an apartment community located in Travis County and the 78741 ZIP Code. This area is served by the Del Valle Independent attendance zone. Unique Features",
     "breadcrumbs": [
       "Texas",
       "Travis County",
       "Austin",
-      "West Oak Hill",
-      "Callista Hill Country Apartments"
+      "East Riverside-Oltorf",
+      "Edison Austin"
     ],
-    "title": "Callista Hill Country Apartments",
+    "title": "Edison Austin",
     "location": "",
-    "rating": "3.9",
-    "reviews": "14",
+    "rating": "3.6",
+    "reviews": "9",
     "images": [],
-    "image": "https://images1.apartments.com/i2/ARIfI4wOU4DLMO7tO651h7ejGMZqes-77cEfqJt3i38/111/callista-hill-country-apartments-austin-tx-primary-photo.jpg",
+    "image": "https://images1.apartments.com/i2/z5H0yQFpjlAgKT3GJVDk1HmGsaf-mFVw0KNZfqRx8AU/111/edison-austin-austin-tx-primary-photo.jpg",
     "Features": [
-      "Polished granite countertops",
-      "BBQ/Picnic Area",
-      "Electronic Thermostat",
-      "Media Room",
-      "Separate shower with glass enclosure*",
-      "Vaulted ceilings*",
-      "Wood-style flooring in kitchen and living areas*",
-      "Air Conditioner",
-      "In-home washer and dryer*",
-      "Stunning hill country views*",
-      "Fenced dog park with large and small dog sections",
-      "Fenced in yard and sunrooms*",
-      "White Subway Tile Backsplash",
-      "Deep soaker style bathtubs*",
-      "Carport",
-      "Fireplace*",
-      "Private patio or balcony*",
-      "USB charging outlets in kitchen",
-      "Walk-in closet with built-in shelving*"
+      "Custom Shelving in Select Units",
+      "In-unit Washer/Dryer",
+      "Rooftop Terrace with Downtown Views",
+      "Slate Grey or Blue Subway Tile Backsplash",
+      "Fenced-in Yard Available",
+      "Dog Spa",
+      "Granite Countertops with Undermount Kitchen Sink",
+      "9' Ceilings",
+      "Ambient Smart Home Technology",
+      "30-day Money Back Guarantee",
+      "Modern Kitchens with Stainless Steel appliances",
+      "Spin/Yoga Studio",
+      "Faux Wood Plank Flooring throughout",
+      "Spacious Dog Park"
     ]
   },
   "contact": {
-    "property_management_logo": "https://images1.apartments.com/i2/eDAHb2tHnP4y-KYD7Jb2Vh50owdZV4hQ3V2woIr_0tQ/115/fairfield-logo.jpg",
-    "phone_number": "(737) 241-4015",
-    "property_website": "https://www.callistahillcountryapartments.com/",
+    "property_management_logo": "https://images1.apartments.com/i2/2KYeNtYOrDikake9VBDRkslEVEBBU18-Vrt6RMeLNtI/115/the-connor-group-logo.png",
+    "phone_number": "(737) 377-3852",
+    "property_website": "https://edisonaustin.com/?utm_source=apartments",
     "language": "Language: English",
     "office_hours": {
-      "days": "Monday & Tuesday,",
-      "hours": "10am - 6pm"
+      "days": "Monday - Friday,",
+      "hours": "11am - 6pm"
     }
   },
   "amenities": [
@@ -379,36 +1030,35 @@
       "title": "Other Amenities",
       "amenities": [
         "Package Service",
-        "Controlled Access",
-        "Maintenance on site",
-        "Property Manager on Site",
-        "Trash Pickup - Door to Door",
-        "Wheelchair Accessible",
+        "Pet Play Area",
+        "Pet Washing Station",
+        "EV Charging",
         "Business Center",
         "Clubhouse",
-        "Walk-Up",
+        "Lounge",
+        "Storage Space",
+        "Conference Rooms",
         "Fitness Center",
         "Spa",
         "Pool",
+        "Bicycle Storage",
         "Gated",
+        "Roof Terrace",
         "Sundeck",
+        "Cabana",
         "Courtyard",
-        "Grill",
-        "Picnic Area",
         "Dog Park"
       ]
     },
     {
       "title": "Indoor Features",
       "amenities": [
-        "Wi-Fi",
+        "High Speed Internet Access",
         "Washer/Dryer",
-        "Washer/Dryer Hookup",
         "Air Conditioning",
-        "Ceiling Fans",
-        "Cable Ready",
-        "Fireplace",
-        "Handrails",
+        "Heating",
+        "Smoke Free",
+        "Storage Space",
         "Wheelchair Accessible (Rooms)"
       ]
     },
@@ -417,135 +1067,137 @@
       "amenities": [
         "Dishwasher",
         "Disposal",
+        "Ice Maker",
         "Granite Countertops",
+        "Stainless Steel Appliances",
+        "Island Kitchen",
         "Kitchen",
-        "Microwave",
         "Oven",
+        "Range",
         "Refrigerator"
       ]
     },
     {
       "title": "Model Details",
       "amenities": [
-        "Carpet",
+        "Hardwood Floors",
         "Vinyl Flooring",
-        "Recreation Room",
-        "Sunroom",
-        "Vaulted Ceiling",
         "Walk-In Closets",
-        "Window Coverings",
-        "Balcony",
-        "Patio",
+        "Floor to Ceiling Windows",
         "Yard"
       ]
     }
   ],
   "education": {
     "colleges_universities": [
-      "Austin C.C., Pinnacle Campus : Drive: 5 min / 2.3 mi",
-      "USAHS : Drive: 12 min / 6.3 mi",
-      "Austin C.C., South Austin : Drive: 14 min / 8.1 mi",
-      "St. Edward's University : Drive: 15 min / 9.8 mi"
+      "Austin C.C., Riverside Campus : Drive: 5 min / 1.9 mi",
+      "St. Edward's University : Drive: 7 min / 3.0 mi",
+      "Austin C.C., Eastview Campus : Drive: 7 min / 3.2 mi",
+      "Austin C.C., Rio Grande Campus : Drive: 10 min / 4.8 mi"
     ],
-    "description": "Callista Hill Country Apartments is within 5 minutes or 2.3 miles from Austin C.C., Pinnacle Campus. It is also near USAHS and Austin C.C., South Austin."
+    "description": "Edison Austin is within 5 minutes or 1.9 miles from Austin C.C., Riverside Campus. It is also near St. Edward's University and Austin C.C., Eastview Campus."
   },
   "schools": {
     "public": [
       {
-        "name": "Oak Hill Elementary School",
+        "name": "Baty Elementary School",
         "subtitle": "Public Elementary School"
       },
       {
-        "name": "Small Middle School",
+        "name": "IDEA Montopolis College Preparatory",
+        "subtitle": "Charter Middle & High School"
+      },
+      {
+        "name": "John P Ojeda J High School",
         "subtitle": "Public Middle School"
       },
       {
-        "name": "Gorzycki Middle",
-        "subtitle": "Public Middle School"
+        "name": "Del Valle High School",
+        "subtitle": "Public Middle & High School"
       },
       {
-        "name": "Austin High School",
-        "subtitle": "Public High School"
-      },
-      {
-        "name": "Westlake High School",
+        "name": "Travis High School",
         "subtitle": "Public High School"
       }
     ],
     "private": [
       {
-        "name": "Austin Waldorf School",
-        "subtitle": "Private Elementary, Middle & High School"
+        "name": "St Ignatius Martyr School",
+        "subtitle": "Private Elementary & Middle School"
       },
       {
-        "name": "Veritas Academy",
-        "subtitle": "Private Elementary, Middle & High School"
+        "name": "San Juan Diego Catholic High School",
+        "subtitle": "Private High School"
       }
     ]
   },
   "transportation": {
-    "description": "Transportation options available in Austin include Downtown Station, located 11.4 miles from Callista Hill Country Apartments. Callista Hill Country Apartments is near Austin-Bergstrom International, located 17.4 miles or 31 minutes away.",
+    "description": "Transportation options available in Austin include Downtown Station, located 3.1 miles from Edison Austin. Edison Austin is near Austin-Bergstrom International, located 8.1 miles or 19 minutes away.",
     "groups": [
       {
         "subtitle": "Transit / Subway",
         "stations": [
-          "Downtown Station : Drive: 18 min / 11.4 mi",
-          "Plaza Saltillo Station : Drive: 20 min / 14.0 mi"
+          "Downtown Station : Drive: 7 min / 3.1 mi",
+          "Plaza Saltillo Station : Drive: 8 min / 3.7 mi",
+          "M L King Jr Station : Drive: 10 min / 4.4 mi",
+          "Highland Station : Drive: 13 min / 7.8 mi",
+          "Crestview Station : Drive: 16 min / 8.7 mi"
         ]
       },
       {
         "subtitle": "Commuter Rail",
         "stations": [
-          "Austin : Drive: 17 min / 10.6 mi",
-          "San Marcos Amtrak : Drive: 45 min / 32.0 mi"
+          "Austin : Drive: 11 min / 4.2 mi",
+          "San Marcos Amtrak : Drive: 38 min / 30.3 mi",
+          "Taylor Amtrak : Drive: 50 min / 38.8 mi"
         ]
       },
       {
         "subtitle": "Airports",
         "stations": [
-          "Austin-Bergstrom International : Drive: 31 min / 17.4 mi"
+          "Austin-Bergstrom International : Drive: 19 min / 8.1 mi"
         ]
       }
     ]
   },
   "pointOfInterest": {
-    "description": "Time and distance from Callista Hill Country Apartments.",
+    "description": "Time and distance from Edison Austin.",
     "groups": [
       {
         "subtitle": "Shopping Centers",
-        "description": "Callista Hill Country Apartments has 3 shopping centers within 2.7 miles, which is about a 8-minute drive. The miles and minutes will be for the farthest away property.",
+        "description": "Edison Austin has 3 shopping centers within 1.1 miles, which is about a 20-minute walk. The miles and minutes will be for the farthest away property.",
         "places": [
-          "Center of the Hills : Drive: 4 min / 1.7 mi",
-          "Westpark Village : Drive: 5 min / 2.6 mi",
-          "Lantana Place : Drive: 8 min / 2.7 mi"
+          "Parke Green : Walk: 7 min / 0.4 mi",
+          "Riverside Place Shopping Center : Walk: 12 min / 0.6 mi",
+          "Willow Creek Center : Walk: 20 min / 1.1 mi"
         ]
       },
       {
         "subtitle": "Parks and Recreation",
-        "description": "Callista Hill Country Apartments has 5 parks within 11.2 miles, including Dick Nichols Park, Circle C Ranch Metropolitan Park, and Lady Bird Johnson Wildflower Center.",
+        "description": "Edison Austin has 5 parks within 6.4 miles, including Lady Bird Lake, Blunn Creek Nature Preserve, and Boggy Creek Greenbelt.",
         "places": [
-          "Dick Nichols Park : Drive: 9 min / 4.3 mi",
-          "Circle C Ranch Metropolitan Park : Drive: 8 min / 4.7 mi",
-          "Barton Creek Greenbelt (360 Access) : Drive: 11 min / 6.8 mi",
-          "Lady Bird Johnson Wildflower Center : Drive: 14 min / 7.2 mi",
-          "Wild Basin Preserve : Drive: 17 min / 11.2 mi"
+          "Lady Bird Lake : Drive: 4 min / 1.5 mi",
+          "Blunn Creek Nature Preserve : Drive: 6 min / 2.5 mi",
+          "Boggy Creek Greenbelt : Drive: 7 min / 3.3 mi",
+          "Umlauf Sculpture Garden and Museum : Drive: 10 min / 4.2 mi",
+          "McKinney Falls State Park : Drive: 16 min / 6.4 mi"
         ]
       },
       {
         "subtitle": "Hospitals",
-        "description": "Callista Hill Country Apartments has 3 hospitals within 10.1 miles, the nearest is Ascension Seton Southwest which is 2.8 miles away and a 5 minute drive.",
+        "description": "Edison Austin has 3 hospitals within 5.2 miles, the nearest is Dell Seton Medical Center at The University of Texas which is 3.8 miles away and a 8 minute drive.",
         "places": [
-          "Ascension Seton Southwest : Drive: 5 min / 2.8 mi",
-          "Austin Oaks Hospital : Drive: 14 min / 8.4 mi",
-          "The Hospital at Westlake Medical Center : Drive: 16 min / 10.1 mi"
+          "Dell Seton Medical Center at The University of Texas : Drive: 8 min / 3.8 mi",
+          "Austin Lakes Hospital : Drive: 9 min / 4.8 mi",
+          "St. David's South Austin Medical Center : Drive: 10 min / 5.2 mi"
         ]
       },
       {
         "subtitle": "Military Bases",
-        "description": "Callista Hill Country Apartments is 67.0 miles from Randolph Air Force Base, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
+        "description": "Edison Austin is 65.2 miles from Randolph Air Force Base, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
         "places": [
-          "Randolph Air Force Base : Drive: 87 min / 67.0 mi",
-          "Camp Bullis Military Training Reservation : Drive: 98 min / 76.7 mi"
+          "Randolph Air Force Base : Drive: 80 min / 65.2 mi",
+          "Camp Bullis Military Training Reservation : Drive: 109 min / 92.7 mi"
         ]
       }
     ]

@@ -139,6 +139,41 @@ LEASE_CHANGE_PLAN_KEYWORDS = (
     "modify floor plan",
     "edit plan",
 )
+LEASE_CHANGE_NAME_KEYWORDS = ("change name", "update name", "edit name", "set name")
+LEASE_CHANGE_DATE_KEYWORDS = (
+    "change date",
+    "change move-in",
+    "change move in",
+    "update date",
+    "edit date",
+    "change movein",
+    "change start date",
+    "change move in date",
+    "change lease date",
+    "change lease start",
+)
+LEASE_CHANGE_TERM_KEYWORDS = (
+    "change lease term",
+    "change duration",
+    "change term",
+    "update lease term",
+    "edit lease term",
+    "change months",
+    "update months",
+    "edit months",
+)
+SHORT_NEGATIVE_RESPONSES = {
+    "no",
+    "nope",
+    "nah",
+    "not now",
+    "not really",
+    "i'm good",
+    "im good",
+    "all good",
+    "nothing",
+    "none",
+}
 LEASE_COMPARE_KEYWORDS = ("compare", "difference between", "vs", "versus")
 LEASE_REFINE_KEYWORDS = ("refine", "change search", "new search", "different search", "update my question")
 LEASE_QUESTION_KEYWORDS = (
@@ -1135,7 +1170,21 @@ def handle_persona_command(state: AgentState, user_input: str) -> Optional[str]:
 
 def _resolve_tenant_name(state: AgentState) -> Optional[str]:
     """Best-effort extraction of the tenant's name supplied by the user."""
+    pending_first = state.get("pending_lease_first_name")
+    pending_last = state.get("pending_lease_last_name")
+    if pending_first or pending_last:
+        combined = " ".join(part for part in [pending_first, pending_last] if part)
+        normalized = _normalize_full_name(combined)
+        if normalized:
+            return normalized
     preferences = state.get("preferences") or {}
+    first_pref = preferences.get("tenant_first_name")
+    last_pref = preferences.get("tenant_last_name")
+    if first_pref or last_pref:
+        combined = " ".join(part for part in [first_pref, last_pref] if part)
+        normalized = _normalize_full_name(combined)
+        if normalized:
+            return normalized
     for key in ("tenant_name", "name", "user_name", "contact_name"):
         value = preferences.get(key)
         if isinstance(value, str) and value.strip():
@@ -1160,6 +1209,20 @@ def _store_tenant_name(state: AgentState, name: str) -> None:
     normalized = _normalize_full_name(cleaned)
     if normalized:
         _store_preference(state, "tenant_name", normalized)
+        first, last = _split_name_parts(normalized)
+        if first:
+            _store_preference(state, "tenant_first_name", first)
+        if last:
+            _store_preference(state, "tenant_last_name", last)
+
+
+def _split_name_parts(full_name: str) -> Tuple[str, str]:
+    tokens = full_name.split()
+    if not tokens:
+        return "", ""
+    if len(tokens) == 1:
+        return tokens[0], ""
+    return tokens[0], " ".join(tokens[1:])
 
 
 def _extract_name_from_message(message: str) -> Optional[str]:
@@ -1266,6 +1329,21 @@ def _wants_change_unit(text: str) -> bool:
 def _wants_change_plan(text: str) -> bool:
     lowered = text.lower()
     return any(keyword in lowered for keyword in LEASE_CHANGE_PLAN_KEYWORDS)
+
+
+def _wants_change_name(text: str) -> bool:
+    lowered = text.lower()
+    return any(keyword in lowered for keyword in LEASE_CHANGE_NAME_KEYWORDS)
+
+
+def _wants_change_date(text: str) -> bool:
+    lowered = text.lower()
+    return any(keyword in lowered for keyword in LEASE_CHANGE_DATE_KEYWORDS)
+
+
+def _wants_change_term(text: str) -> bool:
+    lowered = text.lower()
+    return any(keyword in lowered for keyword in LEASE_CHANGE_TERM_KEYWORDS)
 
 
 def _wants_compare(text: str) -> bool:
@@ -2014,6 +2092,67 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     if not normalized:
         return None
 
+    def _ensure_change_choice() -> Optional[int]:
+        choice = state.get("last_choice_index")
+        if choice is None:
+            choice = state.get("pending_lease_choice")
+        if choice is None:
+            return None
+        state["pending_lease_choice"] = choice
+        return choice
+
+    if _wants_change_name(user_input):
+        choice = _ensure_change_choice()
+        if choice is None:
+            reply = "I need a recent lease draft to update. Please generate one first."
+            return _reply_with_history(state, user_input, reply)
+        state["pending_lease_first_name"] = None
+        state["pending_lease_last_name"] = None
+        state["pending_lease_waiting_name"] = True
+        state["pending_lease_waiting_plan"] = False
+        state["pending_lease_waiting_unit"] = False
+        state["pending_lease_name_only"] = True
+        prefs = state.get("preferences") or {}
+        for key in ("tenant_first_name", "tenant_last_name", "tenant_name"):
+            prefs.pop(key, None)
+        state["preferences"] = prefs
+        prompt = "Sure, let's update your name. What's your first name?"
+        return _reply_with_history(state, user_input, prompt)
+
+    if _wants_change_date(user_input):
+        choice = _ensure_change_choice()
+        if choice is None:
+            reply = "I need a recent lease draft to update the move-in date. Please generate one first."
+            return _reply_with_history(state, user_input, reply)
+        state["pending_lease_waiting_start"] = True
+        state["pending_lease_waiting_duration"] = False
+        state["pending_lease_date_only"] = True
+        prompt = "Sure, what's the new move-in date? Please reply in YYYY-MM-DD format."
+        return _reply_with_history(state, user_input, prompt)
+
+    if _wants_change_term(user_input):
+        choice = _ensure_change_choice()
+        if choice is None:
+            reply = "I need a recent lease draft to update the lease term. Please generate one first."
+            return _reply_with_history(state, user_input, reply)
+        bounds = state.get("last_duration_bounds") or state.get("pending_lease_duration_bounds") or (None, None)
+        state["pending_lease_duration_bounds"] = bounds
+        state["pending_lease_waiting_duration"] = True
+        state["pending_lease_waiting_start"] = False
+        state["pending_lease_waiting_plan"] = False
+        state["pending_lease_term_only"] = True
+        lower, upper = bounds
+        if lower and upper:
+            if lower == upper:
+                prompt = f"The community currently lists {lower}-month terms. How many months should I use?"
+            else:
+                prompt = f"The community lists lease terms between {lower} and {upper} months. How many months should the lease run within that range?"
+        elif upper:
+            prompt = f"The community lists lease terms up to {upper} months. How many months would you like?"
+        else:
+            prompt = "How many months should the lease run? (e.g., 12 months)"
+        return _reply_with_history(state, user_input, prompt)
+
     ack_messages: List[str] = []
     reasoning_data = _reason_about_lease_input(state, user_input)
     reason_intent = (reasoning_data.get("intent") or "").lower()
@@ -2201,6 +2340,9 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
         state["pending_lease_waiting_start"] = False
         normalized = f"option {pending_choice + 1} lease draft"
         user_input = normalized
+        if state.pop("pending_lease_date_only", False):
+            reply = f"Got it—I'll use {move_date} as the move-in date. Anything else you'd like to edit?"
+            return _reply_with_history(state, original_user_input, reply)
 
     waiting_for_duration = bool(state.get("pending_lease_waiting_duration"))
     if waiting_for_duration and pending_choice is not None:
@@ -2242,6 +2384,9 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
         state["pending_lease_waiting_duration"] = False
         normalized = f"option {pending_choice + 1} lease draft"
         user_input = normalized
+        if state.pop("pending_lease_term_only", False):
+            reply = f"Great, I'll use a {months}-month lease term. Need to adjust anything else?"
+            return _reply_with_history(state, original_user_input, reply)
 
     waiting_for_name = bool(state.get("pending_lease_waiting_name"))
     pending_choice = state.get("pending_lease_choice")
@@ -2262,9 +2407,27 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
                 "No problem—let's revisit the listings. Tell me which option number you'd like a lease for (e.g., 'option 2 lease draft').",
             )
 
+        stored_first = state.get("pending_lease_first_name")
+        stored_last = state.get("pending_lease_last_name")
+        pref_first = (state.get("preferences") or {}).get("tenant_first_name")
+        pref_last = (state.get("preferences") or {}).get("tenant_last_name")
+        if not stored_first and pref_first:
+            stored_first = pref_first
+            state["pending_lease_first_name"] = pref_first
+        if not stored_last and pref_last:
+            stored_last = pref_last
+            state["pending_lease_last_name"] = pref_last
+
         reason_first = _clean_name_fragment(reasoning_data.get("first_name"))
         reason_last = _clean_name_fragment(reasoning_data.get("last_name"))
         reason_full = _clean_name_fragment(reasoning_data.get("full_name"))
+        force_manual_last = state.get("pending_lease_name_only") and not stored_last
+        if force_manual_last:
+            reason_last = None
+            reason_full = None
+        if stored_first and not stored_last and reason_full and _is_valid_legal_name(reason_full):
+            reason_last = reason_full
+            reason_full = None
         if reason_full and _is_valid_legal_name(reason_full):
             _store_tenant_name(state, reason_full)
             tenant_name = reason_full
@@ -2274,18 +2437,27 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
             state["pending_lease_waiting_name"] = False
             state["pending_lease_choice"] = None
             user_input = normalized
+            if state.pop("pending_lease_name_only", False):
+                reply = f"Great, I'll use {tenant_name} on the lease. Let me know if you'd like to edit anything else."
+                return _reply_with_history(state, original_user_input, reply)
         extracted = _extract_name_from_message(user_input)
         first_partial, last_partial = _extract_partial_name(user_input)
         if first_partial:
             state["pending_lease_first_name"] = first_partial
+            _store_preference(state, "tenant_first_name", first_partial)
+            stored_first = first_partial
         if last_partial:
             state["pending_lease_last_name"] = last_partial
+            _store_preference(state, "tenant_last_name", last_partial)
+            stored_last = last_partial
         if reason_first:
             state["pending_lease_first_name"] = reason_first
+            _store_preference(state, "tenant_first_name", reason_first)
+            stored_first = reason_first
         if reason_last:
             state["pending_lease_last_name"] = reason_last
-        stored_first = state.get("pending_lease_first_name")
-        stored_last = state.get("pending_lease_last_name")
+            _store_preference(state, "tenant_last_name", reason_last)
+            stored_last = reason_last
 
         if extracted and _is_valid_legal_name(extracted):
             _store_tenant_name(state, extracted)
@@ -2296,18 +2468,38 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
             state["pending_lease_waiting_name"] = False
             state["pending_lease_choice"] = None
             user_input = normalized
+            if state.pop("pending_lease_name_only", False):
+                reply = f"Great, I'll use {tenant_name} on the lease. Let me know if you'd like to edit anything else."
+                return _reply_with_history(state, original_user_input, reply)
         else:
             tokens = re.findall(r"[A-Za-z'\-]+", user_input)
             if tokens and not stored_first:
-                fragment = _clean_name_fragment(tokens[0])
+                fragment = _clean_name_fragment(" ".join(tokens))
                 if fragment:
                     stored_first = fragment
                     state["pending_lease_first_name"] = fragment
+                    _store_preference(state, "tenant_first_name", fragment)
             elif tokens and stored_first and not stored_last:
                 fragment = _clean_name_fragment(" ".join(tokens))
                 if fragment:
                     stored_last = fragment
                     state["pending_lease_last_name"] = fragment
+                    _store_preference(state, "tenant_last_name", fragment)
+            else:
+                if not stored_first:
+                    cleaned_input = re.sub(r"(?:first\s+name\s*(?:is|:)?\s*)", "", user_input, flags=re.IGNORECASE)
+                    fragment = _clean_name_fragment(cleaned_input or user_input)
+                    if fragment:
+                        stored_first = fragment
+                        state["pending_lease_first_name"] = fragment
+                        _store_preference(state, "tenant_first_name", fragment)
+                elif not stored_last:
+                    cleaned_input = re.sub(r"(?:last\s+name\s*(?:is|:)?\s*)", "", user_input, flags=re.IGNORECASE)
+                    fragment = _clean_name_fragment(cleaned_input or user_input)
+                    if fragment:
+                        stored_last = fragment
+                        state["pending_lease_last_name"] = fragment
+                        _store_preference(state, "tenant_last_name", fragment)
 
             if stored_first and stored_last:
                 combined = f"{stored_first} {stored_last}"
@@ -2319,6 +2511,9 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
                 state["pending_lease_waiting_name"] = False
                 state["pending_lease_choice"] = None
                 user_input = normalized
+                if state.pop("pending_lease_name_only", False):
+                    reply = f"Great, I'll use {tenant_name} on the lease. Let me know if you'd like to edit anything else."
+                    return _reply_with_history(state, original_user_input, reply)
             else:
                 missing = "first" if not stored_first else "last"
                 reply = (
@@ -2362,6 +2557,14 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
             reply = f"Great, {pending_first}. What's your last name?"
         reply += "\nNavigation: type 'back' to adjust previous steps or 'restart lease' to start over."
         return _reply_with_history(state, user_input, reply)
+    prefs = state.get("preferences", {})
+    pref_first = prefs.get("tenant_first_name")
+    pref_last = prefs.get("tenant_last_name")
+    if pref_first or pref_last:
+        combined_pref = " ".join(part for part in [pref_first, pref_last] if part)
+        normalized_pref = _normalize_full_name(combined_pref)
+        if normalized_pref:
+            tenant_name = normalized_pref
 
     listing = _select_reference_listing(state, choice_index)
     if not listing:
@@ -2802,6 +3005,17 @@ def main() -> None:
         lease_reply = handle_lease_command(state, user_input)
         if lease_reply:
             print(f"Agent: {lease_reply}\n")
+            continue
+        if user_input.lower() in SHORT_NEGATIVE_RESPONSES:
+            reply = (
+                "No problem—what else can I help with? You can start a new search, ask about the listings we just discussed, "
+                "or type 'change name', 'change date', or 'change lease term' to tweak the latest lease draft."
+            )
+            history = state.get("messages") or []
+            history.append({"role": "user", "content": user_input})
+            history.append({"role": "assistant", "content": reply})
+            state["messages"] = history
+            print(f"Agent: {reply}\n")
             continue
 
         state_messages = state.get("messages") or []
