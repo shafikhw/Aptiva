@@ -35,6 +35,7 @@ from .scraper import run_actor_and_save_outputs
 from .url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
 
 STREAM_CALLBACK: ContextVar[Optional[Callable[[str], None]]] = ContextVar("STREAM_CALLBACK", default=None)
+SCRAPE_SIGNAL = "__aptiva_scrape_start__"
 
 # Defaults can be overridden via env vars
 load_dotenv()
@@ -1245,6 +1246,13 @@ def scrape_listings(state: AgentState) -> AgentState:
         ),
     }
 
+    callback = STREAM_CALLBACK.get()
+    if callback:
+        try:
+            callback(SCRAPE_SIGNAL)
+        except Exception:
+            pass
+
     try:
         json_path = SCRAPER_OUTPUT_PATH
         run_actor_and_save_outputs(run_input, json_path=json_path)
@@ -1540,8 +1548,7 @@ def _render_listings_markdown(listing_views: List[Dict[str, Any]]) -> str:
 
         image_url = view.get("image")
         if image_url:
-            alt_text = f"{title} - primary photo"
-            lines.append(f'   <img src="{image_url}" alt="{alt_text}" width="{THUMBNAIL_WIDTH_PX}" />')
+            lines.append(f"   {image_url}")
 
         price_text = view.get("price_text") or _format_price_label(view.get("price_min"), view.get("price_max"))
         beds_text = view.get("beds_text") or _format_numeric(view.get("beds"))

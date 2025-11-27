@@ -21,7 +21,7 @@ from pydantic import BaseModel
 from server.security import hash_password, verify_password
 from storage.supabase_store import SupabaseStore
 from system1 import lease_drafter
-from system1.real_estate_agent import DEFAULT_PERSONA_MODE
+from system1.real_estate_agent import DEFAULT_PERSONA_MODE, SCRAPE_SIGNAL
 from system1.session import System1AgentSession
 from system2.session import System2AgentSession
 
@@ -297,8 +297,12 @@ def chat_stream(payload: ChatPayload, user: Dict[str, Any] = Depends(get_current
     queue: "Queue[Tuple[str, Any]]" = Queue()
 
     def on_token(text: str) -> None:
-        if text:
-            queue.put(("token", text))
+        if not text:
+            return
+        if text == SCRAPE_SIGNAL:
+            queue.put(("status", "scrape"))
+            return
+        queue.put(("token", text))
 
     def worker() -> None:
         try:
@@ -320,6 +324,8 @@ def chat_stream(payload: ChatPayload, user: Dict[str, Any] = Depends(get_current
             elif kind == "final":
                 yield "event:final\ndata:" + json.dumps(data) + "\n\n"
                 break
+            elif kind == "status":
+                yield f"event:status\ndata:{json.dumps(data)}\n\n"
             else:
                 yield "event:error\ndata:" + json.dumps(data) + "\n\n"
                 break
@@ -489,11 +495,41 @@ def _public_user(user: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
+def _conversation_messages(convo: Dict[str, Any]) -> List[Dict[str, Any]]:
+    if convo.get("messages"):
+        return convo["messages"]
+    state = convo.get("state")
+    if isinstance(state, dict):
+        msgs = state.get("messages")
+        if isinstance(msgs, list):
+            return msgs
+    return []
+
+
+def _snippet(text: str, limit: int) -> str:
+    clean = " ".join((text or "").strip().split())
+    if not clean:
+        return ""
+    if len(clean) <= limit:
+        return clean
+    return clean[: limit - 1].rstrip(" .,;:-") + "…"
+
+
+def _conversation_topic(messages: List[Dict[str, Any]]) -> str:
+    for msg in messages:
+        if msg.get("role") == "user" and msg.get("content"):
+            return _snippet(msg["content"], 80)
+    return ""
+
+
 def _public_conversation(convo: Dict[str, Any], include_messages: bool = True) -> Dict[str, Any]:
-    messages = convo.get("messages", [])
+    messages = _conversation_messages(convo)
     preview = ""
     if messages:
-        preview = messages[-1].get("content", "")[:120]
+        for msg in reversed(messages):
+            if msg.get("content"):
+                preview = _snippet(msg["content"], 160)
+                break
     payload = {
         "id": convo["id"],
         "system": convo["system"],
@@ -502,6 +538,7 @@ def _public_conversation(convo: Dict[str, Any], include_messages: bool = True) -
         "updated_at": _normalize_ts(convo.get("updated_at")),
         "created_at": _normalize_ts(convo.get("created_at")),
         "preview": preview,
+        "topic": _conversation_topic(messages),
     }
     if include_messages:
         payload["messages"] = messages

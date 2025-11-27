@@ -19,6 +19,7 @@ const dom = {
   authToggleBtn: document.getElementById("authToggleBtn"),
   authModal: document.getElementById("authModal"),
   closeAuthModal: document.getElementById("closeAuthModal"),
+  themeToggleBtn: document.getElementById("themeToggleBtn"),
   authTabs: document.querySelectorAll(".auth-tab"),
   loginForm: document.getElementById("loginForm"),
   signupForm: document.getElementById("signupForm"),
@@ -28,12 +29,27 @@ const dom = {
   backToLoginBtn: document.getElementById("backToLoginBtn"),
   leaseList: document.getElementById("leaseList"),
   refreshLeasesBtn: document.getElementById("refreshLeasesBtn"),
+  personaSelect: document.getElementById("personaSelect"),
+  scrapeNotice: document.getElementById("scrapeNotice"),
+  scrapeMessage: document.getElementById("scrapeMessage"),
+  scrapeToggle: document.getElementById("scrapeToggle"),
+  scrapeHide: document.getElementById("scrapeHide"),
+  scrapeDetails: document.getElementById("scrapeDetails"),
 };
+
+const DEFAULT_PERSONA_MODE = "auto";
+const PERSONA_OPTIONS = [
+  { value: "auto", label: "Auto" },
+  { value: "naturalist", label: "Neighborhood Naturalist" },
+  { value: "data", label: "Data Whisperer" },
+  { value: "deal", label: "Deal Navigator" },
+];
 
 const state = {
   token: localStorage.getItem("aptiva_token") || "",
   user: null,
   system: "system1",
+  personaMode: DEFAULT_PERSONA_MODE,
   conversations: [],
   conversationMap: new Map(),
   currentConversationId: null,
@@ -44,9 +60,173 @@ const state = {
   loadingConversationId: null,
   authView: "login",
   leaseDrafts: [],
+  scrapeExpanded: false,
 };
 
+const THEME_STORAGE_KEY = "aptiva_theme";
+const COLOR_SCHEME_QUERY = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+
 const JSON_HEADERS = { "Content-Type": "application/json" };
+
+function resolveThemePreference(preference) {
+  if (preference === "light" || preference === "dark") {
+    return preference;
+  }
+  if (COLOR_SCHEME_QUERY && COLOR_SCHEME_QUERY.matches) {
+    return "light";
+  }
+  return "dark";
+}
+
+function applyTheme(theme) {
+  const normalized = theme === "light" ? "light" : "dark";
+  const root = document.documentElement;
+  root.dataset.theme = normalized;
+  if (dom.themeToggleBtn) {
+    const nextLabel = normalized === "light" ? "Dark mode" : "Light mode";
+    const nextTheme = normalized === "light" ? "dark" : "light";
+    dom.themeToggleBtn.textContent = `${nextTheme.charAt(0).toUpperCase()}${nextTheme.slice(1)} mode`;
+    dom.themeToggleBtn.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+    dom.themeToggleBtn.setAttribute("aria-pressed", normalized === "light" ? "true" : "false");
+  }
+  return normalized;
+}
+
+function setThemePreference(theme) {
+  const normalized = applyTheme(theme);
+  localStorage.setItem(THEME_STORAGE_KEY, normalized);
+}
+
+function attachSystemThemeListener() {
+  if (!COLOR_SCHEME_QUERY) return;
+  const handler = (event) => {
+    if (localStorage.getItem(THEME_STORAGE_KEY)) return;
+    applyTheme(event.matches ? "light" : "dark");
+  };
+  if (typeof COLOR_SCHEME_QUERY.addEventListener === "function") {
+    COLOR_SCHEME_QUERY.addEventListener("change", handler);
+  } else if (typeof COLOR_SCHEME_QUERY.addListener === "function") {
+    COLOR_SCHEME_QUERY.addListener(handler);
+  }
+}
+
+function initThemeControls() {
+  const stored = localStorage.getItem(THEME_STORAGE_KEY);
+  applyTheme(resolveThemePreference(stored));
+  attachSystemThemeListener();
+}
+
+function normalizePersonaMode(mode) {
+  const key = (mode || "").toLowerCase();
+  return PERSONA_OPTIONS.some((p) => p.value === key) ? key : DEFAULT_PERSONA_MODE;
+}
+
+function personaLabel(mode) {
+  const normalized = normalizePersonaMode(mode);
+  return PERSONA_OPTIONS.find((p) => p.value === normalized)?.label || "Auto";
+}
+
+function setPersonaMode(mode, { persistConversation } = {}) {
+  const normalized = normalizePersonaMode(mode);
+  state.personaMode = normalized;
+  if (dom.personaSelect) {
+    dom.personaSelect.value = normalized;
+  }
+  if (persistConversation && state.currentConversationId) {
+    const convo = state.conversationMap.get(state.currentConversationId);
+    if (convo) {
+      convo.persona_mode = normalized;
+      const idx = state.conversations.findIndex((c) => c.id === convo.id);
+      if (idx !== -1) {
+        state.conversations[idx] = { ...state.conversations[idx], persona_mode: normalized };
+      }
+    }
+  }
+  return normalized;
+}
+
+function setScrapeNotice(message) {
+  if (!dom.scrapeNotice) return;
+  if (message) {
+    dom.scrapeMessage.textContent = message;
+    dom.scrapeNotice.classList.remove("hidden");
+  } else {
+    dom.scrapeNotice.classList.add("hidden");
+    state.scrapeExpanded = false;
+    if (dom.scrapeDetails) {
+      dom.scrapeDetails.classList.add("hidden");
+    }
+    if (dom.scrapeToggle) {
+      dom.scrapeToggle.textContent = "Show details";
+    }
+  }
+}
+
+function toggleScrapeDetails() {
+  state.scrapeExpanded = !state.scrapeExpanded;
+  if (dom.scrapeDetails) {
+    dom.scrapeDetails.classList.toggle("hidden", !state.scrapeExpanded);
+  }
+  if (dom.scrapeToggle) {
+    dom.scrapeToggle.textContent = state.scrapeExpanded ? "Hide details" : "Show details";
+  }
+}
+
+function showInlineScrape(bubble) {
+  if (!bubble) return null;
+  const body = bubble.querySelector(".message-body");
+  if (!body) return null;
+  const wrapper = document.createElement("div");
+  wrapper.className = "inline-scrape";
+  wrapper.innerHTML = `
+    <div class="scrape-dot small" aria-hidden="true"></div>
+    <div>
+      <strong>Retrieving listings…</strong>
+      <small>Streaming results in a moment.</small>
+    </div>
+  `;
+  body.appendChild(wrapper);
+  return wrapper;
+}
+
+function stripStreamingPrefix(text = "") {
+  const cleaned = text.replace(/^[\uFEFF]/, "");
+
+  const fenceMatch = cleaned.match(/^```(?:json)?\s*\n([\s\S]*?)```[\s\r\n]*/i);
+  if (fenceMatch) {
+    const afterFence = cleaned.slice(fenceMatch[0].length).trimStart();
+    return afterFence;
+  }
+
+  const trimmed = cleaned.trimStart();
+  if (!trimmed) return "";
+  const firstChar = trimmed[0];
+
+  if (firstChar === "{" || firstChar === "[") {
+    const endIdx = findClosingBracketIndex(trimmed);
+    if (endIdx === -1) return "";
+    const candidate = trimmed.slice(0, endIdx + 1);
+    try {
+      const parsed = JSON.parse(candidate);
+      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+        const remainder = trimmed.slice(endIdx + 1).trimStart();
+        return remainder;
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+
+  return cleaned;
+}
+
+function buildPersonaSelect() {
+  if (!dom.personaSelect) return;
+  dom.personaSelect.innerHTML = PERSONA_OPTIONS.map(
+    (opt) => `<option value="${opt.value}">${opt.label}</option>`,
+  ).join("");
+  dom.personaSelect.value = normalizePersonaMode(state.personaMode);
+}
 
 function escapeHtml(value = "") {
   return value
@@ -71,7 +251,10 @@ function renderMarkdown(text = "") {
       listBuffer = [];
     }
     if (orderedBuffer.length) {
-      output.push(`<ol>${orderedBuffer.join("")}</ol>`);
+      const start = orderedBuffer[0].index || 1;
+      const startAttr = start !== 1 ? ` start="${start}"` : "";
+      const items = orderedBuffer.map((item) => `<li>${item.text}</li>`).join("");
+      output.push(`<ol${startAttr}>${items}</ol>`);
       orderedBuffer = [];
     }
   };
@@ -80,13 +263,13 @@ function renderMarkdown(text = "") {
     const bulletMatch = line.match(/^\s*-\s+(.*)/);
     const orderedMatch = line.match(/^\s*(\d+)\.\s+(.*)/);
     if (bulletMatch) {
-      flushLists();
+      if (orderedBuffer.length) flushLists();
       listBuffer.push(`<li>${bulletMatch[1]}</li>`);
       continue;
     }
     if (orderedMatch) {
-      flushLists();
-      orderedBuffer.push(`<li>${orderedMatch[2]}</li>`);
+      if (listBuffer.length) flushLists();
+      orderedBuffer.push({ index: Number(orderedMatch[1]) || 1, text: orderedMatch[2] });
       continue;
     }
     flushLists();
@@ -102,50 +285,46 @@ function renderMarkdown(text = "") {
   html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
   html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
-  const imgRegex = /https?:\/\/[^\s<>"']+\.(?:png|jpe?g|gif)/gi;
-  html = html.replace(imgRegex, (url) => {
+  const imgRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s<>"']+\.(?:png|jpe?g|gif))/gi;
+  html = html.replace(imgRegex, (match, alt, mdUrl, bareUrl) => {
+    const url = mdUrl || bareUrl;
     const clean = url.replace(/&amp;/g, "&");
-    return `<img src="${clean}" alt="Listing image" class="inline-photo" />`;
+    const altText = alt !== undefined ? alt : "Listing image";
+    return `<img src="${clean}" alt="${altText}" class="inline-photo" />`;
   });
   html = html.replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   html = html.replace(/<a href="[^"]+\.(?:png|jpe?g|gif)[^"]*"[^>]*>.*?<\/a>/gi, "");
   return html;
 }
 
-function stripPreferencePrefix(text = "") {
-  const trimmed = text.replace(/^[\uFEFF]/, "").replace(/^\s+/, "");
-  if (!trimmed.startsWith("{")) {
-    return text;
-  }
-  const endIdx = findClosingBraceIndex(trimmed);
-  if (endIdx === -1) {
-    return text;
-  }
-  try {
-    const obj = JSON.parse(trimmed.slice(0, endIdx + 1));
-    if (!obj || typeof obj !== "object" || !("preferences" in obj)) {
-      return text;
-    }
-  } catch {
-    return text;
-  }
-  const remainder = trimmed.slice(endIdx + 1).replace(/^\s+/, "");
-  return remainder || "";
-}
-
-function findClosingBraceIndex(text) {
-  let depth = 0;
+function findClosingBracketIndex(text) {
+  const stack = [];
   let inString = false;
+  let escapeNext = false;
   for (let i = 0; i < text.length; i += 1) {
     const char = text[i];
-    if (char === '"' && text[i - 1] !== "\\") {
+    if (escapeNext) {
+      escapeNext = false;
+      continue;
+    }
+    if (char === "\\") {
+      escapeNext = true;
+      continue;
+    }
+    if (char === '"') {
       inString = !inString;
+      continue;
     }
     if (inString) continue;
-    if (char === "{") depth += 1;
-    if (char === "}") {
-      depth -= 1;
-      if (depth === 0) {
+    if (char === "{" || char === "[") {
+      stack.push(char);
+    } else if (char === "}" || char === "]") {
+      if (!stack.length) return -1;
+      const open = stack.pop();
+      if ((open === "{" && char !== "}") || (open === "[" && char !== "]")) {
+        return -1;
+      }
+      if (!stack.length) {
         return i;
       }
     }
@@ -324,10 +503,12 @@ function renderConversations() {
     }
     item.dataset.id = convo.id;
     item.role = "option";
-    const title = convo.preview || `Conversation ${convo.id.slice(0, 6)}`;
-    item.innerHTML = `<strong>${title || "Untitled chat"}</strong><small>${formatTimestamp(
-      convo.updated_at || convo.created_at,
-    )}</small>`;
+    const topic = (convo.topic && convo.topic.trim()) || "";
+    const preview = (convo.preview && convo.preview.trim()) || "";
+    const titleText = topic || preview || `Conversation ${convo.id.slice(0, 6)}`;
+    const timestamp = formatTimestamp(convo.updated_at || convo.created_at);
+    const previewMarkup = preview ? `<p class="conversation-preview">${escapeHtml(preview)}</p>` : "";
+    item.innerHTML = `<strong>${escapeHtml(titleText)}</strong><small>${timestamp}</small>${previewMarkup}`;
     dom.conversationList.appendChild(item);
   });
 }
@@ -345,6 +526,9 @@ function formatTimestamp(value) {
 async function loadConversationDetail(id) {
   if (!id || state.loadingConversationId === id) return;
   const cached = state.conversationMap.get(id);
+  if (cached) {
+    setPersonaMode(cached.persona_mode || state.personaMode);
+  }
   if (cached?.messages?.length) {
     setChatHeading(cached);
     renderMessages(cached.messages);
@@ -378,8 +562,8 @@ function clearChat() {
 
 function setChatHeading(convo) {
   dom.chatTitle.textContent = `Chat · ${convo.system === "system2" ? "Lebanon" : "United States"}`;
-  const persona = convo.persona_mode || "auto";
-  dom.chatSubtitle.textContent = `Persona: ${persona} · Updated ${formatTimestamp(convo.updated_at)}`;
+  const persona = setPersonaMode(convo.persona_mode || state.personaMode);
+  dom.chatSubtitle.textContent = `Persona: ${personaLabel(persona)} · Updated ${formatTimestamp(convo.updated_at)}`;
 }
 
 function renderMessages(messages) {
@@ -478,9 +662,11 @@ function appendMessageBubble(role, content) {
   meta.textContent = role === "user" ? "You" : "Aptiva";
   const body = document.createElement("div");
   body.className = "message-body";
-  const rawContent = stripPreferencePrefix(content || "");
-  body.dataset.raw = rawContent;
-  body.innerHTML = renderMarkdown(rawContent);
+  const fullContent = content || "";
+  body.dataset.rawFull = fullContent;
+  const cleanContent = stripStreamingPrefix(fullContent);
+  body.dataset.raw = cleanContent;
+  body.innerHTML = renderMarkdown(cleanContent);
   bubble.append(meta, body);
   dom.chatFeed.appendChild(bubble);
   dom.chatFeed.scrollTop = dom.chatFeed.scrollHeight;
@@ -503,6 +689,7 @@ async function createConversation({ silent = false } = {}) {
   const payload = {
     system: state.system,
     carry_preferences: dom.sharePrefToggle.checked,
+    persona_mode: state.personaMode,
   };
   const promise = (async () => {
     try {
@@ -529,17 +716,21 @@ function insertPlaceholderConversation(id) {
   const placeholder = {
     id,
     preview: "Starting new chat…",
+    topic: "New chat",
     system: state.system,
     messages: [],
-    persona_mode: "auto",
+    persona_mode: normalizePersonaMode(state.personaMode),
   };
+  setPersonaMode(placeholder.persona_mode);
   state.conversations = [placeholder, ...state.conversations];
   state.conversationMap.set(id, placeholder);
   state.currentConversationId = id;
   renderConversations();
   dom.chatFeed.innerHTML = "";
   dom.chatTitle.textContent = "Starting new chat…";
-  dom.chatSubtitle.textContent = "Preparing workspace.";
+  dom.chatSubtitle.textContent = `Persona: ${personaLabel(
+    placeholder.persona_mode,
+  )} · Preparing workspace.`;
 }
 
 function replacePlaceholderConversation(tempId, conversation) {
@@ -582,7 +773,7 @@ async function handleSendMessage(event) {
       message: text,
       system: state.system,
       conversation_id: conversationId,
-      persona_mode: state.conversationMap.get(conversationId)?.persona_mode,
+      persona_mode: state.personaMode,
       carry_preferences: dom.sharePrefToggle.checked,
     });
   } catch (err) {
@@ -591,6 +782,28 @@ async function handleSendMessage(event) {
   } finally {
     dom.sendBtn.disabled = false;
     dom.messageInput.focus();
+  }
+}
+
+function handleComposerKeydown(event) {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    if (dom.sendBtn.disabled) return;
+    if (typeof dom.messageForm.requestSubmit === "function") {
+      dom.messageForm.requestSubmit();
+    } else {
+      dom.messageForm.dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+    }
+  }
+}
+
+function handlePersonaChange(event) {
+  const persona = setPersonaMode(event.target.value, { persistConversation: true });
+  if (state.currentConversationId) {
+    const active = state.conversationMap.get(state.currentConversationId);
+    if (active) {
+      setChatHeading({ ...active, persona_mode: persona });
+    }
   }
 }
 
@@ -615,36 +828,58 @@ async function streamChat(payload) {
   let buffer = "";
   let done = false;
   state.liveAssistantBubble = appendMessageBubble("assistant", "");
-  while (!done) {
-    const { value, done: readerDone } = await reader.read();
-    if (readerDone) break;
-    buffer += decoder.decode(value, { stream: true });
-    let idx;
-    while ((idx = buffer.indexOf("\n\n")) !== -1) {
-      const chunk = buffer.slice(0, idx);
-      buffer = buffer.slice(idx + 2);
-      if (!chunk.trim()) continue;
-      const { event, data } = parseSseChunk(chunk);
-      if (event === "token") {
-        const text = safeJsonParse(data, "");
-        appendStreamToken(text);
-      } else if (event === "final") {
-        const result = safeJsonParse(data, null);
-        if (result) {
-          finalizeStream(result);
+  let inlineScrape = null;
+  const removeInlineScrape = () => {
+    if (inlineScrape && inlineScrape.parentNode) {
+      inlineScrape.parentNode.removeChild(inlineScrape);
+    }
+  };
+  try {
+    while (!done) {
+      const { value, done: readerDone } = await reader.read();
+      if (readerDone) break;
+      buffer += decoder.decode(value, { stream: true });
+      let idx;
+      while ((idx = buffer.indexOf("\n\n")) !== -1) {
+        const chunk = buffer.slice(0, idx);
+        buffer = buffer.slice(idx + 2);
+        if (!chunk.trim()) continue;
+        const { event, data } = parseSseChunk(chunk);
+        if (event === "status") {
+          const status = safeJsonParse(data, data);
+          if (status === "scrape" && !inlineScrape) {
+            inlineScrape = showInlineScrape(state.liveAssistantBubble);
+          }
+          continue;
         }
-        dom.stopStreamBtn.disabled = true;
-        state.streamAbort = null;
-        done = true;
-        break;
-      } else if (event === "error") {
-        const info = safeJsonParse(data, { error: "Streaming error." });
-        throw new Error(info.error || "Streaming error.");
+        if (event === "token") {
+          const text = safeJsonParse(data, "");
+          const rendered = appendStreamToken(text || "");
+          if (rendered) {
+            removeInlineScrape();
+          }
+        } else if (event === "final") {
+          removeInlineScrape();
+          const result = safeJsonParse(data, null);
+          if (result) {
+            finalizeStream(result);
+          }
+          dom.stopStreamBtn.disabled = true;
+          state.streamAbort = null;
+          done = true;
+          break;
+        } else if (event === "error") {
+          removeInlineScrape();
+          const info = safeJsonParse(data, { error: "Streaming error." });
+          throw new Error(info.error || "Streaming error.");
+        }
       }
     }
+  } finally {
+    removeInlineScrape();
+    state.streamAbort = null;
+    dom.stopStreamBtn.disabled = true;
   }
-  state.streamAbort = null;
-  dom.stopStreamBtn.disabled = true;
 }
 
 function parseSseChunk(chunk) {
@@ -661,12 +896,16 @@ function parseSseChunk(chunk) {
 }
 
 function appendStreamToken(token) {
-  if (!state.liveAssistantBubble) return;
+  if (!state.liveAssistantBubble) return false;
   const body = state.liveAssistantBubble.querySelector(".message-body");
-  const prior = body.dataset.raw || "";
-  body.dataset.raw = stripPreferencePrefix(prior + token);
-  body.innerHTML = renderMarkdown(body.dataset.raw);
+  const priorFull = body.dataset.rawFull || "";
+  const nextFull = priorFull + token;
+  body.dataset.rawFull = nextFull;
+  const cleaned = stripStreamingPrefix(nextFull);
+  body.dataset.raw = cleaned;
+  body.innerHTML = renderMarkdown(cleaned);
   dom.chatFeed.scrollTop = dom.chatFeed.scrollHeight;
+  return Boolean(cleaned);
 }
 
 function finalizeStream(result) {
@@ -800,6 +1039,11 @@ function safeJsonParse(value, fallback) {
 }
 
 function bindEvents() {
+  dom.themeToggleBtn?.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    setThemePreference(next);
+  });
   dom.systemSelect.addEventListener("change", async (event) => {
     state.system = event.target.value;
     state.currentConversationId = null;
@@ -810,8 +1054,12 @@ function bindEvents() {
   });
   dom.refreshBtn.addEventListener("click", () => loadConversations());
   dom.messageForm.addEventListener("submit", handleSendMessage);
+  dom.messageInput.addEventListener("keydown", handleComposerKeydown);
   dom.stopStreamBtn.addEventListener("click", stopStreaming);
   dom.conversationList.addEventListener("click", handleConversationClick);
+  dom.personaSelect.addEventListener("change", handlePersonaChange);
+  dom.scrapeToggle?.addEventListener("click", toggleScrapeDetails);
+  dom.scrapeHide?.addEventListener("click", () => setScrapeNotice(""));
   dom.guestBtn.addEventListener("click", () => startGuestSession());
   dom.authToggleBtn.addEventListener("click", () => toggleModal(true));
   dom.closeAuthModal.addEventListener("click", () => toggleModal(false));
@@ -831,6 +1079,9 @@ function bindEvents() {
 }
 
 async function init() {
+  initThemeControls();
+  buildPersonaSelect();
+  setPersonaMode(state.personaMode);
   bindEvents();
   state.system = dom.systemSelect.value;
   const authed = await restoreSession();

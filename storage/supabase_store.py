@@ -137,7 +137,7 @@ class SupabaseStore:
     ) -> List[Dict[str, Any]]:
         query = (
             self._table("conversations")
-            .select("id, system, persona_mode, preferences, updated_at, created_at")
+            .select("id, system, persona_mode, preferences, state, updated_at, created_at")
             .eq("user_id", user_id)
             .order("updated_at", desc=True)
         )

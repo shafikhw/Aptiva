@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,25 @@
     <div class="app-shell">
       <header class="app-header">
         <div class="brand">
-          <div class="logo-pill" aria-hidden="true">A</div>
+          <div class="logo-pill">
+            <img
+              src="/logo.png"
+              alt="Aptiva logo"
+              class="logo-image"
+              width="48"
+              height="48"
+              decoding="async"
+            />
+          </div>
           <div>
             <h1>Aptiva</h1>
             <p>Dual-market rental intelligence</p>
           </div>
         </div>
         <div class="header-actions">
+          <button id="themeToggleBtn" class="ghost-btn" type="button" aria-pressed="false">
+            Light mode
+          </button>
           <button id="guestBtn" class="ghost-btn" type="button">New Guest Session</button>
           <button id="authToggleBtn" class="ghost-btn" type="button">Sign in or create account</button>
           <button id="logoutBtn" class="ghost-btn danger" type="button">Log out</button>
@@ -73,7 +85,30 @@
               <p id="chatSubtitle">Streaming responses match the CLI speed.</p>
             </div>
             <div class="pill-group">
+              <label class="persona-picker">
+                <span>Persona</span>
+                <select id="personaSelect" aria-label="Persona mode"></select>
+              </label>
               <button class="ghost-btn" id="refreshBtn" type="button">Refresh</button>
+            </div>
+          </div>
+          <div class="scrape-notice hidden" id="scrapeNotice" aria-live="polite">
+            <div class="scrape-head">
+              <div class="scrape-dot" aria-hidden="true"></div>
+              <div class="scrape-copy">
+                <strong id="scrapeMessage">Retrieving listings…</strong>
+                <small>We’re fetching fresh apartments; this can take a few seconds.</small>
+              </div>
+            </div>
+            <div class="scrape-actions">
+              <button class="ghost-btn" type="button" id="scrapeToggle">Show details</button>
+              <button class="ghost-btn" type="button" id="scrapeHide">Hide</button>
+            </div>
+            <div class="scrape-details hidden" id="scrapeDetails">
+              <p>
+                The agent is pulling live results from Apartments.com via Apify. Listings will stream in
+                as soon as they’re found. You can keep typing or adjust your filters while this runs.
+              </p>
             </div>
           </div>
           <div class="chat-feed" id="chatFeed" aria-live="off"></div>
@@ -130,6 +165,6 @@
       </div>
     </section>
 
-    <script type="module" src="/assets/app.js"></script>
+    <script type="module" src="/assets/app.js?v=2"></script>
   </body>
 </html>
