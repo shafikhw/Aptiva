@@ -1,1656 +1,144 @@
 {
   "pricingAndFloorPlans": [
     {
-      "model_name": "E1",
-      "rent_label": "$1,185 - $1,400",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "375 Sq Ft"
-      ],
-      "availability": "10 Available units",
-      "units": [
-        {
-          "unit": "1102",
-          "price": "$1,185",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kqppm99-2-unit"
-        },
-        {
-          "unit": "1104",
-          "price": "$1,185",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bjefklc-2-unit"
-        },
-        {
-          "unit": "2119",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8znd421-2-unit"
-        },
-        {
-          "unit": "2126",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9hbqcd5-2-unit"
-        },
-        {
-          "unit": "2219",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jh9gc65-2-unit"
-        },
-        {
-          "unit": "2226",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vr85v1e-2-unit"
-        },
-        {
-          "unit": "2319",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#66h2nys-2-unit"
-        },
-        {
-          "unit": "2326",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dfj85sj-2-unit"
-        },
-        {
-          "unit": "2419",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#3wvxzcf-2-unit"
-        },
-        {
-          "unit": "2426",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qc59rdw-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "E2",
-      "rent_label": "$1,445 - $1,480",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "608 Sq Ft"
-      ],
-      "availability": "4 Available units",
-      "units": [
-        {
-          "unit": "1214",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ee4cm3q-2-unit"
-        },
-        {
-          "unit": "1270",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kvwfbxc-2-unit"
-        },
-        {
-          "unit": "1312",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#d7ghynh-2-unit"
-        },
-        {
-          "unit": "1370",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#71n104w-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A1",
-      "rent_label": "$1,453 - $1,665",
+      "model_name": "A3",
+      "rent_label": "$1,090 - $1,940",
       "details": [
         "1 Bed",
         "1 Bath",
-        "644 Sq Ft"
+        "950 Sq Ft"
       ],
-      "availability": "57 Available units",
+      "availability": "3 Available units",
       "units": [
         {
-          "unit": "1269",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#srkzjm4-2-unit"
+          "unit": "0233",
+          "price": "$1,090",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#1wh01y7-2-unit"
         },
         {
-          "unit": "2117",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0lywth3-2-unit"
+          "unit": "1021",
+          "price": "$1,185",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#j8663h7-2-unit"
         },
         {
-          "unit": "2315",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#cn4e41g-2-unit"
+          "unit": "0826",
+          "price": "$1,185",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#37vm6yd-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A4D",
+      "rent_label": "$1,260 - $2,075",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "983 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "0138",
+          "price": "$1,315",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#p0lgcdr-2-unit"
         },
         {
-          "unit": "2324",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ty96g38-2-unit"
+          "unit": "1226",
+          "price": "$1,260",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#qecxy3y-2-unit"
         },
         {
-          "unit": "1159",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#cp8e79f-2-unit"
-        },
-        {
-          "unit": "1167",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#n8lljjm-2-unit"
-        },
-        {
-          "unit": "1169",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5cx3knn-2-unit"
-        },
-        {
-          "unit": "1259",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vktx35e-2-unit"
-        },
-        {
-          "unit": "1267",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sybzq46-2-unit"
-        },
-        {
-          "unit": "1360",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bvzpbqc-2-unit"
-        },
-        {
-          "unit": "1362",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w410xjj-2-unit"
-        },
-        {
-          "unit": "1364",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jw3qnk7-2-unit"
-        },
-        {
-          "unit": "1366",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#755144z-2-unit"
-        },
-        {
-          "unit": "1367",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w2s0v1l-2-unit"
-        },
-        {
-          "unit": "1369",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w690z1h-2-unit"
-        },
-        {
-          "unit": "1459",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0pbwz80-2-unit"
-        },
-        {
-          "unit": "1467",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pd0beps-2-unit"
-        },
-        {
-          "unit": "1469",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6gftfkr-2-unit"
-        },
-        {
-          "unit": "2113",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2vyybjc-2-unit"
-        },
-        {
-          "unit": "2115",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2spy81b-2-unit"
-        },
-        {
-          "unit": "2213",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#58j3jxm-2-unit"
-        },
-        {
-          "unit": "2215",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1sn7h64-2-unit"
-        },
-        {
-          "unit": "2217",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#hqddyw0-2-unit"
-        },
-        {
-          "unit": "2218",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#brlp9zb-2-unit"
-        },
-        {
-          "unit": "2220",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jycqq26-2-unit"
-        },
-        {
-          "unit": "2222",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lhln1ld-2-unit"
-        },
-        {
-          "unit": "2224",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w3x0tsl-2-unit"
-        },
-        {
-          "unit": "2313",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sspzhd4-2-unit"
-        },
-        {
-          "unit": "2317",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#442rxvj-2-unit"
-        },
-        {
-          "unit": "2318",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9y8gq86-2-unit"
-        },
-        {
-          "unit": "2320",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vm2x5ng-2-unit"
-        },
-        {
-          "unit": "2322",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#hjmdrd2-2-unit"
-        },
-        {
-          "unit": "2413",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jsqqhb4-2-unit"
-        },
-        {
-          "unit": "2415",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pgdbfyr-2-unit"
-        },
-        {
-          "unit": "2417",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xd2vnqq-2-unit"
-        },
-        {
-          "unit": "2418",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tvx6bvc-2-unit"
-        },
-        {
-          "unit": "2420",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ybs2c0v-2-unit"
-        },
-        {
-          "unit": "2422",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#g54942z-2-unit"
-        },
-        {
-          "unit": "2424",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rks4v23-2-unit"
-        },
-        {
-          "unit": "1464",
-          "price": "$1,565",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fd3kews-2-unit"
-        },
-        {
-          "unit": "1129",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#3n5547g-2-unit"
-        },
-        {
-          "unit": "1131",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#clwe2je-2-unit"
-        },
-        {
-          "unit": "1227",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lkvn33e-2-unit"
-        },
-        {
-          "unit": "1231",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lpcn73f-2-unit"
-        },
-        {
-          "unit": "1327",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#q2vj30x-2-unit"
-        },
-        {
-          "unit": "1329",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5d13nxq-2-unit"
-        },
-        {
-          "unit": "1331",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m408xqj-2-unit"
-        },
-        {
-          "unit": "1427",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8qgmyp0-2-unit"
-        },
-        {
-          "unit": "1429",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bycpgg8-2-unit"
-        },
-        {
-          "unit": "1431",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#q43j5hz-2-unit"
-        },
-        {
-          "unit": "1127",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6d2tets-2-unit"
-        },
-        {
-          "unit": "1164",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9zdgph6-2-unit"
-        },
-        {
-          "unit": "1166",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2zfyfj8-2-unit"
-        },
-        {
-          "unit": "2120",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#40krsvk-2-unit"
-        },
-        {
-          "unit": "2122",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#68kt9tt-2-unit"
-        },
-        {
-          "unit": "2124",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#70j11ww-2-unit"
-        },
-        {
-          "unit": "2118",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7wk9nmw-2-unit"
+          "unit": "1234",
+          "price": "$1,300",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9md3gl6-2-unit"
         }
       ]
     },
     {
       "model_name": "A2",
-      "rent_label": "$1,545 - $1,680",
+      "rent_label": "$1,165 - $1,905",
       "details": [
         "1 Bed",
         "1 Bath",
-        "679 Sq Ft"
+        "794 Sq Ft"
       ],
-      "availability": "54 Available units",
+      "availability": "1 Available unit",
       "units": [
         {
-          "unit": "1139",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rjn4rb2-2-unit"
-        },
-        {
-          "unit": "1141",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1ze7pp6-2-unit"
-        },
-        {
-          "unit": "1206",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rhj4sk2-2-unit"
-        },
-        {
-          "unit": "1208",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#g1m902w-2-unit"
-        },
-        {
-          "unit": "1239",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fczkbmv-2-unit"
-        },
-        {
-          "unit": "1241",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8lzmtp3-2-unit"
-        },
-        {
-          "unit": "1246",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0hkwsr2-2-unit"
-        },
-        {
-          "unit": "1250",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xe6vmgq-2-unit"
-        },
-        {
-          "unit": "1252",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#456rw3j-2-unit"
-        },
-        {
-          "unit": "1306",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#z3ys2yx-2-unit"
-        },
-        {
-          "unit": "1339",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#x9pvhgm-2-unit"
-        },
-        {
-          "unit": "1341",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9w0gnr7-2-unit"
-        },
-        {
-          "unit": "1346",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w550w9j-2-unit"
-        },
-        {
-          "unit": "1350",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6fbtgbr-2-unit"
-        },
-        {
-          "unit": "1352",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#e8hcjvm-2-unit"
-        },
-        {
-          "unit": "1441",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#818hss3-2-unit"
-        },
-        {
-          "unit": "1450",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tc22c4b-2-unit"
-        },
-        {
-          "unit": "2101",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pwzfd9r-2-unit"
-        },
-        {
-          "unit": "2103",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v31s32d-2-unit"
-        },
-        {
-          "unit": "2201",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4qjwzdj-2-unit"
-        },
-        {
-          "unit": "2203",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c1c91ye-2-unit"
-        },
-        {
-          "unit": "2208",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gnve5xy-2-unit"
-        },
-        {
-          "unit": "2210",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h278tv2-2-unit"
-        },
-        {
-          "unit": "2212",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2dxtd68-2-unit"
-        },
-        {
-          "unit": "2214",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#824htj2-2-unit"
-        },
-        {
-          "unit": "2216",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xv1zl0m-2-unit"
-        },
-        {
-          "unit": "2301",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yv26c7t-2-unit"
-        },
-        {
-          "unit": "2303",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#s99vjl5-2-unit"
-        },
-        {
-          "unit": "2308",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#19b3js5-2-unit"
-        },
-        {
-          "unit": "2310",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4l1wvdk-2-unit"
-        },
-        {
-          "unit": "2312",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5yp7pkq-2-unit"
-        },
-        {
-          "unit": "2314",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xrezh8n-2-unit"
-        },
-        {
-          "unit": "2316",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ghge05x-2-unit"
-        },
-        {
-          "unit": "2401",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pzlfg1s-2-unit"
-        },
-        {
-          "unit": "2403",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l6mj6wg-2-unit"
-        },
-        {
-          "unit": "2408",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6s9y9xv-2-unit"
-        },
-        {
-          "unit": "2410",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#j98ljn5-2-unit"
-        },
-        {
-          "unit": "2412",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l30j34d-2-unit"
-        },
-        {
-          "unit": "2414",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#06nryq1-2-unit"
-        },
-        {
-          "unit": "2416",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wl24v6k-2-unit"
-        },
-        {
-          "unit": "1308",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#z6bs76y-2-unit"
-        },
-        {
-          "unit": "1115",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m0h8sqk-2-unit"
-        },
-        {
-          "unit": "1125",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5f93qep-2-unit"
-        },
-        {
-          "unit": "1225",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bzgpfq8-2-unit"
-        },
-        {
-          "unit": "1305",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bsqp87b-2-unit"
-        },
-        {
-          "unit": "1325",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jtvql25-2-unit"
-        },
-        {
-          "unit": "1425",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m3w8tzl-2-unit"
-        },
-        {
-          "unit": "1146",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9smgh04-2-unit"
-        },
-        {
-          "unit": "1152",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tsn68cb-2-unit"
-        },
-        {
-          "unit": "2108",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ev3gldm-2-unit"
-        },
-        {
-          "unit": "2110",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kc3bc2b-2-unit"
-        },
-        {
-          "unit": "2112",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pv3fc1t-2-unit"
-        },
-        {
-          "unit": "2114",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6ynyfns-2-unit"
-        },
-        {
-          "unit": "2116",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7my543y-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A3",
-      "rent_label": "$1,715 - $1,850",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "761 Sq Ft"
-      ],
-      "availability": "28 Available units",
-      "units": [
-        {
-          "unit": "1137",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dk4mtkk-2-unit"
-        },
-        {
-          "unit": "1147",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bfmkfh9-2-unit"
-        },
-        {
-          "unit": "1149",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#whf4rfl-2-unit"
-        },
-        {
-          "unit": "1161",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kdzbdb8-2-unit"
-        },
-        {
-          "unit": "1163",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#s8evhc5-2-unit"
-        },
-        {
-          "unit": "1236",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fympfls-2-unit"
-        },
-        {
-          "unit": "1237",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qnrn5qy-2-unit"
-        },
-        {
-          "unit": "1247",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qmwn4gy-2-unit"
-        },
-        {
-          "unit": "1248",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#80dhr13-2-unit"
-        },
-        {
-          "unit": "1249",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#031rvg2-2-unit"
-        },
-        {
-          "unit": "1261",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#37k178g-2-unit"
-        },
-        {
-          "unit": "1263",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#escgjwn-2-unit"
-        },
-        {
-          "unit": "1301",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l4wj4df-2-unit"
-        },
-        {
-          "unit": "1336",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#exvgnwp-2-unit"
-        },
-        {
-          "unit": "1337",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1gk3q97-2-unit"
-        },
-        {
-          "unit": "1347",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#t8f28dc-2-unit"
-        },
-        {
-          "unit": "1348",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sdxvmc6-2-unit"
-        },
-        {
-          "unit": "1349",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2c1tcfb-2-unit"
-        },
-        {
-          "unit": "1361",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9b7ckq4-2-unit"
-        },
-        {
-          "unit": "1363",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ql0n37w-2-unit"
-        },
-        {
-          "unit": "1437",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v5ss5kf-2-unit"
-        },
-        {
-          "unit": "1447",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kglbg29-2-unit"
-        },
-        {
-          "unit": "1449",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c7l97fg-2-unit"
-        },
-        {
-          "unit": "1461",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nrdqhfn-2-unit"
-        },
-        {
-          "unit": "1463",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#j8dlhe5-2-unit"
-        },
-        {
-          "unit": "1303",
-          "price": "$1,765",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#99ccjz5-2-unit"
-        },
-        {
-          "unit": "1403",
-          "price": "$1,765",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wjb4spl-2-unit"
-        },
-        {
-          "unit": "1148",
-          "price": "$1,850",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#00err73-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A4",
-      "rent_label": "$1,725 - $1,860",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "826 Sq Ft"
-      ],
-      "availability": "23 Available units",
-      "units": [
-        {
-          "unit": "1133",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zqjx71z-2-unit"
-        },
-        {
-          "unit": "1143",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wpp4yyj-2-unit"
-        },
-        {
-          "unit": "1145",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#30f100e-2-unit"
-        },
-        {
-          "unit": "1165",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fv0pcct-2-unit"
-        },
-        {
-          "unit": "1202",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9dzcm76-2-unit"
-        },
-        {
-          "unit": "1232",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tet2em8-2-unit"
-        },
-        {
-          "unit": "1233",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1et3ns6-2-unit"
-        },
-        {
-          "unit": "1234",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mpqdyrj-2-unit"
-        },
-        {
-          "unit": "1243",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v25s2td-2-unit"
-        },
-        {
-          "unit": "1245",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#34y140f-2-unit"
-        },
-        {
-          "unit": "1258",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1b63kj4-2-unit"
-        },
-        {
-          "unit": "1265",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#05srxz0-2-unit"
-        },
-        {
-          "unit": "1332",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gl3e3ew-2-unit"
-        },
-        {
-          "unit": "1333",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5v27lbm-2-unit"
-        },
-        {
-          "unit": "1334",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#b98k9rc-2-unit"
-        },
-        {
-          "unit": "1343",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yyp6fzs-2-unit"
-        },
-        {
-          "unit": "1345",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v4xs4bf-2-unit"
-        },
-        {
-          "unit": "1358",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#07jrzg1-2-unit"
-        },
-        {
-          "unit": "1365",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zhex09x-2-unit"
-        },
-        {
-          "unit": "1434",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zpnx6sz-2-unit"
-        },
-        {
-          "unit": "1443",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#k8gb8bc-2-unit"
-        },
-        {
-          "unit": "1445",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9fqcpq7-2-unit"
-        },
-        {
-          "unit": "1432",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mqldz0j-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A5.1",
-      "rent_label": "$1,755 - $1,890",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "922 Sq Ft"
-      ],
-      "availability": "3 Available units",
-      "units": [
-        {
-          "unit": "1216",
-          "price": "$1,755",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fxrpevr-2-unit"
-        },
-        {
-          "unit": "1315",
-          "price": "$1,755",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mmzdw8h-2-unit"
-        },
-        {
-          "unit": "1116",
-          "price": "$1,890",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c4z946f-2-unit"
+          "unit": "1132",
+          "price": "$1,165",
+          "square_feet": "794",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#lg44x2e-2-unit"
         }
       ]
     },
     {
       "model_name": "B1",
-      "rent_label": "$2,039 - $2,285",
+      "rent_label": "$1,390 - $2,125",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,077 Sq Ft"
-      ],
-      "availability": "61 Available units",
-      "units": [
-        {
-          "unit": "1240",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7qk57cz-2-unit"
-        },
-        {
-          "unit": "1268",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wnt4xph-2-unit"
-        },
-        {
-          "unit": "2121",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r1b0sn3-2-unit"
-        },
-        {
-          "unit": "2304",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7hf503x-2-unit"
-        },
-        {
-          "unit": "1224",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xynzprq-2-unit"
-        },
-        {
-          "unit": "1226",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nymqpyq-2-unit"
-        },
-        {
-          "unit": "1230",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tfp2fw9-2-unit"
-        },
-        {
-          "unit": "1242",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dqhmzbj-2-unit"
-        },
-        {
-          "unit": "1244",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r6p0yx1-2-unit"
-        },
-        {
-          "unit": "1256",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mhgdr8l-2-unit"
-        },
-        {
-          "unit": "1316",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#35t15rf-2-unit"
-        },
-        {
-          "unit": "1318",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4j9wswl-2-unit"
-        },
-        {
-          "unit": "1322",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mnvdxhh-2-unit"
-        },
-        {
-          "unit": "1324",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yzk6g7s-2-unit"
-        },
-        {
-          "unit": "1326",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#31b11re-2-unit"
-        },
-        {
-          "unit": "1330",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#18f3h15-2-unit"
-        },
-        {
-          "unit": "1340",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qk4n2zw-2-unit"
-        },
-        {
-          "unit": "1342",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jerlnn6-2-unit"
-        },
-        {
-          "unit": "1344",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l24j2wd-2-unit"
-        },
-        {
-          "unit": "1222",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l7hj74g-2-unit"
-        },
-        {
-          "unit": "1422",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7l253cw-2-unit"
-        },
-        {
-          "unit": "1424",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yxt6eqr-2-unit"
-        },
-        {
-          "unit": "1426",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#t9b29mc-2-unit"
-        },
-        {
-          "unit": "1430",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dpmmykj-2-unit"
-        },
-        {
-          "unit": "1442",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sesvnl6-2-unit"
-        },
-        {
-          "unit": "1444",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yt66bzt-2-unit"
-        },
-        {
-          "unit": "2102",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#04xrw70-2-unit"
-        },
-        {
-          "unit": "2204",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fzhpgcs-2-unit"
-        },
-        {
-          "unit": "2221",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bghkg89-2-unit"
-        },
-        {
-          "unit": "2321",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7nt55vy-2-unit"
-        },
-        {
-          "unit": "2421",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5wy7m2p-2-unit"
-        },
-        {
-          "unit": "1356",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sgjvq37-2-unit"
-        },
-        {
-          "unit": "1368",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v0es0be-2-unit"
-        },
-        {
-          "unit": "1418",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6zjyges-2-unit"
-        },
-        {
-          "unit": "1440",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sb5vkv4-2-unit"
-        },
-        {
-          "unit": "1218",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tb62bwb-2-unit"
-        },
-        {
-          "unit": "1468",
-          "price": "$2,185",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yrf68gv-2-unit"
-        },
-        {
-          "unit": "2402",
-          "price": "$2,185",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wqk4z6j-2-unit"
-        },
-        {
-          "unit": "1319",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#299t9yc-2-unit"
-        },
-        {
-          "unit": "1321",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ns8qjpn-2-unit"
-        },
-        {
-          "unit": "1323",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h338v32-2-unit"
-        },
-        {
-          "unit": "1223",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gmze45y-2-unit"
-        },
-        {
-          "unit": "1221",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2estey8-2-unit"
-        },
-        {
-          "unit": "1219",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2fntfp9-2-unit"
-        },
-        {
-          "unit": "1419",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7jb51vx-2-unit"
-        },
-        {
-          "unit": "1421",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nwwqmfp-2-unit"
-        },
-        {
-          "unit": "1423",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kb7bbtb-2-unit"
-        },
-        {
-          "unit": "1119",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pscf9jv-2-unit"
-        },
-        {
-          "unit": "1121",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5sb7jtn-2-unit"
-        },
-        {
-          "unit": "1123",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l18j1me-2-unit"
-        },
-        {
-          "unit": "1215",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7k652lw-2-unit"
-        },
-        {
-          "unit": "1415",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#erggh4n-2-unit"
-        },
-        {
-          "unit": "2202",
-          "price": "$2,225",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c2792pd-2-unit"
-        },
-        {
-          "unit": "2302",
-          "price": "$2,225",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gpqe6nz-2-unit"
-        },
-        {
-          "unit": "2404",
-          "price": "$2,260",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#85rhxs0-2-unit"
-        },
-        {
-          "unit": "1118",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ysb69qv-2-unit"
-        },
-        {
-          "unit": "1122",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r260tx2-2-unit"
-        },
-        {
-          "unit": "1124",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gk7e2nw-2-unit"
-        },
-        {
-          "unit": "1126",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ywy6dgr-2-unit"
-        },
-        {
-          "unit": "1144",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1dy3m16-2-unit"
-        },
-        {
-          "unit": "1168",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xwxzm8p-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B1.1",
-      "rent_label": "$2,150 - $2,285",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,077 Sq Ft"
+        "1,036 Sq Ft"
       ],
       "availability": "2 Available units",
       "units": [
         {
-          "unit": "2104",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sc1vl34-2-unit"
+          "unit": "0838",
+          "price": "$1,390",
+          "square_feet": "1,036",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#fnp55jt-2-unit"
         },
         {
-          "unit": "1156",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fwwpd3r-2-unit"
+          "unit": "0728",
+          "price": "$1,415",
+          "square_feet": "1,036",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#xm9fsvq-2-unit"
         }
       ]
     },
     {
-      "model_name": "B3",
-      "rent_label": "$2,310 - $2,345",
+      "model_name": "C1",
+      "rent_label": "$1,560 - $3,005",
       "details": [
-        "2 Beds",
+        "3 Beds",
         "2 Baths",
-        "1,262 Sq Ft"
+        "1,310 Sq Ft"
       ],
-      "availability": "5 Available units",
+      "availability": "3 Available units",
       "units": [
         {
-          "unit": "1254",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v19s1ke-2-unit"
+          "unit": "0517",
+          "price": "$1,560",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#tt7g6v9-2-unit"
         },
         {
-          "unit": "2206",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6rey85v-2-unit"
+          "unit": "0921",
+          "price": "$1,675",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#r6znzc2-2-unit"
         },
         {
-          "unit": "2306",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h7l8z31-2-unit"
-        },
-        {
-          "unit": "1454",
-          "price": "$2,345",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r7k0z51-2-unit"
-        },
-        {
-          "unit": "2406",
-          "price": "$2,345",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xzjzq0q-2-unit"
+          "unit": "1211",
+          "price": "$1,855",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9km3934-2-unit"
         }
       ]
     },
     {
-      "model_name": "B4",
-      "rent_label": "$2,325 - $2,355",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,253 Sq Ft"
-      ],
-      "availability": "5 Available units",
-      "units": [
-        {
-          "unit": "2309",
-          "price": "$2,325",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#eyqgpmq-2-unit"
-        },
-        {
-          "unit": "1253",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gqle7ez-2-unit"
-        },
-        {
-          "unit": "2109",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bb4kbhb-2-unit"
-        },
-        {
-          "unit": "2209",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fs8p9vv-2-unit"
-        },
-        {
-          "unit": "2409",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nxrqnpp-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A5",
+      "model_name": "A1",
       "rent_label": "Call for Rent",
       "details": [
         "1 Bed",
         "1 Bath",
-        "922 Sq Ft"
+        "686 Sq Ft"
       ],
       "units": []
     },
@@ -1660,1681 +148,129 @@
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,252 Sq Ft"
+        "1,097 Sq Ft"
       ],
       "units": []
     },
     {
-      "model_name": "C1",
+      "model_name": "B3",
       "rent_label": "Call for Rent",
       "details": [
-        "3 Beds",
-        "3 Baths",
-        "1,399 Sq Ft"
+        "2 Beds",
+        "2 Baths",
+        "1,226 Sq Ft"
       ],
       "units": []
     },
     {
-      "model_name": "C1.1",
-      "rent_label": "Call for Rent",
-      "details": [
-        "3 Beds",
-        "3 Baths",
-        "1,399 Sq Ft"
-      ],
-      "units": []
-    },
-    {
-      "model_name": "E1",
-      "rent_label": "$1,185 - $1,400",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "375 Sq Ft"
-      ],
-      "availability": "10 Available units",
-      "units": [
-        {
-          "unit": "1102",
-          "price": "$1,185",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kqppm99-2-unit"
-        },
-        {
-          "unit": "1104",
-          "price": "$1,185",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bjefklc-2-unit"
-        },
-        {
-          "unit": "2119",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8znd421-2-unit"
-        },
-        {
-          "unit": "2126",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9hbqcd5-2-unit"
-        },
-        {
-          "unit": "2219",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jh9gc65-2-unit"
-        },
-        {
-          "unit": "2226",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vr85v1e-2-unit"
-        },
-        {
-          "unit": "2319",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#66h2nys-2-unit"
-        },
-        {
-          "unit": "2326",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dfj85sj-2-unit"
-        },
-        {
-          "unit": "2419",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#3wvxzcf-2-unit"
-        },
-        {
-          "unit": "2426",
-          "price": "$1,395",
-          "square_feet": "375",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qc59rdw-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "E2",
-      "rent_label": "$1,445 - $1,480",
-      "details": [
-        "Studio",
-        "1 Bath",
-        "608 Sq Ft"
-      ],
-      "availability": "4 Available units",
-      "units": [
-        {
-          "unit": "1214",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ee4cm3q-2-unit"
-        },
-        {
-          "unit": "1270",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kvwfbxc-2-unit"
-        },
-        {
-          "unit": "1312",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#d7ghynh-2-unit"
-        },
-        {
-          "unit": "1370",
-          "price": "$1,445",
-          "square_feet": "608",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#71n104w-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A1",
-      "rent_label": "$1,453 - $1,665",
+      "model_name": "A3",
+      "rent_label": "$1,090 - $1,940",
       "details": [
         "1 Bed",
         "1 Bath",
-        "644 Sq Ft"
+        "950 Sq Ft"
       ],
-      "availability": "57 Available units",
+      "availability": "3 Available units",
       "units": [
         {
-          "unit": "1269",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#srkzjm4-2-unit"
+          "unit": "0233",
+          "price": "$1,090",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#1wh01y7-2-unit"
         },
         {
-          "unit": "2117",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0lywth3-2-unit"
+          "unit": "1021",
+          "price": "$1,185",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#j8663h7-2-unit"
         },
         {
-          "unit": "2315",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#cn4e41g-2-unit"
+          "unit": "0826",
+          "price": "$1,185",
+          "square_feet": "950",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#37vm6yd-2-unit"
+        }
+      ]
+    },
+    {
+      "model_name": "A4D",
+      "rent_label": "$1,260 - $2,075",
+      "details": [
+        "1 Bed",
+        "1 Bath",
+        "983 Sq Ft"
+      ],
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "0138",
+          "price": "$1,315",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#p0lgcdr-2-unit"
         },
         {
-          "unit": "2324",
-          "price": "$1,453",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ty96g38-2-unit"
+          "unit": "1226",
+          "price": "$1,260",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#qecxy3y-2-unit"
         },
         {
-          "unit": "1159",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#cp8e79f-2-unit"
-        },
-        {
-          "unit": "1167",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#n8lljjm-2-unit"
-        },
-        {
-          "unit": "1169",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5cx3knn-2-unit"
-        },
-        {
-          "unit": "1259",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vktx35e-2-unit"
-        },
-        {
-          "unit": "1267",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sybzq46-2-unit"
-        },
-        {
-          "unit": "1360",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bvzpbqc-2-unit"
-        },
-        {
-          "unit": "1362",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w410xjj-2-unit"
-        },
-        {
-          "unit": "1364",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jw3qnk7-2-unit"
-        },
-        {
-          "unit": "1366",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#755144z-2-unit"
-        },
-        {
-          "unit": "1367",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w2s0v1l-2-unit"
-        },
-        {
-          "unit": "1369",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w690z1h-2-unit"
-        },
-        {
-          "unit": "1459",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0pbwz80-2-unit"
-        },
-        {
-          "unit": "1467",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pd0beps-2-unit"
-        },
-        {
-          "unit": "1469",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6gftfkr-2-unit"
-        },
-        {
-          "unit": "2113",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2vyybjc-2-unit"
-        },
-        {
-          "unit": "2115",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2spy81b-2-unit"
-        },
-        {
-          "unit": "2213",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#58j3jxm-2-unit"
-        },
-        {
-          "unit": "2215",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1sn7h64-2-unit"
-        },
-        {
-          "unit": "2217",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#hqddyw0-2-unit"
-        },
-        {
-          "unit": "2218",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#brlp9zb-2-unit"
-        },
-        {
-          "unit": "2220",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jycqq26-2-unit"
-        },
-        {
-          "unit": "2222",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lhln1ld-2-unit"
-        },
-        {
-          "unit": "2224",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w3x0tsl-2-unit"
-        },
-        {
-          "unit": "2313",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sspzhd4-2-unit"
-        },
-        {
-          "unit": "2317",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#442rxvj-2-unit"
-        },
-        {
-          "unit": "2318",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9y8gq86-2-unit"
-        },
-        {
-          "unit": "2320",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#vm2x5ng-2-unit"
-        },
-        {
-          "unit": "2322",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#hjmdrd2-2-unit"
-        },
-        {
-          "unit": "2413",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jsqqhb4-2-unit"
-        },
-        {
-          "unit": "2415",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pgdbfyr-2-unit"
-        },
-        {
-          "unit": "2417",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xd2vnqq-2-unit"
-        },
-        {
-          "unit": "2418",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tvx6bvc-2-unit"
-        },
-        {
-          "unit": "2420",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ybs2c0v-2-unit"
-        },
-        {
-          "unit": "2422",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#g54942z-2-unit"
-        },
-        {
-          "unit": "2424",
-          "price": "$1,530",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rks4v23-2-unit"
-        },
-        {
-          "unit": "1464",
-          "price": "$1,565",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fd3kews-2-unit"
-        },
-        {
-          "unit": "1129",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#3n5547g-2-unit"
-        },
-        {
-          "unit": "1131",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#clwe2je-2-unit"
-        },
-        {
-          "unit": "1227",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lkvn33e-2-unit"
-        },
-        {
-          "unit": "1231",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#lpcn73f-2-unit"
-        },
-        {
-          "unit": "1327",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#q2vj30x-2-unit"
-        },
-        {
-          "unit": "1329",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5d13nxq-2-unit"
-        },
-        {
-          "unit": "1331",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m408xqj-2-unit"
-        },
-        {
-          "unit": "1427",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8qgmyp0-2-unit"
-        },
-        {
-          "unit": "1429",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bycpgg8-2-unit"
-        },
-        {
-          "unit": "1431",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#q43j5hz-2-unit"
-        },
-        {
-          "unit": "1127",
-          "price": "$1,580",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6d2tets-2-unit"
-        },
-        {
-          "unit": "1164",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9zdgph6-2-unit"
-        },
-        {
-          "unit": "1166",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2zfyfj8-2-unit"
-        },
-        {
-          "unit": "2120",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#40krsvk-2-unit"
-        },
-        {
-          "unit": "2122",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#68kt9tt-2-unit"
-        },
-        {
-          "unit": "2124",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#70j11ww-2-unit"
-        },
-        {
-          "unit": "2118",
-          "price": "$1,665",
-          "square_feet": "644",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7wk9nmw-2-unit"
+          "unit": "1234",
+          "price": "$1,300",
+          "square_feet": "983",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9md3gl6-2-unit"
         }
       ]
     },
     {
       "model_name": "A2",
-      "rent_label": "$1,545 - $1,680",
+      "rent_label": "$1,165 - $1,905",
       "details": [
         "1 Bed",
         "1 Bath",
-        "679 Sq Ft"
+        "794 Sq Ft"
       ],
-      "availability": "54 Available units",
+      "availability": "1 Available unit",
       "units": [
         {
-          "unit": "1139",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rjn4rb2-2-unit"
-        },
-        {
-          "unit": "1141",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1ze7pp6-2-unit"
-        },
-        {
-          "unit": "1206",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#rhj4sk2-2-unit"
-        },
-        {
-          "unit": "1208",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#g1m902w-2-unit"
-        },
-        {
-          "unit": "1239",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fczkbmv-2-unit"
-        },
-        {
-          "unit": "1241",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#8lzmtp3-2-unit"
-        },
-        {
-          "unit": "1246",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#0hkwsr2-2-unit"
-        },
-        {
-          "unit": "1250",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xe6vmgq-2-unit"
-        },
-        {
-          "unit": "1252",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#456rw3j-2-unit"
-        },
-        {
-          "unit": "1306",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#z3ys2yx-2-unit"
-        },
-        {
-          "unit": "1339",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#x9pvhgm-2-unit"
-        },
-        {
-          "unit": "1341",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9w0gnr7-2-unit"
-        },
-        {
-          "unit": "1346",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#w550w9j-2-unit"
-        },
-        {
-          "unit": "1350",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6fbtgbr-2-unit"
-        },
-        {
-          "unit": "1352",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#e8hcjvm-2-unit"
-        },
-        {
-          "unit": "1441",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#818hss3-2-unit"
-        },
-        {
-          "unit": "1450",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tc22c4b-2-unit"
-        },
-        {
-          "unit": "2101",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pwzfd9r-2-unit"
-        },
-        {
-          "unit": "2103",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v31s32d-2-unit"
-        },
-        {
-          "unit": "2201",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4qjwzdj-2-unit"
-        },
-        {
-          "unit": "2203",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c1c91ye-2-unit"
-        },
-        {
-          "unit": "2208",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gnve5xy-2-unit"
-        },
-        {
-          "unit": "2210",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h278tv2-2-unit"
-        },
-        {
-          "unit": "2212",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2dxtd68-2-unit"
-        },
-        {
-          "unit": "2214",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#824htj2-2-unit"
-        },
-        {
-          "unit": "2216",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xv1zl0m-2-unit"
-        },
-        {
-          "unit": "2301",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yv26c7t-2-unit"
-        },
-        {
-          "unit": "2303",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#s99vjl5-2-unit"
-        },
-        {
-          "unit": "2308",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#19b3js5-2-unit"
-        },
-        {
-          "unit": "2310",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4l1wvdk-2-unit"
-        },
-        {
-          "unit": "2312",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5yp7pkq-2-unit"
-        },
-        {
-          "unit": "2314",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xrezh8n-2-unit"
-        },
-        {
-          "unit": "2316",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ghge05x-2-unit"
-        },
-        {
-          "unit": "2401",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pzlfg1s-2-unit"
-        },
-        {
-          "unit": "2403",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l6mj6wg-2-unit"
-        },
-        {
-          "unit": "2408",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6s9y9xv-2-unit"
-        },
-        {
-          "unit": "2410",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#j98ljn5-2-unit"
-        },
-        {
-          "unit": "2412",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l30j34d-2-unit"
-        },
-        {
-          "unit": "2414",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#06nryq1-2-unit"
-        },
-        {
-          "unit": "2416",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wl24v6k-2-unit"
-        },
-        {
-          "unit": "1308",
-          "price": "$1,545",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#z6bs76y-2-unit"
-        },
-        {
-          "unit": "1115",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m0h8sqk-2-unit"
-        },
-        {
-          "unit": "1125",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5f93qep-2-unit"
-        },
-        {
-          "unit": "1225",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bzgpfq8-2-unit"
-        },
-        {
-          "unit": "1305",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bsqp87b-2-unit"
-        },
-        {
-          "unit": "1325",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jtvql25-2-unit"
-        },
-        {
-          "unit": "1425",
-          "price": "$1,595",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#m3w8tzl-2-unit"
-        },
-        {
-          "unit": "1146",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9smgh04-2-unit"
-        },
-        {
-          "unit": "1152",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tsn68cb-2-unit"
-        },
-        {
-          "unit": "2108",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ev3gldm-2-unit"
-        },
-        {
-          "unit": "2110",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kc3bc2b-2-unit"
-        },
-        {
-          "unit": "2112",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pv3fc1t-2-unit"
-        },
-        {
-          "unit": "2114",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6ynyfns-2-unit"
-        },
-        {
-          "unit": "2116",
-          "price": "$1,680",
-          "square_feet": "679",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7my543y-2-unit"
+          "unit": "1132",
+          "price": "$1,165",
+          "square_feet": "794",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#lg44x2e-2-unit"
         }
       ]
     },
     {
-      "model_name": "A3",
-      "rent_label": "$1,715 - $1,850",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "761 Sq Ft"
-      ],
-      "availability": "28 Available units",
-      "units": [
-        {
-          "unit": "1137",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dk4mtkk-2-unit"
-        },
-        {
-          "unit": "1147",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bfmkfh9-2-unit"
-        },
-        {
-          "unit": "1149",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#whf4rfl-2-unit"
-        },
-        {
-          "unit": "1161",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kdzbdb8-2-unit"
-        },
-        {
-          "unit": "1163",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#s8evhc5-2-unit"
-        },
-        {
-          "unit": "1236",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fympfls-2-unit"
-        },
-        {
-          "unit": "1237",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qnrn5qy-2-unit"
-        },
-        {
-          "unit": "1247",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qmwn4gy-2-unit"
-        },
-        {
-          "unit": "1248",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#80dhr13-2-unit"
-        },
-        {
-          "unit": "1249",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#031rvg2-2-unit"
-        },
-        {
-          "unit": "1261",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#37k178g-2-unit"
-        },
-        {
-          "unit": "1263",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#escgjwn-2-unit"
-        },
-        {
-          "unit": "1301",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l4wj4df-2-unit"
-        },
-        {
-          "unit": "1336",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#exvgnwp-2-unit"
-        },
-        {
-          "unit": "1337",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1gk3q97-2-unit"
-        },
-        {
-          "unit": "1347",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#t8f28dc-2-unit"
-        },
-        {
-          "unit": "1348",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sdxvmc6-2-unit"
-        },
-        {
-          "unit": "1349",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2c1tcfb-2-unit"
-        },
-        {
-          "unit": "1361",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9b7ckq4-2-unit"
-        },
-        {
-          "unit": "1363",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ql0n37w-2-unit"
-        },
-        {
-          "unit": "1437",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v5ss5kf-2-unit"
-        },
-        {
-          "unit": "1447",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kglbg29-2-unit"
-        },
-        {
-          "unit": "1449",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c7l97fg-2-unit"
-        },
-        {
-          "unit": "1461",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nrdqhfn-2-unit"
-        },
-        {
-          "unit": "1463",
-          "price": "$1,715",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#j8dlhe5-2-unit"
-        },
-        {
-          "unit": "1303",
-          "price": "$1,765",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#99ccjz5-2-unit"
-        },
-        {
-          "unit": "1403",
-          "price": "$1,765",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wjb4spl-2-unit"
-        },
-        {
-          "unit": "1148",
-          "price": "$1,850",
-          "square_feet": "761",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#00err73-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A4",
-      "rent_label": "$1,725 - $1,860",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "826 Sq Ft"
-      ],
-      "availability": "23 Available units",
-      "units": [
-        {
-          "unit": "1133",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zqjx71z-2-unit"
-        },
-        {
-          "unit": "1143",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wpp4yyj-2-unit"
-        },
-        {
-          "unit": "1145",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#30f100e-2-unit"
-        },
-        {
-          "unit": "1165",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fv0pcct-2-unit"
-        },
-        {
-          "unit": "1202",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9dzcm76-2-unit"
-        },
-        {
-          "unit": "1232",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tet2em8-2-unit"
-        },
-        {
-          "unit": "1233",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1et3ns6-2-unit"
-        },
-        {
-          "unit": "1234",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mpqdyrj-2-unit"
-        },
-        {
-          "unit": "1243",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v25s2td-2-unit"
-        },
-        {
-          "unit": "1245",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#34y140f-2-unit"
-        },
-        {
-          "unit": "1258",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1b63kj4-2-unit"
-        },
-        {
-          "unit": "1265",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#05srxz0-2-unit"
-        },
-        {
-          "unit": "1332",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gl3e3ew-2-unit"
-        },
-        {
-          "unit": "1333",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5v27lbm-2-unit"
-        },
-        {
-          "unit": "1334",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#b98k9rc-2-unit"
-        },
-        {
-          "unit": "1343",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yyp6fzs-2-unit"
-        },
-        {
-          "unit": "1345",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v4xs4bf-2-unit"
-        },
-        {
-          "unit": "1358",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#07jrzg1-2-unit"
-        },
-        {
-          "unit": "1365",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zhex09x-2-unit"
-        },
-        {
-          "unit": "1434",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#zpnx6sz-2-unit"
-        },
-        {
-          "unit": "1443",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#k8gb8bc-2-unit"
-        },
-        {
-          "unit": "1445",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#9fqcpq7-2-unit"
-        },
-        {
-          "unit": "1432",
-          "price": "$1,725",
-          "square_feet": "826",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mqldz0j-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A5.1",
-      "rent_label": "$1,755 - $1,890",
-      "details": [
-        "1 Bed",
-        "1 Bath",
-        "922 Sq Ft"
-      ],
-      "availability": "3 Available units",
-      "units": [
-        {
-          "unit": "1216",
-          "price": "$1,755",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fxrpevr-2-unit"
-        },
-        {
-          "unit": "1315",
-          "price": "$1,755",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mmzdw8h-2-unit"
-        },
-        {
-          "unit": "1116",
-          "price": "$1,890",
-          "square_feet": "922",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c4z946f-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "A5",
+      "model_name": "A1",
       "rent_label": "Call for Rent",
       "details": [
         "1 Bed",
         "1 Bath",
-        "922 Sq Ft"
+        "686 Sq Ft"
       ],
       "units": []
     },
     {
       "model_name": "B1",
-      "rent_label": "$2,039 - $2,285",
+      "rent_label": "$1,390 - $2,125",
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,077 Sq Ft"
-      ],
-      "availability": "61 Available units",
-      "units": [
-        {
-          "unit": "1240",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7qk57cz-2-unit"
-        },
-        {
-          "unit": "1268",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wnt4xph-2-unit"
-        },
-        {
-          "unit": "2121",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r1b0sn3-2-unit"
-        },
-        {
-          "unit": "2304",
-          "price": "$2,039",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7hf503x-2-unit"
-        },
-        {
-          "unit": "1224",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xynzprq-2-unit"
-        },
-        {
-          "unit": "1226",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nymqpyq-2-unit"
-        },
-        {
-          "unit": "1230",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tfp2fw9-2-unit"
-        },
-        {
-          "unit": "1242",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dqhmzbj-2-unit"
-        },
-        {
-          "unit": "1244",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r6p0yx1-2-unit"
-        },
-        {
-          "unit": "1256",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mhgdr8l-2-unit"
-        },
-        {
-          "unit": "1316",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#35t15rf-2-unit"
-        },
-        {
-          "unit": "1318",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#4j9wswl-2-unit"
-        },
-        {
-          "unit": "1322",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#mnvdxhh-2-unit"
-        },
-        {
-          "unit": "1324",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yzk6g7s-2-unit"
-        },
-        {
-          "unit": "1326",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#31b11re-2-unit"
-        },
-        {
-          "unit": "1330",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#18f3h15-2-unit"
-        },
-        {
-          "unit": "1340",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#qk4n2zw-2-unit"
-        },
-        {
-          "unit": "1342",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#jerlnn6-2-unit"
-        },
-        {
-          "unit": "1344",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l24j2wd-2-unit"
-        },
-        {
-          "unit": "1222",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l7hj74g-2-unit"
-        },
-        {
-          "unit": "1422",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7l253cw-2-unit"
-        },
-        {
-          "unit": "1424",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yxt6eqr-2-unit"
-        },
-        {
-          "unit": "1426",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#t9b29mc-2-unit"
-        },
-        {
-          "unit": "1430",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#dpmmykj-2-unit"
-        },
-        {
-          "unit": "1442",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sesvnl6-2-unit"
-        },
-        {
-          "unit": "1444",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yt66bzt-2-unit"
-        },
-        {
-          "unit": "2102",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#04xrw70-2-unit"
-        },
-        {
-          "unit": "2204",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fzhpgcs-2-unit"
-        },
-        {
-          "unit": "2221",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bghkg89-2-unit"
-        },
-        {
-          "unit": "2321",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7nt55vy-2-unit"
-        },
-        {
-          "unit": "2421",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5wy7m2p-2-unit"
-        },
-        {
-          "unit": "1356",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sgjvq37-2-unit"
-        },
-        {
-          "unit": "1368",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v0es0be-2-unit"
-        },
-        {
-          "unit": "1418",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6zjyges-2-unit"
-        },
-        {
-          "unit": "1440",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sb5vkv4-2-unit"
-        },
-        {
-          "unit": "1218",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#tb62bwb-2-unit"
-        },
-        {
-          "unit": "1468",
-          "price": "$2,185",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#yrf68gv-2-unit"
-        },
-        {
-          "unit": "2402",
-          "price": "$2,185",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#wqk4z6j-2-unit"
-        },
-        {
-          "unit": "1319",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#299t9yc-2-unit"
-        },
-        {
-          "unit": "1321",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ns8qjpn-2-unit"
-        },
-        {
-          "unit": "1323",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h338v32-2-unit"
-        },
-        {
-          "unit": "1223",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gmze45y-2-unit"
-        },
-        {
-          "unit": "1221",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2estey8-2-unit"
-        },
-        {
-          "unit": "1219",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#2fntfp9-2-unit"
-        },
-        {
-          "unit": "1419",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7jb51vx-2-unit"
-        },
-        {
-          "unit": "1421",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nwwqmfp-2-unit"
-        },
-        {
-          "unit": "1423",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#kb7bbtb-2-unit"
-        },
-        {
-          "unit": "1119",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#pscf9jv-2-unit"
-        },
-        {
-          "unit": "1121",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#5sb7jtn-2-unit"
-        },
-        {
-          "unit": "1123",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#l18j1me-2-unit"
-        },
-        {
-          "unit": "1215",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#7k652lw-2-unit"
-        },
-        {
-          "unit": "1415",
-          "price": "$2,200",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#erggh4n-2-unit"
-        },
-        {
-          "unit": "2202",
-          "price": "$2,225",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#c2792pd-2-unit"
-        },
-        {
-          "unit": "2302",
-          "price": "$2,225",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gpqe6nz-2-unit"
-        },
-        {
-          "unit": "2404",
-          "price": "$2,260",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#85rhxs0-2-unit"
-        },
-        {
-          "unit": "1118",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ysb69qv-2-unit"
-        },
-        {
-          "unit": "1122",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r260tx2-2-unit"
-        },
-        {
-          "unit": "1124",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gk7e2nw-2-unit"
-        },
-        {
-          "unit": "1126",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#ywy6dgr-2-unit"
-        },
-        {
-          "unit": "1144",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#1dy3m16-2-unit"
-        },
-        {
-          "unit": "1168",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xwxzm8p-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B1.1",
-      "rent_label": "$2,150 - $2,285",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,077 Sq Ft"
+        "1,036 Sq Ft"
       ],
       "availability": "2 Available units",
       "units": [
         {
-          "unit": "2104",
-          "price": "$2,150",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#sc1vl34-2-unit"
+          "unit": "0838",
+          "price": "$1,390",
+          "square_feet": "1,036",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#fnp55jt-2-unit"
         },
         {
-          "unit": "1156",
-          "price": "$2,285",
-          "square_feet": "1,077",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fwwpd3r-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B3",
-      "rent_label": "$2,310 - $2,345",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,262 Sq Ft"
-      ],
-      "availability": "5 Available units",
-      "units": [
-        {
-          "unit": "1254",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#v19s1ke-2-unit"
-        },
-        {
-          "unit": "2206",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#6rey85v-2-unit"
-        },
-        {
-          "unit": "2306",
-          "price": "$2,310",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#h7l8z31-2-unit"
-        },
-        {
-          "unit": "1454",
-          "price": "$2,345",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#r7k0z51-2-unit"
-        },
-        {
-          "unit": "2406",
-          "price": "$2,345",
-          "square_feet": "1,262",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#xzjzq0q-2-unit"
-        }
-      ]
-    },
-    {
-      "model_name": "B4",
-      "rent_label": "$2,325 - $2,355",
-      "details": [
-        "2 Beds",
-        "2 Baths",
-        "1,253 Sq Ft"
-      ],
-      "availability": "5 Available units",
-      "units": [
-        {
-          "unit": "2309",
-          "price": "$2,325",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#eyqgpmq-2-unit"
-        },
-        {
-          "unit": "1253",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#gqle7ez-2-unit"
-        },
-        {
-          "unit": "2109",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#bb4kbhb-2-unit"
-        },
-        {
-          "unit": "2209",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#fs8p9vv-2-unit"
-        },
-        {
-          "unit": "2409",
-          "price": "$2,355",
-          "square_feet": "1,253",
-          "view_more_html": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/#nxrqnpp-2-unit"
+          "unit": "0728",
+          "price": "$1,415",
+          "square_feet": "1,036",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#xm9fsvq-2-unit"
         }
       ]
     },
@@ -3344,155 +280,118 @@
       "details": [
         "2 Beds",
         "2 Baths",
-        "1,252 Sq Ft"
+        "1,097 Sq Ft"
+      ],
+      "units": []
+    },
+    {
+      "model_name": "B3",
+      "rent_label": "Call for Rent",
+      "details": [
+        "2 Beds",
+        "2 Baths",
+        "1,226 Sq Ft"
       ],
       "units": []
     },
     {
       "model_name": "C1",
-      "rent_label": "Call for Rent",
+      "rent_label": "$1,560 - $3,005",
       "details": [
         "3 Beds",
-        "3 Baths",
-        "1,399 Sq Ft"
+        "2 Baths",
+        "1,310 Sq Ft"
       ],
-      "units": []
-    },
-    {
-      "model_name": "C1.1",
-      "rent_label": "Call for Rent",
-      "details": [
-        "3 Beds",
-        "3 Baths",
-        "1,399 Sq Ft"
-      ],
-      "units": []
+      "availability": "3 Available units",
+      "units": [
+        {
+          "unit": "0517",
+          "price": "$1,560",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#tt7g6v9-2-unit"
+        },
+        {
+          "unit": "0921",
+          "price": "$1,675",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#r6znzc2-2-unit"
+        },
+        {
+          "unit": "1211",
+          "price": "$1,855",
+          "square_feet": "1,310",
+          "view_more_html": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/#9km3934-2-unit"
+        }
+      ]
     }
   ],
-  "url": "https://www.apartments.com/del-via-apartments-del-valle-tx/szn0te6/",
+  "url": "https://www.apartments.com/callista-hill-country-apartments-austin-tx/vmepv2g/",
   "feesAndPolicies": {},
   "about": {
-    "description": "Welcome to Del Via Apartments, southeast Austins newest luxury apartment community offering contemporary design and everyday convenience. Located just two miles from the Tesla Gigafactory and minutes from Austin-Bergstrom International Airport, Downtown Austin, and Highway 71, Del Via connects you to the best of city living. Choose from modern one-, two-, and three-bedroom apartments featuring quartz countertops, stainless-steel appliances, large kitchen islands, and full-size washer and dryer. Select homes offer private yards, downtown views, and built-in desks for work-from-home ease. Enjoy resort-inspired amenities including a Euro-style swimming pool with cabanas, rooftop lounge, yoga and spin studio, co-working spaces, and 24-hour fitness center. With EV charging, a bark park, and on-site car wash, Del Via delivers the elevated Austin lifestyle you deserveschedule your tour today! Del Via Apartments is an apartment community located in Travis County and the 78617 ZIP Code. This area is served by the Del Valle Independent attendance zone. Unique Features",
+    "description": "Welcome to Callista Hill Country Apartments, a blissful community where we celebrate a healthful balance between relaxation and refinement, responsibility, and indulgence. Stunning hilltop views entice you to enjoy our outdoor amenities while desirable interior features beckon you to the comforts of home. Less than 3 miles away youll find a number of major employers including Yeti Coolers, AMD, and NXP Semiconductors. The nearby Hill Country Galleria and Barton Creek Square give you access to a variety of shopping, dining, and entertainment options. When you want to connect with nature, the Barton Creek Habitat Preserve is less than two miles away. Callista Hill Country Apartments is an apartment community located in Travis County and the 78735 ZIP Code. This area is served by the Austin Independent attendance zone. Unique Features",
     "breadcrumbs": [
       "Texas",
       "Travis County",
-      "Del Valle",
-      "Southeast Austin",
-      "Del Via Apartments"
+      "Austin",
+      "West Oak Hill",
+      "Callista Hill Country Apartments"
     ],
-    "title": "Del Via Apartments",
+    "title": "Callista Hill Country Apartments",
     "location": "",
-    "rating": "",
-    "reviews": "0",
+    "rating": "3.9",
+    "reviews": "14",
     "images": [],
-    "image": "https://images1.apartments.com/i2/ZOMQeQnrNgztS7IeG-T11VYA8rD-Xm6HQjjC-N1t-54/111/del-via-apartments-del-valle-tx-primary-photo.jpg",
+    "image": "https://images1.apartments.com/i2/ARIfI4wOU4DLMO7tO651h7ejGMZqes-77cEfqJt3i38/111/callista-hill-country-apartments-austin-tx-primary-photo.jpg",
     "Features": [
-      "Car Wash Station",
-      "Co-working Office Space",
-      "Dog Washing Station",
-      "EV Charging Stations",
-      "Luxury Wood-Style Plank Flooring",
-      "Tile Backsplash and LED Under-Cabinet Lighting",
-      "Yoga/spin Studio",
-      "App-Controlled Honeywell Smart Thermostat",
-      "Built-In Closet Cabinetry with Extra Storage",
-      "Dedicated Yoga and Spin Studio",
-      "High-End Bathroom Finishes",
-      "Open-Concept Kitchen & Living Area Layout",
-      "Planned Resident Social Activities",
-      "8-Foot Interior Doors for Spacious Feel",
-      "Grab and Go Market",
-      "Large Package Locker System for Deliveries",
-      "Outdoor Patio or Balcony Space",
-      "Sand Volleyball and Ping Pong Table",
-      "24-Hour Emergency Maintenance Services",
-      "Countertop Folding Area in Laundry Rooms*",
-      "Game Room with Entertainment Options",
-      "Poolside Cabanas and Lounge Seating",
-      "Smoke-Free Community",
-      "Stainless-Steel Energy-Efficient Appliances",
-      "2 Interior Finishes to Choose From",
-      "Additional Storage Units Available",
-      "Built-In Floating Shelving*",
-      "Carports Available for Rent",
-      "Clubroom Lounge with Bar and Social Spaces",
-      "Expansive Fenced-In Bark Park",
-      "Indoor Corridors and Elevators",
-      "Private Yards Available*",
-      "Professional Management Team",
-      "Rooftop Lounge",
-      "Full-Size In-Home Washer and Dryer",
-      "Outdoor Living Room with Fireplace Seating",
-      "Pet-Friendly Community",
-      "Built-In Desks for Work-From-Home Convenience*",
-      "Co-Working Lounges and Private Work Areas",
-      "Online Resident Portal",
-      "Oversized Windows for Natural Light*",
-      "Poolside Outdoor Kitchen with Grilling Stations",
-      "24-Hour Fitness Center",
-      "Attached Storage Spaces*",
-      "Bike Storage & Repair Center",
-      "Built-In Dishwasher & Microwave",
-      "Downtown Views*",
-      "Modern Two-Tone Kitchen Cabinetry",
-      "Private Yards",
-      "Resort-Style Euro Swimming Pool"
+      "Polished granite countertops",
+      "BBQ/Picnic Area",
+      "Electronic Thermostat",
+      "Media Room",
+      "Separate shower with glass enclosure*",
+      "Vaulted ceilings*",
+      "Wood-style flooring in kitchen and living areas*",
+      "Air Conditioner",
+      "In-home washer and dryer*",
+      "Stunning hill country views*",
+      "Fenced dog park with large and small dog sections",
+      "Fenced in yard and sunrooms*",
+      "White Subway Tile Backsplash",
+      "Deep soaker style bathtubs*",
+      "Carport",
+      "Fireplace*",
+      "Private patio or balcony*",
+      "USB charging outlets in kitchen",
+      "Walk-in closet with built-in shelving*"
     ]
   },
   "contact": {
-    "property_management_logo": "https://images1.apartments.com/i2/kvpW7qu94be5lst5Q2OjcjPLBNtdNt0HEO86uqsfNEM/115/presidium-logo.png",
-    "phone_number": "(972) 992-5969",
-    "property_website": "https://www.delviaapts.com/?rcstdid=OQ%3D%3D-o6qee6pfj48%3D",
-    "language": "Languages: English & Spanish",
+    "property_management_logo": "https://images1.apartments.com/i2/eDAHb2tHnP4y-KYD7Jb2Vh50owdZV4hQ3V2woIr_0tQ/115/fairfield-logo.jpg",
+    "phone_number": "(737) 241-4015",
+    "property_website": "https://www.callistahillcountryapartments.com/",
+    "language": "Language: English",
     "office_hours": {
-      "days": "Monday - Friday,",
-      "hours": "9am - 6pm"
+      "days": "Monday & Tuesday,",
+      "hours": "10am - 6pm"
     }
   },
   "amenities": [
     {
-      "title": "Property Services",
+      "title": "Other Amenities",
       "amenities": [
-        "Wi-Fi",
+        "Package Service",
         "Controlled Access",
         "Maintenance on site",
         "Property Manager on Site",
         "Trash Pickup - Door to Door",
-        "Recycling",
-        "Online Services",
-        "Pet Washing Station",
-        "EV Charging",
-        "Car Wash Area",
-        "Key Fob Entry"
-      ]
-    },
-    {
-      "title": "Shared Community",
-      "amenities": [
-        "Elevator",
+        "Wheelchair Accessible",
         "Business Center",
         "Clubhouse",
-        "Lounge",
-        "Multi Use Room",
-        "Storage Space",
-        "Conference Rooms"
-      ]
-    },
-    {
-      "title": "Fitness & Recreation",
-      "amenities": [
+        "Walk-Up",
         "Fitness Center",
+        "Spa",
         "Pool",
-        "Bicycle Storage",
-        "Volleyball Court",
-        "Gameroom",
-        "Media Center/Movie Theatre"
-      ]
-    },
-    {
-      "title": "Outdoor Features",
-      "amenities": [
-        "Cabana",
+        "Gated",
+        "Sundeck",
         "Courtyard",
         "Grill",
         "Picnic Area",
@@ -3502,17 +401,14 @@
     {
       "title": "Indoor Features",
       "amenities": [
-        "High Speed Internet Access",
         "Wi-Fi",
         "Washer/Dryer",
+        "Washer/Dryer Hookup",
         "Air Conditioning",
-        "Heating",
         "Ceiling Fans",
-        "Smoke Free",
-        "Storage Space",
-        "Double Vanities",
-        "Tub/Shower",
+        "Cable Ready",
         "Fireplace",
+        "Handrails",
         "Wheelchair Accessible (Rooms)"
       ]
     },
@@ -3521,136 +417,135 @@
       "amenities": [
         "Dishwasher",
         "Disposal",
-        "Ice Maker",
-        "Stainless Steel Appliances",
-        "Pantry",
-        "Island Kitchen",
+        "Granite Countertops",
         "Kitchen",
         "Microwave",
         "Oven",
-        "Range",
-        "Freezer",
-        "Quartz Countertops"
+        "Refrigerator"
       ]
     },
     {
       "title": "Model Details",
       "amenities": [
+        "Carpet",
         "Vinyl Flooring",
-        "Dining Room",
-        "High Ceilings",
-        "Office",
-        "Built-In Bookshelves",
+        "Recreation Room",
+        "Sunroom",
+        "Vaulted Ceiling",
         "Walk-In Closets",
-        "Double Pane Windows",
         "Window Coverings",
         "Balcony",
         "Patio",
-        "Porch",
         "Yard"
       ]
     }
   ],
   "education": {
     "colleges_universities": [
-      "Austin C.C., Riverside Campus : Drive: 10 min / 5.9 mi",
-      "Austin C.C., Eastview Campus : Drive: 11 min / 7.2 mi",
-      "University of Texas at Austin : Drive: 15 min / 9.5 mi",
-      "St. Edward's University : Drive: 13 min / 9.7 mi"
+      "Austin C.C., Pinnacle Campus : Drive: 5 min / 2.3 mi",
+      "USAHS : Drive: 12 min / 6.3 mi",
+      "Austin C.C., South Austin : Drive: 14 min / 8.1 mi",
+      "St. Edward's University : Drive: 15 min / 9.8 mi"
     ],
-    "description": "Del Via Apartments is within 10 minutes or 5.9 miles from Austin C.C., Riverside Campus. It is also near Austin C.C., Eastview Campus and St. Edward's University."
+    "description": "Callista Hill Country Apartments is within 5 minutes or 2.3 miles from Austin C.C., Pinnacle Campus. It is also near USAHS and Austin C.C., South Austin."
   },
   "schools": {
     "public": [
       {
-        "name": "Del Valle Elementary School",
+        "name": "Oak Hill Elementary School",
         "subtitle": "Public Elementary School"
       },
       {
-        "name": "Del Valle High School",
-        "subtitle": "Public Middle & High School"
+        "name": "Small Middle School",
+        "subtitle": "Public Middle School"
       },
       {
-        "name": "Del Valle Middle",
+        "name": "Gorzycki Middle",
         "subtitle": "Public Middle School"
+      },
+      {
+        "name": "Austin High School",
+        "subtitle": "Public High School"
+      },
+      {
+        "name": "Westlake High School",
+        "subtitle": "Public High School"
       }
     ],
     "private": [
       {
-        "name": "Acton Academy",
+        "name": "Austin Waldorf School",
         "subtitle": "Private Elementary, Middle & High School"
       },
       {
-        "name": "Praise Christian Academy",
-        "subtitle": "Private Elementary School"
+        "name": "Veritas Academy",
+        "subtitle": "Private Elementary, Middle & High School"
       }
     ]
   },
   "transportation": {
-    "description": "Transportation options available in Del Valle include Plaza Saltillo Station, located 7.7 miles from Del Via Apartments. Del Via Apartments is near Austin-Bergstrom International, located 6.2 miles or 15 minutes away.",
+    "description": "Transportation options available in Austin include Downtown Station, located 11.4 miles from Callista Hill Country Apartments. Callista Hill Country Apartments is near Austin-Bergstrom International, located 17.4 miles or 31 minutes away.",
     "groups": [
       {
         "subtitle": "Transit / Subway",
         "stations": [
-          "Plaza Saltillo Station : Drive: 12 min / 7.7 mi",
-          "M L King Jr Station : Drive: 13 min / 8.2 mi",
-          "Downtown Station : Drive: 13 min / 8.4 mi"
+          "Downtown Station : Drive: 18 min / 11.4 mi",
+          "Plaza Saltillo Station : Drive: 20 min / 14.0 mi"
         ]
       },
       {
         "subtitle": "Commuter Rail",
         "stations": [
-          "Austin : Drive: 17 min / 9.8 mi",
-          "San Marcos Amtrak : Drive: 41 min / 36.9 mi",
-          "Taylor Amtrak : Drive: 42 min / 37.1 mi"
+          "Austin : Drive: 17 min / 10.6 mi",
+          "San Marcos Amtrak : Drive: 45 min / 32.0 mi"
         ]
       },
       {
         "subtitle": "Airports",
         "stations": [
-          "Austin-Bergstrom International : Drive: 15 min / 6.2 mi"
+          "Austin-Bergstrom International : Drive: 31 min / 17.4 mi"
         ]
       }
     ]
   },
   "pointOfInterest": {
-    "description": "Time and distance from Del Via Apartments.",
+    "description": "Time and distance from Callista Hill Country Apartments.",
     "groups": [
       {
         "subtitle": "Shopping Centers",
-        "description": "Del Via Apartments has 3 shopping centers within 6.2 miles, which is about a 11-minute walk. The miles and minutes will be for the farthest away property.",
+        "description": "Callista Hill Country Apartments has 3 shopping centers within 2.7 miles, which is about a 8-minute drive. The miles and minutes will be for the farthest away property.",
         "places": [
-          "The Row : Walk: 10 min / 0.6 mi",
-          "Montopolis Plaza : Drive: 8 min / 5.4 mi",
-          "Parke Green : Drive: 11 min / 6.2 mi"
+          "Center of the Hills : Drive: 4 min / 1.7 mi",
+          "Westpark Village : Drive: 5 min / 2.6 mi",
+          "Lantana Place : Drive: 8 min / 2.7 mi"
         ]
       },
       {
         "subtitle": "Parks and Recreation",
-        "description": "Del Via Apartments has 5 parks within 9.6 miles, including Walter E. Long Park, Lady Bird Lake, and Boggy Creek Greenbelt.",
+        "description": "Callista Hill Country Apartments has 5 parks within 11.2 miles, including Dick Nichols Park, Circle C Ranch Metropolitan Park, and Lady Bird Johnson Wildflower Center.",
         "places": [
-          "Walter E. Long Park : Drive: 12 min / 6.9 mi",
-          "Lady Bird Lake : Drive: 12 min / 7.2 mi",
-          "Boggy Creek Greenbelt : Drive: 11 min / 7.3 mi",
-          "McKinney Falls State Park : Drive: 17 min / 8.9 mi",
-          "Onion Creek Greenbelt Park : Drive: 18 min / 9.6 mi"
+          "Dick Nichols Park : Drive: 9 min / 4.3 mi",
+          "Circle C Ranch Metropolitan Park : Drive: 8 min / 4.7 mi",
+          "Barton Creek Greenbelt (360 Access) : Drive: 11 min / 6.8 mi",
+          "Lady Bird Johnson Wildflower Center : Drive: 14 min / 7.2 mi",
+          "Wild Basin Preserve : Drive: 17 min / 11.2 mi"
         ]
       },
       {
         "subtitle": "Hospitals",
-        "description": "Del Via Apartments has 3 hospitals within 9.9 miles, the nearest is Dell Seton Medical Center at The University of Texas which is 8.8 miles away and a 13 minute drive.",
+        "description": "Callista Hill Country Apartments has 3 hospitals within 10.1 miles, the nearest is Ascension Seton Southwest which is 2.8 miles away and a 5 minute drive.",
         "places": [
-          "Dell Seton Medical Center at The University of Texas : Drive: 13 min / 8.8 mi",
-          "Austin Lakes Hospital : Drive: 15 min / 9.8 mi",
-          "St. David's South Austin Medical Center : Drive: 13 min / 9.9 mi"
+          "Ascension Seton Southwest : Drive: 5 min / 2.8 mi",
+          "Austin Oaks Hospital : Drive: 14 min / 8.4 mi",
+          "The Hospital at Westlake Medical Center : Drive: 16 min / 10.1 mi"
         ]
       },
       {
         "subtitle": "Military Bases",
-        "description": "Del Via Apartments is 71.8 miles from Randolph Air Force Base, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
+        "description": "Callista Hill Country Apartments is 67.0 miles from Randolph Air Force Base, and is convenient to other military bases, including Camp Bullis Military Training Reservation.",
         "places": [
-          "Randolph Air Force Base : Drive: 84 min / 71.8 mi",
-          "Camp Bullis Military Training Reservation : Drive: 113 min / 99.3 mi"
+          "Randolph Air Force Base : Drive: 87 min / 67.0 mi",
+          "Camp Bullis Military Training Reservation : Drive: 98 min / 76.7 mi"
         ]
       }
     ]
