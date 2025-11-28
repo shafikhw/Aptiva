@@ -1,0 +1,325 @@
+Residential Lease Agreement – {{ state }}
+
+**Important:** This is a general sample lease template for educational / prototype use only.  
+It is **not legal advice** and must be reviewed and customized by a qualified attorney and the actual Landlord before real-world use.
+
+---
+
+#1. Parties and Premises
+
+**Landlord:** {{ landlord_name }}  
+**Landlord Address for Notices:** {{ landlord_address }}
+
+**Resident(s):** {{ tenant_names }}  
+**Other Approved Occupants (if any):** {{ other_occupants }}
+
+**Premises:** {{ property_address }}  
+**Unit / Apartment:** {{ unit_number }}  
+**City / State / ZIP:** {{ city }}, {{ state }} {{ postal_code }}
+
+The Premises include the interior of the dwelling unit and any areas specifically assigned to Resident for exclusive use (such as a particular parking space or storage unit), plus the non-exclusive use of common areas of the community, subject to all rules and regulations.
+
+---
+
+#2. Term, Move‑In, and Renewal
+
+**Lease Start Date:** {{ lease_start_date }}  
+**Lease End Date:** {{ lease_end_date }}  
+**Effective Date (date signed):** {{ effective_date }}
+
+2.1 **Initial term**  
+Landlord leases the Premises to Resident, and Resident leases from Landlord, for the term beginning on the Lease Start Date and ending on the Lease End Date, unless ended sooner under this Lease or applicable law.
+
+2.2 **Availability of premises**  
+If, for reasons beyond Landlord’s reasonable control, the Premises are not ready for occupancy on the Lease Start Date, the Lease will begin as soon as the Premises are reasonably ready. Landlord is not liable for delay damages, but Rent will be adjusted so Resident does not pay Rent for any period when the Premises are not available.
+
+2.3 **Automatic month‑to‑month renewal (optional)**  
+After the Lease End Date, if Resident remains in possession **with Landlord’s consent** and no new written lease is signed, this Lease converts to a month‑to‑month tenancy under the same terms except that:
+- The monthly Rent may change to Landlord’s then‑current market rent, and  
+- Either party may terminate with at least {{ month_to_month_notice_days }} days’ written notice before the next monthly period.
+
+---
+
+#3. Rent and Payment Terms
+
+**Monthly Rent:** ${{ monthly_rent }}  
+**Due Date:** On or before the {{ rent_due_day }} of each month, by {{ rent_due_time }} local time.
+
+3.1 **Place and method of payment**  
+Resident must pay Rent without notice or demand, in lawful U.S. funds, by one of the methods approved by Landlord, which may include:
+- Online payments via the property portal (for example, Apartments.com or a similar system), or  
+- Other methods designated in writing by Landlord.
+
+3.2 **First month / prorated Rent**  
+If the Lease Start Date is not the first day of a month, the first month’s Rent will be prorated based on a daily rate (Monthly Rent divided by the number of days in that month). The prorated amount is due at or before move‑in, together with any other move‑in amounts.
+
+3.3 **Other recurring monthly charges (if any)**  
+If applicable, Resident agrees to pay the following additional monthly charges (leave blank or “0.00” if none):
+
+- Parking / Garage / Carport: ${{ parking_monthly_amount }} per month  
+- Storage Unit: ${{ storage_monthly_amount }} per month  
+- Washer / Dryer or Appliance Rental: ${{ appliance_rental_monthly_amount }} per month  
+- Other agreed recurring charge: {{ other_monthly_description }} – ${{ other_monthly_amount }} per month  
+
+These amounts are due with Monthly Rent and are treated as part of the total amount owed each month.
+
+3.4 **No set‑off**  
+Except where required by law, Resident may not withhold or offset Rent or other sums owed under this Lease based on any claim against Landlord.
+
+---
+
+#4. Late Fees and Returned Payments
+
+**Grace Period (if any):** {{ grace_period_days }} days after the Due Date  
+**Flat Late Charge:** ${{ late_fee_flat_amount }}
+
+4.1 **Late charges**  
+If Landlord does not receive the total Monthly Rent by the end of the grace period (if any), Resident must pay the Late Charge listed above as additional amounts under this Lease. Time is of the essence for all payments.
+
+4.2 **Returned / rejected payments**  
+If any check or electronic payment is dishonored, returned, rejected, or reversed, Resident must pay:
+- The unpaid amount,  
+- Any applicable Late Charge (if Rent is late), and  
+- A **returned payment fee** of ${{ returned_payment_fee }}.
+
+After {{ returned_payment_limit }} or more returned payments, Landlord may require all future payments to be made by cashier’s check, certified check, or money order.
+
+---
+
+#5. Security Deposit
+
+**Security Deposit Amount:** ${{ security_deposit_amount }}
+
+5.1 **Purpose**  
+The Security Deposit secures Resident’s performance of all obligations under this Lease. It is **not** an advance payment of Rent and may not be used by Resident as Rent.
+
+5.2 **Use of deposit**  
+Landlord may use the Security Deposit, as permitted by law, to cover:
+- Unpaid Rent or other amounts due under this Lease,  
+- Costs to repair damage beyond normal wear and tear,  
+- Costs to clean the Premises to restore it to move‑in condition (allowing for normal wear and tear), and  
+- Other lawful charges allowed by applicable law.
+
+If Landlord uses any portion of the Security Deposit during the term, Resident agrees to promptly restore it to the original amount upon written notice.
+
+5.3 **Return and accounting**  
+Within the time required by law after the Lease ends and Resident surrenders the Premises, Landlord will:
+- Provide a written accounting of any deductions, and  
+- Return any remaining balance of the Security Deposit to the Resident’s forwarding address on file.
+
+If there are multiple Residents, Landlord may issue a single refund check payable jointly to all Residents.
+
+---
+
+#6. Utilities and Services
+
+6.1 **Resident‑paid utilities**  
+Except as listed in Section 6.2, Resident must arrange and pay, in their own name if required, for all utility services to the Premises, which may include (depending on the property): electricity, gas, water, sewer, trash, cable, internet, and similar services.
+
+6.2 **Landlord‑paid utilities (if any)**  
+Landlord will provide and pay for the following utilities or services, if applicable:
+
+- {{ landlord_paid_utilities }}
+
+Landlord may change providers or methods of billing as allowed by law, including sub‑metering or ratio billing, upon giving any required notice.
+
+6.3 **Transfer and continuity**  
+Resident must place required utilities into Resident’s name on or before the Lease Start Date and keep them active through the end of the Lease term. Resident is responsible for any utility charges or fees that result from failure to timely establish, maintain, or discontinue service.
+
+6.4 **Interruption of service**  
+Landlord is not liable for interruption or failure of utilities not supplied directly by Landlord, or for interruptions beyond Landlord’s reasonable control. Landlord will use reasonable efforts to restore any Landlord‑supplied utility service.
+
+---
+
+#7. Use, Occupancy, and Conduct
+
+7.1 **Residential use only**  
+Resident shall use the Premises solely as a private residence and for no unlawful purpose. Running a business that brings frequent customers or deliveries, or violates zoning or law, is prohibited.
+
+7.2 **Guests and extended stays**  
+Guests may visit from time to time, but any person staying more than {{ guest_nights_limit }} consecutive days, or more than {{ guest_total_days_per_period }} total days in any {{ guest_period_description }}, may be considered an unauthorized occupant unless approved in writing by Landlord.
+
+7.3 **Conduct and criminal activity**  
+Resident, Occupants, and guests must not engage in criminal activity in or near the Premises, or conduct that threatens the health, safety, or peaceful enjoyment of others. Serious or repeated violations may be treated as a material, non‑curable breach of this Lease, subject to applicable law.
+
+7.4 **Compliance with rules**  
+Resident agrees to comply with all Rules and Regulations attached to and incorporated into this Lease, and any reasonable, written rules adopted later by Landlord and delivered or posted as required by law.
+
+---
+
+#8. Maintenance, Repairs, and Premises Condition
+
+8.1 **Move‑in condition**  
+By moving into the Premises, Resident acknowledges that the Premises, including appliances and fixtures, appear clean, safe, and in good working order, except as otherwise noted on a move‑in inspection form completed within {{ move_in_inspection_hours }} hours of taking possession.
+
+8.2 **Resident’s duties**  
+Resident must:
+- Keep the Premises reasonably clean and sanitary,  
+- Dispose of trash properly and regularly,  
+- Avoid damage from neglect, misuse, or failure to report problems, and  
+- Maintain a reasonable indoor temperature to protect pipes and systems.
+
+8.3 **Repairs and reporting**  
+Resident must promptly notify Landlord of needed repairs or unsafe conditions. Landlord will make repairs in a reasonable time, considering the seriousness of the issue. Rent generally does not abate during repairs unless required by law.
+
+8.4 **Alterations**  
+Resident may not paint, install fixtures, change locks, or make structural or cosmetic alterations without Landlord’s prior written consent. Unauthorized changes may have to be removed or reversed at Resident’s expense.
+
+8.5 **Damage caused by Resident**  
+Resident is responsible for damage caused by Resident, Occupants, guests, or pets, beyond normal wear and tear. Landlord may charge for such damage as additional amounts under this Lease.
+
+---
+
+#9. Entry by Landlord
+
+9.1 **Right of entry**  
+Subject to applicable law, Landlord and its agents may enter the Premises at reasonable times for:
+- Inspections,  
+- Maintenance and repairs,  
+- Pest control,  
+- Showing the Premises to prospective residents, buyers, or lenders, or  
+- In emergencies, without prior notice if necessary for safety or to protect property.
+
+9.2 **Notice**  
+When required by law and practicable, Landlord will provide reasonable advance notice of entry. A maintenance request from Resident authorizes Landlord to enter the Premises to perform that work without further notice, as permitted by law.
+
+---
+
+#10. Rules and Regulations (Incorporated by Reference)
+
+The detailed **Lease Rules and Regulations** attached as *Exhibit A* are part of this Lease and legally binding as if fully written here.
+
+In summary, the Rules and Regulations cover topics such as:
+- Use of Premises and occupancy limits,  
+- Care of the Premises, cleanliness, and trash,  
+- Noise, neighbor relations, and use of common areas,  
+- Parking and vehicle rules,  
+- Pets and pet addendums (if pets are allowed),  
+- Safety, security, and fire protection,  
+- Surrender and move‑out obligations, and  
+- Any applicable military or special termination rights.
+
+**Exhibit A – Rules and Regulations** will be attached at the end of this Lease and may be generated from the standard rules file used by your system.
+
+In your implementation, you can insert the contents of your rules file here, for example:
+>
+{{ standard_rules_block }}
+
+---
+
+#11. Casualty, Condemnation, and Uninhabitable Conditions
+
+11.1 **Damage to Premises**  
+If the Premises are damaged by fire, water, or other casualty, Resident must promptly notify Landlord. If the Premises are still reasonably habitable, Landlord will repair within a reasonable time. Rent may be adjusted or abated only as required by law or this Lease.
+
+11.2 **Total loss / long‑term uninhabitability**  
+If, in Landlord’s reasonable judgment, the Premises are so damaged that they cannot be repaired within a reasonable time, or are condemned or restricted from occupancy by authorities, Landlord may terminate this Lease by written notice, and Rent will be owed only through the effective termination date, except where Resident or guests caused the damage.
+
+---
+
+#12. Default and Landlord’s Remedies
+
+12.1 **Events of default**  
+Resident will be in default if, for example:
+- Rent or other sums are not paid when due,  
+- Resident materially violates the Lease or the Rules and Regulations,  
+- Resident abandons the Premises,  
+- Resident or guests engage in criminal activity on the Premises, or  
+- Resident holds over without Landlord’s consent.
+
+12.2 **Remedies**  
+Subject to law and required notices, Landlord may:
+- Terminate Resident’s right to possession,  
+- Seek eviction and recover possession,  
+- Recover unpaid Rent and damages,  
+- Apply the Security Deposit, and  
+- Pursue any other lawful remedies.
+
+Acceptance of partial payments or delay in enforcing rights does not waive Landlord’s remedies unless required by law.
+
+---
+
+#13. Insurance and Resident’s Personal Property
+
+13.1 **Landlord’s insurance**  
+Landlord’s insurance generally covers only the building and Landlord’s own property, not Resident’s personal belongings.
+
+13.2 **Resident’s insurance**  
+Resident is strongly encouraged – and may be required by addendum – to maintain renter’s liability insurance and personal property coverage in an amount specified by Landlord (for example, at least $100,000 liability coverage). Resident is responsible for insuring their own belongings.
+
+---
+
+#14. Notices
+
+Unless a different method is required by law, notices under this Lease may be given:
+
+- **By Landlord to Resident**: by personal delivery, email (if Resident has provided an address), posting at the Premises, or mail to the Premises or any forwarding address on file.  
+- **By Resident to Landlord**: by personal delivery or mail to Landlord’s notice address written at the start of this Lease, or any updated address Landlord provides in writing.
+
+Email may be used for certain communications if allowed by law, but formal legal notices may require written delivery or mail.
+
+---
+
+#15. Assignment, Subletting, and Transfers
+
+Resident may not assign this Lease, sublet the Premises, or rent it to others (including short‑term or vacation rentals such as Airbnb‑type platforms) without Landlord’s prior written consent, except where law provides otherwise.
+
+Any unauthorized assignment, sublet, or listing may be treated as a serious violation of this Lease.
+
+---
+
+#16. Move‑Out, Surrender, and Holdover
+
+16.1 **Move‑out and surrender**  
+At the end of the Lease or earlier lawful termination, Resident must:
+- Vacate the Premises by the move‑out date,  
+- Remove all personal property,  
+- Clean the Premises, and  
+- Return all keys, fobs, and access devices to Landlord.
+
+16.2 **Abandonment**  
+The Premises may be considered abandoned under circumstances permitted by law, such as when it reasonably appears that all Residents have moved out, belongings are substantially removed, and Rent is unpaid for a specified period.
+
+16.3 **Holdover**  
+If Resident stays beyond the Lease End Date without Landlord’s express consent, Resident may be treated as a holdover tenant and may owe increased Rent or other charges as allowed by law, and may be subject to eviction.
+
+---
+
+#17. General Provisions
+
+17.1 **Entire agreement**  
+This Lease, including all attached addenda and Rules and Regulations, is the entire agreement between Landlord and Resident for the Premises. There are no oral promises or side agreements.
+
+17.2 **Changes**  
+Any change to this Lease must be in a written document signed by Landlord and Resident, except for reasonable rule changes made in accordance with this Lease and applicable law.
+
+17.3 **Governing law**  
+This Lease is governed by the laws of the state where the Premises are located ({{ state }}).
+
+17.4 **Severability**  
+If any part of this Lease is found unenforceable, the rest remains in effect to the fullest extent allowed by law.
+
+17.5 **Joint and several liability**  
+If more than one person signs as Resident, each is fully and individually responsible for all obligations under this Lease.
+
+---
+
+#18. Lead‑Based Paint and Other Addenda (If Applicable)
+
+If the Premises were built before 1978 or as otherwise required by law, the parties will sign a **Lead‑Based Paint Disclosure** and Resident will receive the EPA pamphlet “Protect Your Family From Lead in Your Home.” Additional addenda, such as a Pet Addendum, Parking Addendum, or Renter’s Insurance Addendum, may also be attached and are part of this Lease.
+
+---
+
+#19. Signatures
+
+By signing below, the parties acknowledge that they have read this Lease (including any addenda and Rules and Regulations), that they understand it, and that they agree to be bound by its terms.
+
+**LANDLORD:**  
+Name: {{ landlord_name }}  
+Title / Capacity: {{ landlord_title }}  
+
+Signature: _____________________________  Date: __________________
+
+**RESIDENT(S):**  
+{{ tenant_signature_block }}
+

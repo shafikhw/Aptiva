@@ -286,7 +286,7 @@ def get_conversation(conversation_id: str, user: Dict[str, Any] = Depends(get_cu
 @app.post("/api/chat/send")
 def chat_send(payload: ChatPayload, user: Dict[str, Any] = Depends(get_current_user)):
     try:
-        result = _process_chat_message(user, payload.dict())
+        result = _process_chat_message(user, payload.model_dump())
     except ValueError as exc:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc))
     return result
@@ -306,7 +306,7 @@ def chat_stream(payload: ChatPayload, user: Dict[str, Any] = Depends(get_current
 
     def worker() -> None:
         try:
-            result = _process_chat_message(user, payload.dict(), stream_handler=on_token)
+            result = _process_chat_message(user, payload.model_dump(), stream_handler=on_token)
             queue.put(("final", result))
         except ValueError as exc:
             queue.put(("error", {"error": str(exc)}))
@@ -377,6 +377,7 @@ def _process_chat_message(user: Dict[str, Any], payload: Dict[str, Any], stream_
         conversation_state.setdefault("messages", conversation.get("messages") or [])
         if "preferences" not in conversation_state:
             conversation_state["preferences"] = dict(conversation.get("preferences") or {})
+        conversation_state.setdefault("persona_mode", conversation.get("persona_mode") or DEFAULT_PERSONA_MODE)
         conversation["state"] = conversation_state
 
     history_source = conversation if conversation_id else (latest_prior_convo or conversation)
@@ -479,8 +480,8 @@ def _invoke_system(
             state=conversation.get("state") if conversation else None,
         )
         return session.send(message, stream_handler=stream_handler)
-    session = System2AgentSession()
-    return session.send(message)
+    session = System2AgentSession(state=conversation.get("state") if conversation else None)
+    return session.send(message, stream_handler=stream_handler)
 
 
 def _public_user(user: Dict[str, Any]) -> Dict[str, Any]:

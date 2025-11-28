@@ -3,7 +3,7 @@ import os
 import json
 import asyncio
 from datetime import datetime, timedelta, timezone
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Callable
 from openai import OpenAI
 from fastmcp import Client as McpClient
 from fastmcp.client.transports import StreamableHttpTransport
@@ -30,8 +30,8 @@ ZAPIER_MCP_TOKEN = ""
 
 
 ## change code here
-USER_CALENDAR_ID = os.getenv("USER_CAL_ID", "mawlama152003@gmail.com")
-LANDLORD_CALENDAR_ID = os.getenv("LANDLORD_CAL_ID", "lamamawlawi9@gmail.com")
+USER_CALENDAR_ID = os.getenv("USER_CAL_ID", "lamamawlawi9@gmail.com")
+LANDLORD_CALENDAR_ID = os.getenv("LANDLORD_CAL_ID", "mawlama152003@gmail.com")
 USER_EMAIL = USER_CALENDAR_ID
 
 LISTING_TITLE = os.getenv("LISTING_TITLE", "Oskar Luxury Apartments")
@@ -650,8 +650,13 @@ TOOLS = [
 # =========================
 
 async def handle_tool_call(tool_call) -> Dict[str, Any]:
-    name = tool_call.function.name
-    raw_args = tool_call.function.arguments or "{}"
+    if isinstance(tool_call, dict):
+        func = tool_call.get("function") or {}
+        name = func.get("name")
+        raw_args = func.get("arguments") or "{}"
+    else:
+        name = tool_call.function.name
+        raw_args = tool_call.function.arguments or "{}"
     try:
         args = json.loads(raw_args)
     except json.JSONDecodeError:
@@ -667,6 +672,114 @@ async def handle_tool_call(tool_call) -> Dict[str, Any]:
         return await backend_cancel_tour(**args)
     else:
         return {"error": f"Unknown tool: {name}"}
+
+
+def _extract_chunk_text(delta: Any) -> str:
+    """Pull text from a streaming delta object."""
+    content = getattr(delta, "content", None)
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts: List[str] = []
+        for item in content:
+            if isinstance(item, str):
+                parts.append(item)
+            elif isinstance(item, dict):
+                parts.append(str(item.get("text", "")))
+            else:
+                text_val = getattr(item, "text", None)
+                if text_val:
+                    parts.append(str(text_val))
+        return "".join(parts)
+    if isinstance(content, dict):
+        return str(content.get("text", ""))
+    return ""
+
+
+def stream_completion_with_tools(
+    *,
+    stream_label: Optional[str] = None,
+    stream_to_stdout: bool = False,
+    stream_callback: Optional[Callable[[str], None]] = None,
+    **kwargs: Any,
+) -> Tuple[Dict[str, Any], bool]:
+    """
+    Stream a chat completion that may request tool calls.
+
+    Returns (message_dict, streamed_to_stdout).
+    """
+    kwargs["stream"] = True
+    content_parts: List[str] = []
+    tool_calls: Dict[int, Dict[str, Any]] = {}
+    emitted = False
+    label_printed = False
+    role: Optional[str] = None
+
+    try:
+        response = openai_client.chat.completions.create(**kwargs)
+        for chunk in response:
+            choice = chunk.choices[0]
+            delta = choice.delta
+            role = role or getattr(delta, "role", None) or "assistant"
+
+            text = _extract_chunk_text(delta)
+            if text:
+                content_parts.append(text)
+                if stream_callback:
+                    try:
+                        stream_callback(text)
+                    except Exception:
+                        pass
+                if stream_to_stdout:
+                    if stream_label is not None and not label_printed:
+                        print(stream_label, end="", flush=True)
+                        label_printed = True
+                    print(text, end="", flush=True)
+                    emitted = True
+
+            for tc in getattr(delta, "tool_calls", []) or []:
+                idx = getattr(tc, "index", 0) or 0
+                acc = tool_calls.setdefault(
+                    idx,
+                    {"id": getattr(tc, "id", None), "function": {"name": None, "arguments": ""}},
+                )
+                if getattr(tc, "id", None):
+                    acc["id"] = tc.id
+                func = getattr(tc, "function", None)
+                if func:
+                    name = getattr(func, "name", None)
+                    if name:
+                        acc["function"]["name"] = name
+                    args = getattr(func, "arguments", None)
+                    if args:
+                        acc["function"]["arguments"] += args
+        if emitted:
+            print()
+    except Exception as exc:
+        if emitted:
+            print("\n[stream interrupted—partial reply above; you can ask again]", flush=True)
+        fallback = "".join(content_parts) or f"Sorry, the response was interrupted ({exc})."
+        return {"role": role or "assistant", "content": fallback}, emitted
+
+    tool_call_list: List[Dict[str, Any]] = []
+    for idx in sorted(tool_calls.keys()):
+        tc = tool_calls[idx]
+        tool_call_list.append(
+            {
+                "id": tc["id"] or f"call_{idx}",
+                "type": "function",
+                "function": {
+                    "name": tc["function"].get("name") or "",
+                    "arguments": tc["function"].get("arguments") or "",
+                },
+            }
+        )
+
+    message: Dict[str, Any] = {"role": role or "assistant", "content": "".join(content_parts)}
+    if tool_call_list:
+        message["tool_calls"] = tool_call_list
+
+    return message, emitted
 
 
 def build_system_prompt() -> str:
@@ -718,38 +831,49 @@ def run_scheduler_agent_cli():
 
         # We may need multiple tool->LLM->tool cycles for a single user turn
         while True:
-            resp = openai_client.chat.completions.create(
+            msg, streamed = stream_completion_with_tools(
                 model=OPENAI_MODEL,
                 messages=messages,
                 tools=TOOLS,
                 tool_choice="auto",
+                stream_label="Agent: ",
+                stream_to_stdout=True,
             )
 
-            msg = resp.choices[0].message
-
             # If the model wants to call tools
-            if msg.tool_calls:
-                messages.append({
-                    "role": "assistant",
-                    "content": msg.content or "",
-                    "tool_calls": msg.tool_calls,
-                })
+            tool_calls = msg.get("tool_calls") or []
+            if tool_calls:
+                messages.append(
+                    {
+                        "role": "assistant",
+                        "content": msg.get("content") or "",
+                        "tool_calls": tool_calls,
+                    }
+                )
 
                 # Run each tool call
-                for tool_call in msg.tool_calls:
+                for tool_call in tool_calls:
                     result = asyncio.run(handle_tool_call(tool_call))
-                    messages.append({
-                        "role": "tool",
-                        "tool_call_id": tool_call.id,
-                        "name": tool_call.function.name,
-                        "content": json.dumps(result),
-                    })
+                    tc_id = tool_call.get("id") if isinstance(tool_call, dict) else getattr(tool_call, "id", None)
+                    tc_func = tool_call.get("function", {}) if isinstance(tool_call, dict) else getattr(tool_call, "function", {})
+                    messages.append(
+                        {
+                            "role": "tool",
+                            "tool_call_id": tc_id,
+                            "name": tc_func.get("name") if isinstance(tc_func, dict) else getattr(tc_func, "name", None),
+                            "content": json.dumps(result),
+                        }
+                    )
                 # Loop again so the model can see tool results and answer
                 continue
 
             # No tool calls: this is the final user-facing answer
-            print(f"Agent: {msg.content}\n")
-            messages.append({"role": "assistant", "content": msg.content})
+            final_text = msg.get("content") or ""
+            if not streamed:
+                print(f"Agent: {final_text}\n")
+            else:
+                print()  # blank line after streaming for readability
+            messages.append({"role": "assistant", "content": final_text})
             break
 
 

@@ -2981,7 +2981,7 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
         for key in ("tenant_first_name", "tenant_last_name", "tenant_name"):
             prefs.pop(key, None)
         state["preferences"] = prefs
-        prompt = "Sure, let's update your name. What's your first name?"
+        prompt = "Sure, let's update your name. What's your full legal name?"
         return _reply_with_history(state, user_input, prompt)
 
     if _wants_change_date(user_input):
@@ -3423,7 +3423,7 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
             prefs.pop(key, None)
         state["preferences"] = prefs
         if not pending_first:
-            reply = "Let's capture your name. What's your first name?"
+            reply = "Let's capture your name. What's your full legal name?"
         else:
             reply = f"Great, {pending_first}. What's your last name?"
         reply += "\nNavigation: type 'back' to adjust previous steps or 'restart lease' to start over."
