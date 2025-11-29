@@ -59,6 +59,8 @@ VALID_FILTER_OPTIONS = {"all", "bed0", "bed1", "bed2", "bed3", "bed4", "bed5"}
 SCRAPER_OUTPUT_PATH = "actor_output.json"
 SCRAPER_OUTPUT_FILE = Path(__file__).resolve().parent / SCRAPER_OUTPUT_PATH
 FALLBACK_LISTINGS_PATH = SCRAPER_OUTPUT_FILE
+NEARBY_PLACES_OUTPUT_PATH = "nearby_places.json"
+NEARBY_PLACES_FILE = Path(__file__).resolve().parent / NEARBY_PLACES_OUTPUT_PATH
 THUMBNAIL_WIDTH_PX = 280
 MAX_DEFAULT_MOVE_IN_DATE = date(2026, 3, 31)
 
@@ -505,6 +507,7 @@ class AgentState(TypedDict, total=False):
     listing_summaries: List[Dict[str, Any]]
     listing_lookup: Dict[str, Dict[str, Any]]
     focused_listing: Dict[str, Any]
+    nearby_places_lookup: Dict[str, Any]
     reply: str
     reply_streamed: bool
     lease_drafts: List[Dict[str, Any]]
@@ -1402,19 +1405,39 @@ def enrich_with_maps(state: AgentState) -> AgentState:
     """Augment listings with nearby points of interest via Google Maps."""
     gmaps_client = get_gmaps_client()
     listings = state.get("listings", []) or []
+    nearby_lookup = _load_nearby_places()
+    listings = _attach_nearby_places(listings, nearby_lookup)
     if not gmaps_client:
         return {**state, "enriched_listings": listings}
 
     enriched: List[Dict[str, Any]] = []
     for listing in listings:
+        listing_copy = dict(listing)
         location_text = (
-            listing.get("about", {}).get("location")
-            or listing.get("about", {}).get("title")
-            or listing.get("url")
+            listing_copy.get("about", {}).get("location")
+            or listing_copy.get("about", {}).get("title")
+            or listing_copy.get("url")
         )
-        lat_lng = _geocode_address(gmaps_client, location_text, conversation_id=state.get("conversation_id"))
-        pois = _find_pois(gmaps_client, lat_lng, conversation_id=state.get("conversation_id")) if lat_lng else []
-        enriched.append({**listing, "nearby_pois": pois, "geocoded_location": lat_lng})
+        lat_lng = listing_copy.get("geocoded_location") or _deserialize_coords(listing_copy.get("geocoded_location"))
+        if not lat_lng:
+            lat_lng = _geocode_address(gmaps_client, location_text, conversation_id=state.get("conversation_id"))
+        if lat_lng:
+            listing_copy["geocoded_location"] = lat_lng
+
+        cached_places = listing_copy.get("nearby_places")
+        if cached_places is None and lat_lng:
+            cached_places = _find_pois(gmaps_client, lat_lng, conversation_id=state.get("conversation_id"))
+        summaries = listing_copy.get("nearby_pois")
+        if summaries is None or (not summaries and cached_places):
+            summaries = _summarize_nearby_places(cached_places or [])
+        if cached_places is not None:
+            listing_copy["nearby_places"] = cached_places
+        if summaries:
+            listing_copy["nearby_pois"] = summaries
+
+        enriched.append(listing_copy)
+
+    _save_nearby_places(enriched)
     return {**state, "enriched_listings": enriched}
 
 
@@ -1440,7 +1463,9 @@ def _geocode_address(gmaps_client, address: Optional[str], *, conversation_id: O
     return None
 
 
-def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversation_id: Optional[str] = None) -> List[str]:
+def _find_pois(
+    gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversation_id: Optional[str] = None
+) -> List[Dict[str, Any]]:
     """Find nearby points of interest for the given coordinates."""
     if not lat_lng:
         return []
@@ -1454,7 +1479,7 @@ def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversa
         ("hospitals", "hospital"),
         ("beaches", "beach"),
     ]
-    poi_summaries: List[str] = []
+    places: List[Dict[str, Any]] = []
     for label, place_type in categories:
         try:
             logger.info(
@@ -1466,7 +1491,7 @@ def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversa
             timer.done()
             names = [p.get("name") for p in results.get("results", [])[:2] if p.get("name")]
             if names:
-                poi_summaries.append(f"Nearby {label}: {', '.join(names)}")
+                places.append({"label": label, "type": place_type, "names": names})
         except Exception:
             try:
                 timer.done()
@@ -1477,7 +1502,130 @@ def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversa
                 extra={"conversation_id": conversation_id, "place_type": place_type},
             )
             continue
-    return poi_summaries
+    return places
+
+
+def _summarize_nearby_places(places: Optional[List[Dict[str, Any]]]) -> List[str]:
+    """Build short text summaries from structured nearby place entries."""
+    if not places:
+        return []
+    summaries: List[str] = []
+    for entry in places:
+        names = entry.get("names") or []
+        label = entry.get("label") or entry.get("type")
+        if not names or not label:
+            continue
+        summaries.append(f"Nearby {label}: {', '.join(names[:2])}")
+    return summaries
+
+
+def _serialize_coords(coords: Optional[Tuple[float, float]]) -> Optional[Dict[str, float]]:
+    if not coords:
+        return None
+    try:
+        lat, lng = coords
+        return {"lat": float(lat), "lng": float(lng)}
+    except Exception:
+        return None
+
+
+def _deserialize_coords(value: Any) -> Optional[Tuple[float, float]]:
+    if isinstance(value, dict) and {"lat", "lng"} <= set(value.keys()):
+        try:
+            return float(value["lat"]), float(value["lng"])
+        except Exception:
+            return None
+    if isinstance(value, (list, tuple)) and len(value) == 2:
+        try:
+            return float(value[0]), float(value[1])
+        except Exception:
+            return None
+    return None
+
+
+def _normalize_url_key(url: Optional[str]) -> str:
+    if not url:
+        return ""
+    base = url.split("#")[0].split("?")[0]
+    return base.strip().lower()
+
+
+def _load_nearby_places() -> Dict[str, Dict[str, Any]]:
+    """Load cached nearby place data keyed by listing identity."""
+    if not NEARBY_PLACES_FILE.exists():
+        return {}
+    try:
+        data = json.loads(NEARBY_PLACES_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        logger.warning("nearby_places_load_failed", exc_info=True)
+        return {}
+    if not isinstance(data, list):
+        return {}
+    lookup: Dict[str, Dict[str, Any]] = {}
+    for entry in data:
+        if not isinstance(entry, dict):
+            continue
+        url_key = _normalize_url_key(entry.get("url"))
+        combo_key = _normalize_lookup_key(f"{entry.get('title') or ''} {entry.get('location') or ''}") if (entry.get("title") or entry.get("location")) else ""
+        if url_key:
+            lookup[url_key] = entry
+        if combo_key:
+            lookup[combo_key] = entry
+    return lookup
+
+
+def _match_nearby_record(identity: Dict[str, Any], lookup: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    url_key = _normalize_url_key(identity.get("url"))
+    if url_key and url_key in lookup:
+        return lookup[url_key]
+    combo_key = _normalize_lookup_key(f"{identity.get('title') or ''} {identity.get('location') or ''}")
+    if combo_key and combo_key in lookup:
+        return lookup[combo_key]
+    return None
+
+
+def _attach_nearby_places(listings: List[Dict[str, Any]], nearby_lookup: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    if not listings or not nearby_lookup:
+        return listings
+    merged: List[Dict[str, Any]] = []
+    for listing in listings:
+        listing_copy = dict(listing)
+        record = _match_nearby_record(_listing_identity(listing_copy), nearby_lookup)
+        if record:
+            coords = _deserialize_coords(record.get("geocoded_location"))
+            if coords:
+                listing_copy["geocoded_location"] = coords
+            if record.get("nearby_places") is not None:
+                listing_copy["nearby_places"] = record.get("nearby_places") or []
+                if not listing_copy.get("nearby_pois") or (not listing_copy.get("nearby_pois") and listing_copy["nearby_places"]):
+                    listing_copy["nearby_pois"] = _summarize_nearby_places(listing_copy["nearby_places"])
+            elif record.get("nearby_pois"):
+                listing_copy["nearby_pois"] = record["nearby_pois"]
+        merged.append(listing_copy)
+    return merged
+
+
+def _save_nearby_places(listings: List[Dict[str, Any]]) -> None:
+    if not listings:
+        return
+    payload: List[Dict[str, Any]] = []
+    captured_at = datetime.utcnow().isoformat()
+    for listing in listings:
+        identity = _listing_identity(listing)
+        record = {
+            "title": identity.get("title"),
+            "location": identity.get("location"),
+            "url": identity.get("url"),
+            "geocoded_location": _serialize_coords(listing.get("geocoded_location")),
+            "nearby_places": listing.get("nearby_places") if listing.get("nearby_places") is not None else [],
+            "nearby_pois": listing.get("nearby_pois") or [],
+            "captured_at": captured_at,
+        }
+        payload.append(record)
+    try:
+        NEARBY_PLACES_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    except Exception:
+        logger.warning("nearby_places_save_failed", exc_info=True)
 
 
 def rank_and_format(state: AgentState) -> AgentState:
@@ -1962,7 +2110,10 @@ def _load_scraped_output(state: AgentState, *, force_reload: bool = False) -> Li
         listings = state.get("scraped_listings") or []
     except Exception:
         listings = state.get("scraped_listings") or []
+    nearby_lookup = _load_nearby_places()
+    listings = _attach_nearby_places(listings, nearby_lookup)
     state["scraped_listings"] = listings
+    state["nearby_places_lookup"] = nearby_lookup
     return listings
 
 
