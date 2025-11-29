@@ -63,6 +63,22 @@ Install steps:
   - The web app is served from `/` (static assets under `webapp/`); SSE chat stream is at `/api/chat/stream`.
 - **Scheduler CLI** (calendar tools / debugging): `python -m system2.schedular`
 - **Homepage router from CLI**: `python main.py` (wraps the CLI menu above).
+- **Docker image**:
+  ```bash
+  docker run -it --rm \
+    -p 8000:8000 \
+    -e OPENAI_API_KEY="your_openai_key" \
+    -e GOOGLE_MAPS_API_KEY="your_google_maps_key" \
+    -e APIFY_TOKEN="your_apify_token" \
+    -e SUPABASE_URL="your_supabase_url" \
+    -e SUPABASE_SERVICE_ROLE_KEY="your_supabase_service_role_key" \
+    -e RAPIDAPI_KEY="your_rapidapi_key" \
+    shafikhw/aptiva:latest
+  ```
+  Or load everything from `.env`:
+  ```bash
+  docker run -it --env-file .env --rm -p 8000:8000 shafikhw/aptiva:latest
+  ```
 
 ## Environment Configuration
 | Variable | Purpose | Default |

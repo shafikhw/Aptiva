@@ -32,7 +32,6 @@ from pathlib import Path
 
 from langgraph.graph import END, StateGraph
 from openai import OpenAI
-import requests
 
 from . import lease_drafter
 from .scraper import run_actor_and_save_outputs

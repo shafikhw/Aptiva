@@ -4,7 +4,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
-import pandas as pd
 from apify_client import ApifyClient
 from telemetry.metrics import log_metric
 from telemetry.logging_utils import get_logger
@@ -92,14 +91,6 @@ def run_actor_and_save_outputs(run_input, json_path="output.json", conversation_
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
     print(f"Saved {len(items)} items to {json_path}")
-
-    # df = pd.DataFrame(items)
-    # df.to_csv(csv_path, index=False, encoding="utf-8-sig")
-    # print(f"Saved {len(items)} items to {csv_path}")
-
-    # xlsx_path = csv_path.replace(".csv", ".xlsx")
-    # df.to_excel(xlsx_path, index=False)
-    # print(f"Saved {len(items)} items to {xlsx_path}")
 
 
 if __name__ == "__main__":
