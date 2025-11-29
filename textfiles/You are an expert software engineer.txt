@@ -1,0 +1,19 @@
+You are an expert software engineer. Your task is to create "system2" based on the following specification.
+
+Your job is to create system2 based on the following description:
+
+system2 contains @real_estate_agent.py, a template of system2 agent, and @all_listings.json, a json file containing all the listings that system2 agent will be retrieving the listings from. System2 is a local real estate agency having access only to the listings provided @all_listings.json, which are all the listings this local agency have. System2 will offer exactly the same features of system1 with an additional scheduling feature. (matching properties based on user preference with follow up available until the user make a decision on a specific listing -> schedule a viewing based on the available timeslots by calling tools or functions from the schedular.py to view the agency calendars, suggest available time slots based on the interaction with the user defining which day and what time and scheduling the viewing, noting that this agency operate Monday to Friday from 8am to 5pm -> assuming that the viewing is done proceed to the lease draft the same exact way as in system1)
+
+Implement the same system1 for the United States in system2 for Lebanon, noting the following differences:
+
+1) Instead of using tools to build actor_output.json as in system1, system2 has all_listings.json as an available json file in the directory containing all the listings of this agency which the agent can read and make suggestions from.
+
+2) The agent should strictly return one listing at a time as a suggestion in the chat. If the user was not satisfied with this listing, the agent matches again the user preferences to another listing. If user preferences are not met, the agent should mention that clearly and return the most relevant listing.
+
+3) system2 agent should be able to call functions from schedular.py and schedule a viewing by suggesting time slots and asking the user to choose based on his availability, following the workflow in schedular.py, and fixing LISTING_TITLE and LISTING_ADDRESS based on the listing to be viewed.
+
+4) system2 operates in Lebanon for one specific agency called "Masharee3 Trablos" with all listings available in the json file.
+
+5) If the user asked a very detailed question that the agent does not have info about and cannot answer based on the available information at the moment, the agent should ask the user to contact the agency based on the contact info available in @contact_info.json.
+
+Implement all necessary logic, function calls, and data handling inside @real_estate_agent.py so that the system2 agent behaves exactly as described above.

@@ -1,0 +1,5 @@
+uvicorn server.app:app --host 0.0.0.0 --port 8000
+
+http://127.0.0.1:8000/
+
+i am searching for an apartment in lebanon, ohio. budget: less than $2150; 2 bedrooms 2 bathrooms; parking should be available and a preferred student life-style

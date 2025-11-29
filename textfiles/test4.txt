@@ -1,0 +1,62 @@
+You
+good evening
+
+Aptiva
+Good evening! I’d love to help you find a rental property in Lebanon. To get started, could you please clarify a few things for me?
+
+What type of property are you looking for (apartment, house, etc.)?
+Do you have a specific city or neighborhood in mind?
+What is your budget for rent?
+How many bedrooms and bathrooms do you need?
+Are you looking for a furnished property?
+Once I have this information, I can assist you better!
+
+You
+apartment in dam w farez, for less than 600, 3 bedrooms 2 bathrooms
+
+Aptiva
+Here’s a listing that fits your criteria in Dam W Farez:
+
+Spacious Apartment For Rent in Dam Wel Farez Tripoli
+   
+
+Location: Dam W Farez Tripoli, North Lebanon
+Price: $550 - $550
+Beds: 3
+Baths: 2
+Why it matches: fits your budget ceiling; meets your bedroom need; not oversized on bedrooms
+Nearby: 
+Gyms: Safadi Sports Center, Sports District
+Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+Universities: City University, soufiprint - مطبعة الصوفي
+Parks: center of tripoly, جزيرة الشبكة
+Shopping: Egoiste, Sana Cosmetics
+Hospitals: Monla Hospital مستشفى المنلا, Al Hanan Hospital
+Beaches: Tripoli, Noir é Blanc
+Would you like to schedule a viewing for this apartment? Available hours are Monday to Friday from 9:00 to 17:00. Alternatively, I can help you find another option or adjust your preferences!
+
+You
+let's schedule the viewing next tuesday
+
+Aptiva
+Here are the available slots for viewing on Tuesday, December 2nd:
+
+Tue December 02 - 9:00 AM -> 9:30 AM
+Tue December 02 - 9:30 AM -> 10:00 AM
+Tue December 02 - 10:00 AM -> 10:30 AM
+Tue December 02 - 10:30 AM -> 11:00 AM
+Tue December 02 - 11:00 AM -> 11:30 AM
+Tue December 02 - 11:30 AM -> 12:00 PM
+Tue December 02 - 12:00 PM -> 12:30 PM
+Tue December 02 - 12:30 PM -> 1:00 PM
+Tue December 02 - 1:00 PM -> 1:30 PM
+Tue December 02 - 1:30 PM -> 2:00 PM
+Please let me know which slot you would like to book!
+
+You
+option 7
+
+Aptiva
+Your apartment tour for "Spacious Apartment For Rent in Dam Wel Farez Tripoli" has been successfully booked for Tuesday, December 2nd, from 12:00 PM to 12:30 PM (local time).
+
+If you need any further assistance, feel free to let me know!

@@ -1,0 +1,184 @@
+$ python main.py
+Welcome to Aptiva
+Find your next home faster with our location-specific assistants.
+Choose your location to continue:
+  1) United States
+  2) Lebanon
+  (You can also rerun this command with --location us or --location lb to skip this menu.)
+Enter 1 or 2: 2
+Hi! I'm the Masharee3 Trablos rental assistant. Tell me your city/area, budget, beds/baths, and must-haves.
+You: hello
+Agent: Hello! It's great to hear from you. To help you find the perfect rental property, could you please share a bit more about what you're looking for? Here are a few questions to guide you:
+
+- What type of property are you interested in (apartment, villa, etc.)?
+- What is your budget range for rent?
+- How many bedrooms and bathrooms do you need?
+- Do you have a preferred neighborhood or area in Lebanon?
+- Are you looking for a furnished property?
+- Do you have any specific amenities in mind?
+
+Feel free to answer any or all of these questions, and I'll do my best to assist you!
+Agent: Hello! It's great to hear from you. To help you find the perfect rental property, could you please share a bit more about what you're looking for? Here are a few questions to guide you:
+
+- What type of property are you interested in (apartment, villa, etc.)?
+- What is your budget range for rent?
+- How many bedrooms and bathrooms do you need?
+- Do you have a preferred neighborhood or area in Lebanon?
+- Are you looking for a furnished property?
+- Do you have any specific amenities in mind?
+
+Feel free to answer any or all of these questions, and I'll do my best to assist you!
+
+You: apartment with a budget less than $650 of 3 bedrooms 2 bathrooms
+Agent: To assist you better, could you please specify your preferred city or neighborhood in Lebanon? This will help me find suitable listings that match your criteria of a 3-bedroom, 2-bathroom apartment under $650. Thank you!
+Agent: To assist you better, could you please specify your preferred city or neighborhood in Lebanon? This will help me find suitable listings that match your criteria of a 3-bedroom, 2-bathroom apartment under $650. Thank you!
+
+You: dam w farez 
+Agent: Here's a great option that fits your criteria:
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![Spacious Apartment](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: fits your budget ceiling; meets your bedroom need
+   - **Nearby**:
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+     - Parks: Center of Tripoli, جزيرة الشبكة
+     - Shopping: Egoiste, Sana Cosmetics
+     - Hospitals: Monla Hospital مستشفى المنلا, Al Hanan Hospital
+     - Beaches: Tripoli, Noir é Blanc
+
+Would you like to schedule a viewing for this apartment? Please note that viewings are available Monday through Friday from 9:00 AM to 5:00 PM. If you're interested in another listing or have any adjustments to your preferences, just let me know!
+Agent: Here's a great option that fits your criteria:
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![Spacious Apartment](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: fits your budget ceiling; meets your bedroom need
+   - **Nearby**:
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+     - Parks: Center of Tripoli, جزيرة الشبكة
+     - Shopping: Egoiste, Sana Cosmetics
+     - Hospitals: Monla Hospital مستشفى المنلا, Al Hanan Hospital
+     - Beaches: Tripoli, Noir é Blanc
+
+Would you like to schedule a viewing for this apartment? Please note that viewings are available Monday through Friday from 9:00 AM to 5:00 PM. If you're interested in another listing or have any adjustments to your preferences, just let me know!
+
+You: yes, let's schedule on wednesday
+To confirm, are you referring to the next Wednesday, which is December 3, 2025? Please let me know if that is correct, and I will check the available slots for you.
+Agent: To confirm, are you referring to the next Wednesday, which is December 3, 2025? Please let me know if that is correct, and I will check the available slots for you.
+
+You: yes
+Please hold on while I check the available slots for Wednesday, December 3, 2025.
+Here are the available slots for a tour on Wednesday, December 3, 2025:
+
+1. Wed December 03 - 9:00 AM -> 9:30 AM
+2. Wed December 03 - 9:30 AM -> 10:00 AM
+3. Wed December 03 - 10:00 AM -> 10:30 AM
+4. Wed December 03 - 10:30 AM -> 11:00 AM
+5. Wed December 03 - 11:00 AM -> 11:30 AM
+6. Wed December 03 - 11:30 AM -> 12:00 PM
+7. Wed December 03 - 12:00 PM -> 12:30 PM
+8. Wed December 03 - 12:30 PM -> 1:00 PM
+9. Wed December 03 - 1:00 PM -> 1:30 PM
+10. Wed December 03 - 1:30 PM -> 2:00 PM
+
+Please let me know which slot you'd like to book.
+Agent: Here are the available slots for a tour on Wednesday, December 3, 2025:
+
+1. Wed December 03 - 9:00 AM -> 9:30 AM
+2. Wed December 03 - 9:30 AM -> 10:00 AM
+3. Wed December 03 - 10:00 AM -> 10:30 AM
+4. Wed December 03 - 10:30 AM -> 11:00 AM
+5. Wed December 03 - 11:00 AM -> 11:30 AM
+6. Wed December 03 - 11:30 AM -> 12:00 PM
+7. Wed December 03 - 12:00 PM -> 12:30 PM
+8. Wed December 03 - 12:30 PM -> 1:00 PM
+9. Wed December 03 - 1:00 PM -> 1:30 PM
+10. Wed December 03 - 1:30 PM -> 2:00 PM
+
+Please let me know which slot you'd like to book.
+
+You: 5. Wed December 03 - 11:00 AM -> 11:30 AM
+Your tour has been successfully booked for Wednesday, December 3, 2025, from 11:00 AM to 11:30 AM at the "Spacious Apartment For Rent in Dam Wel Farez Tripoli" in Dam W Farez Tripoli, North Lebanon.
+
+If you need further assistance or wish to make changes, feel free to let me know!
+Agent: Your tour has been successfully booked for Wednesday, December 3, 2025, from 11:00 AM to 11:30 AM at the "Spacious Apartment For Rent in Dam Wel Farez Tripoli" in Dam W Farez Tripoli, North Lebanon.
+
+If you need further assistance or wish to make changes, feel free to let me know!
+
+You: let's start with the lease draft
+Agent: Switching to option 1.
+Let's capture your name. What's your first name?
+Navigation: type 'back' to adjust previous steps or 'restart lease' to start over.
+
+You: Shafik Houeidi
+Agent: Please share your last name so I can include it in the lease draft.
+Navigation: type 'back' to adjust previous steps or 'restart lease' to start over.
+
+You: Hoeuidi
+Agent: Here's a great option for you, Shafik Houeidi!
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![Apartment](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: fits your budget ceiling; meets your bedroom need
+   - **Nearby**: 
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+
+This apartment fits your preferences perfectly! If you'd like to schedule a viewing or if you want to see another listing, just let me know. We can arrange viewings anytime Monday through Friday from 9:00 AM to 5:00 PM.
+Agent: Here's a great option for you, Shafik Houeidi!
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![Apartment](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: fits your budget ceiling; meets your bedroom need
+   - **Nearby**:
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+
+This apartment fits your preferences perfectly! If you'd like to schedule a viewing or if you want to see another listing, just let me know. We can arrange viewings anytime Monday through Friday from 9:00 AM to 5:00 PM. 
+
+You: lease draft option 1
+Agent: Switching to option 1.
+Option 1 (For Rent) has multiple units. Which one should I use for the lease?
+1. Unit | Base Price: $550 | Sq Ft: 200
+Reply with the unit number, name, or copy/paste the option (e.g., '1', 'Unit 7204', or 'Sunset Suite').       
+Navigation: type 'back' to revisit floor plans or 'restart lease' to start over.
+
+You: 1
+Agent: When should the lease start? Please reply with a move-in date (YYYY-MM-DD).
+Navigation: type 'back' to revisit the unit options or 'restart lease' to start over.
+
+You: 2025-12-05
+Agent: The community lists lease terms between 1 and 12 months. How many months should the lease run within that range?
+Navigation: type 'back' to adjust the move-in date or 'restart lease' to start over.
+
+You: 6
+Agent: Lease draft created.
+Property: Spacious Apartment For Rent in Dam Wel Farez Tripoli - Dam W Farez Tripoli, North Lebanon
+Move-in: 2025-12-05
+Term: 6 months
+Floor plan: For Rent
+Unit: N/A | Price: $550 | Sq Ft: 200
+Tenant: Option Lease Draft Houeidi
+Draft file: system1\lease_drafts\Option_Lease_Draft_Houeidi_21c23c9f_lease_draft.pdf
+Navigation: type 'change unit', 'change plan', 'change name', 'change date', 'change lease term', or 'update lease' to adjust terms, or 'restart lease' to begin with a new property.

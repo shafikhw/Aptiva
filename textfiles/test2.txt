@@ -1,0 +1,74 @@
+$ python main.py
+Welcome to Aptiva
+Find your next home faster with our location-specific assistants.
+Choose your location to continue:
+  1) United States
+  2) Lebanon
+  (You can also rerun this command with --location us or --location lb to skip this menu.)
+Enter 1 or 2: 2
+Hi! I'm the Masharee3 Trablos rental assistant. Tell me your city/area, budget, beds/baths, and must-haves.
+You: trablos, 2 beds and 1 bath
+Agent: Here's a lovely option for you:
+
+1. **[RWB171SN - Traditional House for rent in Bechmezzine Koura - Apartments & Villas For Rent - 116430365](https://www.olx.com.lb/ad/rwb171sn-traditional-house-for-rent-in-bechmezzine-koura-ID116430365.html)**
+   ![](https://images.olx.com.lb/thumbnails/14362289-800x600.jpeg)
+   - **Location**: Bishmezzine Koura, North Lebanon
+   - **Price**: $700
+   - **Beds**: 2
+   - **Baths**: 2
+   - **Amenities**: Private backyard garden, front yard patio
+   - **Why it matches**: Meets your bedroom need; not oversized on bedrooms; has amenities like a private backyard garden and front yard patio.
+   - **Nearby**: 
+     - Gyms: FlyyFitt Fitness Center, Forever Fit Gym
+     - Schools: Bishmizzine High School, Bishmezzine Seventh-day Adventist School
+     - Parks: Olive Gardens Resort, Ard Nehme أرض نعمة
+
+Would you like to schedule a viewing for this property, perhaps on a weekday between 8:00 AM and 5:00 PM? Or would you like to see another listing?
+Agent: Here's a lovely option for you:
+
+1. **[RWB171SN - Traditional House for rent in Bechmezzine Koura - Apartments & Villas For Rent - 116430365](https://www.olx.com.lb/ad/rwb171sn-traditional-house-for-rent-in-bechmezzine-koura-ID116430365.html)**
+   ![](https://images.olx.com.lb/thumbnails/14362289-800x600.jpeg)
+   - **Location**: Bishmezzine Koura, North Lebanon
+   - **Price**: $700
+   - **Beds**: 2
+   - **Baths**: 2
+   - **Amenities**: Private backyard garden, front yard patio
+   - **Why it matches**: Meets your bedroom need; not oversized on bedrooms; has amenities like a private backyard garden and front yard patio.
+   - **Nearby**:
+     - Gyms: FlyyFitt Fitness Center, Forever Fit Gym
+     - Schools: Bishmizzine High School, Bishmezzine Seventh-day Adventist School
+     - Parks: Olive Gardens Resort, Ard Nehme أرض نعمة
+
+Would you like to schedule a viewing for this property, perhaps on a weekday between 8:00 AM and 5:00 PM? Or would you like to see another listing?
+
+You: i want something less than $600
+Agent: Here's a great option that fits your budget:
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: Fits your budget ceiling; meets your bedroom need.
+   - **Nearby**:
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+
+Would you like to schedule a viewing for this property during weekdays between 8:00 AM and 5:00 PM? Or would you like to see another listing?
+Agent: Here's a great option that fits your budget:
+
+1. **[Spacious Apartment For Rent in Dam Wel Farez Tripoli](https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/)**
+   ![](https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png)
+   - **Location**: Dam W Farez Tripoli, North Lebanon
+   - **Price**: $550
+   - **Beds**: 3
+   - **Baths**: 2
+   - **Why it matches**: Fits your budget ceiling; meets your bedroom need.
+   - **Nearby**:
+     - Gyms: Safadi Sports Center, Sports District
+     - Schools: Old Tripoli Evangelical School for Boys and Girls, مجمع العزم التربوي
+     - Universities: City University, soufiprint - مطبعة الصوفي
+
+Would you like to schedule a viewing for this property during weekdays between 8:00 AM and 5:00 PM? Or would you like to see another listing?

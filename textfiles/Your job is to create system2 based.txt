@@ -1,0 +1,68 @@
+Your job is to create system2 based on the following description and requirements: 
+
+You are working in a codebase where:
+
+* `system2` contains ` [real_estate_agent.py](aptiva/system2/real_estate_agent.py) `, which is a copy of the system1 agent. you have to edit it to satisfy system1 needs.
+* `system2` contains ` [all_listings.json](aptiva/system2/all_listings.json) `, which is a JSON file containing all the listings that the system2 agent will retrieve listings from 
+* `system2` is a local real estate agency assistant that has access only to the listings provided in ` [all_listings.json](aptiva/system2/all_listings.json) `. These JSON entries represent all the listings that this local agency has 
+
+System2 must:
+
+1. Implement the same functionality as **system1** (which operates in the United States) but adapted for Lebanon, with the differences listed below.
+2. Offer exactly the same features as system1, with an additional scheduling feature:
+
+   * Match properties based on user preferences
+   * Continue following up with the user until they make a decision on a specific listing
+   * Once the user decides to view a specific listing, schedule a viewing by calling tools or functions from `schedular.py`
+   * Use `schedular.py` to:
+
+     * View the agency calendars
+     * Suggest available time slots based on interaction with the user
+     * Ask the user which day and what time they prefer
+     * Propose time slots that respect the agency working hours: Monday to Friday from 8:00 am to 5:00 pm
+     * Schedule the viewing and set `LISTING_TITLE` and `LISTING_ADDRESS` according to the chosen listing
+   * After the viewing is assumed to be done, proceed to the lease drafting flow in exactly the same way as in system1
+
+Differences from system1 that must be reflected in system2:
+
+* System1 used tools to build `actor_output.json`. In system2, instead of using tools to build this, the agent has `all_listings.json` available in the directory.
+
+  * `all_listings.json` contains all the listings of this agency and is the only source of listing data.
+  * The system2 agent must read from this file and make listing suggestions based on it.
+
+* The system2 agent must **strictly return one listing at a time** as a suggestion in the chat.
+
+  * If the user is not satisfied with the suggested listing, the agent should re-match the user preferences to another listing and then suggest that single new listing.
+  * If user preferences are not fully met by any listing, the agent should clearly mention that the preferences cannot be fully met and then return the most relevant listing from `all_listings.json`.
+
+* System2 operates in Lebanon for one specific agency called **"Masharee3 Trablos"**.
+
+  * All listings available to this agency are contained in `all_listings.json`.
+  * The agent must behave as a local Lebanese agency assistant, but still follow the same interaction patterns and overall logic of system1.
+
+Scheduling logic requirements:
+
+* System2 must be able to call functions from `schedular.py` to:
+
+  * View available agency calendars
+  * Suggest time slots for viewing a listing
+  * Ask the user to choose a time slot based on their availability
+* The scheduling flow should mirror the workflow in `schedular.py`.
+* The system must enforce that the agency operates **Monday to Friday from 8:00 am to 5:00 pm**.
+* When scheduling, system2 must fill in `LISTING_TITLE` and `LISTING_ADDRESS` based on the listing that the user will view.
+
+Handling missing details:
+
+* If the user asks a very detailed or specific question that the agent cannot answer using the information available in `all_listings.json` and other local files, the agent should not hallucinate an answer.
+* Instead, the agent must politely ask the user to contact the agency directly using the contact information available in `@contact_info.json`.
+* The agent should read from `contact_info.json` and instruct the user how to reach "Masharee3 Trablos" for more detailed information.
+
+Summary of constraints:
+
+* System2 must only use the data in `all_listings.json` for listings.
+* System2 must return exactly one listing per suggestion step.
+* System2 must support a follow up and scheduling workflow using `schedular.py`.
+* System2 must operate in the context of Lebanon for the agency "Masharee3 Trablos".
+* When information is not available, system2 must redirect the user to the agency using `contact_info.json` instead of guessing.
+
+Please implement or complete the code in ` [real_estate_agent.py](aptiva/system2/real_estate_agent.py)` and any required glue code so that system2 behaves as specified above.
