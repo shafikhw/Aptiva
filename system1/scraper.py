@@ -1,9 +1,18 @@
 import json
 import os
+import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
 import pandas as pd
 from apify_client import ApifyClient
+from telemetry.metrics import log_metric
+from telemetry.logging_utils import get_logger
+from telemetry.retry import retry_with_backoff
+
+logger = get_logger(__name__)
+APIFY_TIMEOUT_SECONDS = int(os.getenv("APIFY_TIMEOUT_SECONDS", "120"))
+APIFY_MAX_RETRIES = int(os.getenv("APIFY_MAX_RETRIES", "2"))
 
 
 load_dotenv()
@@ -24,27 +33,61 @@ def fetch_listings_from_actor(
     run_input: Dict,
     *,
     actor_id: Optional[str] = None,
+    conversation_id: Optional[str] = None,
 ) -> List[Dict]:
     """Run the configured Apify actor and return listing items as dictionaries."""
 
-    client = _get_client()
-    actor_client = client.actor(actor_id or os.getenv("APIFY_ACTOR_ID", DEFAULT_ACTOR_ID))
-    run_result = actor_client.call(run_input=run_input)
+    start = time.perf_counter()
+    actor_name = actor_id or os.getenv("APIFY_ACTOR_ID", DEFAULT_ACTOR_ID)
+    logger.info(
+        "apify_call_start",
+        extra={"actor_id": actor_name, "conversation_id": conversation_id, "run_input_keys": list(run_input.keys())},
+    )
+    try:
+        def _run_once():
+            client = _get_client()
+            actor_client = client.actor(actor_name)
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                run_result = executor.submit(lambda: actor_client.call(run_input=run_input)).result(
+                    timeout=APIFY_TIMEOUT_SECONDS
+                )
 
-    dataset_id = run_result.get("defaultDatasetId")
-    if not dataset_id:
-        raise RuntimeError("Actor did not return defaultDatasetId; check the actor output/storage method.")
+            dataset_id = run_result.get("defaultDatasetId")
+            if not dataset_id:
+                raise RuntimeError("Actor did not return defaultDatasetId; check the actor output/storage method.")
 
-    dataset_client = client.dataset(dataset_id)
-    items_result = dataset_client.list_items()
-    return items_result.items
+            dataset_client = client.dataset(dataset_id)
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                items_result = executor.submit(lambda: dataset_client.list_items()).result(
+                    timeout=APIFY_TIMEOUT_SECONDS
+                )
+            return items_result.items
+
+        items = retry_with_backoff(
+            _run_once,
+            retries=APIFY_MAX_RETRIES,
+            retry_exceptions=(Exception, TimeoutError),
+        )
+        logger.info(
+            "apify_call_complete",
+            extra={"actor_id": actor_name, "conversation_id": conversation_id, "items": len(items)},
+        )
+        return items
+    finally:
+        latency_ms = (time.perf_counter() - start) * 1000
+        log_metric(
+            "apify",
+            actor_name,
+            latency_ms=latency_ms,
+            conversation_id=conversation_id,
+        )
 
 
 # def run_actor_and_save_outputs(run_input, json_path="output.json", csv_path="output.csv"):
-def run_actor_and_save_outputs(run_input, json_path="output.json"):
+def run_actor_and_save_outputs(run_input, json_path="output.json", conversation_id: Optional[str] = None):
     """Backward-compatible helper that also saves scraped items to disk."""
 
-    items = fetch_listings_from_actor(run_input)
+    items = fetch_listings_from_actor(run_input, conversation_id=conversation_id)
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)

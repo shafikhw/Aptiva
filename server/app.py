@@ -20,10 +20,15 @@ from pydantic import BaseModel
 
 from server.security import hash_password, verify_password
 from storage.supabase_store import SupabaseStore
+from storage.memory_store import InMemoryStore
 from system1 import lease_drafter
 from system1.real_estate_agent import DEFAULT_PERSONA_MODE, SCRAPE_SIGNAL
 from system1.session import System1AgentSession
 from system2.session import System2AgentSession
+from telemetry.metrics import fetch_metrics, summarize_metrics
+from telemetry.logging_utils import get_logger
+
+logger = get_logger(__name__)
 
 load_dotenv()
 
@@ -33,10 +38,29 @@ LEASE_OUTPUT_DIR = BASE_DIR / "system1" / "lease_drafts"
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
-if not SUPABASE_URL or not SUPABASE_SERVICE_ROLE_KEY:
-    raise RuntimeError("Supabase is required. Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env")
-store = SupabaseStore(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 
+
+def _init_store():
+    if SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY:
+        try:
+            supastore = SupabaseStore(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+            if supastore.ping():
+                logger.info("supabase_ready")
+                return supastore, False
+        except Exception:
+            logger.exception("supabase_init_failed")
+    logger.warning("supabase_unavailable_falling_back_to_memory")
+    return InMemoryStore(), True
+
+
+store, DEMO_MODE = _init_store()
+def _switch_to_memory(reason: str) -> None:
+    global store, DEMO_MODE
+    if DEMO_MODE:
+        return
+    logger.warning("switching_to_in_memory_store", extra={"reason": reason})
+    store = InMemoryStore()
+    DEMO_MODE = True
 
 class RegisterPayload(BaseModel):
     email: str
@@ -100,10 +124,18 @@ def get_current_user(request: Request) -> Dict[str, Any]:
     if not auth_header.lower().startswith("bearer "):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
     token = auth_header.split(None, 1)[1].strip()
-    session = store.get_session(token)
+    try:
+        session = store.get_session(token)
+    except Exception:
+        _switch_to_memory("store_access_error")
+        session = store.get_session(token)
     if not session:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
-    user = store.find_user_by_id(session["user_id"])
+    try:
+        user = store.find_user_by_id(session["user_id"])
+    except Exception:
+        _switch_to_memory("store_access_error")
+        user = store.find_user_by_id(session["user_id"])
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
     request.state.session_token = token
@@ -272,6 +304,15 @@ def create_conversation(payload: CreateConversationPayload, user: Dict[str, Any]
     persona_mode = payload.persona_mode or DEFAULT_PERSONA_MODE
     initial_preferences = _initial_preferences(payload.carry_preferences, user)
     convo = store.create_conversation(user["id"], system, persona_mode, initial_preferences=initial_preferences)
+    logger.info(
+        "conversation_created",
+        extra={
+            "conversation_id": convo["id"],
+            "system": system,
+            "persona_mode": persona_mode,
+            "user_id": user["id"],
+        },
+    )
     return {"conversation": _public_conversation(convo)}
 
 
@@ -333,6 +374,33 @@ def chat_stream(payload: ChatPayload, user: Dict[str, Any] = Depends(get_current
     return StreamingResponse(generate(), media_type="text/event-stream")
 
 
+@app.get("/api/metrics/summary")
+def metrics_summary(user: Dict[str, Any] = Depends(get_current_user)):
+    """
+    Return aggregate telemetry for demo purposes.
+    Falls back to local CSV metrics when Supabase is unavailable.
+    """
+    records = fetch_metrics(limit=500)
+    summary = summarize_metrics(records)
+    return {"summary": summary}
+
+
+@app.get("/api/health")
+def health():
+    missing_env = [name for name in ("SUPABASE_URL", "SUPABASE_SERVICE_ROLE_KEY", "OPENAI_API_KEY") if not os.getenv(name)]
+    supabase_ok = store.ping() if not DEMO_MODE else False
+    status = {
+        "supabase": {"ok": supabase_ok, "mode": "memory" if DEMO_MODE else "supabase"},
+        "env": {"missing": missing_env, "ok": len(missing_env) == 0 or DEMO_MODE},
+    }
+    if not DEMO_MODE and not supabase_ok:
+        _switch_to_memory("healthcheck_supabase_unavailable")
+        status["supabase"] = {"ok": False, "mode": "memory"}
+    overall = (supabase_ok and not missing_env) or DEMO_MODE
+    logger.info("health_check", extra={"supabase_ok": supabase_ok, "missing_env": missing_env, "demo_mode": DEMO_MODE})
+    return {"ok": overall, "details": status}
+
+
 @app.get("/{path:path}")
 def serve_frontend(path: str):
     target = WEBAPP_DIR / path
@@ -371,6 +439,26 @@ def _process_chat_message(user: Dict[str, Any], payload: Dict[str, Any], stream_
             initial_preferences=initial_preferences,
         )
         conversation_id = conversation["id"]
+        logger.info(
+            "conversation_started",
+            extra={
+                "conversation_id": conversation_id,
+                "system": system_id,
+                "persona_mode": persona,
+                "user_id": user["id"],
+            },
+        )
+
+    persona_for_log = persona_mode or (conversation.get("persona_mode") if conversation else None)
+    logger.info(
+        "conversation_message_start",
+        extra={
+            "conversation_id": conversation_id,
+            "system": system_id,
+            "user_id": user["id"],
+            "persona_mode": persona_for_log,
+        },
+    )
 
     if conversation:
         conversation_state = conversation.get("state") or {}
@@ -378,6 +466,13 @@ def _process_chat_message(user: Dict[str, Any], payload: Dict[str, Any], stream_
         if "preferences" not in conversation_state:
             conversation_state["preferences"] = dict(conversation.get("preferences") or {})
         conversation_state.setdefault("persona_mode", conversation.get("persona_mode") or DEFAULT_PERSONA_MODE)
+        conversation_state.setdefault("conversation_id", conversation_id or conversation.get("id"))
+        if DEMO_MODE:
+            notices = conversation_state.get("system_notices") or []
+            demo_notice = "Cloud storage is unavailable; using temporary in-memory storage. Conversations may not persist."
+            if demo_notice not in notices:
+                notices.append(demo_notice)
+            conversation_state["system_notices"] = notices
         conversation["state"] = conversation_state
 
     history_source = conversation if conversation_id else (latest_prior_convo or conversation)
@@ -395,6 +490,16 @@ def _process_chat_message(user: Dict[str, Any], payload: Dict[str, Any], stream_
             persona_mode,
             message,
             stream_handler=stream_handler,
+        )
+        logger.info(
+            "conversation_message_end",
+            extra={
+                "conversation_id": conversation_id,
+                "system": system_id,
+                "user_id": user["id"],
+                "persona_mode": persona_for_log,
+                "reply_length": len(session_result.get("reply") or ""),
+            },
         )
 
     lease_plan = session_result["state"].pop("lease_generation_plan", None) if session_result.get("state") else None
@@ -587,6 +692,7 @@ def _assemble_conversation_payload(
     base["system"] = system_id
     state = session_result.get("state") or {}
     preferences = session_result.get("preferences") or {}
+    state.setdefault("conversation_id", conversation_id)
     persona = state.get("persona_mode") or persona_mode or base.get("persona_mode") or DEFAULT_PERSONA_MODE
     base["persona_mode"] = persona
     base["preferences"] = preferences
@@ -638,6 +744,15 @@ def _generate_and_store_lease(
     prefs = _collect_preferences(user, conversation)
     listing = _extract_listing_from_state(conversation_state or {})
     overrides = overrides or {}
+    logger.info(
+        "lease_generation_start",
+        extra={
+            "user_id": user["id"],
+            "conversation_id": conversation.get("id") if conversation else None,
+            "has_listing": bool(listing),
+            "override_keys": list(overrides.keys()),
+        },
+    )
 
     inputs = lease_drafter.infer_inputs(preferences=prefs, listing=listing, overrides=overrides)
     package = lease_drafter.build_lease_package(inputs, output_dir=str(LEASE_OUTPUT_DIR))
@@ -658,6 +773,15 @@ def _generate_and_store_lease(
         pdf_base64=pdf_base64,
         summary=summary,
         metadata=metadata,
+    )
+    logger.info(
+        "lease_generation_complete",
+        extra={
+            "user_id": user["id"],
+            "conversation_id": conversation.get("id") if conversation else None,
+            "draft_id": saved.get("id"),
+            "title": title,
+        },
     )
 
     # Cleanup generated files to avoid clutter.

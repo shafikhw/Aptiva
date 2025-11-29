@@ -9,6 +9,9 @@ import httpx
 from postgrest import APIError
 
 from supabase import Client, create_client
+from telemetry.logging_utils import get_logger
+
+logger = get_logger(__name__)
 
 
 class SupabaseStore:
@@ -27,7 +30,9 @@ class SupabaseStore:
                 return fn()
             except (httpx.RemoteProtocolError, httpx.WriteError, APIError):
                 if attempt >= self._max_retries - 1:
+                    logger.error("supabase_request_failed", extra={"attempt": attempt + 1})
                     raise
+                logger.warning("supabase_retry", extra={"attempt": attempt + 1, "delay_seconds": delay})
                 time.sleep(delay)
                 delay *= 2
 
@@ -241,3 +246,12 @@ class SupabaseStore:
     def get_latest_lease_draft(self, user_id: str) -> Optional[Dict[str, Any]]:
         drafts = self.list_lease_drafts(user_id, limit=1)
         return drafts[0] if drafts else None
+
+    def ping(self) -> bool:
+        """Lightweight connectivity check."""
+        try:
+            self._with_retry(lambda: self._table("users").select("id").limit(1).execute())
+            return True
+        except Exception:
+            logger.exception("supabase_ping_failed")
+            return False

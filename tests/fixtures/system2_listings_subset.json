@@ -1,0 +1,831 @@
+[
+  {
+    "id": "200sqm apartment in dam w farez\u0627\u0644\u0636\u0645 \u0648\u0627\u0644\u0641\u0631\u0632",
+    "data": {
+      "id": "200sqm apartment in dam w farez\u0627\u0644\u0636\u0645 \u0648\u0627\u0644\u0641\u0631\u0632",
+      "source": {
+        "url": "https://mearealestate.com/property/9299",
+        "scraped_at": "019ac508-582a-7519-b1c1-99d491b2452c"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$750",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "200",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "4",
+      "baths": "3",
+      "parking_spaces": "1",
+      "floor": "",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$750",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$750",
+              "square_feet": "200",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://mearealestate.com/property/9299",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 4",
+            "Bathrooms: 3",
+            "Area: 200 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "MEA Real Estate - Your Dream Home Is Closer Than Ever",
+        "breadcrumbs": [],
+        "title": "Property Details | MEA Real Estate",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638558558957200622.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638558558962854292.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638558558964557525.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638558558966289620.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638558558968004802.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638558558969697671.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "image": "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+96181000760",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://mearealestate.com/property/9299",
+        "language": "en",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Type",
+        "city": "Type",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://mearealestate.com/static/media/logo2.1d2fe48d4ebee7edc3eb.png",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638558558957200622.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/1_638558558962854292.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/2_638558558964557525.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/3_638558558966289620.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/4_638558558968004802.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/5_638558558969697671.0.JPG",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638998427135632792.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/000-01_638998322372914262.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997646805751472.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638997546898728285.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638997527513639051.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/OLX-01_638996683513232960.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995845676070369.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0-01_638995805309109518.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/00-01_638990628264425991.jpg",
+          "https://confidence-cdn.s3.us-east-2.amazonaws.com/0000-01_638990620081022676.jpg",
+          "https://mearealestate.com/static/media/footerBG.eea374a7bdb4b56a8816.png",
+          "https://mearealestate.com/static/media/AppStore.5ecebf0c0471cbd17378.webp",
+          "https://mearealestate.com/static/media/google-play-badge_1.ce912f94585d390602b2.webp"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Apartment 220m for rent in Dam Wel Farez",
+    "data": {
+      "id": "Apartment 220m for rent in Dam Wel Farez",
+      "source": {
+        "url": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+        "scraped_at": "019ac574-766f-7618-9f98-c4c4041b7f18"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$900",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "220",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "3",
+      "baths": "3",
+      "parking_spaces": "",
+      "floor": "3",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$900",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$900",
+              "square_feet": "220",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 3",
+            "Bathrooms: 3",
+            "Area: 220 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "Explore this apartment 220m for rent in Dam Wel Farez - Tripoli, featuring 3 bedrooms, maid room, and multiple balconies. Perfect for renting properties in Tripoli, Lebanon.",
+        "breadcrumbs": [],
+        "title": "Apartment 220m for rent in Dam Wel Farez - Tripoli, near Hoz Mall",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/01/97be811a1ae0650dfb425a451436e0421-1024x1024.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1.jpg"
+        ],
+        "image": "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-1080x785.jpg",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+9616440723",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.remax-tripoli.com/property/r9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall/",
+        "language": "en-US",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "s.RE/MAX is the global leading real estate agency in the world. Operated offices with over 100,000 agents in 100 countries worldwide.",
+        "city": "s.RE/MAX is the global leading real estate agency in the world. Operated offices with over 100,000 agents in 100 countries worldwide.",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2077-apartment-220m-for-rent-in-dam-wel-farez-tripoli-near-hoz-mall%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/01/97be811a1ae0650dfb425a451436e0421-1024x1024.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-1080x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/2-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/20.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/16.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/6-1.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/01/5-1.jpg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "For Rent",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Apartment For Rent in Dam Wel Farez Tripoli",
+    "data": {
+      "id": "Apartment For Rent in Dam Wel Farez Tripoli",
+      "source": {
+        "url": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+        "scraped_at": "019ac52e-7e13-7396-a88e-73cf304b3cdd"
+      },
+      "listing_type": "rent",
+      "property_type": "Apartment",
+      "price": {
+        "amount": "$550",
+        "currency": "USD",
+        "frequency": "monthly",
+        "commission": "",
+        "deposit": ""
+      },
+      "size": {
+        "value": "200",
+        "units": "sqm",
+        "land_size": ""
+      },
+      "beds": "3",
+      "baths": "2",
+      "parking_spaces": "1",
+      "floor": "10",
+      "year_built": "",
+      "furnishing": "",
+      "pricingAndFloorPlans": [
+        {
+          "model_name": "For Rent",
+          "rent_label": "$550",
+          "details": [],
+          "units": [
+            {
+              "unit": "",
+              "price": "$550",
+              "square_feet": "200",
+              "view_more_html": ""
+            }
+          ],
+          "availability": "For Rent"
+        }
+      ],
+      "url": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+      "feesAndPolicies": {
+        "details": {
+          "Property Information": [
+            "Bedrooms: 3",
+            "Bathrooms: 2",
+            "Area: 200 sqm"
+          ]
+        }
+      },
+      "about": {
+        "description": "Spacious 200m apartment for rent in Dam W Farez Tripoli. Located on the 10th floor with panoramic views, 3 bedrooms, 3 bathrooms, salon, dining, living room, kitchen, 2 balconies, elevator, and private parking. Ideal for families and professionals.",
+        "breadcrumbs": [],
+        "title": "Spacious Apartment For Rent in Dam Wel Farez Tripoli",
+        "location": "Dam W Farez Tripoli, North Lebanon",
+        "rating": "",
+        "reviews": "",
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10.jpg"
+        ],
+        "image": "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+        "Unique Features": [],
+        "Features": []
+      },
+      "features": {
+        "general": [],
+        "interior": [],
+        "exterior": [],
+        "appliances": [],
+        "heating_cooling": [],
+        "parking": []
+      },
+      "contact": {
+        "property_management_logo": "",
+        "phone_number": "+9616440723",
+        "whatsapp": "",
+        "email": "",
+        "contact_name": "",
+        "agency": "",
+        "property_website": "https://www.remax-tripoli.com/property/r9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli/",
+        "language": "en-US",
+        "office_hours": {
+          "days": "Monday - Friday",
+          "hours": "9am - 5pm"
+        }
+      },
+      "location": {
+        "address_line": "Dam W Farez Tripoli, North Lebanon",
+        "city": "Dam W Farez Tripoli, North Lebanon",
+        "area": "",
+        "neighborhood": "",
+        "street": "",
+        "country": "Lebanon",
+        "coordinates": {
+          "lat": "",
+          "lng": ""
+        }
+      },
+      "media": {
+        "images": [
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2.png",
+          "https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.remax-tripoli.com%2Fproperty%2Fr9-2713-spacious-apartment-for-rent-in-dam-wel-farez-tripoli%2F&media=https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-940x785.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2016/02/Rani-TALEB-210x210-1-150x150.jpeg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-62-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-63-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-55-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-43-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-37-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-38-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-19-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-20-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-11-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-9-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-12-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-8-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-5-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/14-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/15-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/16-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/17-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/1-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/2-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/3-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/4-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/5-4-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/6-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/7-3-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/8-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/9-2-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/10-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/11-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/12-1-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/11/13-592x444.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/02/r2-768x308.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-clipart-itunes-app-store-apple-logo-apple-text-rectangle-e1692789977538.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/07/png-transparent-google-play-logo-google-play-android-app-store-play-now-button-text-label-logo-thumbnail-e1692790010730.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2023/08/logo-remax-white.png",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/9-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-13.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/1-9.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/2-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/3-8.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/4-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/5-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/6-14.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/7-10.jpg",
+          "https://www.remax-tripoli.com/wp-content/uploads/2025/10/8-10.jpg"
+        ],
+        "floorplans": [],
+        "videos": []
+      },
+      "availability": "Immediate",
+      "legal": {
+        "ownership": ""
+      },
+      "similar_listings": [],
+      "amenities": [
+        {
+          "title": "",
+          "amenities": []
+        }
+      ],
+      "education": {
+        "colleges_universities": [],
+        "description": ""
+      },
+      "schools": {
+        "public": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ],
+        "private": [
+          {
+            "name": "",
+            "subtitle": ""
+          }
+        ]
+      },
+      "transportation": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "stations": []
+          }
+        ]
+      },
+      "pointOfInterest": {
+        "description": "",
+        "groups": [
+          {
+            "subtitle": "",
+            "description": "",
+            "places": []
+          }
+        ]
+      }
+    }
+  }
+]

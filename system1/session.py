@@ -6,6 +6,9 @@ import json
 from copy import deepcopy
 from typing import Dict, Optional, Callable, Any
 
+from telemetry.logging_utils import get_logger
+from telemetry.prompt_filters import detect_prompt_injection, INJECTION_REMINDER
+
 from .real_estate_agent import (
     AgentState,
     DEFAULT_PERSONA_MODE,
@@ -20,6 +23,8 @@ from .real_estate_agent import (
     continue_lease_collection,
     STREAM_CALLBACK,
 )
+
+logger = get_logger(__name__)
 
 
 def _snapshot(state: AgentState) -> AgentState:
@@ -62,6 +67,24 @@ class System1AgentSession:
         user_input = (text or "").strip()
         if not user_input:
             raise ValueError("Message must not be empty.")
+
+        # Prompt-injection guard
+        injection_reason = detect_prompt_injection(user_input)
+        if injection_reason:
+            self.state["prompt_injection"] = True
+            self.state["prompt_injection_reason"] = injection_reason
+            messages = self.state.get("messages") or []
+            if not any(msg.get("content") == INJECTION_REMINDER for msg in messages if msg.get("role") == "system"):
+                messages.append({"role": "system", "content": INJECTION_REMINDER})
+                self.state["messages"] = messages
+
+        logger.info(
+            "session_message_start",
+            extra={
+                "conversation_id": self.state.get("conversation_id"),
+                "persona_mode": self.state.get("persona_mode"),
+            },
+        )
 
         # Allow persona switches without invoking the full graph.
         command_reply = handle_persona_command(self.state, user_input)
@@ -155,6 +178,15 @@ class System1AgentSession:
         self.state.setdefault("messages", []).append({"role": "assistant", "content": reply})
 
         snapshot = _snapshot(self.state)
+        logger.info(
+            "session_message_complete",
+            extra={
+                "conversation_id": snapshot.get("conversation_id"),
+                "persona_mode": snapshot.get("persona_mode"),
+                "reply_length": len(reply),
+                "off_topic": snapshot.get("off_topic", False),
+            },
+        )
         return {
             "reply": reply,
             "state": snapshot,

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "lb-01",
+    "user_profile": "Data analyst relocating to Tripoli; works remote, no car, okay with walking and taxis.",
+    "query": "Show 2-3 quiet rentals in Dam w Farez or Maarad under $800/month with reliable internet and an elevator if above the 3rd floor. Include a viewing suggestion for this Friday afternoon.",
+    "expected_type": "N Tripoli listings under a budget with access details and a proposed viewing time."
+  },
+  {
+    "id": "lb-02",
+    "user_profile": "Doctor starting a 6-month contract in Ras Maska; needs something move-in ready next week.",
+    "query": "Find furnished one-bedroom or large studio options in Ras Maska or Al-Koura with sea views or balcony access, budget up to $1,200/month. Propose two viewing windows this weekend and note which have parking.",
+    "expected_type": "Shortlist with parking notes and suggested viewing windows."
+  },
+  {
+    "id": "lb-03",
+    "user_profile": "Family of four returning to Lebanon for a year; schools near Bishmezzine or Koura, one car, needs storage.",
+    "query": "Prioritize 3-bedroom listings in Bishmezzine or nearby Koura villages with parking for 1 car, storage, and outdoor space. Budget around $1,500/month. Ask the agency what documents they need to start a lease draft for the best option.",
+    "expected_type": "Ranked family-friendly Koura listings with follow-up lease prep questions."
+  },
+  {
+    "id": "lb-heldout-01",
+    "user_profile": "Internal audit task to spot-check unseen Masharee3 Trablos listings.",
+    "query": "Use the held-out local listings subset to show a Tripoli-area option with parking and schedule a viewing window, then outline a lease draft for the same option.",
+    "expected_type": "Held-out local listing pulled from cached data, plus a proposed tour time and lease draft summary.",
+    "held_out": true
+  }
+]

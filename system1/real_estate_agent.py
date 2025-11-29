@@ -37,9 +37,17 @@ import requests
 from . import lease_drafter
 from .scraper import run_actor_and_save_outputs
 from .url_complex import ApartmentsSearchQuery, Lifestyle, PetType, PropertyType
+from telemetry.metrics import extract_usage_tokens, log_metric, start_timer
+from telemetry.logging_utils import get_logger
+from telemetry.retry import retry_with_backoff
+from telemetry.schemas import validate_listings
 
 STREAM_CALLBACK: ContextVar[Optional[Callable[[str], None]]] = ContextVar("STREAM_CALLBACK", default=None)
 SCRAPE_SIGNAL = "__aptiva_scrape_start__"
+COMPONENT_NAME = "system1"
+OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "30"))
+OPENAI_MAX_RETRIES = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
+logger = get_logger(__name__)
 
 # Defaults can be overridden via env vars
 load_dotenv()
@@ -59,6 +67,8 @@ DOMAIN_GUARD_SYSTEM_MESSAGE = (
     "You only discuss topics directly related to finding and comparing rental properties in the United States; "
     "property details, neighborhoods, and local amenities; scheduling viewings and tours; "
     "lease terms, applications, approvals, move-in logistics, and follow-up questions about scraped listings. "
+    "You do not provide legal or financial advice; always remind users to have any lease you draft reviewed by a qualified human professional or agent. "
+    "Flag that scraped or provided listing data can be stale or incomplete and that users should verify pricing, availability, and terms directly with property managers. "
     "If the user asks for anything outside this scope (general coding, medical advice, politics, personal counseling, etc.), "
     "politely refuse, explain that you only handle US residential rentals, and invite a housing-related question instead. "
     "Do not answer unrelated questions even if you know the answer, and use general knowledge only to support US rental decisions."
@@ -519,7 +529,7 @@ def get_openai_client() -> OpenAI:
     """Create an OpenAI client, raising a helpful error when the key is missing."""
     if not os.getenv("OPENAI_API_KEY"):
         raise RuntimeError("OPENAI_API_KEY is required to run the real estate agent.")
-    return OpenAI()
+    return OpenAI(timeout=OPENAI_TIMEOUT)
 
 
 def get_gmaps_client():
@@ -913,6 +923,7 @@ def stream_chat_completion(
     *,
     stream_label: Optional[str] = None,
     stream_to_stdout: bool = False,
+    conversation_id: Optional[str] = None,
     **kwargs: Any,
 ) -> Tuple[str, bool]:
     """
@@ -924,15 +935,26 @@ def stream_chat_completion(
     messages = kwargs.get("messages") or []
     kwargs["messages"] = _inject_domain_guardrail(list(messages))
     kwargs["stream"] = True  # guarantee streaming on every call
+    kwargs["timeout"] = OPENAI_TIMEOUT
     content_parts: List[str] = []
     emitted_to_stdout = False
     label_printed = False
+    usage_tokens: Tuple[Optional[int], Optional[int]] = (None, None)
+    model_name = kwargs.get("model")
 
     callback = STREAM_CALLBACK.get()
+    timer = start_timer(COMPONENT_NAME, model_name, conversation_id)
 
     try:
-        response = client.chat.completions.create(**kwargs)
+        response = retry_with_backoff(
+            lambda: client.chat.completions.create(**kwargs),
+            retries=OPENAI_MAX_RETRIES,
+        )
         for chunk in response:
+            model_name = getattr(chunk, "model", None) or model_name
+            new_usage = extract_usage_tokens(chunk)
+            if any(new_usage):
+                usage_tokens = new_usage
             text = _extract_chunk_text(chunk)
             if not text:
                 continue
@@ -959,11 +981,14 @@ def stream_chat_completion(
             notice = "\n[stream interruptedâ€”partial reply above; you can ask me to continue]"
             print(notice, flush=True)
         fallback = "".join(content_parts)
+        timer.done(tokens_in=usage_tokens[0], tokens_out=usage_tokens[1])
         if not fallback:
             fallback = "Sorry, the response was interrupted. Could you ask again?"
         else:
             fallback += "\n\n(Streaming was interrupted; message may be partial.)"
         return fallback, emitted_to_stdout or had_content
+    timer.model_or_tool = model_name
+    timer.done(tokens_in=usage_tokens[0], tokens_out=usage_tokens[1])
     return "".join(content_parts), emitted_to_stdout
 
 
@@ -1105,6 +1130,7 @@ def generate_persona_reply(
         top_p=persona_cfg.get("top_p", 1.0),
         stream_label="Agent: ",
         stream_to_stdout=True,
+        conversation_id=state.get("conversation_id"),
     )
     reply = reply or "Let me know how you'd like to adjust the search."
     return reply, persona_key, streamed
@@ -1199,6 +1225,7 @@ def analyze_preferences(state: AgentState) -> AgentState:
         messages=extraction_messages,
         temperature=0,
         response_format={"type": "json_object"},
+        conversation_id=state.get("conversation_id"),
     )
     raw = raw or "{}"
     try:
@@ -1294,7 +1321,16 @@ def scrape_listings(state: AgentState) -> AgentState:
     fallback_notice = None
     try:
         json_path = SCRAPER_OUTPUT_PATH
-        run_actor_and_save_outputs(run_input, json_path=json_path)
+        logger.info(
+            "apify_call_start",
+            extra={
+                "conversation_id": state.get("conversation_id"),
+                "search_url": search_url,
+                "max_pages": run_input["max_pages"],
+                "filter_option": run_input["filter_option"],
+            },
+        )
+        run_actor_and_save_outputs(run_input, json_path=json_path, conversation_id=state.get("conversation_id"))
         with open(json_path, "r", encoding="utf-8") as f:
             scraped_data = json.load(f)
         items: List[Dict[str, Any]] = []
@@ -1307,7 +1343,13 @@ def scrape_listings(state: AgentState) -> AgentState:
                     break
         else:
             items = []
+        items = validate_listings(items)
+        logger.info(
+            "apify_call_complete",
+            extra={"conversation_id": state.get("conversation_id"), "items": len(items)},
+        )
     except Exception as exc:
+        logger.exception("apify_call_failed", extra={"conversation_id": state.get("conversation_id")})
         items = _load_fallback_listings()
         if not items:
             reply, persona_key, streamed = generate_persona_reply(
@@ -1370,27 +1412,35 @@ def enrich_with_maps(state: AgentState) -> AgentState:
             or listing.get("about", {}).get("title")
             or listing.get("url")
         )
-        lat_lng = _geocode_address(gmaps_client, location_text)
-        pois = _find_pois(gmaps_client, lat_lng) if lat_lng else []
+        lat_lng = _geocode_address(gmaps_client, location_text, conversation_id=state.get("conversation_id"))
+        pois = _find_pois(gmaps_client, lat_lng, conversation_id=state.get("conversation_id")) if lat_lng else []
         enriched.append({**listing, "nearby_pois": pois, "geocoded_location": lat_lng})
     return {**state, "enriched_listings": enriched}
 
 
-def _geocode_address(gmaps_client, address: Optional[str]) -> Optional[Tuple[float, float]]:
+def _geocode_address(gmaps_client, address: Optional[str], *, conversation_id: Optional[str] = None) -> Optional[Tuple[float, float]]:
     """Geocode an address string to (lat, lng)."""
     if not address:
         return None
+    logger.info("google_maps_geocode_start", extra={"conversation_id": conversation_id})
+    timer = start_timer("google_maps", "geocode", conversation_id)
     try:
         result = gmaps_client.geocode(address)
         if result and "geometry" in result[0]:
             loc = result[0]["geometry"]["location"]
-            return loc.get("lat"), loc.get("lng")
+            coords = loc.get("lat"), loc.get("lng")
+            timer.done()
+            logger.info("google_maps_geocode_complete", extra={"conversation_id": conversation_id, "coords": coords})
+            return coords
     except Exception:
+        timer.done()
+        logger.warning("google_maps_geocode_failed", extra={"conversation_id": conversation_id})
         return None
+    timer.done()
     return None
 
 
-def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]]) -> List[str]:
+def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]], *, conversation_id: Optional[str] = None) -> List[str]:
     """Find nearby points of interest for the given coordinates."""
     if not lat_lng:
         return []
@@ -1407,11 +1457,25 @@ def _find_pois(gmaps_client, lat_lng: Optional[Tuple[float, float]]) -> List[str
     poi_summaries: List[str] = []
     for label, place_type in categories:
         try:
+            logger.info(
+                "google_maps_places_start",
+                extra={"conversation_id": conversation_id, "place_type": place_type},
+            )
+            timer = start_timer("google_maps", f"places_{place_type}", conversation_id)
             results = gmaps_client.places_nearby(location=(lat, lng), radius=2000, type=place_type)
+            timer.done()
             names = [p.get("name") for p in results.get("results", [])[:2] if p.get("name")]
             if names:
                 poi_summaries.append(f"Nearby {label}: {', '.join(names)}")
         except Exception:
+            try:
+                timer.done()
+            except Exception:
+                pass
+            logger.warning(
+                "google_maps_places_failed",
+                extra={"conversation_id": conversation_id, "place_type": place_type},
+            )
             continue
     return poi_summaries
 
@@ -2475,16 +2539,24 @@ def _reason_about_lease_input(state: AgentState, user_input: str) -> Dict[str, A
         "instead of answering a prompt, set intent to \"property_question\" and include the user's question.\n"
         "When the user clearly wants to switch options, set intent to \"change_option\" and provide option_index.\n"
     )
+    timer = start_timer(COMPONENT_NAME, DEFAULT_REASONING_MODEL, state.get("conversation_id"))
     try:
-        response = client.responses.create(
-            model=DEFAULT_REASONING_MODEL,
-            reasoning={"effort": "medium"},
-            input=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
-            ],
+        response = retry_with_backoff(
+            lambda: client.responses.create(
+                model=DEFAULT_REASONING_MODEL,
+                reasoning={"effort": "medium"},
+                input=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
+                ],
+                timeout=OPENAI_TIMEOUT,
+            ),
+            retries=OPENAI_MAX_RETRIES,
         )
+        prompt_tokens, completion_tokens = extract_usage_tokens(response)
+        timer.done(tokens_in=prompt_tokens, tokens_out=completion_tokens)
     except Exception:
+        timer.done()
         return {}
     text = _collapse_reasoning_output(response)
     if not text:
@@ -2524,16 +2596,27 @@ def _answer_property_question(state: AgentState, question: Optional[str], option
         "Answer the question about the property using the provided listing summary. "
         "If the detail is missing, admit it briefly. Keep responses under six sentences."
     )
+    timer = start_timer(COMPONENT_NAME, DEFAULT_OPENAI_MODEL, state.get("conversation_id"))
     try:
-        response = client.chat.completions.create(
-            model=DEFAULT_OPENAI_MODEL,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": json.dumps(prompt_payload, ensure_ascii=False)},
-            ],
-            temperature=0.4,
+        response = retry_with_backoff(
+            lambda: client.chat.completions.create(
+                model=DEFAULT_OPENAI_MODEL,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": json.dumps(prompt_payload, ensure_ascii=False)},
+                ],
+                temperature=0.4,
+                timeout=OPENAI_TIMEOUT,
+            ),
+            retries=OPENAI_MAX_RETRIES,
         )
+        prompt_tokens, completion_tokens = extract_usage_tokens(response)
+        timer.done(tokens_in=prompt_tokens, tokens_out=completion_tokens)
     except Exception:
+        try:
+            timer.done()
+        except Exception:
+            pass
         if target_summary and question:
             return f"I couldn't retrieve additional info, but here's the question you asked: {question}"
         return "I couldn't retrieve extra details right now."
@@ -2798,7 +2881,7 @@ def _load_fallback_listings(limit: int = 50) -> List[Dict[str, Any]]:
                 data = data["data"]
     if not isinstance(data, list):
         return []
-    return data[:limit]
+    return validate_listings(data, limit=limit)
 
 
 def _handle_global_lease_commands(state: AgentState, user_input: str, normalized: str) -> Optional[str]:
@@ -2947,6 +3030,165 @@ def _handle_global_lease_commands(state: AgentState, user_input: str, normalized
     return None
 
 
+LEASE_NAVIGATION_HINT = (
+    "Navigation: type 'change unit', 'change plan', 'change name', 'change date', 'change lease term', or 'update lease' to adjust terms, or 'restart lease' to begin with a new property."
+)
+
+
+def _build_lease_confirmation_prompt(
+    state: AgentState,
+    *,
+    listing: Optional[Dict[str, Any]],
+    overrides: Dict[str, Any],
+    selected_plan: Optional[Dict[str, Any]],
+    selected_unit: Optional[Dict[str, Any]],
+    tenant_name: Optional[str],
+    header: str,
+    navigation_hint: Optional[str] = None,
+    ack: str = "Creating your lease draft now.",
+) -> str:
+    """Capture lease details and ask the user to confirm before generating a draft."""
+    overrides_copy = dict(overrides or {})
+    state["pending_lease_confirmation"] = {
+        "overrides": overrides_copy,
+        "listing": listing,
+        "selected_plan": selected_plan,
+        "selected_unit": selected_unit,
+        "tenant_name": tenant_name,
+        "ack": ack,
+    }
+    state["last_overrides"] = overrides_copy
+    state["last_listing"] = listing
+    if selected_plan:
+        state["lease_selected_plan"] = selected_plan
+    if selected_unit:
+        state["lease_selected_unit"] = selected_unit
+
+    preferences = state.get("preferences") or {}
+    summary_lines: List[str] = [header]
+    title = (listing.get("about", {}) or {}).get("title") if isinstance(listing, dict) else None
+    location = (listing.get("about", {}) or {}).get("location") if isinstance(listing, dict) else None
+    if title or location:
+        summary_lines.append(f"Property: {' - '.join(part for part in [title, location] if part)}")
+    move_in = overrides_copy.get("lease_start_date") or preferences.get("lease_start_date")
+    if move_in:
+        summary_lines.append(f"Move-in: {move_in}")
+    term = overrides_copy.get("lease_term_months") or preferences.get("lease_duration_months")
+    if term:
+        summary_lines.append(f"Term: {term} months")
+    if selected_plan:
+        plan_label = selected_plan.get("model_name") or selected_plan.get("name")
+        if plan_label:
+            summary_lines.append(f"Floor plan: {plan_label}")
+    if selected_unit:
+        unit_label = selected_unit.get("unit") or selected_unit.get("label")
+        price = selected_unit.get("price")
+        parts = [f"Unit: {unit_label or 'N/A'}"]
+        if price:
+            parts.append(f"Price: ${price:,}")
+        sqft = selected_unit.get("square_feet")
+        if sqft:
+            parts.append(f"Sq Ft: {sqft}")
+        availability = selected_unit.get("availability")
+        if availability:
+            parts.append(f"Availability: {availability}")
+        summary_lines.append(" | ".join(parts))
+    if tenant_name or overrides_copy.get("tenant_name"):
+        summary_lines.append(f"Tenant: {tenant_name or overrides_copy.get('tenant_name')}")
+    if navigation_hint:
+        summary_lines.append(navigation_hint)
+    summary_lines.append(
+        "Type CONFIRM to proceed or tell me what to change (e.g., 'change unit' or 'restart lease'). "
+        "This is not legal or financial advice—please have a licensed agent review the lease and verify the listing details are current."
+    )
+    prompt = "\n".join(summary_lines)
+    state["pending_lease_confirmation"]["prompt"] = prompt
+    return prompt
+
+
+def _finalize_pending_lease(state: AgentState, user_input: str) -> str:
+    """Generate the lease draft after the user explicitly confirms."""
+    pending = state.get("pending_lease_confirmation") or {}
+    overrides = dict(pending.get("overrides") or state.get("last_overrides") or {})
+    listing = pending.get("listing") or state.get("last_listing")
+    selected_plan = pending.get("selected_plan") or state.get("lease_selected_plan")
+    selected_unit = pending.get("selected_unit") or state.get("lease_selected_unit")
+    tenant_name = pending.get("tenant_name") or overrides.get("tenant_name")
+    preferences = state.get("preferences") or {}
+    ack = pending.get("ack") or "Creating your lease draft now."
+
+    try:
+        lease_inputs = lease_drafter.infer_inputs(preferences=preferences, listing=listing, overrides=dict(overrides))
+        package = lease_drafter.build_lease_package(lease_inputs)
+    except Exception as exc:
+        state.pop("pending_lease_confirmation", None)
+        return _reply_with_history(state, user_input, f"I couldn't generate the lease right now: {exc}")
+
+    summary_lines: List[str] = ["Lease draft created."]
+    title = (listing.get("about", {}) or {}).get("title") if isinstance(listing, dict) else None
+    location = (listing.get("about", {}) or {}).get("location") if isinstance(listing, dict) else None
+    if title or location:
+        label = " - ".join(part for part in [title, location] if part)
+        summary_lines.append(f"Property: {label}")
+    move_in = preferences.get("lease_start_date") or overrides.get("lease_start_date")
+    if move_in:
+        summary_lines.append(f"Move-in: {move_in}")
+    term = preferences.get("lease_duration_months") or overrides.get("lease_term_months")
+    if term:
+        summary_lines.append(f"Term: {term} months")
+    if selected_plan:
+        plan_label = selected_plan.get("model_name") or selected_plan.get("name")
+        if plan_label:
+            summary_lines.append(f"Floor plan: {plan_label}")
+    if selected_unit:
+        unit_label = selected_unit.get("unit") or selected_unit.get("label")
+        price = selected_unit.get("price")
+        parts = [f"Unit: {unit_label or 'N/A'}"]
+        if price:
+            parts.append(f"Price: ${price:,}")
+        sqft = selected_unit.get("square_feet")
+        if sqft:
+            parts.append(f"Sq Ft: {sqft}")
+        availability = selected_unit.get("availability")
+        if availability:
+            parts.append(f"Availability: {availability}")
+        summary_lines.append(" | ".join(parts))
+    if tenant_name:
+        summary_lines.append(f"Tenant: {tenant_name}")
+    if isinstance(package, dict) and package.get("pdf_path"):
+        summary_lines.append(f"Draft file: {package['pdf_path']}")
+    summary_lines.append(
+        "Reminder: This is not legal or financial advice. Please have a qualified human agent review the lease and confirm the listing data is up to date."
+    )
+    summary_lines.append(LEASE_NAVIGATION_HINT)
+    reply = "\n".join(summary_lines)
+
+    _reply_with_history(state, user_input, reply)
+
+    drafts = state.get("lease_drafts") or []
+    drafts.append(package)
+    state["lease_drafts"] = drafts
+    state["lease_generation_plan"] = {
+        "status": "requested",
+        "ack": ack,
+        "overrides": overrides,
+    }
+    state["pending_lease_waiting_name"] = False
+    state["pending_lease_waiting_plan"] = False
+    state["pending_lease_plan_options"] = []
+    state["pending_lease_selected_plan"] = None
+    state["pending_lease_waiting_unit"] = False
+    state["pending_lease_unit_options"] = []
+    state["pending_lease_selected_unit"] = None
+    state["pending_lease_waiting_start"] = False
+    state["pending_lease_waiting_duration"] = False
+    state["pending_lease_choice"] = None
+    state["pending_lease_duration_bounds"] = (None, None)
+    state.pop("pending_lease_confirmation", None)
+
+    return reply
+
+
 def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     """
     Generate a lease draft when the user explicitly requests it.
@@ -2956,6 +3198,25 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     normalized = user_input.strip().lower()
     if not normalized:
         return None
+
+    pending_confirmation = state.get("pending_lease_confirmation")
+    if pending_confirmation:
+        if normalized in {"confirm", "confirm lease", "confirm draft", "confirm lease draft"}:
+            return _finalize_pending_lease(state, user_input)
+        if normalized in {"cancel", "cancel lease", "restart lease", "start over"} or _wants_back_command(user_input):
+            state.pop("pending_lease_confirmation", None)
+            return _reply_with_history(
+                state,
+                user_input,
+                "Lease draft cancelled. Tell me which option number you'd like me to work on instead.",
+            )
+        if any(keyword in normalized for keyword in ("change", "update", "option", "edit", "adjust")):
+            state.pop("pending_lease_confirmation", None)
+        else:
+            reminder = pending_confirmation.get("prompt") or (
+                "I'm ready to generate your lease draft. Type CONFIRM to proceed or tell me what to change."
+            )
+            return _reply_with_history(state, user_input, reminder)
 
     def _ensure_change_choice() -> Optional[int]:
         choice = state.get("last_choice_index")
@@ -3542,59 +3803,20 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     state["preferences"] = preferences
     state["last_overrides"] = overrides
     state["last_listing"] = listing
-
-    try:
-        lease_inputs = lease_drafter.infer_inputs(preferences=preferences, listing=listing, overrides=dict(overrides))
-        package = lease_drafter.build_lease_package(lease_inputs)
-    except Exception as exc:
-        package = {"error": str(exc)}
-
-    summary_lines: List[str] = ["Lease draft created."]
-    title = (listing.get("about", {}) or {}).get("title") if isinstance(listing, dict) else None
-    location = (listing.get("about", {}) or {}).get("location") if isinstance(listing, dict) else None
-    if title or location:
-        label = " - ".join(part for part in [title, location] if part)
-        summary_lines.append(f"Property: {label}")
-    summary_lines.append(f"Move-in: {preferences.get('lease_start_date')}")
-    summary_lines.append(f"Term: {preferences.get('lease_duration_months')} months")
-    if selected_plan:
-        plan_label = selected_plan.get("model_name") or selected_plan.get("name")
-        if plan_label:
-            summary_lines.append(f"Floor plan: {plan_label}")
-    if selected_unit:
-        unit_label = selected_unit.get("unit") or selected_unit.get("label")
-        price = selected_unit.get("price")
-        parts = [f"Unit: {unit_label or 'N/A'}"]
-        if price:
-            parts.append(f"Price: ${price:,}")
-        sqft = selected_unit.get("square_feet")
-        if sqft:
-            parts.append(f"Sq Ft: {sqft}")
-        availability = selected_unit.get("availability")
-        if availability:
-            parts.append(f"Availability: {availability}")
-        summary_lines.append(" | ".join(parts))
-    if tenant_name:
-        summary_lines.append(f"Tenant: {tenant_name}")
-    if isinstance(package, dict) and package.get("pdf_path"):
-        summary_lines.append(f"Draft file: {package['pdf_path']}")
-    summary_lines.append(
-        "Navigation: type 'change unit', 'change plan', 'change name', 'change date', 'change lease term', or 'update lease' to adjust terms, or 'restart lease' to begin with a new property."
-    )
-    reply = "\n".join(summary_lines)
-
-    _reply_with_history(state, user_input, reply)
-
-    drafts = state.get("lease_drafts") or []
-    drafts.append(package)
-    state["lease_drafts"] = drafts
     state["lease_selected_plan"] = selected_plan
     state["lease_selected_unit"] = selected_unit
-    state["lease_generation_plan"] = {
-        "status": "requested",
-        "ack": "Creating your lease draft now.",
-        "overrides": overrides,
-    }
+
+    confirm_message = _build_lease_confirmation_prompt(
+        state,
+        listing=listing,
+        overrides=overrides,
+        selected_plan=selected_plan,
+        selected_unit=selected_unit,
+        tenant_name=tenant_name,
+        header="Ready to create your lease draft. Please review these details:",
+        navigation_hint=LEASE_NAVIGATION_HINT,
+        ack="Creating your lease draft now.",
+    )
     state["pending_lease_waiting_name"] = False
     state["pending_lease_waiting_plan"] = False
     state["pending_lease_plan_options"] = []
@@ -3607,7 +3829,7 @@ def handle_lease_command(state: AgentState, user_input: str) -> Optional[str]:
     state["pending_lease_choice"] = None
     state["pending_lease_duration_bounds"] = (None, None)
 
-    return reply
+    return _reply_with_history(state, user_input, confirm_message)
 
 
 def _build_floor_plan_options(listing: Optional[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -3855,32 +4077,19 @@ def handle_lease_update_request(state: AgentState, user_input: str) -> Optional[
 
     state["preferences"] = preferences
     state["last_overrides"] = overrides
-    try:
-        lease_inputs = lease_drafter.infer_inputs(preferences=preferences, listing=last_listing, overrides=overrides)
-        package = lease_drafter.build_lease_package(lease_inputs)
-    except Exception as exc:
-        return f"I couldn't update the lease right now: {exc}"
-
-    drafts = state.get("lease_drafts") or []
-    drafts.append(package)
-    state["lease_drafts"] = drafts
-    state["lease_generation_plan"] = {
-        "status": "requested",
-        "ack": "Updating your lease draft now.",
-        "overrides": overrides,
-    }
-
-    summary_lines = ["Lease draft updated."]
-    if overrides.get("lease_start_date"):
-        summary_lines.append(f"Move-in: {overrides['lease_start_date']}")
-    if overrides.get("lease_term_months"):
-        summary_lines.append(f"Term: {overrides['lease_term_months']} months")
-    if overrides.get("monthly_rent"):
-        summary_lines.append(f"Rent: ${overrides['monthly_rent']:,}")
-    if overrides.get("tenant_name"):
-        summary_lines.append(f"Tenant: {overrides['tenant_name']}")
-    summary_lines.append("If you'd like, share more changes or run another search.")
-    return "\n".join(summary_lines)
+    state["last_listing"] = last_listing
+    prompt = _build_lease_confirmation_prompt(
+        state,
+        listing=last_listing,
+        overrides=overrides,
+        selected_plan=state.get("lease_selected_plan"),
+        selected_unit=state.get("lease_selected_unit"),
+        tenant_name=overrides.get("tenant_name"),
+        header="Ready to update your lease draft with these changes:",
+        navigation_hint="Share more changes or type CONFIRM to regenerate the draft.",
+        ack="Updating your lease draft now.",
+    )
+    return prompt
 
 
 def continue_lease_collection(state: AgentState, user_input: str) -> Optional[str]:
@@ -3960,11 +4169,54 @@ def continue_lease_collection(state: AgentState, user_input: str) -> Optional[st
 
     if index >= len(fields):
         plan = collector.get("plan") or {}
-        plan["status"] = "requested"
-        plan["overrides"] = responses
-        state["lease_generation_plan"] = plan
+        overrides = {
+            "tenant_name": responses.get("tenant_name"),
+            "lease_start_date": responses.get("lease_start_date"),
+            "lease_term_months": responses.get("lease_term_months"),
+        }
+        if responses.get("selected_unit_price"):
+            overrides["monthly_rent"] = responses.get("selected_unit_price")
+        preferences = state.get("preferences") or {}
+        if responses.get("lease_start_date"):
+            preferences["lease_start_date"] = responses["lease_start_date"]
+        if responses.get("lease_term_months"):
+            preferences["lease_duration_months"] = responses["lease_term_months"]
+        if responses.get("tenant_name"):
+            preferences["tenant_name"] = responses["tenant_name"]
+        state["preferences"] = preferences
+
+        selected_plan = None
+        if responses.get("selected_plan_name") or responses.get("selected_plan_details"):
+            selected_plan = {
+                "model_name": responses.get("selected_plan_name"),
+                "name": responses.get("selected_plan_name") or responses.get("selected_plan_details"),
+                "details": responses.get("selected_plan_details"),
+                "availability": responses.get("selected_plan_availability"),
+            }
+        selected_unit = None
+        if any(responses.get(key) for key in ("selected_unit_label", "selected_unit_price", "selected_unit_sqft", "selected_unit_availability")):
+            selected_unit = {
+                "unit": responses.get("selected_unit_label"),
+                "label": responses.get("selected_unit_label"),
+                "price": responses.get("selected_unit_price"),
+                "square_feet": responses.get("selected_unit_sqft"),
+                "availability": responses.get("selected_unit_availability"),
+                "details": responses.get("selected_unit_details"),
+            }
+        header = plan.get("ack") or "I can draft the lease with these details:"
+        prompt = _build_lease_confirmation_prompt(
+            state,
+            listing=collector.get("listing"),
+            overrides=overrides,
+            selected_plan=selected_plan,
+            selected_unit=selected_unit,
+            tenant_name=responses.get("tenant_name"),
+            header=header,
+            navigation_hint="Type CONFIRM to generate the draft or share updates to change any fields.",
+            ack=plan.get("ack") or "Creating your lease draft now.",
+        )
         state.pop("lease_collection", None)
-        return "Thanks! I have all the details I need. I'll assemble the lease now and let you know when it's ready."
+        return prompt
     return None
 
 

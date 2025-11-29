@@ -8,8 +8,12 @@ from openai import OpenAI
 from fastmcp import Client as McpClient
 from fastmcp.client.transports import StreamableHttpTransport
 import dotenv
+from telemetry.metrics import extract_usage_tokens, start_timer
+from telemetry.logging_utils import get_logger
+from telemetry.retry import retry_async_with_backoff, retry_with_backoff
 
 dotenv.load_dotenv()
+logger = get_logger(__name__)
 
 # =========================
 # CONFIG
@@ -20,7 +24,11 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
     raise RuntimeError("Set OPENAI_API_KEY in your environment.")
 OPENAI_MODEL = "gpt-4o"
-openai_client = OpenAI(api_key=OPENAI_API_KEY)
+OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "30"))
+OPENAI_MAX_RETRIES = int(os.getenv("OPENAI_MAX_RETRIES", "3"))
+MCP_TIMEOUT_SECONDS = float(os.getenv("MCP_TIMEOUT", "30"))
+MCP_MAX_RETRIES = int(os.getenv("MCP_MAX_RETRIES", "3"))
+openai_client = OpenAI(api_key=OPENAI_API_KEY, timeout=OPENAI_TIMEOUT)
 
 ZAPIER_MCP_URL = os.getenv(
     "ZAPIER_MCP_URL",
@@ -109,6 +117,13 @@ class GoogleCalendarMCP:
         await self.client.__aexit__(exc_type, exc, tb)
         self.client = None
 
+    async def _call_tool_with_retry(self, name: str, payload: Dict[str, Any]) -> Any:
+        assert self.client is not None, "MCP client not connected"
+        return await retry_async_with_backoff(
+            lambda: asyncio.wait_for(self.client.call_tool(name, payload), MCP_TIMEOUT_SECONDS),
+            retries=MCP_MAX_RETRIES,
+        )
+
     async def find_events_as_busy(
         self,
         calendar_id: str,
@@ -131,7 +146,7 @@ class GoogleCalendarMCP:
             "Do NOT ask me any follow-up questions."
         )
 
-        res = await self.client.call_tool(
+        res = await self._call_tool_with_retry(
             "google_calendar_find_events",
             {
                 "instructions": instructions,
@@ -180,7 +195,7 @@ class GoogleCalendarMCP:
             "Do NOT ask me any follow-up questions."
         )
 
-        res = await self.client.call_tool(
+        res = await self._call_tool_with_retry(
             "google_calendar_find_events",
             {
                 "instructions": instructions,
@@ -650,6 +665,7 @@ TOOLS = [
 # =========================
 
 async def handle_tool_call(tool_call) -> Dict[str, Any]:
+    """Route a tool call payload to the appropriate backend_* function with logging and error handling."""
     if isinstance(tool_call, dict):
         func = tool_call.get("function") or {}
         name = func.get("name")
@@ -662,16 +678,24 @@ async def handle_tool_call(tool_call) -> Dict[str, Any]:
     except json.JSONDecodeError:
         args = {}
 
-    if name == "get_common_slots":
-        return await backend_get_common_slots(**args)
-    elif name == "book_tour":
-        return await backend_book_tour(**args)
-    elif name == "list_tours":
-        return await backend_list_tours(**args)
-    elif name == "cancel_tour":
-        return await backend_cancel_tour(**args)
-    else:
-        return {"error": f"Unknown tool: {name}"}
+    logger.info("mcp_tool_call_start", extra={"tool_name": name})
+    try:
+        if name == "get_common_slots":
+            result = await backend_get_common_slots(**args)
+        elif name == "book_tour":
+            result = await backend_book_tour(**args)
+        elif name == "list_tours":
+            result = await backend_list_tours(**args)
+        elif name == "cancel_tour":
+            result = await backend_cancel_tour(**args)
+        else:
+            logger.warning("mcp_tool_call_unknown", extra={"tool_name": name})
+            result = {"error": f"Unknown tool: {name}"}
+    except Exception:
+        logger.exception("mcp_tool_call_failed", extra={"tool_name": name})
+        result = {"error": f"Tool call failed: {name}"}
+    logger.info("mcp_tool_call_complete", extra={"tool_name": name})
+    return result
 
 
 def _extract_chunk_text(delta: Any) -> str:
@@ -701,6 +725,7 @@ def stream_completion_with_tools(
     stream_label: Optional[str] = None,
     stream_to_stdout: bool = False,
     stream_callback: Optional[Callable[[str], None]] = None,
+    conversation_id: Optional[str] = None,
     **kwargs: Any,
 ) -> Tuple[Dict[str, Any], bool]:
     """
@@ -709,15 +734,26 @@ def stream_completion_with_tools(
     Returns (message_dict, streamed_to_stdout).
     """
     kwargs["stream"] = True
+    kwargs["timeout"] = OPENAI_TIMEOUT
     content_parts: List[str] = []
     tool_calls: Dict[int, Dict[str, Any]] = {}
     emitted = False
     label_printed = False
     role: Optional[str] = None
+    usage_tokens: Tuple[Optional[int], Optional[int]] = (None, None)
+    model_name = kwargs.get("model")
+    timer = start_timer("scheduler", model_name, conversation_id)
 
     try:
-        response = openai_client.chat.completions.create(**kwargs)
+        response = retry_with_backoff(
+            lambda: openai_client.chat.completions.create(**kwargs),
+            retries=OPENAI_MAX_RETRIES,
+        )
         for chunk in response:
+            model_name = getattr(chunk, "model", None) or model_name
+            new_usage = extract_usage_tokens(chunk)
+            if any(new_usage):
+                usage_tokens = new_usage
             choice = chunk.choices[0]
             delta = choice.delta
             role = role or getattr(delta, "role", None) or "assistant"
@@ -756,6 +792,7 @@ def stream_completion_with_tools(
         if emitted:
             print()
     except Exception as exc:
+        timer.done(tokens_in=usage_tokens[0], tokens_out=usage_tokens[1])
         if emitted:
             print("\n[stream interrupted—partial reply above; you can ask again]", flush=True)
         fallback = "".join(content_parts) or f"Sorry, the response was interrupted ({exc})."
@@ -779,10 +816,13 @@ def stream_completion_with_tools(
     if tool_call_list:
         message["tool_calls"] = tool_call_list
 
+    timer.model_or_tool = model_name
+    timer.done(tokens_in=usage_tokens[0], tokens_out=usage_tokens[1])
     return message, emitted
 
 
 def build_system_prompt() -> str:
+    """Construct the scheduler system prompt with current time, calendars, and listing defaults."""
     now_utc = datetime.now(timezone.utc).isoformat(timespec="seconds")
     now_local = datetime.now(LOCAL_TZ).isoformat(timespec="seconds")
     return (
@@ -813,6 +853,7 @@ def build_system_prompt() -> str:
 # =========================
 
 def run_scheduler_agent_cli():
+    """Interactive CLI loop for testing the scheduler agent with tool-calling enabled."""
     system_prompt = build_system_prompt()
     messages: List[Dict[str, Any]] = [
         {"role": "system", "content": system_prompt},

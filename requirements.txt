@@ -10,3 +10,4 @@ pandas>=2.2.2
 googlemaps>=4.10.0
 reportlab>=4.0.8
 fastmcp>=0.0.7
+pytest>=7.4

@@ -61,6 +61,9 @@ const state = {
   authView: "login",
   leaseDrafts: [],
   scrapeExpanded: false,
+  demoMode: false,
+  pinnedStatus: "",
+  pinnedVariant: "warning",
 };
 
 const THEME_STORAGE_KEY = "aptiva_theme";
@@ -334,8 +337,36 @@ function findClosingBracketIndex(text) {
 
 function setStatus(message, variant = "info") {
   if (!dom.statusBar) return;
-  dom.statusBar.textContent = message || "";
-  dom.statusBar.dataset.variant = variant;
+  const combined = state.pinnedStatus
+    ? [state.pinnedStatus, message].filter(Boolean).join(" · ")
+    : message;
+  const effectiveVariant = state.pinnedStatus ? state.pinnedVariant || variant : variant;
+  dom.statusBar.textContent = combined || "";
+  dom.statusBar.dataset.variant = effectiveVariant;
+}
+
+function pinStatus(message, variant = "warning") {
+  state.pinnedStatus = message;
+  state.pinnedVariant = variant;
+  setStatus("");
+}
+
+async function checkHealth() {
+  try {
+    const res = await api("/api/health");
+    const mode = res.details?.supabase?.mode || "supabase";
+    if (mode === "memory") {
+      state.demoMode = true;
+      pinStatus("Supabase unavailable – running in demo (in-memory) mode", "warning");
+    } else {
+      state.demoMode = false;
+      state.pinnedStatus = "";
+      state.pinnedVariant = "info";
+    }
+  } catch (err) {
+    console.error(err);
+    setStatus("Health check failed.", "error");
+  }
 }
 
 async function api(path, { method = "GET", json, headers, signal } = {}) {
@@ -1084,6 +1115,7 @@ async function init() {
   setPersonaMode(state.personaMode);
   bindEvents();
   state.system = dom.systemSelect.value;
+  await checkHealth();
   const authed = await restoreSession();
   if (!authed) {
     setStatus("Sign in or start a guest session to begin.");

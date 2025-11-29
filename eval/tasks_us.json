@@ -1,0 +1,27 @@
+[
+  {
+    "id": "us-01",
+    "user_profile": "Remote worker moving from Seattle to Los Angeles with a medium dog; prefers quiet, walkable neighborhoods with easy Metro access.",
+    "query": "Find 3-5 Los Angeles apartments under $2,800/month available in January, within a 10-minute walk of a Metro stop, with in-unit laundry and that allow dogs.",
+    "expected_type": "N listings in LA under $X with transit + pet constraints."
+  },
+  {
+    "id": "us-02",
+    "user_profile": "Couple relocating to the Bay Area; visiting Redwood City this week and can tour in person.",
+    "query": "Summarize two-bedroom options around Redwood City with parking and central AC near Caltrain for about $3,600/month. Draft a 12-month lease for the second-best option starting Feb 1 that includes one reserved parking spot and a $400 pet deposit for one cat.",
+    "expected_type": "Ranked listings plus lease drafted for Option 2 with pet deposit and start date."
+  },
+  {
+    "id": "us-03",
+    "user_profile": "Family with one toddler moving to Austin; commute to the Domain, wants flexible move-in mid-January.",
+    "query": "Pull at least three two-bedroom Austin listings near the Domain or North Burnet under $2,400/month that have a pool, on-site gym, and in-unit washer/dryer. Flag any with on-site daycare partnerships. Give a shortlist with pros/cons.",
+    "expected_type": "Shortlisted Austin listings under a budget with required amenities and noted family perks."
+  },
+  {
+    "id": "us-heldout-01",
+    "user_profile": "QA reviewer validating the agent on unseen Apartments.com-style data.",
+    "query": "Using the held-out apartments fixture, surface at least one Austin option and draft a simple 12-month lease for the first result under the name Jordan Tester.",
+    "expected_type": "Held-out listing recap plus lease draft for option 1 using cached/fixture data.",
+    "held_out": true
+  }
+]
